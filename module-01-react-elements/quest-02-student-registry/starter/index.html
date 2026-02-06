@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quest 2: Student Registry</title>
+  
+  <!-- React CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    #root {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    /* TODO: Add your custom styles here */
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <script>
+    // TODO: Create an array of student objects
+    // Each student should have: name, house, magicLevel, health
+    const students = [
+      // Add your students here
+    ];
+    
+    // TODO: Use React.createElement() to render the student list
+    // Hint: Use .map() to create elements for each student
+    
+    // TODO: Render your app
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      React.createElement('div', null,
+        React.createElement('h1', null, 'Student Registry'),
+        React.createElement('p', null, 'Create a list of students using createElement!')
+        // Add your student list here
+      )
+    );
+  </script>
+</body>
+</html>
+
+
+
+
+

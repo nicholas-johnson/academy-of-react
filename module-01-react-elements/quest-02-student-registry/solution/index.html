@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quest 2: Student Registry - Solution</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- React 19 from CDN -->
+  <script crossorigin src="https://unpkg.com/react@19/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@19/umd/react-dom.development.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    const { createElement: h } = React;
+    const { createRoot } = ReactDOM;
+
+    // Student data
+    const students = [
+      {
+        id: 1,
+        name: "Elara Moonwhisper",
+        house: "Wisdom",
+        level: 42,
+        specialty: "Elemental Magic",
+        status: "active"
+      },
+      {
+        id: 2,
+        name: "Theron Stormforge",
+        house: "Valor",
+        level: 38,
+        specialty: "Combat Magic",
+        status: "active"
+      },
+      {
+        id: 3,
+        name: "Luna Willowshade",
+        house: "Nature",
+        level: 45,
+        specialty: "Healing Arts",
+        status: "active"
+      },
+      {
+        id: 4,
+        name: "Raven Shadowmere",
+        house: "Mystery",
+        level: 40,
+        specialty: "Illusion Magic",
+        status: "active"
+      },
+      {
+        id: 5,
+        name: "Atlas Ironheart",
+        house: "Valor",
+        level: 35,
+        specialty: "Defense Magic",
+        status: "training"
+      },
+      {
+        id: 6,
+        name: "Seraphina Starlight",
+        house: "Wisdom",
+        level: 48,
+        specialty: "Astral Magic",
+        status: "active"
+      },
+      {
+        id: 7,
+        name: "Finn Oakwalker",
+        house: "Nature",
+        level: 33,
+        specialty: "Beast Taming",
+        status: "active"
+      },
+      {
+        id: 8,
+        name: "Morgana Nightshade",
+        house: "Mystery",
+        level: 50,
+        specialty: "Dark Arts",
+        status: "active"
+      }
+    ];
+
+    // House colors and emblems
+    const houseConfig = {
+      Valor: { color: '#dc2626', emblem: '🦁' },
+      Wisdom: { color: '#2563eb', emblem: '🦅' },
+      Nature: { color: '#16a34a', emblem: '🐺' },
+      Mystery: { color: '#9333ea', emblem: '🐍' }
+    };
+
+    // State for filtering and sorting (Bonus features)
+    let currentFilter = 'all'; // 'all', 'Valor', 'Wisdom', 'Nature', 'Mystery'
+    let currentSort = 'name'; // 'name', 'level'
+
+    // Student card component
+    function StudentCard(student) {
+      const config = houseConfig[student.house];
+      
+      return h('div', { 
+        className: 'student-card',
+        'data-house': student.house.toLowerCase()
+      },
+        // Card header with house accent
+        h('div', { 
+          className: 'card-header',
+          style: { borderTopColor: config.color }
+        },
+          h('div', { className: 'header-content' },
+            h('h3', { className: 'student-name' }, student.name),
+            h('span', { 
+              className: 'level-badge',
+              style: { backgroundColor: config.color }
+            }, `Lv ${student.level}`)
+          ),
+          h('span', { 
+            className: 'house-emblem',
+            style: { color: config.color }
+          }, config.emblem)
+        ),
+        
+        // Card body
+        h('div', { className: 'card-body' },
+          h('div', { className: 'info-row' },
+            h('span', { className: 'info-label' }, '🏠 House:'),
+            h('span', { 
+              className: 'house-name',
+              style: { color: config.color }
+            }, student.house)
+          ),
+          h('div', { className: 'info-row' },
+            h('span', { className: 'info-label' }, '✨ Specialty:'),
+            h('span', { className: 'info-value' }, student.specialty)
+          ),
+          h('div', { className: 'info-row' },
+            h('span', { className: 'info-label' }, '📊 Status:'),
+            h('span', { 
+              className: `status-badge status-${student.status}`
+            }, student.status)
+          )
+        )
+      );
+    }
+
+    // Filter buttons component (Bonus feature)
+    function FilterButtons(onFilterChange) {
+      return h('div', { className: 'filter-section' },
+        h('h3', { className: 'filter-title' }, 'Filter by House:'),
+        h('div', { className: 'filter-buttons' },
+          h('button', {
+            className: currentFilter === 'all' ? 'filter-btn active' : 'filter-btn',
+            onclick: () => {
+              currentFilter = 'all';
+              onFilterChange();
+            }
+          }, 'All'),
+          Object.keys(houseConfig).map(house => 
+            h('button', {
+              key: house,
+              className: currentFilter === house ? 'filter-btn active' : 'filter-btn',
+              style: { 
+                borderColor: houseConfig[house].color,
+                ...(currentFilter === house && { 
+                  backgroundColor: houseConfig[house].color,
+                  color: 'white' 
+                })
+              },
+              onclick: () => {
+                currentFilter = house;
+                onFilterChange();
+              }
+            }, `${houseConfig[house].emblem} ${house}`)
+          )
+        )
+      );
+    }
+
+    // Sort buttons component (Bonus feature)
+    function SortButtons(onSortChange) {
+      return h('div', { className: 'sort-section' },
+        h('h3', { className: 'sort-title' }, 'Sort by:'),
+        h('div', { className: 'sort-buttons' },
+          h('button', {
+            className: currentSort === 'name' ? 'sort-btn active' : 'sort-btn',
+            onclick: () => {
+              currentSort = 'name';
+              onSortChange();
+            }
+          }, '📝 Name'),
+          h('button', {
+            className: currentSort === 'level' ? 'sort-btn active' : 'sort-btn',
+            onclick: () => {
+              currentSort = 'level';
+              onSortChange();
+            }
+          }, '⭐ Level')
+        )
+      );
+    }
+
+    // Filter and sort students
+    function filterAndSortStudents() {
+      let filtered = currentFilter === 'all' 
+        ? students 
+        : students.filter(s => s.house === currentFilter);
+      
+      if (currentSort === 'name') {
+        filtered = filtered.sort((a, b) => a.name.localeCompare(b.name));
+      } else if (currentSort === 'level') {
+        filtered = filtered.sort((a, b) => b.level - a.level);
+      }
+      
+      return filtered;
+    }
+
+    // Stats summary (Bonus feature)
+    function StatsSummary(studentsToShow) {
+      const totalStudents = studentsToShow.length;
+      const avgLevel = totalStudents > 0 
+        ? Math.round(studentsToShow.reduce((sum, s) => sum + s.level, 0) / totalStudents)
+        : 0;
+      const houseCount = {};
+      studentsToShow.forEach(s => {
+        houseCount[s.house] = (houseCount[s.house] || 0) + 1;
+      });
+
+      return h('div', { className: 'stats-summary' },
+        h('div', { className: 'stat-box' },
+          h('div', { className: 'stat-value' }, totalStudents),
+          h('div', { className: 'stat-label' }, 'Students')
+        ),
+        h('div', { className: 'stat-box' },
+          h('div', { className: 'stat-value' }, avgLevel),
+          h('div', { className: 'stat-label' }, 'Avg Level')
+        ),
+        h('div', { className: 'stat-box' },
+          h('div', { className: 'stat-value' }, Object.keys(houseCount).length),
+          h('div', { className: 'stat-label' }, 'Houses')
+        )
+      );
+    }
+
+    // Main App component
+    function App() {
+      // This will be called to re-render
+      function render() {
+        const filteredStudents = filterAndSortStudents();
+        
+        const app = h('div', { className: 'app-container' },
+          h('div', { className: 'quest-header' },
+            h('h1', null, '⚡ Quest 2: Student Registry'),
+            h('p', { className: 'quest-subtitle' }, 
+              'Displaying students with React.createElement()'
+            )
+          ),
+          
+          StatsSummary(filteredStudents),
+          
+          h('div', { className: 'controls' },
+            FilterButtons(render),
+            SortButtons(render)
+          ),
+          
+          h('div', { className: 'student-grid' },
+            filteredStudents.length === 0 
+              ? h('p', { className: 'no-students' }, 'No students found in this house.')
+              : filteredStudents.map(student => 
+                  h(StudentCard, { key: student.id, ...student })
+                )
+          )
+        );
+        
+        root.render(app);
+      }
+      
+      render();
+    }
+
+    // Render the app
+    const root = createRoot(document.getElementById('root'));
+    App();
+  </script>
+</body>
+</html>
+
+
+
+
+
+

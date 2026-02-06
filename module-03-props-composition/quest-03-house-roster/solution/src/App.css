@@ -1,0 +1,160 @@
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.quest-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.quest-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.quest-subtitle {
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+.houses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.house-roster {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.house-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-top: 6px solid #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.house-emblem {
+  font-size: 4rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.house-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.house-motto {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.house-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.students-list {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.student-card {
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.student-card:hover {
+  background: #e2e8f0;
+  transform: translateX(4px);
+}
+
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.student-name {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.student-level {
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  background: #e2e8f0;
+  border-radius: 999px;
+  color: #64748b;
+}
+
+.student-specialty {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .houses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

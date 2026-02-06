@@ -1,0 +1,32 @@
+.app { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+h1 { color: #667eea; margin-bottom: 10px; font-size: 2.2rem; }
+.search-section { background: #f9fafb; padding: 32px; border-radius: 12px; margin: 30px 0; }
+.search-input { width: 100%; padding: 16px; border: 3px solid #667eea; border-radius: 8px; font-size: 1.1rem; margin-bottom: 20px; transition: border-color 0.2s; }
+.search-input:focus { outline: none; border-color: #764ba2; }
+.search-stats { display: flex; flex-direction: column; gap: 12px; padding: 20px; background: white; border-radius: 8px; }
+.search-stats span { color: #6b7280; }
+.search-stats strong { color: #333; font-weight: 600; }
+.highlight { color: #667eea !important; }
+.results-section { margin: 30px 0; }
+.results-section h3 { color: #333; margin-bottom: 20px; }
+.empty-message { padding: 60px 40px; text-align: center; background: #f9fafb; border-radius: 12px; color: #6b7280; font-size: 1.1rem; }
+.spell-list { display: flex; flex-direction: column; gap: 12px; }
+.spell-item { padding: 20px; background: #f9fafb; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; transition: transform 0.2s; }
+.spell-item:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+.spell-item h4 { color: #333; margin-bottom: 6px; font-size: 1.2rem; }
+.spell-desc { color: #6b7280; font-size: 0.95rem; }
+.spell-meta { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+.type-badge { padding: 4px 12px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; text-transform: capitalize; }
+.type-badge.fire { background: #fee2e2; color: #dc2626; }
+.type-badge.ice { background: #dbeafe; color: #2563eb; }
+.type-badge.lightning { background: #fef3c7; color: #d97706; }
+.type-badge.healing { background: #d1fae5; color: #059669; }
+.type-badge.dark { background: #e5e7eb; color: #374151; }
+.type-badge.light { background: #fef3c7; color: #ca8a04; }
+.type-badge.earth { background: #fef2e2; color: #d97706; }
+.type-badge.wind { background: #e0f2fe; color: #0284c7; }
+.power-badge { font-weight: 700; color: #667eea; }
+.info-box { background: #f0f4ff; border: 2px solid #667eea; padding: 24px; border-radius: 12px; margin-top: 30px; }
+.info-box h3 { color: #667eea; margin-bottom: 12px; }
+.info-box ul { padding-left: 24px; }
+.info-box li { padding: 6px 0; color: #4b5563; }

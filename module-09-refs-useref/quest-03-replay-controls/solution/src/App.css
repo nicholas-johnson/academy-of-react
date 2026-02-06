@@ -1,0 +1,26 @@
+.app { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+h1 { color: #667eea; margin-bottom: 10px; font-size: 2.2rem; }
+.timeline-display { background: #f9fafb; padding: 24px; border-radius: 12px; margin: 30px 0; }
+.time-counter { font-size: 1.8rem; font-weight: 700; color: #667eea; text-align: center; margin-bottom: 16px; }
+.progress-bar { height: 20px; background: #e5e7eb; border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); transition: width 0.3s ease; }
+.controls { display: flex; gap: 12px; margin: 20px 0; }
+.btn { flex: 1; padding: 14px; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: opacity 0.2s, transform 0.1s; }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn:active:not(:disabled) { transform: scale(0.98); }
+.btn-play { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; }
+.btn-pause { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; }
+.btn-restart { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; }
+.events-section { margin: 30px 0; padding: 24px; background: #f9fafb; border-radius: 12px; }
+.events-section h3 { color: #333; margin-bottom: 16px; }
+.empty-message { color: #9ca3af; font-style: italic; }
+.events-list { list-style: none; }
+.event-item { padding: 12px; margin: 8px 0; background: white; border-left: 4px solid #667eea; border-radius: 4px; display: flex; gap: 12px; align-items: center; animation: slideIn 0.3s ease; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+.event-icon { font-size: 1.5rem; }
+.event-time { font-weight: 700; color: #667eea; min-width: 40px; }
+.event-description { color: #333; }
+.info-box { background: #f0f4ff; border: 2px solid #667eea; padding: 24px; border-radius: 12px; margin-top: 30px; }
+.info-box h3 { color: #667eea; margin-bottom: 12px; }
+.info-box ul { list-style: none; padding: 0; }
+.info-box li { padding: 6px 0; color: #4b5563; }

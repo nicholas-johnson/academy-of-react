@@ -1,0 +1,5 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { min-height: 100vh; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: background 0.3s, color 0.3s; }
+body.light { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #1f2937; }
+body.dark { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); color: #f3f4f6; }
+#root { max-width: 900px; margin: 0 auto; padding: 40px 20px; }

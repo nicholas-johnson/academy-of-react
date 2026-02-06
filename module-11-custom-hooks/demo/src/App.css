@@ -1,0 +1,17 @@
+.app { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+h1 { color: #667eea; margin-bottom: 10px; font-size: 2.2rem; }
+h3 { color: #333; margin-bottom: 16px; }
+.demo-section { background: #f9fafb; padding: 32px; border-radius: 12px; margin: 30px 0; }
+.stat-display { display: flex; gap: 40px; font-size: 1.2rem; margin-bottom: 12px; }
+.hint { color: #6b7280; font-style: italic; font-size: 0.9rem; }
+.btn { padding: 12px 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: transform 0.1s; }
+.btn:active { transform: scale(0.95); }
+.btn-secondary { background: #e5e7eb; color: #333; }
+.message-box { margin-top: 16px; padding: 20px; background: #f0f4ff; border: 2px solid #667eea; border-radius: 8px; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.counter-display { font-size: 4rem; font-weight: 700; color: #667eea; text-align: center; margin: 20px 0; }
+.button-group { display: flex; gap: 12px; justify-content: center; }
+.info-box { background: #f0f4ff; border: 2px solid #667eea; padding: 24px; border-radius: 12px; margin-top: 30px; }
+.info-box h3 { color: #667eea; margin-bottom: 12px; }
+.info-box ul { padding-left: 24px; }
+.info-box li { padding: 6px 0; color: #4b5563; }

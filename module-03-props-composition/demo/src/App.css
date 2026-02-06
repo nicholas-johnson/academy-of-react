@@ -1,0 +1,63 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.header {
+  background: #667eea;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.content {
+  padding: 30px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 12px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.student-info {
+  background: #f7f7ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+
+
+
+

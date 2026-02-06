@@ -1,0 +1,8 @@
+.app { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+h1 { color: #667eea; margin-bottom: 30px; }
+.quest-list { display: grid; gap: 16px; margin-bottom: 30px; }
+.quest-card { padding: 20px; border: 2px solid #e5e7eb; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; }
+.pagination { display: flex; justify-content: center; align-items: center; gap: 10px; }
+.pagination button { padding: 8px 16px; border: 2px solid #e5e7eb; background: white; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
+.pagination button.active { background: #667eea; color: white; border-color: #667eea; }

@@ -1,0 +1,140 @@
+.app {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #667eea;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.app > p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.rankings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.rankings-table thead {
+  background: #f9fafb;
+}
+
+.rankings-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 700;
+  color: #4b5563;
+  border-bottom: 2px solid #e5e7eb;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.rankings-table th:hover {
+  background: #f3f4f6;
+}
+
+.rankings-table th.active {
+  color: #667eea;
+  background: #f0f4ff;
+}
+
+.rankings-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.rankings-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.rankings-table tbody tr.top-3 {
+  background: #fef3c7;
+}
+
+.rankings-table tbody tr.top-3:hover {
+  background: #fde68a;
+}
+
+.rank {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.rank.top-1 {
+  color: #eab308;
+}
+
+.rank.top-2 {
+  color: #a3a3a3;
+}
+
+.rank.top-3 {
+  color: #cd7f32;
+}
+
+.name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.house-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.house-badge.gryffin {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.house-badge.ravenclaw {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.house-badge.hufflepuff {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.house-badge.slytherin {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.stat {
+  font-weight: 600;
+}
+
+.wins {
+  color: #10b981;
+}
+
+.losses {
+  color: #ef4444;
+}
+
+.magic-level {
+  color: #667eea;
+}
+
+.sort-icon {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #667eea;
+}

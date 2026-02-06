@@ -1,0 +1,159 @@
+.app {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #667eea;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.app > p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.controls button:hover {
+  border-color: #667eea;
+}
+
+.controls button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.student-table thead {
+  background: #f9fafb;
+}
+
+.student-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 700;
+  color: #4b5563;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.student-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.student-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.rank {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 1.1rem;
+}
+
+.name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.score {
+  font-weight: 700;
+  color: #10b981;
+  font-size: 1.1rem;
+}
+
+.house-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.house-badge.gryffin {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.house-badge.ravenclaw {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.house-badge.hufflepuff {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.house-badge.slytherin {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.info-box {
+  background: #f0f4ff;
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 30px;
+}
+
+.info-box h3 {
+  color: #667eea;
+  margin-bottom: 12px;
+}
+
+.info-box p {
+  color: #4b5563;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.info-box code {
+  background: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box li {
+  padding: 8px 0;
+  color: #4b5563;
+}
