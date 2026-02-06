@@ -4,7 +4,7 @@
 
 ## Story Introduction
 
-Professor Hooksworth has tasked you with a critical mission: translate the old `createElement()` incantations from Module 1 into modern JSX. This will prove you understand both the ancient and modern methods of React magic. "Those who know the old ways," the Professor says with a twinkle in his eye, "appreciate the new ways even more."
+Professor Hooksweasel has tasked you with a critical mission: translate the old `createElement()` incantations from Module 1 into modern JSX. This will prove you understand both the ancient and modern methods of React magic. "Those who know the old ways," the Professor says with a twinkle in his eye, "appreciate the new ways even more."
 
 ## Objective
 

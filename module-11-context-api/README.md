@@ -1,4 +1,4 @@
-# Module 10: Context API for Global State
+# Module 11: Context API for Global State
 
 ## Story Context
 
@@ -32,4 +32,4 @@ TypeScript + Vite. Run `npm install` then `npm run dev`.
 3. **User Session** - Authentication context
 
 ---
-[Previous](../module-09-refs-useref/) | [Next](../module-11-custom-hooks/)
+[Previous](../module-10-refs-useref/) | [Next](../module-12-custom-hooks/)

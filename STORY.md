@@ -58,11 +58,11 @@ The academy with the best-performing battle system wins eternal glory and braggi
 ### Headmaster Renderius the Wise
 Ancient wizard who founded the Academy centuries ago. Inventor of the State Crystal and champion of component-based magic. Serves as narrator throughout the course.
 
-### Professor Hooksworth  
+### Professor Hooksweasel  
 Master of Custom Spells (Hooks). Teaches advanced magic in Phase 3. Eccentric but brilliant, known for creating the most elegant reusable enchantments.
 
 ### Archmage Optima
-Specialist in Performance Magic. Arrived from the Eastern Academies. In Module 12, she reveals the secrets of memoization and lazy loading.
+Specialist in Performance Magic. Arrived from the Eastern Academies. In Module 13, she reveals the secrets of memoization and lazy loading.
 
 ### The Rival Academies
 
@@ -111,7 +111,7 @@ Training intensifies. Competitions between houses heat up. You're learning advan
 
 Rumors spread about the rival academies. "Shadowmere has a new secret weapon." "Brightspire's battle animations are unbeatable." "The Consortium never has bugs."
 
-### The Arrival (Module 9)
+### The Arrival (Module 10)
 They're here. Three great airships descend upon the Academy grounds. The rival schools have arrived for the Wizarding War. 
 
 Headmaster Renderius reveals Phase 3 training: TypeScript magic. "You must build a battle system so robust, so type-safe, that nothing can fail during combat."
@@ -121,7 +121,7 @@ You learn:
 - Shared consciousness through Context
 - Custom spell creation (hooks)
 
-### The Tournament Begins (Module 12)
+### The Tournament Begins (Module 13)
 The final challenge: Build the ultimate Battle Arena. Students from all academies watch as your creation comes to life:
 
 - Teams of wizards take their positions

@@ -1,4 +1,4 @@
-# Module 13: Modern Server Rendering
+# Module 14: Modern Server Rendering
 
 ## Story Context
 
@@ -63,10 +63,10 @@ Different frameworks excel at different use cases:
 
 ## Prerequisites
 
-- Complete Modules 1-12
+- Complete Modules 1-13
 - Understand React fundamentals
 - Basic Node.js knowledge
 - Understanding of HTTP, routing, and web APIs
 
 ---
-[Previous](../module-12-performance/) | **Final Module**
+[Previous](../module-13-performance/) | **Final Module**

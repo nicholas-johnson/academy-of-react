@@ -1,4 +1,4 @@
-# Module 9: useRef and DOM References
+# Module 10: useRef and DOM References
 
 ## Story Context
 
@@ -32,4 +32,4 @@ First time with TypeScript! Run `npm install` then `npm run dev`.
 3. **Replay Controls** - Video-like controls with refs
 
 ---
-[Previous](../module-08-managing-state/) | [Next](../module-10-context-api/)
+[Previous](../module-09-react-router/) | [Next](../module-11-context-api/)

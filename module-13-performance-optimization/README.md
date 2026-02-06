@@ -1,4 +1,4 @@
-# Module 12: Performance and Code Splitting
+# Module 13: Performance and Code Splitting
 
 ## Story Context
 ⚔️ **THE WIZARDING WAR BEGINS!** Build the ultimate Battle Arena - a complete interactive battle system with real-time combat, optimized for maximum performance!
@@ -55,7 +55,7 @@ Congratulations on mastering client-side React! 🎉
 
 Ready to take your skills to the next level with **server rendering**?
 
-→ **[Module 13: Modern Server Rendering](../module-13-server-rendering/)** - Learn Next.js, Remix, and Astro to build production full-stack applications!
+→ **[Module 14: Modern Server Rendering](../module-14-server-rendering/)** - Learn Next.js, Remix, and Astro to build production full-stack applications!
 
 ---
 
@@ -76,5 +76,5 @@ You've completed the Arcane Academy of React! You've mastered:
 **You are now a React Wizard!** 🧙‍♂️⚡
 
 ---
-[Previous](../module-11-custom-hooks/)
+[Previous](../module-12-custom-hooks/) | [Next](../module-14-server-rendering/)
 

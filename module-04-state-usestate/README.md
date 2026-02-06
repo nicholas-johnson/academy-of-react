@@ -4,7 +4,7 @@
 
 Your wizard is growing stronger! But there's a problem: everything we've built so far is **static**. Props flow down, but they never change. How do we track a wizard's health after taking damage? How do we update mana after casting spells? 
 
-Enter **state** — React's way of remembering values that can change over time. Professor Hooksworth reveals the State Crystal: "With the `useState` hook, your components come alive!"
+Enter **state** — React's way of remembering values that can change over time. Professor Hooksweasel reveals the State Crystal: "With the `useState` hook, your components come alive!"
 
 ## Learning Objectives
 

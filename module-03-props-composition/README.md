@@ -2,7 +2,7 @@
 
 ## Story Context
 
-The Academy's information systems are growing more complex. You need to build layouts, organize data by houses, and create components that work together. Professor Hooksworth introduces you to the art of **component composition** — building large applications by combining smaller, focused components. "Great wizards compose spells," she explains. "Great React developers compose components."
+The Academy's information systems are growing more complex. You need to build layouts, organize data by houses, and create components that work together. Professor Hooksweasel introduces you to the art of **component composition** — building large applications by combining smaller, focused components. "Great wizards compose spells," she explains. "Great React developers compose components."
 
 ## Learning Objectives
 

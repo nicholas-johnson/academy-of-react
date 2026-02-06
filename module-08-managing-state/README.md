@@ -27,4 +27,4 @@ Battle preparations intensify! Students must build complex dashboards managing m
 3. **Creature Gallery** - Combined filter/sort/pagination
 
 ---
-[Previous](../module-07-effects-useeffect/) | [Next](../module-09-refs-useref/)
+[Previous](../module-07-effects-useeffect/) | [Next](../module-09-react-router/)

@@ -1,4 +1,4 @@
-# Module 11: Custom Hooks
+# Module 12: Custom Hooks
 
 ## Story Context
 
@@ -32,4 +32,4 @@ TypeScript + Vite. Run `npm install` then `npm run dev`.
 3. **useDebounce** - Debounce any value
 
 ---
-[Previous](../module-10-context-api/) | [Next](../module-12-performance/)
+[Previous](../module-11-context-api/) | [Next](../module-13-performance/)

@@ -2,7 +2,7 @@
 
 ## Story Context
 
-You've survived the arduous `createElement()` training, but Professor Hooksworth has good news: "There's a better way!" The Academy has adopted JSX — a modern runic language that looks like HTML but is actually JavaScript. It's much easier to read and write, and it's what professional React wizards use in the real world.
+You've survived the arduous `createElement()` training, but Professor Hooksweasel has good news: "There's a better way!" The Academy has adopted JSX — a modern runic language that looks like HTML but is actually JavaScript. It's much easier to read and write, and it's what professional React wizards use in the real world.
 
 ## Learning Objectives
 

@@ -1,4 +1,4 @@
-# Module 12: Performance and Code Splitting
+# Module 13: Performance and Code Splitting
 
 ## Story Context
 
@@ -33,4 +33,4 @@ TypeScript + Vite. Run `npm install` then `npm run dev`.
 3. **Lazy Academy** - Code splitting with lazy/Suspense
 
 ---
-[Previous](../module-11-custom-hooks/) | [Next](../module-13-server-rendering/)
+[Previous](../module-12-custom-hooks/) | [Next](../module-14-server-rendering/)
