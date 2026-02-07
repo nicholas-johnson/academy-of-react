@@ -1,0 +1,47 @@
+.app { min-height: 100vh; background: #f8fafc; }
+.header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+.header h1 { font-size: 2rem; margin: 0 0 8px 0; }
+.header p { margin: 0; opacity: 0.9; }
+
+.main { max-width: 900px; margin: 0 auto; padding: 24px; display: grid; gap: 24px; }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.stat-card { background: white; border-radius: 16px; padding: 24px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.stat-value { display: block; font-size: 2.5rem; font-weight: 700; color: #667eea; }
+.stat-label { color: #64748b; font-size: 0.9rem; }
+
+.add-form { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.add-form h2 { margin: 0 0 20px 0; color: #1e293b; }
+.form-row { margin-bottom: 16px; }
+.form-row:first-child { display: flex; gap: 12px; }
+.form-row input[type="text"], .form-row select { padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; }
+.form-row input[type="text"] { flex: 1; }
+.form-row label { display: block; color: #64748b; }
+.form-row input[type="range"] { width: 100%; margin-top: 8px; }
+
+.btn { padding: 14px 24px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.btn.primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; width: 100%; }
+.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
+
+.roster { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.roster-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 16px; }
+.roster-header h2 { margin: 0; color: #1e293b; }
+.controls { display: flex; gap: 12px; }
+.controls select { padding: 8px 12px; border: 2px solid #e2e8f0; border-radius: 8px; }
+
+.student-list { display: flex; flex-direction: column; gap: 12px; }
+.empty { text-align: center; color: #94a3b8; padding: 40px; }
+
+.student-card { display: flex; align-items: center; gap: 16px; padding: 16px; background: #f8fafc; border-radius: 12px; border-left: 4px solid; }
+.student-info { flex: 1; }
+.student-info h3 { margin: 0 0 8px 0; color: #1e293b; }
+.house-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; color: white; font-size: 0.8rem; font-weight: 600; }
+
+.student-power { display: flex; align-items: center; gap: 12px; }
+.power-value { font-size: 1.5rem; font-weight: 700; color: #667eea; min-width: 50px; text-align: center; }
+.power-controls { display: flex; gap: 4px; }
+.power-controls button { width: 28px; height: 28px; border: none; background: #e2e8f0; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.power-controls button:hover { background: #cbd5e1; }
+
+.remove-btn { width: 36px; height: 36px; border: none; background: #fee2e2; color: #ef4444; border-radius: 8px; font-size: 1.5rem; cursor: pointer; }
+.remove-btn:hover { background: #fecaca; }
