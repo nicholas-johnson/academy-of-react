@@ -13,6 +13,7 @@ You've been chosen as a new student at the Arcane Academy. Through three phases 
 This course contains **13 modules** divided into **four progressive phases**:
 
 ### Phase 1: JavaScript Basics (Modules 1-4)
+
 **Technology**: React CDN + Plain JavaScript
 
 Learn fundamental JavaScript and basic React concepts. You'll track student stats, manage magical resources, and master the basics of React elements, JSX, props, and state.
@@ -23,15 +24,17 @@ Learn fundamental JavaScript and basic React concepts. You'll track student stat
 - Module 4: Forms and Event Handling
 
 ### Phase 2: Core React (Modules 5-7)
+
 **Technology**: Vite + JavaScript
 
-Build complete Academy systems using modern tooling. Master props, lists, and side effects as you prepare for the coming war.
+Build complete Academy systems using modern tooling. Master side effects, styling, and component composition as you prepare for the coming war.
 
 - Module 5: Side Effects with useEffect
-- Module 6: Lists, Keys, and Data Manipulation
-- Module 7: Props and Composition
+- Module 6: Styling in React (CSS Modules, Styled Components, Tailwind)
+- Module 7: The Children Prop
 
 ### Phase 3: Routing + Advanced (Modules 8-12)
+
 **Technology**: Vite + TypeScript
 
 The war begins! Learn client-side routing, build the battle system with TypeScript for type safety, and master advanced patterns and optimization techniques.
@@ -43,6 +46,7 @@ The war begins! Learn client-side routing, build the battle system with TypeScri
 - Module 12: Performance and Code Splitting
 
 ### Phase 4: Modern Server Rendering (Module 13) - **Capstone**
+
 **Technology**: Next.js / Remix / Astro + TypeScript
 
 Victory achieved! Now share the Academy's knowledge with the world. Learn modern server rendering with React Server Components and Islands Architecture.
@@ -59,6 +63,7 @@ Each module contains:
 2. **Three Quests** — Themed exercises with story context that advance your skills and the narrative
 
 By Module 13, you'll have built:
+
 - A complete student management system
 - Spell and potion directories
 - Resource management dashboards
@@ -70,6 +75,7 @@ By Module 13, you'll have built:
   - Lazy-loaded sections for optimal performance
 
 By Module 13, you'll deploy production server-rendered applications:
+
 - Academy Knowledge Portal with React Server Components (Next.js/Remix)
 - OR Lightning-fast content site with Islands Architecture (Astro)
 - Real hosting on Vercel, Netlify, or Fly.io
@@ -90,6 +96,7 @@ To enroll in the Arcane Academy, you should have:
 ## 🚀 How to Use This Course
 
 ### For Modules 1-4 (CDN-based):
+
 1. Navigate to the module folder
 2. Open the demo's `index.html` file in your browser
 3. Study the demo code
@@ -97,6 +104,7 @@ To enroll in the Arcane Academy, you should have:
 5. Check your work against the acceptance criteria
 
 ### For Modules 5-13 (Vite-based):
+
 1. Navigate to the module folder
 2. Install dependencies: `npm install`
 3. Run the demo: `npm run dev`
@@ -115,6 +123,7 @@ To enroll in the Arcane Academy, you should have:
 Track your journey through the Academy:
 
 ### Phase 1: JavaScript Basics
+
 - [ ] Module 1: React Elements with createElement()
   - [ ] Quest 1: Wizard Identity
   - [ ] Quest 2: Student Registry
@@ -133,20 +142,20 @@ Track your journey through the Academy:
   - [ ] Bonus: Roster Manager (Array State)
 
 ### Phase 2: Core React
+
 - [ ] Module 5: Side Effects with useEffect
   - [ ] Quest 1: Meditation Timer
   - [ ] Quest 2: War Intelligence
   - [ ] Quest 3: Auto-Save
-- [ ] Module 6: Lists, Keys, and Data Manipulation
-  - [ ] Quest 1: Battle Rankings
-  - [ ] Quest 2: Spell Inventory
-  - [ ] Quest 3: Quest Pagination
-- [ ] Module 7: Props and Composition
-  - [ ] Quest 1: Stat Display
-  - [ ] Quest 2: Layout Component
-  - [ ] Quest 3: House Roster
+- [ ] Module 6: Styling in React
+  - [ ] Quest 1: House Badges (CSS Modules)
+  - [ ] Quest 2: Spell Cards (Styled Components)
+  - [ ] Quest 3: Battle Dashboard (Tailwind)
+- [ ] Module 7: The Children Prop
+  - [ ] Quest 1: Layout Components
 
 ### Phase 3: Routing + Advanced
+
 - [ ] Module 8: React Router
   - [ ] Quest 1: Academy Navigation
   - [ ] Quest 2: Spell Directory
@@ -169,6 +178,7 @@ Track your journey through the Academy:
   - [ ] Quest 3: Battle Arena ⚔️
 
 ### Phase 4: Modern Server Rendering (Capstone)
+
 - [ ] Module 13: Modern Server Rendering
   - Choose your path:
   - [ ] Next.js Path (RSC) - Recommended first

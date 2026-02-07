@@ -6,33 +6,48 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  const fetchIntelligence = async () => {
+  useEffect(() => {
+    // Fetch data when component mounts
+    const fetchIntelligence = async () => {
+      setLoading(true)
+      setError(null)
+
+      try {
+        // Fetch from local JSON file (served by Vite from public/)
+        const response = await fetch('/api/intelligence.json')
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        
+        const data = await response.json()
+        setIntel(data.reports)
+      } catch (err) {
+        setError(err.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchIntelligence()
+  }, []) // Empty array = run once on mount
+
+  // Manual refresh function
+  const handleRefresh = async () => {
     setLoading(true)
     setError(null)
 
     try {
-      // Simulated intelligence data (in real app, fetch from API)
-      await new Promise(resolve => setTimeout(resolve, 1000)) // Simulate network delay
-
-      const mockData = [
-        { id: 1, academy: 'Shadowvale Academy', threatLevel: 'High', info: 'Advanced spell mastery detected. 15 elite wizards prepared.', timestamp: Date.now() },
-        { id: 2, academy: 'Crystal Peaks Institute', threatLevel: 'Medium', info: 'Moderate preparation. Focus on defensive spells.', timestamp: Date.now() },
-        { id: 3, academy: 'Ember Ridge School', threatLevel: 'High', info: 'Fire magic specialists. Strong offensive capabilities.', timestamp: Date.now() },
-        { id: 4, academy: 'Misty Hollow Academy', threatLevel: 'Low', info: 'Limited combat training. Primarily academic focus.', timestamp: Date.now() },
-        { id: 5, academy: 'Stormwatch College', threatLevel: 'High', info: 'Lightning magic experts. Weather manipulation confirmed.', timestamp: Date.now() },
-      ]
-
-      setIntel(mockData)
-      setLoading(false)
+      const response = await fetch('/api/intelligence.json')
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
+      const data = await response.json()
+      setIntel(data.reports)
     } catch (err) {
       setError(err.message)
+    } finally {
       setLoading(false)
     }
   }
-
-  useEffect(() => {
-    fetchIntelligence()
-  }, [])
 
   if (loading) {
     return (
@@ -52,7 +67,7 @@ function App() {
         <h1>🔍 War Intelligence</h1>
         <div className="error">
           <p>❌ Error: {error}</p>
-          <button onClick={fetchIntelligence} className="btn-primary">
+          <button onClick={handleRefresh} className="btn-primary">
             Retry
           </button>
         </div>
@@ -65,7 +80,7 @@ function App() {
       <h1>🔍 War Intelligence</h1>
       <p>Latest reports on rival academies</p>
 
-      <button onClick={fetchIntelligence} className="refresh-btn">
+      <button onClick={handleRefresh} className="refresh-btn">
         🔄 Refresh Intelligence
       </button>
 
@@ -81,7 +96,7 @@ function App() {
             <p className="intel-info">{report.info}</p>
             <div className="card-footer">
               <span className="timestamp">
-                Updated: {new Date(report.timestamp).toLocaleTimeString()}
+                Updated: {new Date(report.lastUpdated).toLocaleDateString()}
               </span>
             </div>
           </div>

@@ -13,7 +13,7 @@
 **Module 5: Side Effects with useEffect** (JavaScript)
 - Demo + 3 complete quests (Meditation Timer, War Intelligence, Auto-Save)
 
-**Module 7: Props and Composition** (JavaScript)
+**Module 7: The Children Prop** (JavaScript)
 - Demo + 3 complete quests (Stat Display, Layout Component, House Roster)
 
 **Module 8: React Router** (TypeScript) ⭐

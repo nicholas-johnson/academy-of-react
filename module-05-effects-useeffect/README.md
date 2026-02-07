@@ -22,6 +22,18 @@ The Academy's information systems need to connect to the outside world! Students
 - Async operations in effects
 - Effect timing (mount, update, unmount)
 
+## Slides
+
+Introduction slides covering useEffect concepts:
+
+```bash
+cd slides
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 and use arrow keys to navigate.
+
 ## Setup
 
 Navigate to `demo/`, run `npm install`, then `npm run dev`.
@@ -36,4 +48,4 @@ Navigate to `demo/`, run `npm install`, then `npm run dev`.
 
 **Previous Module**: [Module 4: Forms and Events](../module-04-forms-events/)
 
-**Next Module**: [Module 6: Lists, Keys, and Data Manipulation](../module-06-lists-keys/)
+**Next Module**: [Module 6: Styling in React](../module-06-styling/)

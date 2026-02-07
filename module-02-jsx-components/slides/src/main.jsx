@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import { SlideDeck } from 'slide-deck'
+import { slides } from './slides'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <SlideDeck slides={slides} />
+  </React.StrictMode>
 )

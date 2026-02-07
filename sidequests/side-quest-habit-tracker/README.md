@@ -5,6 +5,7 @@
 ## What You'll Build
 
 A satisfying habit tracking app where you can:
+
 - Create habits with custom schedules (daily, weekdays, specific days)
 - Check off completed habits each day
 - Track streaks and see your best runs
@@ -22,62 +23,74 @@ For notifications, you can optionally use the browser's Notification API.
 ## Module Progression
 
 ### After Module 2: Basic Display
+
 - Create a `HabitCard` component using JSX
 - Display habit name, streak count, and check button
 - Show today's completion status
 
 ### After Module 3: State
+
 - Toggle habit completion for today
 - Track current streak
 - Add simple habit creation
 
 ### After Module 4: Forms
+
 - Full habit creation form
 - Name, icon/emoji, color, frequency
 - Edit and delete habits
 
 ### After Module 5: Effects (useEffect)
+
 - Persist habits and history to localStorage
 - Calculate streaks on date change
 - Auto-reset daily completions at midnight
 - Optional: Browser notifications for reminders
 - Multiple views: Today / All Habits / Statistics
 
-### After Module 6: Lists & Keys
-- Render habits with proper keys
-- Sort by: streak, name, completion status
-- Filter by: completed today, category, frequency
+### After Module 6: Styling
 
-### After Module 7: Props & Composition
+- Style habit cards with dynamic colors (Styled Components)
+- Create streak badge animations
+- Build a polished UI with Tailwind
+
+### After Module 7: The Children Prop
+
 - Create `HabitList`, `HabitCard`, `StreakBadge` components
 - Pass habit data via props
 - Compose daily view with header and list
 
 ### After Module 8: React Router
+
 - Route-based views for calendar and statistics
 - URL parameters for specific dates
 
 ### After Module 9: Refs
+
 - Confetti animation on milestone streaks
 - Haptic-style feedback animations
 - Scroll to current day in calendar
 
 ### After Module 10: Context
+
 - Theme context (dark/light mode)
 - First day of week preference (Sun/Mon)
 - Notification settings
 
 ### After Module 11: Custom Hooks
+
 - `useHabits()` — CRUD operations for habits
 - `useStreak(habitId)` — calculate current and best streak
 - `useCompletionRate(habitId, range)` — completion percentage
 
 ### After Module 12: Performance
+
 - Memoize streak calculations
 - Lazy load statistics/calendar views
 - Optimize re-renders on check-in
 
 ### After Module 13: Server Rendering
+
 - Public accountability page
 - Shareable streak achievements
 - Printable habit reports
@@ -92,25 +105,26 @@ If you add a backend for syncing across devices, use Vite's proxy.
 
 ```typescript
 // vite.config.ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': {
-        target: 'http://localhost:3001',
-        changeOrigin: true
-      }
-    }
-  }
-})
+      "/api": {
+        target: "http://localhost:3001",
+        changeOrigin: true,
+      },
+    },
+  },
+});
 ```
 
 ### Why Proxy?
 
 During development:
+
 - Your React app runs on `localhost:5173`
 - Your API might run on `localhost:3001`
 - Browsers block cross-origin requests by default (CORS)
@@ -118,7 +132,7 @@ During development:
 
 ```typescript
 // This request:
-fetch('/api/habits')
+fetch("/api/habits");
 
 // Gets proxied to:
 // http://localhost:3001/api/habits
@@ -132,32 +146,32 @@ fetch('/api/habits')
 
 ```typescript
 interface Habit {
-  id: string
-  name: string
-  icon: string        // Emoji or icon name
-  color: string       // Hex color
-  frequency: Frequency
-  createdAt: string   // ISO date
-  archivedAt?: string
+  id: string;
+  name: string;
+  icon: string; // Emoji or icon name
+  color: string; // Hex color
+  frequency: Frequency;
+  createdAt: string; // ISO date
+  archivedAt?: string;
 }
 
-type Frequency = 
-  | { type: 'daily' }
-  | { type: 'weekdays' }  // Mon-Fri
-  | { type: 'weekly'; days: number[] }  // 0=Sun, 1=Mon, etc.
+type Frequency =
+  | { type: "daily" }
+  | { type: "weekdays" } // Mon-Fri
+  | { type: "weekly"; days: number[] }; // 0=Sun, 1=Mon, etc.
 
 interface Completion {
-  habitId: string
-  date: string  // YYYY-MM-DD
-  completedAt: string  // ISO timestamp
+  habitId: string;
+  date: string; // YYYY-MM-DD
+  completedAt: string; // ISO timestamp
 }
 
 // Derived (calculated, not stored)
 interface HabitStats {
-  currentStreak: number
-  bestStreak: number
-  totalCompletions: number
-  completionRate: number  // 0-1
+  currentStreak: number;
+  bestStreak: number;
+  totalCompletions: number;
+  completionRate: number; // 0-1
 }
 ```
 
@@ -166,27 +180,27 @@ interface HabitStats {
 ```typescript
 function calculateStreak(completions: string[], frequency: Frequency): number {
   // Sort dates descending
-  const sorted = [...completions].sort().reverse()
-  
-  let streak = 0
-  let checkDate = new Date()
-  
+  const sorted = [...completions].sort().reverse();
+
+  let streak = 0;
+  let checkDate = new Date();
+
   for (const date of sorted) {
     // Check if this date should count based on frequency
     if (!shouldTrackDate(checkDate, frequency)) {
-      checkDate = subtractDay(checkDate)
-      continue
+      checkDate = subtractDay(checkDate);
+      continue;
     }
-    
+
     if (formatDate(checkDate) === date) {
-      streak++
-      checkDate = subtractDay(checkDate)
+      streak++;
+      checkDate = subtractDay(checkDate);
     } else {
-      break // Streak broken
+      break; // Streak broken
     }
   }
-  
-  return streak
+
+  return streak;
 }
 ```
 

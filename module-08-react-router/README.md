@@ -292,6 +292,6 @@ Both patterns are valuable:
 
 ---
 
-**Previous Module**: [Module 7: Props and Composition](../module-07-props-composition/)
+**Previous Module**: [Module 7: The Children Prop](../module-07-children-prop/)
 
 **Next Module**: [Module 9: useRef and DOM References](../module-09-refs-useref/)

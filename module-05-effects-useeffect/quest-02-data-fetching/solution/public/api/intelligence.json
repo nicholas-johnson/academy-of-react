@@ -1,0 +1,44 @@
+{
+  "reports": [
+    {
+      "id": 1,
+      "academy": "Shadowvale Academy",
+      "threatLevel": "High",
+      "info": "Advanced spell mastery detected. 15 elite wizards prepared.",
+      "lastUpdated": "2026-02-06T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "academy": "Crystal Peaks Institute",
+      "threatLevel": "Medium",
+      "info": "Moderate preparation. Focus on defensive spells.",
+      "lastUpdated": "2026-02-06T09:15:00Z"
+    },
+    {
+      "id": 3,
+      "academy": "Ember Ridge School",
+      "threatLevel": "High",
+      "info": "Fire magic specialists. Strong offensive capabilities.",
+      "lastUpdated": "2026-02-06T11:00:00Z"
+    },
+    {
+      "id": 4,
+      "academy": "Misty Hollow Academy",
+      "threatLevel": "Low",
+      "info": "Limited combat training. Primarily academic focus.",
+      "lastUpdated": "2026-02-05T16:45:00Z"
+    },
+    {
+      "id": 5,
+      "academy": "Stormwatch College",
+      "threatLevel": "High",
+      "info": "Lightning magic experts. Weather manipulation confirmed.",
+      "lastUpdated": "2026-02-06T08:00:00Z"
+    }
+  ],
+  "meta": {
+    "totalAcademies": 5,
+    "highThreat": 3,
+    "generatedAt": "2026-02-06T12:00:00Z"
+  }
+}
