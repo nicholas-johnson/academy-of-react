@@ -19,8 +19,8 @@ Learn fundamental JavaScript and basic React concepts. You'll track student stat
 
 - Module 1: React Elements with createElement()
 - Module 2: JSX and Components
-- Module 3: Props and Composition
-- Module 4: State with useState
+- Module 3: State with useState
+- Module 4: Props and Composition
 
 ### Phase 2: Core React (Modules 5-8)
 **Technology**: Vite + JavaScript
@@ -124,14 +124,14 @@ Track your journey through the Academy:
   - [ ] Quest 1: Translation
   - [ ] Quest 2: SpellCard
   - [ ] Quest 3: Potion Cards
-- [ ] Module 3: Props and Composition
-  - [ ] Quest 1: Stat Display
+- [ ] Module 3: State with useState
+  - [ ] Quest 1: Multiple State
   - [ ] Quest 2: Layout
   - [ ] Quest 3: House Roster
-- [ ] Module 4: State with useState
-  - [ ] Quest 1: Training System
-  - [ ] Quest 2: Potion Brewing
-  - [ ] Quest 3: Roster Manager
+- [ ] Module 4: Props and Composition
+  - [ ] Quest 1: Stat Display
+  - [ ] Quest 2: Component Composition
+  - [ ] Quest 3: Prop Patterns
 
 ### Phase 2: Core React
 - [ ] Module 5: Forms and Event Handling

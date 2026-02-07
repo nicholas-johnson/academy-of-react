@@ -26,15 +26,15 @@ This project uses [The Movie Database (TMDB) API](https://www.themoviedb.org/doc
 - Display hardcoded movie data (title, poster, year, rating)
 - Style the card with CSS
 
-### After Module 3: Props & Composition
-- Create `MovieList`, `MovieCard`, and `Rating` components
-- Pass movie data via props
-- Use composition for card layouts
-
-### After Module 4: State
+### After Module 3: State
 - Add "Add to Watchlist" button with state
 - Toggle between "Want to Watch" / "Watching" / "Completed"
 - Track user ratings with star selection
+
+### After Module 4: Props & Composition
+- Create `MovieList`, `MovieCard`, and `Rating` components
+- Pass movie data via props
+- Use composition for card layouts
 
 ### After Module 5: Forms
 - Build a search form

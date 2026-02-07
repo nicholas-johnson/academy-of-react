@@ -29,15 +29,15 @@ For an optional backend later, consider:
 - Display hardcoded transactions (amount, category, date, note)
 - Color-code income (green) vs expense (red)
 
-### After Module 3: Props & Composition
-- Create `TransactionList`, `Transaction`, and `Balance` components
-- Pass transaction data via props
-- Compose a summary card showing totals
-
-### After Module 4: State
+### After Module 3: State
 - Add transaction form (amount, category, type)
 - Running balance calculation
 - Delete transaction functionality
+
+### After Module 4: Props & Composition
+- Create `TransactionList`, `Transaction`, and `Balance` components
+- Pass transaction data via props
+- Compose a summary card showing totals
 
 ### After Module 5: Forms
 - Full transaction form with validation

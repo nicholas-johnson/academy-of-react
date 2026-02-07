@@ -55,30 +55,23 @@ Key points to notice:
 
 ## Quests
 
-### Quest 1: Wizard Identity
+### Quest 1: Basic Elements
 **Difficulty**: ⭐ Beginner
 
 Create a student object with your wizard's stats and render it using `createElement()`.
 
-[Start Quest →](./quest-01-wizard-identity/)
+[Start Quest →](./quest-01-basic-elements/)
 
-### Quest 2: Student Registry  
+### Quest 2: Rendering Arrays  
 **Difficulty**: ⭐⭐ Beginner-Intermediate
 
-Build an array of multiple students and render them as a list.
+Build an array of multiple students and render them as a list using `.map()`.
 
-[Start Quest →](./quest-02-student-registry/)
-
-### Quest 3: Spell Calculator
-**Difficulty**: ⭐⭐ Intermediate
-
-Write a function that calculates spell success rate and displays it with a button.
-
-[Start Quest →](./quest-03-spell-calculator/)
+[Start Quest →](./quest-02-rendering-arrays/)
 
 ## Bonus Mastery Challenge
 
-Once you've completed all three quests, try this:
+Once you've completed both quests, try this:
 
 **The Student Comparison Tool**
 

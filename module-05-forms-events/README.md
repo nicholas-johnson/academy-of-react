@@ -74,26 +74,26 @@ Study how validation is implemented and how errors are displayed.
 
 ## Quests
 
-### Quest 1: Battle Signup
+### Quest 1: Form Validation
 **Difficulty**: ⭐⭐ Intermediate
 
-Create a battle registration form with validation.
+Create a registration form with field-level validation.
 
-[Start Quest →](./quest-01-battle-signup/)
+[Start Quest →](./quest-01-form-validation/)
 
-### Quest 2: Spell Search
+### Quest 2: Controlled Inputs
 **Difficulty**: ⭐⭐ Intermediate
 
-Build a searchable spell directory with live filtering.
+Build a searchable directory with live filtering using controlled inputs.
 
-[Start Quest →](./quest-02-spell-search/)
+[Start Quest →](./quest-02-controlled-inputs/)
 
-### Quest 3: Sorting Ceremony
+### Quest 3: Form Submission
 **Difficulty**: ⭐⭐⭐ Advanced
 
-Create a multi-step wizard form for the Sorting Ceremony.
+Create a multi-step form with proper submission handling.
 
-[Start Quest →](./quest-03-sorting-ceremony/)
+[Start Quest →](./quest-03-form-submission/)
 
 ## Bonus Mastery Challenge
 
@@ -258,7 +258,7 @@ This teaches you **why** Actions are better by showing the evolution!
 
 ---
 
-**Previous Module**: [Module 4: State with useState](../module-04-state-usestate/)
+**Previous Module**: [Module 4: Props and Composition](../module-04-props-composition/)
 
 **Next Module**: [Module 6: Lists, Keys, and Data Manipulation](../module-06-lists-keys/)
 

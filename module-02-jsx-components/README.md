@@ -227,29 +227,37 @@ Much easier to read and work with! JSX gets transformed to `createElement()` cal
 
 ## Quests
 
-### Quest 1: Translation
+### Quest 1: JSX Conversion
 
 **Difficulty**: ⭐ Beginner
 
 Convert your Module 1 createElement() code to JSX syntax.
 
-[Start Quest →](./quest-01-translation/)
+[Start Quest →](./quest-01-jsx-conversion/)
 
-### Quest 2: SpellCard Component
+### Quest 2: Props Basics
 
 **Difficulty**: ⭐⭐ Beginner-Intermediate
 
-Create a reusable SpellCard component that displays spell information.
+Create a reusable SpellCard component that receives data via props.
 
-[Start Quest →](./quest-02-spellcard/)
+[Start Quest →](./quest-02-props-basics/)
 
-### Quest 3: Potion Cards
+### Quest 3: Component Lists
 
 **Difficulty**: ⭐⭐ Intermediate
 
-Build a PotionCard component and render a list of potions.
+Build a PotionCard component and render a list using `.map()` with keys.
 
-[Start Quest →](./quest-03-potion-cards/)
+[Start Quest →](./quest-03-component-lists/)
+
+### Quest 4: Events and State Preview
+
+**Difficulty**: ⭐⭐ Intermediate
+
+Build an interactive spell calculator with event handlers and manual re-rendering.
+
+[Start Quest →](./quest-04-events-state/)
 
 ## Bonus Mastery Challenge
 
@@ -282,4 +290,4 @@ This combines component creation, props, conditional rendering, and calculations
 
 **Previous Module**: [Module 1: React Elements](../module-01-react-elements/)
 
-**Next Module**: [Module 3: Props and Composition](../module-03-props-composition/)
+**Next Module**: [Module 3: State with useState](../module-03-state-usestate/)

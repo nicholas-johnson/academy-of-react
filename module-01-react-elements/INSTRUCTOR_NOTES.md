@@ -83,45 +83,9 @@ spells.map(spell => h('li', { key: spell.id }, spell.name))
 
 ---
 
-### Demo 4: Events and Reactivity (`demo-04-events/`)
-
-**What to show:**
-- Counter with increment/decrement/reset buttons
-- Text input that updates a greeting in real-time
-- Range slider with visual power bar
-- A "wizard card" that combines all values
-
-**Key points to emphasize:**
-```js
-// The reactivity pattern (before useState):
-// 1. Store data in variables
-let count = 0;
-
-// 2. Event handler updates the variable
-onClick: () => {
-  count = count + 1;  // Update state
-  render();           // Re-render manually!
-}
-```
-
-- React uses camelCase event names: `onClick` not `onclick`
-- `onChange` for text inputs, `onInput` for sliders (instant feedback)
-- Event handlers receive an `event` object with `event.target.value`
-- **Manual re-render pattern** — call `render()` after state changes
-
-**Live coding suggestion:**
-- Add a new piece of state (e.g., `wizardLevel`)
-- Create an input for it
-- Show how forgetting `render()` means nothing updates
-
-**Transition to Quest 3:**
-"Now you'll build a spell calculator that uses these same patterns. You'll have sliders that affect spell power and buttons that trigger calculations."
-
----
-
 ## Quests Overview
 
-### Quest 1: Wizard Identity
+### Quest 1: Basic Elements
 **Difficulty**: Beginner
 **Time estimate**: 15-20 minutes
 
@@ -139,7 +103,7 @@ Students create a single wizard object and render it as a card.
 
 ---
 
-### Quest 2: Student Registry
+### Quest 2: Rendering Arrays
 **Difficulty**: Beginner-Intermediate
 **Time estimate**: 20-30 minutes
 
@@ -154,25 +118,6 @@ Students render an array of student objects as a list.
 - Forgetting to return from the map callback
 - Missing keys (show them the console warning)
 - Arrow function syntax with implicit return
-
----
-
-### Quest 3: Spell Calculator
-**Difficulty**: Intermediate
-**Time estimate**: 25-35 minutes
-
-Students build an interactive calculator with sliders.
-
-**What they practice:**
-- Functions that calculate values
-- Event handling (`onInput`, `onClick`)
-- Re-rendering when data changes
-- More complex element structures
-
-**Common struggles:**
-- Understanding how to trigger re-renders (manual re-render pattern)
-- Event handler syntax in createElement
-- Debugging calculation logic
 
 ---
 
@@ -206,16 +151,7 @@ Students build an interactive calculator with sliders.
    - Show why React is fast
    - Explain diffing conceptually
 
-7. **Demo 4: Events and Reactivity** (15 min)
-   - Show click events and counter
-   - Show input events and live updates
-   - Emphasize the manual re-render pattern
-
-8. **Quest 3** (25-35 min)
-   - More challenging, may need hints
-   - Focus on the re-render pattern
-
-9. **Wrap-up** (5 min)
+7. **Wrap-up** (5 min)
    - Recap: createElement is the foundation
    - Preview: JSX makes this much easier (Module 2)
 
@@ -258,7 +194,7 @@ A: `createRoot()` is the React 18 way. The old `ReactDOM.render()` is deprecated
 
 ### Elements not updating
 - Students need to call `render()` again after changing data
-- This is intentional — state management comes in Module 4
+- This is intentional — state management comes in Module 3
 
 ---
 
@@ -274,18 +210,11 @@ module-01-react-elements/
 ├── demo-03-lists/           # Rendering lists with map
 │   ├── index.html
 │   └── app.js
-├── demo-04-events/          # Events and reactivity
-│   ├── index.html
-│   └── app.js
-├── quest-01-wizard-identity/
+├── quest-01-basic-elements/
 │   ├── README.md            # Quest instructions
 │   ├── starter/             # Starting point for students
 │   └── solution/            # Reference solution
-├── quest-02-student-registry/
-│   ├── README.md
-│   ├── starter/
-│   └── solution/
-├── quest-03-spell-calculator/
+├── quest-02-rendering-arrays/
 │   ├── README.md
 │   ├── starter/
 │   └── solution/

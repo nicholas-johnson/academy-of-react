@@ -258,7 +258,7 @@ function Component() {
 ---
 
 **Previous Quest**: [Quest 1: Academy Portal ←](../quest-01-academy-portal/)  
-**Next Quest**: [Quest 3: Production Deployment →](../quest-03-full-deployment/)
+**Next Quest**: [Quest 3: Deployment →](../quest-03-deployment/)
 
 
 

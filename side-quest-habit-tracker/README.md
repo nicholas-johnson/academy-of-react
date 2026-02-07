@@ -26,15 +26,15 @@ For notifications, you can optionally use the browser's Notification API.
 - Display habit name, streak count, and check button
 - Show today's completion status
 
-### After Module 3: Props & Composition
-- Create `HabitList`, `HabitCard`, `StreakBadge` components
-- Pass habit data via props
-- Compose daily view with header and list
-
-### After Module 4: State
+### After Module 3: State
 - Toggle habit completion for today
 - Track current streak
 - Add simple habit creation
+
+### After Module 4: Props & Composition
+- Create `HabitList`, `HabitCard`, `StreakBadge` components
+- Pass habit data via props
+- Compose daily view with header and list
 
 ### After Module 5: Forms
 - Full habit creation form

@@ -1,0 +1,265 @@
+.app-container {
+  padding: 2rem;
+}
+
+.quest-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quest-header h1 {
+  color: #667eea;
+  margin: 0;
+}
+
+.quest-subtitle {
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Layout */
+.calculator-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .calculator-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel-title {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+/* Input groups */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.input-value {
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* Spell buttons */
+.spell-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.spell-btn {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.spell-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.spell-btn.active {
+  color: white;
+  border-color: transparent;
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #e2e8f0;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+}
+
+/* Results panel */
+.results-panel {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  color: white;
+}
+
+.results-icon {
+  font-size: 2rem;
+}
+
+.results-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.result-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.result-card-highlight {
+  background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+}
+
+.result-value {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.result-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+/* Breakdown */
+.breakdown {
+  padding: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.breakdown-title {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breakdown-value {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Combo section */
+.combo-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.combo-title {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.combo-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.combo-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.combo-btn:hover {
+  border-color: #667eea;
+}
+
+.combo-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+/* Comparison table */
+.comparison-section {
+  margin-top: 2rem;
+}
+
+.comparison-title {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.comparison-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-header {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.comparison-row.active {
+  background: #f0f0ff;
+}
+
+.comparison-cell {
+  display: flex;
+  align-items: center;
+}

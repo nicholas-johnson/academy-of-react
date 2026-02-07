@@ -31,15 +31,15 @@ For metadata fetching, options include:
 - Display URL, title, and favicon
 - Show domain name extracted from URL
 
-### After Module 3: Props & Composition
-- Create `LinkList`, `LinkCard`, `TagBadge` components
-- Pass link data via props
-- Compose card with image preview, title, tags
-
-### After Module 4: State
+### After Module 3: State
 - Add new link (URL input)
 - Toggle read/unread status
 - Delete links
+
+### After Module 4: Props & Composition
+- Create `LinkList`, `LinkCard`, `TagBadge` components
+- Pass link data via props
+- Compose card with image preview, title, tags
 
 ### After Module 5: Forms
 - Full link form (URL, title override, notes, tags)
