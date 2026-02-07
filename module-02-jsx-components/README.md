@@ -182,7 +182,7 @@ React.createElement('h1', null, 'Hello')
 **Project Setup:**
 ```javascript
 // Module 1 (CDN):
-<script crossorigin src="https://unpkg.com/react@19/..."></script>
+<script crossorigin src="https://unpkg.com/react@18/..."></script>
 
 // Module 2 (Vite):
 import React from 'react'  // From npm packages!

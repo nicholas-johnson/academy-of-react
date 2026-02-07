@@ -17,7 +17,7 @@ Create a function that calculates spell success rate based on a wizard's magicLe
 - JavaScript functions
 - Function parameters and return values
 - Calculations and Math operations
-- Event listeners (onclick)
+- Event listeners (onClick)
 - DOM manipulation (updating content)
 
 ## Requirements
@@ -81,12 +81,12 @@ function calculateSpellSuccess(magicLevel) {
 ```javascript
 React.createElement(
   'button',
-  { onclick: handleClick },
+  { onClick: handleClick },  // Note: camelCase in React!
   'Calculate Spell Success'
 )
 ```
 
-**Hint 3**: The onclick handler needs to be a function. You can define it before:
+**Hint 3**: The onClick handler needs to be a function. You can define it before:
 ```javascript
 function handleClick() {
   const result = calculateSpellSuccess(student.magicLevel);
@@ -110,7 +110,7 @@ function renderApp() {
     'div',
     null,
     // ... your elements ...
-    React.createElement('button', { onclick: handleClick }, 'Calculate'),
+    React.createElement('button', { onClick: handleClick }, 'Calculate'),
     React.createElement('p', null, resultText) // Show result
   );
   root.render(app);

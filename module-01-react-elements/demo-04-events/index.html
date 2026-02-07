@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 4 - Events and Reactivity</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    #root {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    h1 {
+      color: #667eea;
+      margin-top: 0;
+    }
+    h2 {
+      color: #764ba2;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 30px;
+    }
+    .example {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
+    }
+    button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+      transition: transform 0.1s, box-shadow 0.1s;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    button:active {
+      transform: translateY(0);
+    }
+    .counter-display {
+      font-size: 48px;
+      font-weight: bold;
+      color: #667eea;
+      text-align: center;
+      padding: 20px;
+    }
+    input[type="text"], input[type="range"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    input[type="text"]:focus {
+      border-color: #667eea;
+      outline: none;
+    }
+    .greeting {
+      font-size: 24px;
+      color: #764ba2;
+      padding: 15px;
+      background: #f0f0ff;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .slider-value {
+      font-size: 32px;
+      font-weight: bold;
+      color: #667eea;
+      text-align: center;
+    }
+    .power-bar {
+      height: 20px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .power-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transition: width 0.2s;
+    }
+    code {
+      background: #e9ecef;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Consolas', monospace;
+    }
+    .key-concept {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .key-concept strong {
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="app.js"></script>
+</body>
+</html>
