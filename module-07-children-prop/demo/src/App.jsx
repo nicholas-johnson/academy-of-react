@@ -1,13 +1,9 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 // 1. Simple Card - wraps any content
 function Card({ children, variant = "default" }) {
-  return (
-    <div className={`card card-${variant}`}>
-      {children}
-    </div>
-  );
+  return <div className={`card card-${variant}`}>{children}</div>;
 }
 
 // 2. Section - adds a title to any content
@@ -23,17 +19,17 @@ function Section({ title, children }) {
 // 3. Modal - wraps content in a dialog
 function Modal({ isOpen, onClose, title, children }) {
   if (!isOpen) return null;
-  
+
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal" onClick={e => e.stopPropagation()}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h3>{title}</h3>
-          <button className="modal-close" onClick={onClose}>×</button>
+          <button className="modal-close" onClick={onClose}>
+            ×
+          </button>
         </div>
-        <div className="modal-body">
-          {children}
-        </div>
+        <div className="modal-body">{children}</div>
       </div>
     </div>
   );
@@ -97,7 +93,7 @@ function App() {
             <h3>💙 Mana</h3>
             <p className="stat-value">80</p>
             <div className="mana-bar">
-              <div className="mana-fill" style={{ width: '80%' }}></div>
+              <div className="mana-fill" style={{ width: "80%" }}></div>
             </div>
           </Card>
         </div>
@@ -114,8 +110,8 @@ function App() {
       </Section>
 
       {/* Modal demonstrates children in dialogs */}
-      <Modal 
-        isOpen={modalOpen} 
+      <Modal
+        isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
         title="Cast a Spell"
       >

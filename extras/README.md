@@ -5,11 +5,13 @@ Supplementary modules that are **not part of the main course flow**. Complete th
 ## Available Extras
 
 ### [TypeScript](./typescript/)
+
 Master TypeScript fundamentals and React-specific patterns. Covers types, interfaces, generics, hooks typing, events, and common patterns.
 
 **Best before**: Module 8 (Built-in Hooks) — as a primer before Phase 3, or use as a reference anytime
 
 ### [Tailwind CSS](./tailwind-css/)
+
 Learn utility-first CSS styling with Tailwind. Covers setup, core concepts, responsive design, dark mode, and React patterns.
 
 **Best after**: Module 4 (Forms) — when you're comfortable with React components

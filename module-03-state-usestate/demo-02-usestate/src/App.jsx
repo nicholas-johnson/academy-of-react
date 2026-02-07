@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
   // Demo 1: Basic Counter
   const [count, setCount] = useState(0);
 
   // Demo 2: Controlled Input
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   // Demo 3: Conditional Rendering
   const [isVisible, setIsVisible] = useState(true);
@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <h1>⚡ State Crystal Training</h1>
-      
+
       {/* Demo 1: Counter */}
       <div className="counter">
         <h2>Energy Counter</h2>
@@ -33,18 +33,14 @@ function App() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        {name && (
-          <div className="message">
-            Welcome, {name}! 🧙‍♂️
-          </div>
-        )}
+        {name && <div className="message">Welcome, {name}! 🧙‍♂️</div>}
       </div>
 
       {/* Demo 3: Conditional Rendering */}
       <div className="counter">
         <h2>Secret Passage</h2>
         <button onClick={() => setIsVisible(!isVisible)}>
-          {isVisible ? 'Hide' : 'Reveal'} Passage
+          {isVisible ? "Hide" : "Reveal"} Passage
         </button>
         {isVisible && (
           <div className="message">
@@ -57,8 +53,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-

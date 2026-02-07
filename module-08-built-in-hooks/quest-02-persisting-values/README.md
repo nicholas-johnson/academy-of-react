@@ -7,6 +7,7 @@ Battle spells need visual flair! When wizards cast powerful spells, dramatic ani
 ## Your Mission
 
 Create a spell casting interface that:
+
 - Has multiple spell cards
 - Each card has a different animation effect
 - Clicking triggers the animation via ref
@@ -30,6 +31,7 @@ Create a spell casting interface that:
 ## Starter Code
 
 Starter includes spell data and basic layout. Add:
+
 - Refs for each spell card
 - Click handlers to trigger animations
 - CSS animation classes
@@ -43,4 +45,5 @@ Starter includes spell data and basic layout. Add:
 - setTimeout to remove class after animation
 
 ---
+
 [Solution](./solution/) | [Back to Module](../../)

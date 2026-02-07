@@ -7,6 +7,7 @@
 ## Objective
 
 Build and deploy a complete Astro site with:
+
 - View Transitions for smooth navigation
 - Optimized images
 - SEO optimization
@@ -26,6 +27,7 @@ Build and deploy a complete Astro site with:
 ### 1. Complete Site Structure
 
 Build a full Academy portal:
+
 ```
 src/
 ├── pages/
@@ -89,6 +91,7 @@ import { ViewTransitions } from 'astro:transitions';
 ```
 
 Control specific transitions:
+
 ```astro
 <h1 transition:name="page-title">{title}</h1>
 <img src={hero} transition:name="hero-image" />
@@ -97,6 +100,7 @@ Control specific transitions:
 ### 3. Image Optimization
 
 Use Astro's Image component:
+
 ```astro
 ---
 import { Image } from 'astro:assets';
@@ -117,6 +121,7 @@ import heroImage from '../assets/hero.jpg';
 ### 4. SEO Component
 
 Create `src/components/SEO.astro`:
+
 ```astro
 ---
 interface Props {
@@ -155,6 +160,7 @@ const socialImage = image || '/og-image.jpg';
 ```
 
 Use in pages:
+
 ```astro
 ---
 import SEO from '../components/SEO.astro';
@@ -169,28 +175,29 @@ import SEO from '../components/SEO.astro';
 ### 5. Astro Config for Production
 
 Update `astro.config.mjs`:
+
 ```js
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
 
 export default defineConfig({
-  site: 'https://arcane-academy.com',
+  site: "https://arcane-academy.com",
   integrations: [react()],
-  output: 'static', // or 'hybrid' for SSR
+  output: "static", // or 'hybrid' for SSR
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: "auto",
   },
   image: {
     service: {
-      entrypoint: 'astro/assets/services/sharp'
-    }
+      entrypoint: "astro/assets/services/sharp",
+    },
   },
   vite: {
     build: {
       rollupOptions: {
         output: {
           manualChunks: {
-            'react-vendor': ['react', 'react-dom'],
+            "react-vendor": ["react", "react-dom"],
           },
         },
       },
@@ -204,6 +211,7 @@ export default defineConfig({
 ### Option A: Deploy to Netlify
 
 1. Create `netlify.toml`:
+
 ```toml
 [build]
   command = "npm run build"
@@ -214,6 +222,7 @@ export default defineConfig({
 ```
 
 2. Deploy:
+
 ```bash
 npm install --save-dev @astrojs/netlify
 # Push to GitHub
@@ -223,22 +232,25 @@ npm install --save-dev @astrojs/netlify
 ### Option B: Deploy to Vercel
 
 1. Install adapter:
+
 ```bash
 npm install --save-dev @astrojs/vercel
 ```
 
 2. Update config:
+
 ```js
 // astro.config.mjs
-import vercel from '@astrojs/vercel/static';
+import vercel from "@astrojs/vercel/static";
 
 export default defineConfig({
-  output: 'static',
+  output: "static",
   adapter: vercel(),
 });
 ```
 
 3. Deploy:
+
 ```bash
 npm i -g vercel
 vercel
@@ -254,6 +266,7 @@ npm run build
 ## Performance Optimization Checklist
 
 ### Pre-Deployment
+
 - [ ] All images use `<Image />` component
 - [ ] Large images compressed (< 500KB each)
 - [ ] ViewTransitions enabled
@@ -263,6 +276,7 @@ npm run build
 - [ ] Build succeeds: `npm run build`
 
 ### Post-Deployment
+
 - [ ] Run Lighthouse audit (aim for 95+)
 - [ ] Check Core Web Vitals
 - [ ] Verify all images load
@@ -281,16 +295,16 @@ npm run build
 ✅ Lighthouse score 95+  
 ✅ Working navigation  
 ✅ Islands hydrate correctly  
-✅ Fast load times (< 2s)  
+✅ Fast load times (< 2s)
 
 ## Lighthouse Targets
 
-| Metric | Target | Why |
-|--------|--------|-----|
-| Performance | 95-100 | Fast loads, optimized assets |
-| Accessibility | 95-100 | Proper HTML, ARIA labels |
-| Best Practices | 95-100 | HTTPS, no console errors |
-| SEO | 95-100 | Meta tags, semantic HTML |
+| Metric         | Target | Why                          |
+| -------------- | ------ | ---------------------------- |
+| Performance    | 95-100 | Fast loads, optimized assets |
+| Accessibility  | 95-100 | Proper HTML, ARIA labels     |
+| Best Practices | 95-100 | HTTPS, no console errors     |
+| SEO            | 95-100 | Meta tags, semantic HTML     |
 
 ## Hints
 
@@ -311,28 +325,32 @@ import Layout from '../layouts/Layout.astro';
   </div>
 </Layout>
 ```
+
 </details>
 
 <details>
 <summary>Hint 2: Dynamic Sitemap</summary>
 
 Install:
+
 ```bash
 npm install @astrojs/sitemap
 ```
 
 Configure:
+
 ```js
 // astro.config.mjs
-import sitemap from '@astrojs/sitemap';
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: 'https://arcane-academy.com',
+  site: "https://arcane-academy.com",
   integrations: [react(), sitemap()],
 });
 ```
 
 Generates sitemap.xml automatically!
+
 </details>
 
 <details>
@@ -340,14 +358,14 @@ Generates sitemap.xml automatically!
 
 ```js
 // src/pages/rss.xml.js
-import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
+import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
 
 export async function GET(context) {
-  const battles = await getCollection('battles');
+  const battles = await getCollection("battles");
   return rss({
-    title: 'Arcane Academy Battle Updates',
-    description: 'Latest battles from the Academy',
+    title: "Arcane Academy Battle Updates",
+    description: "Latest battles from the Academy",
     site: context.site,
     items: battles.map((battle) => ({
       title: battle.data.title,
@@ -357,6 +375,7 @@ export async function GET(context) {
   });
 }
 ```
+
 </details>
 
 ## Performance Tips
@@ -422,9 +441,3 @@ npm run build && ls -lh dist/
 **Want to compare?** Review the [Next.js Path](../../nextjs-path/) and [Remix Path](../../remix-path/) to see different approaches.
 
 **Course Complete!** 🎓 Return to the [main README](../../../README.md) - you're now a Full-Stack React Wizard ready to build modern web applications!
-
-
-
-
-
-

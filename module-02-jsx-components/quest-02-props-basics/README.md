@@ -73,14 +73,16 @@ function WizardCard({ name, house, level }) {
 **Hint 3**: Map over the array:
 
 ```jsx
-{wizards.map(wizard => (
-  <WizardCard
-    key={wizard.id}
-    name={wizard.name}
-    house={wizard.house}
-    level={wizard.level}
-  />
-))}
+{
+  wizards.map((wizard) => (
+    <WizardCard
+      key={wizard.id}
+      name={wizard.name}
+      house={wizard.house}
+      level={wizard.level}
+    />
+  ));
+}
 ```
 
 **Hint 4**: Numbers need curly braces, strings can use quotes:

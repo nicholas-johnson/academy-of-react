@@ -24,7 +24,7 @@ React.createElement(
   "div",
   { className: "wizard-card" },
   React.createElement("h2", null, wizard.name),
-  React.createElement("p", null, "Level: ", wizard.level)
+  React.createElement("p", null, "Level: ", wizard.level),
 );
 ```
 
@@ -117,7 +117,7 @@ React.createElement(
   "div",
   { className: "wizard-card" },
   React.createElement("h2", null, wizard.name),
-  React.createElement("p", null, wizard.level)
+  React.createElement("p", null, wizard.level),
 );
 ```
 
@@ -147,9 +147,9 @@ React.createElement(
     "div",
     { className: "header" },
     React.createElement("h2", null, title),
-    React.createElement("span", null, subtitle)
+    React.createElement("span", null, subtitle),
   ),
-  React.createElement("div", { className: "body" }, content)
+  React.createElement("div", { className: "body" }, content),
 );
 ```
 

@@ -9,13 +9,14 @@ This extra module teaches you how to use Tailwind effectively with React.
 ## Why Tailwind?
 
 **Traditional CSS:**
+
 ```css
 /* styles.css */
 .card {
   background-color: white;
   border-radius: 0.5rem;
   padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
@@ -32,6 +33,7 @@ This extra module teaches you how to use Tailwind effectively with React.
 ```
 
 **With Tailwind:**
+
 ```jsx
 <div className="bg-white rounded-lg p-6 shadow">
   <h2 className="text-xl font-semibold text-gray-800">Hello</h2>
@@ -69,15 +71,12 @@ npx tailwindcss init -p
 ```js
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
 ```
 
 ### Add Tailwind to `src/index.css`
@@ -94,11 +93,9 @@ export default {
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Tailwind is working!
-      </h1>
+      <h1 className="text-4xl font-bold text-blue-600">Tailwind is working!</h1>
     </div>
-  )
+  );
 }
 ```
 
@@ -108,18 +105,19 @@ function App() {
 
 Tailwind uses a consistent spacing scale (in `rem` by default):
 
-| Class | Value |
-|-------|-------|
-| `p-0` | 0 |
+| Class | Value         |
+| ----- | ------------- |
+| `p-0` | 0             |
 | `p-1` | 0.25rem (4px) |
-| `p-2` | 0.5rem (8px) |
-| `p-4` | 1rem (16px) |
+| `p-2` | 0.5rem (8px)  |
+| `p-4` | 1rem (16px)   |
 | `p-6` | 1.5rem (24px) |
-| `p-8` | 2rem (32px) |
+| `p-8` | 2rem (32px)   |
 
 Works with: `p` (padding), `m` (margin), `gap`, `space-x`, `space-y`, `w`, `h`
 
 **Directional variants:**
+
 - `pt-4` — padding-top
 - `pb-4` — padding-bottom
 - `pl-4` — padding-left
@@ -211,12 +209,12 @@ Color scale: `50`, `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`
 Tailwind uses mobile-first breakpoints:
 
 | Prefix | Min-width |
-|--------|-----------|
-| `sm:` | 640px |
-| `md:` | 768px |
-| `lg:` | 1024px |
-| `xl:` | 1280px |
-| `2xl:` | 1536px |
+| ------ | --------- |
+| `sm:`  | 640px     |
+| `md:`  | 768px     |
+| `lg:`  | 1024px    |
+| `xl:`  | 1280px    |
+| `2xl:` | 1536px    |
 
 ```jsx
 // Stack on mobile, row on desktop
@@ -280,54 +278,58 @@ export default {
 ### Card Component
 
 ```tsx
-function Card({ title, children }: { title: string; children: React.ReactNode }) {
+function Card({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
-        {title}
-      </h3>
-      <div className="text-gray-600">
-        {children}
-      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
+      <div className="text-gray-600">{children}</div>
     </div>
-  )
+  );
 }
 ```
 
 ### Button Variants
 
 ```tsx
-type ButtonVariant = 'primary' | 'secondary' | 'danger'
+type ButtonVariant = "primary" | "secondary" | "danger";
 
-function Button({ 
-  variant = 'primary', 
-  children 
-}: { 
-  variant?: ButtonVariant
-  children: React.ReactNode 
+function Button({
+  variant = "primary",
+  children,
+}: {
+  variant?: ButtonVariant;
+  children: React.ReactNode;
 }) {
-  const baseStyles = "px-4 py-2 rounded-lg font-medium transition-colors"
-  
+  const baseStyles = "px-4 py-2 rounded-lg font-medium transition-colors";
+
   const variants = {
     primary: "bg-blue-500 text-white hover:bg-blue-600",
     secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
     danger: "bg-red-500 text-white hover:bg-red-600",
-  }
-  
+  };
+
   return (
-    <button className={`${baseStyles} ${variants[variant]}`}>
-      {children}
-    </button>
-  )
+    <button className={`${baseStyles} ${variants[variant]}`}>{children}</button>
+  );
 }
 ```
 
 ### Form Input
 
 ```tsx
-function Input({ label, error, ...props }: { 
-  label: string
-  error?: string 
+function Input({
+  label,
+  error,
+  ...props
+}: {
+  label: string;
+  error?: string;
 } & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <div className="mb-4">
@@ -338,25 +340,24 @@ function Input({ label, error, ...props }: {
         className={`
           w-full px-3 py-2 border rounded-lg
           focus:outline-none focus:ring-2
-          ${error 
-            ? 'border-red-500 focus:ring-red-200' 
-            : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'
+          ${
+            error
+              ? "border-red-500 focus:ring-red-200"
+              : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"
           }
         `}
         {...props}
       />
-      {error && (
-        <p className="mt-1 text-sm text-red-500">{error}</p>
-      )}
+      {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
     </div>
-  )
+  );
 }
 ```
 
 ### Navigation
 
 ```tsx
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
@@ -367,25 +368,27 @@ function Nav() {
             <span className="text-xl font-bold text-gray-900">Logo</span>
           </div>
           <div className="flex items-center gap-4">
-            <NavLink 
-              to="/" 
+            <NavLink
+              to="/"
               className={({ isActive }) => `
                 px-3 py-2 rounded-md text-sm font-medium
-                ${isActive 
-                  ? 'bg-gray-100 text-gray-900' 
-                  : 'text-gray-600 hover:text-gray-900'
+                ${
+                  isActive
+                    ? "bg-gray-100 text-gray-900"
+                    : "text-gray-600 hover:text-gray-900"
                 }
               `}
             >
               Home
             </NavLink>
-            <NavLink 
+            <NavLink
               to="/about"
               className={({ isActive }) => `
                 px-3 py-2 rounded-md text-sm font-medium
-                ${isActive 
-                  ? 'bg-gray-100 text-gray-900' 
-                  : 'text-gray-600 hover:text-gray-900'
+                ${
+                  isActive
+                    ? "bg-gray-100 text-gray-900"
+                    : "text-gray-600 hover:text-gray-900"
                 }
               `}
             >
@@ -395,7 +398,7 @@ function Nav() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 ```
 
@@ -405,10 +408,10 @@ function Nav() {
 
 ```tsx
 const buttonClasses = `
-  px-4 py-2 
-  bg-blue-500 hover:bg-blue-600 
-  text-white font-medium 
-  rounded-lg 
+  px-4 py-2
+  bg-blue-500 hover:bg-blue-600
+  text-white font-medium
+  rounded-lg
   transition-colors
 `
 
@@ -422,23 +425,26 @@ npm install clsx
 ```
 
 ```tsx
-import clsx from 'clsx'
+import clsx from "clsx";
 
-function Button({ disabled, variant }: { disabled?: boolean; variant: 'primary' | 'danger' }) {
+function Button({
+  disabled,
+  variant,
+}: {
+  disabled?: boolean;
+  variant: "primary" | "danger";
+}) {
   return (
     <button
-      className={clsx(
-        'px-4 py-2 rounded-lg font-medium',
-        {
-          'bg-blue-500 hover:bg-blue-600': variant === 'primary',
-          'bg-red-500 hover:bg-red-600': variant === 'danger',
-          'opacity-50 cursor-not-allowed': disabled,
-        }
-      )}
+      className={clsx("px-4 py-2 rounded-lg font-medium", {
+        "bg-blue-500 hover:bg-blue-600": variant === "primary",
+        "bg-red-500 hover:bg-red-600": variant === "danger",
+        "opacity-50 cursor-not-allowed": disabled,
+      })}
     >
       Button
     </button>
-  )
+  );
 }
 ```
 
@@ -451,44 +457,39 @@ npm install class-variance-authority
 ```
 
 ```tsx
-import { cva, type VariantProps } from 'class-variance-authority'
+import { cva, type VariantProps } from "class-variance-authority";
 
-const button = cva(
-  'px-4 py-2 rounded-lg font-medium transition-colors',
-  {
-    variants: {
-      intent: {
-        primary: 'bg-blue-500 text-white hover:bg-blue-600',
-        secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
-        danger: 'bg-red-500 text-white hover:bg-red-600',
-      },
-      size: {
-        sm: 'text-sm px-3 py-1',
-        md: 'text-base px-4 py-2',
-        lg: 'text-lg px-6 py-3',
-      },
+const button = cva("px-4 py-2 rounded-lg font-medium transition-colors", {
+  variants: {
+    intent: {
+      primary: "bg-blue-500 text-white hover:bg-blue-600",
+      secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
+      danger: "bg-red-500 text-white hover:bg-red-600",
     },
-    defaultVariants: {
-      intent: 'primary',
-      size: 'md',
+    size: {
+      sm: "text-sm px-3 py-1",
+      md: "text-base px-4 py-2",
+      lg: "text-lg px-6 py-3",
     },
-  }
-)
+  },
+  defaultVariants: {
+    intent: "primary",
+    size: "md",
+  },
+});
 
 type ButtonProps = VariantProps<typeof button> & {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 function Button({ intent, size, children }: ButtonProps) {
-  return (
-    <button className={button({ intent, size })}>
-      {children}
-    </button>
-  )
+  return <button className={button({ intent, size })}>{children}</button>;
 }
 
 // Usage
-<Button intent="danger" size="lg">Delete</Button>
+<Button intent="danger" size="lg">
+  Delete
+</Button>;
 ```
 
 ## Customizing Tailwind
@@ -503,22 +504,22 @@ export default {
       colors: {
         // Custom brand colors
         brand: {
-          50: '#f0f9ff',
-          500: '#3b82f6',
-          900: '#1e3a8a',
+          50: "#f0f9ff",
+          500: "#3b82f6",
+          900: "#1e3a8a",
         },
         // Single color
-        'wizard-purple': '#7c3aed',
+        "wizard-purple": "#7c3aed",
       },
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
+        display: ["Playfair Display", "serif"],
       },
       spacing: {
-        '128': '32rem',
+        128: "32rem",
       },
     },
   },
-}
+};
 ```
 
 ### Using Custom Values
@@ -541,6 +542,7 @@ export default {
 ## VS Code Setup
 
 Install the **Tailwind CSS IntelliSense** extension for:
+
 - Autocomplete for class names
 - Hover preview of CSS
 - Linting for errors
@@ -551,6 +553,7 @@ Install the **Tailwind CSS IntelliSense** extension for:
 ### Exercise 1: Style a Wizard Card
 
 Create a styled wizard profile card with:
+
 - Name, house, and power level
 - House-colored accent (Gryffin = red, Serpent = green, etc.)
 - Hover effect
@@ -559,6 +562,7 @@ Create a styled wizard profile card with:
 ### Exercise 2: Form with Validation Styles
 
 Build a login form with:
+
 - Email and password fields
 - Error states (red border, error message)
 - Success states (green border)
@@ -568,6 +572,7 @@ Build a login form with:
 ### Exercise 3: Responsive Dashboard
 
 Create a dashboard layout with:
+
 - Sidebar (hidden on mobile, visible on desktop)
 - Header with navigation
 - Main content area with card grid

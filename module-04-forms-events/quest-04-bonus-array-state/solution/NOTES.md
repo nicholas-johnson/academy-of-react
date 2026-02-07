@@ -13,25 +13,29 @@ Store arrays in state just like any other value!
 ### 2. CRUD Operations
 
 **Create (Add)**:
+
 ```jsx
 setStudents([...students, newStudent]);
 ```
 
 **Read (Display)**:
+
 ```jsx
-students.map(student => <StudentCard key={student.id} {...student} />)
+students.map((student) => <StudentCard key={student.id} {...student} />);
 ```
 
 **Update**:
+
 ```jsx
-setStudents(students.map(s => 
-  s.id === editingId ? { ...s, ...formData } : s
-));
+setStudents(
+  students.map((s) => (s.id === editingId ? { ...s, ...formData } : s)),
+);
 ```
 
 **Delete**:
+
 ```jsx
-setStudents(students.filter(s => s.id !== id));
+setStudents(students.filter((s) => s.id !== id));
 ```
 
 ### 3. Form State
@@ -40,7 +44,7 @@ setStudents(students.filter(s => s.id !== id));
 const [formData, setFormData] = useState({
   name: "",
   house: "Valor",
-  level: 1
+  level: 1,
 });
 ```
 
@@ -60,26 +64,28 @@ Input value controlled by state!
 ## Array Update Patterns
 
 **❌ Wrong: Mutating directly**
+
 ```jsx
 students.push(newStudent); // Don't mutate!
 setStudents(students);
 ```
 
 **✅ Right: Create new array**
+
 ```jsx
 setStudents([...students, newStudent]);
 ```
 
 **❌ Wrong: Modifying element**
+
 ```jsx
 students[0].name = "New Name"; // Don't mutate!
 ```
 
 **✅ Right: Map with new object**
+
 ```jsx
-setStudents(students.map((s, i) => 
-  i === 0 ? { ...s, name: "New Name" } : s
-));
+setStudents(students.map((s, i) => (i === 0 ? { ...s, name: "New Name" } : s)));
 ```
 
 ## Search/Filter Pattern
@@ -87,8 +93,8 @@ setStudents(students.map((s, i) =>
 ```jsx
 const [search, setSearch] = useState("");
 
-const filtered = students.filter(s =>
-  s.name.toLowerCase().includes(search.toLowerCase())
+const filtered = students.filter((s) =>
+  s.name.toLowerCase().includes(search.toLowerCase()),
 );
 ```
 
@@ -116,6 +122,7 @@ Validate before updating state.
 ## Module 4 Complete!
 
 You now master:
+
 - ✅ useState hook basics
 - ✅ Multiple state variables
 - ✅ Complex state (objects/arrays)
@@ -125,9 +132,3 @@ You now master:
 **Congratulations!** You've completed Phase 1 (Modules 1-4) - JavaScript Basics with React!
 
 **Next Phase**: Modules 5-8 will introduce Vite, forms, lists, and side effects!
-
-
-
-
-
-

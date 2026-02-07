@@ -35,7 +35,7 @@ const students = [
   { name: "Thor Ironforge", house: "Gryffin", magicLevel: 62, health: 100 },
   { name: "Luna Starlight", house: "Hufflepuff", magicLevel: 38, health: 100 },
   { name: "Draco Shadowmere", house: "Slytherin", magicLevel: 55, health: 100 },
-  { name: "Finn Earthshaker", house: "Gryffin", magicLevel: 41, health: 100 }
+  { name: "Finn Earthshaker", house: "Gryffin", magicLevel: 41, health: 100 },
 ];
 ```
 
@@ -54,41 +54,46 @@ const students = [
 <summary>Click for hints</summary>
 
 **Hint 1**: You can create an array of React elements using a for loop:
+
 ```javascript
 const studentElements = [];
 for (let i = 0; i < students.length; i++) {
   const student = students[i];
-  const element = React.createElement('div', null, student.name);
+  const element = React.createElement("div", null, student.name);
   studentElements.push(element);
 }
 ```
 
 **Hint 2**: Or use the array .map() method (more common in React):
+
 ```javascript
-const studentElements = students.map(student => {
-  return React.createElement('div', null, student.name);
+const studentElements = students.map((student) => {
+  return React.createElement("div", null, student.name);
 });
 ```
 
 **Hint 3**: Pass the array of elements as children:
+
 ```javascript
-React.createElement('div', null, ...studentElements)
+React.createElement("div", null, ...studentElements);
 ```
 
 **Hint 4**: Add a className prop for styling:
+
 ```javascript
 React.createElement('div', { className: 'student-card' }, ...)
 ```
 
 **Hint 5**: Create nested elements for each stat:
+
 ```javascript
 React.createElement(
-  'div',
-  { className: 'student-card' },
-  React.createElement('h3', null, student.name),
-  React.createElement('p', null, `House: ${student.house}`),
-  React.createElement('p', null, `Magic Level: ${student.magicLevel}`)
-)
+  "div",
+  { className: "student-card" },
+  React.createElement("h3", null, student.name),
+  React.createElement("p", null, `House: ${student.house}`),
+  React.createElement("p", null, `Magic Level: ${student.magicLevel}`),
+);
 ```
 
 </details>
@@ -103,12 +108,13 @@ Add these enhancements:
 4. **Sorting**: Display students sorted by magicLevel (highest first)
 
 Bonus tip: For house colors, you could use:
+
 ```javascript
 const houseColors = {
-  'Gryffin': '#FFD700',
-  'Ravenclaw': '#00B4D8',
-  'Hufflepuff': '#FFB703',
-  'Slytherin': '#06A77D'
+  Gryffin: "#FFD700",
+  Ravenclaw: "#00B4D8",
+  Hufflepuff: "#FFB703",
+  Slytherin: "#06A77D",
 };
 ```
 
@@ -117,4 +123,3 @@ const houseColors = {
 **Congratulations!** You've completed Module 1!
 
 **Next Module**: [Module 2: JSX and Components](../../module-02-jsx-components/) — Learn the modern JSX syntax that makes React much more readable!
-

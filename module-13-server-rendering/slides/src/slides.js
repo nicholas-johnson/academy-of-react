@@ -1,32 +1,32 @@
 export const slides = [
   {
-    type: 'title',
+    type: "title",
     content: {
-      title: 'Modern Server Rendering',
-      subtitle: 'Module 13: Next.js, Remix, and Astro',
-      emoji: '🌐'
-    }
+      title: "Modern Server Rendering",
+      subtitle: "Module 13: Next.js, Remix, and Astro",
+      emoji: "🌐",
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'The Problem with Client-Side React',
+      title: "The Problem with Client-Side React",
       points: [
-        '📄 Empty HTML sent to browser — bad for SEO',
-        '⏳ User sees blank screen until JS loads',
-        '📱 Slow on mobile/low-powered devices',
-        '🔄 Data fetching starts after component mounts',
-        '🌍 Poor performance on slow networks'
+        "📄 Empty HTML sent to browser — bad for SEO",
+        "⏳ User sees blank screen until JS loads",
+        "📱 Slow on mobile/low-powered devices",
+        "🔄 Data fetching starts after component mounts",
+        "🌍 Poor performance on slow networks",
       ],
-      emoji: '😰'
-    }
+      emoji: "😰",
+    },
   },
   {
-    type: 'comparison',
+    type: "comparison",
     content: {
-      title: 'CSR vs SSR',
+      title: "CSR vs SSR",
       left: {
-        label: 'Client-Side Rendering (CSR)',
+        label: "Client-Side Rendering (CSR)",
         code: `<!-- What the server sends -->
 <html>
   <body>
@@ -38,10 +38,10 @@ export const slides = [
 // Browser downloads JS
 // JS executes
 // React renders
-// THEN user sees content`
+// THEN user sees content`,
       },
       right: {
-        label: 'Server-Side Rendering (SSR)',
+        label: "Server-Side Rendering (SSR)",
         code: `<!-- What the server sends -->
 <html>
   <body>
@@ -55,62 +55,62 @@ export const slides = [
   </body>
 </html>
 
-// User sees content IMMEDIATELY`
-      }
-    }
+// User sees content IMMEDIATELY`,
+      },
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'Server Rendering Benefits',
+      title: "Server Rendering Benefits",
       points: [
-        '⚡ Faster First Contentful Paint (FCP)',
-        '🔍 Better SEO — crawlers see real content',
-        '📱 Works without JavaScript (progressive enhancement)',
-        '🚀 Data fetched on server — closer to database',
-        '🔐 Sensitive logic stays on server'
+        "⚡ Faster First Contentful Paint (FCP)",
+        "🔍 Better SEO — crawlers see real content",
+        "📱 Works without JavaScript (progressive enhancement)",
+        "🚀 Data fetched on server — closer to database",
+        "🔐 Sensitive logic stays on server",
       ],
-      emoji: '✨'
-    }
+      emoji: "✨",
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'Three Modern Approaches',
+      title: "Three Modern Approaches",
       points: [
-        '▲ Next.js — Hybrid rendering, Server Components, Vercel',
-        '💿 Remix — Web standards, progressive enhancement, loaders',
-        '🚀 Astro — Content-first, islands architecture, multi-framework'
+        "▲ Next.js — Hybrid rendering, Server Components, Vercel",
+        "💿 Remix — Web standards, progressive enhancement, loaders",
+        "🚀 Astro — Content-first, islands architecture, multi-framework",
       ],
-      emoji: '🛠️'
-    }
+      emoji: "🛠️",
+    },
   },
   {
-    type: 'title',
+    type: "title",
     content: {
-      title: '▲ Next.js',
-      subtitle: 'The React Framework for Production',
-      emoji: '▲'
-    }
+      title: "▲ Next.js",
+      subtitle: "The React Framework for Production",
+      emoji: "▲",
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'Next.js Key Features',
+      title: "Next.js Key Features",
       points: [
-        '📁 File-based routing — pages are files',
-        '⚛️ Server Components — render on server by default',
-        '🔄 Hybrid rendering — static, SSR, or client per page',
-        '⚡ Streaming — progressive page loading',
-        '🎯 Server Actions — mutations without API routes'
+        "📁 File-based routing — pages are files",
+        "⚛️ Server Components — render on server by default",
+        "🔄 Hybrid rendering — static, SSR, or client per page",
+        "⚡ Streaming — progressive page loading",
+        "🎯 Server Actions — mutations without API routes",
       ],
-      emoji: '▲'
-    }
+      emoji: "▲",
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Next.js App Router Structure',
+      title: "Next.js App Router Structure",
       code: `app/
 ├── layout.js          # Root layout (wraps all pages)
 ├── page.js            # Home page (/)
@@ -125,17 +125,17 @@ export const slides = [
 
 // File = Route. Folders = URL segments.`,
       highlights: [
-        'page.js = route component',
-        'layout.js = shared wrapper',
-        '[id] = dynamic segment',
-        'Nested folders = nested routes'
-      ]
-    }
+        "page.js = route component",
+        "layout.js = shared wrapper",
+        "[id] = dynamic segment",
+        "Nested folders = nested routes",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Server Components (Default)',
+      title: "Server Components (Default)",
       code: `// app/spells/page.js
 // This runs on the SERVER — no "use client" directive
 
@@ -158,17 +158,17 @@ async function SpellsPage() {
 
 export default SpellsPage`,
       highlights: [
-        'async component — fetch in render!',
-        'Runs on server only',
-        'No useState, no useEffect',
-        'Data fetched before HTML sent'
-      ]
-    }
+        "async component — fetch in render!",
+        "Runs on server only",
+        "No useState, no useEffect",
+        "Data fetched before HTML sent",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Client Components',
+      title: "Client Components",
       code: `// app/components/SpellFilter.js
 "use client"  // 👈 This makes it a Client Component
 
@@ -195,16 +195,16 @@ export function SpellFilter({ onFilter }) {
 // - Browser-only APIs`,
       highlights: [
         '"use client" at top of file',
-        'Now you can use hooks',
-        'Hydrates on client',
-        'Use sparingly — server is default'
-      ]
-    }
+        "Now you can use hooks",
+        "Hydrates on client",
+        "Use sparingly — server is default",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Server Actions',
+      title: "Server Actions",
       code: `// app/spells/new/page.js
 async function addSpell(formData) {
   "use server"  // 👈 This runs on the server!
@@ -227,38 +227,38 @@ export default function NewSpellPage() {
 }`,
       highlights: [
         '"use server" marks server action',
-        'Form submits to server function',
-        'No API route needed',
-        'Works without JavaScript!'
-      ]
-    }
-  },
-  {
-    type: 'title',
-    content: {
-      title: '💿 Remix',
-      subtitle: 'Full Stack Web Framework',
-      emoji: '💿'
-    }
-  },
-  {
-    type: 'standard',
-    content: {
-      title: 'Remix Philosophy',
-      points: [
-        '🌐 Web standards first — uses native fetch, FormData, Response',
-        '📝 Forms are the API — no separate endpoint needed',
-        '🔄 Loaders load data — actions mutate data',
-        '⚡ Progressive enhancement — works without JS',
-        '🎯 Nested routes — parallel data loading'
+        "Form submits to server function",
+        "No API route needed",
+        "Works without JavaScript!",
       ],
-      emoji: '💿'
-    }
+    },
   },
   {
-    type: 'code',
+    type: "title",
     content: {
-      title: 'Remix Loaders',
+      title: "💿 Remix",
+      subtitle: "Full Stack Web Framework",
+      emoji: "💿",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Remix Philosophy",
+      points: [
+        "🌐 Web standards first — uses native fetch, FormData, Response",
+        "📝 Forms are the API — no separate endpoint needed",
+        "🔄 Loaders load data — actions mutate data",
+        "⚡ Progressive enhancement — works without JS",
+        "🎯 Nested routes — parallel data loading",
+      ],
+      emoji: "💿",
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Remix Loaders",
       code: `// app/routes/spells.jsx
 import { json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react"
@@ -282,17 +282,17 @@ export default function SpellsPage() {
   )
 }`,
       highlights: [
-        'loader() fetches data on server',
-        'useLoaderData() accesses it',
-        'No loading states needed',
-        'Data ready on first render'
-      ]
-    }
+        "loader() fetches data on server",
+        "useLoaderData() accesses it",
+        "No loading states needed",
+        "Data ready on first render",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Remix Actions',
+      title: "Remix Actions",
       code: `// app/routes/spells.new.jsx
 import { redirect } from "@remix-run/node"
 import { Form } from "@remix-run/react"
@@ -317,39 +317,39 @@ export default function NewSpell() {
 
 // Form works even with JavaScript disabled!`,
       highlights: [
-        'action() handles POST/PUT/DELETE',
-        '<Form> progressively enhances',
-        'Standard web form behavior',
-        'redirect() for navigation'
-      ]
-    }
-  },
-  {
-    type: 'title',
-    content: {
-      title: '🚀 Astro',
-      subtitle: 'The Web Framework for Content',
-      emoji: '🚀'
-    }
-  },
-  {
-    type: 'standard',
-    content: {
-      title: 'Astro Philosophy',
-      points: [
-        '📄 Content-focused — ships zero JS by default',
-        '🏝️ Islands architecture — hydrate only what needs it',
-        '🔀 Multi-framework — use React, Vue, Svelte together',
-        '⚡ Static-first — pre-renders everything possible',
-        '🎯 Partial hydration — client:load, client:visible, etc.'
+        "action() handles POST/PUT/DELETE",
+        "<Form> progressively enhances",
+        "Standard web form behavior",
+        "redirect() for navigation",
       ],
-      emoji: '🚀'
-    }
+    },
   },
   {
-    type: 'code',
+    type: "title",
     content: {
-      title: 'Astro Components',
+      title: "🚀 Astro",
+      subtitle: "The Web Framework for Content",
+      emoji: "🚀",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Astro Philosophy",
+      points: [
+        "📄 Content-focused — ships zero JS by default",
+        "🏝️ Islands architecture — hydrate only what needs it",
+        "🔀 Multi-framework — use React, Vue, Svelte together",
+        "⚡ Static-first — pre-renders everything possible",
+        "🎯 Partial hydration — client:load, client:visible, etc.",
+      ],
+      emoji: "🚀",
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Astro Components",
       code: `---
 // src/pages/spells.astro
 // This is the "frontmatter" — runs at build time
@@ -374,17 +374,17 @@ const spells = await response.json()
 
 <!-- Zero JavaScript shipped! Pure HTML. -->`,
       highlights: [
-        '--- frontmatter runs at build',
-        'HTML templating below',
-        'No JS sent to client',
-        'Lightning fast pages'
-      ]
-    }
+        "--- frontmatter runs at build",
+        "HTML templating below",
+        "No JS sent to client",
+        "Lightning fast pages",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Astro Islands',
+      title: "Astro Islands",
       code: `---
 // src/pages/index.astro
 import SpellSearch from '../components/SpellSearch.jsx'
@@ -405,31 +405,47 @@ import StaticHeader from '../components/Header.astro'
 <!-- Never hydrate (static HTML only) -->
 <SpellSearch />`,
       highlights: [
-        'client:visible — lazy hydration',
-        'client:load — immediate hydration',
-        'client:idle — when browser is idle',
-        'No directive = static HTML'
-      ]
-    }
+        "client:visible — lazy hydration",
+        "client:load — immediate hydration",
+        "client:idle — when browser is idle",
+        "No directive = static HTML",
+      ],
+    },
   },
   {
-    type: 'rules',
+    type: "rules",
     content: {
-      title: 'When to Use Each',
+      title: "When to Use Each",
       rules: [
-        { rule: 'Next.js', example: 'Full apps, dashboards, e-commerce, hybrid static/dynamic', icon: '▲' },
-        { rule: 'Remix', example: 'Forms-heavy apps, progressive enhancement, web standards', icon: '💿' },
-        { rule: 'Astro', example: 'Blogs, docs, marketing sites, content-heavy', icon: '🚀' },
-        { rule: 'Plain React', example: 'SPAs, internal tools, no SEO needs', icon: '⚛️' }
-      ]
-    }
+        {
+          rule: "Next.js",
+          example: "Full apps, dashboards, e-commerce, hybrid static/dynamic",
+          icon: "▲",
+        },
+        {
+          rule: "Remix",
+          example: "Forms-heavy apps, progressive enhancement, web standards",
+          icon: "💿",
+        },
+        {
+          rule: "Astro",
+          example: "Blogs, docs, marketing sites, content-heavy",
+          icon: "🚀",
+        },
+        {
+          rule: "Plain React",
+          example: "SPAs, internal tools, no SEO needs",
+          icon: "⚛️",
+        },
+      ],
+    },
   },
   {
-    type: 'comparison',
+    type: "comparison",
     content: {
-      title: 'Framework Comparison',
+      title: "Framework Comparison",
       left: {
-        label: 'Rendering',
+        label: "Rendering",
         code: `Next.js:
   - Server Components (default)
   - Client Components ("use client")
@@ -444,10 +460,10 @@ Remix:
 Astro:
   - Static (default)
   - SSR (opt-in)
-  - Islands (partial hydration)`
+  - Islands (partial hydration)`,
       },
       right: {
-        label: 'Data Loading',
+        label: "Data Loading",
         code: `Next.js:
   - async components
   - Server Actions
@@ -461,42 +477,42 @@ Remix:
 Astro:
   - Frontmatter (---)
   - fetch at build time
-  - API routes for dynamic`
-      }
-    }
+  - API routes for dynamic`,
+      },
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'Key Concepts Summary',
+      title: "Key Concepts Summary",
       points: [
-        '🖥️ SSR — Render HTML on server, send complete page',
-        '📄 SSG — Generate HTML at build time',
-        '⚛️ Server Components — React components that run on server',
-        '🏝️ Islands — Hydrate only interactive parts',
-        '🔄 Hydration — Making static HTML interactive'
+        "🖥️ SSR — Render HTML on server, send complete page",
+        "📄 SSG — Generate HTML at build time",
+        "⚛️ Server Components — React components that run on server",
+        "🏝️ Islands — Hydrate only interactive parts",
+        "🔄 Hydration — Making static HTML interactive",
       ],
-      emoji: '📚'
-    }
+      emoji: "📚",
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'Module 13 Paths',
+      title: "Module 13 Paths",
       points: [
-        '▲ Next.js Path — App Router, Server Components, Server Actions',
-        '💿 Remix Path — Loaders, Actions, Nested Routes',
-        '🚀 Astro Path — Static Generation, Islands Architecture'
+        "▲ Next.js Path — App Router, Server Components, Server Actions",
+        "💿 Remix Path — Loaders, Actions, Nested Routes",
+        "🚀 Astro Path — Static Generation, Islands Architecture",
       ],
-      emoji: '🛤️'
-    }
+      emoji: "🛤️",
+    },
   },
   {
-    type: 'title',
+    type: "title",
     content: {
-      title: 'Go Full Stack!',
-      subtitle: 'Choose your path and build for the web',
-      emoji: '🚀'
-    }
-  }
+      title: "Go Full Stack!",
+      subtitle: "Choose your path and build for the web",
+      emoji: "🚀",
+    },
+  },
 ];

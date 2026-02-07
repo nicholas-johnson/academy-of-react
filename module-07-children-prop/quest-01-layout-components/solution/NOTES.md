@@ -8,7 +8,7 @@ The `children` prop is whatever you put between a component's opening and closin
 
 ```jsx
 <Card>
-  <h3>Title</h3>   {/* This becomes children */}
+  <h3>Title</h3> {/* This becomes children */}
   <p>Content</p>
 </Card>
 ```
@@ -21,7 +21,7 @@ Card, Section, and Modal all "wrap" their children:
 function Card({ children }) {
   return (
     <div className="card">
-      {children}  {/* Render whatever was passed in */}
+      {children} {/* Render whatever was passed in */}
     </div>
   );
 }
@@ -35,9 +35,9 @@ Layout uses multiple "slots" — specific props for different areas:
 function Layout({ header, sidebar, children }) {
   return (
     <div className="layout">
-      <header>{header}</header>      {/* Named slot */}
-      <aside>{sidebar}</aside>       {/* Named slot */}
-      <main>{children}</main>        {/* Default slot */}
+      <header>{header}</header> {/* Named slot */}
+      <aside>{sidebar}</aside> {/* Named slot */}
+      <main>{children}</main> {/* Default slot */}
     </div>
   );
 }
@@ -56,11 +56,11 @@ Small components combine to build complex UIs:
 
 ```jsx
 function Modal({ isOpen, onClose, title, children }) {
-  if (!isOpen) return null;  // Don't render if closed
-  
+  if (!isOpen) return null; // Don't render if closed
+
   return (
     <div className="overlay" onClick={onClose}>
-      <div className="modal" onClick={e => e.stopPropagation()}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
         {/* stopPropagation prevents closing when clicking inside */}
         <h3>{title}</h3>
         {children}
@@ -72,12 +72,12 @@ function Modal({ isOpen, onClose, title, children }) {
 
 ## When to Use children
 
-| Use children when... | Use props when... |
-|---------------------|------------------|
-| Content is JSX | Content is simple data |
+| Use children when...        | Use props when...            |
+| --------------------------- | ---------------------------- |
+| Content is JSX              | Content is simple data       |
 | User decides what to render | Component controls rendering |
-| Component wraps/decorates | Specific structure required |
-| Maximum flexibility needed | Data transformation needed |
+| Component wraps/decorates   | Specific structure required  |
+| Maximum flexibility needed  | Data transformation needed   |
 
 ## Common Mistakes
 

@@ -1,49 +1,49 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  const [incantation, setIncantation] = useState('')
-  const [lastSaved, setLastSaved] = useState(null)
-  const [saveStatus, setSaveStatus] = useState('') // 'saving' or 'saved'
+  const [incantation, setIncantation] = useState("");
+  const [lastSaved, setLastSaved] = useState(null);
+  const [saveStatus, setSaveStatus] = useState(""); // 'saving' or 'saved'
 
   // Load from localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem('incantation')
-    const timestamp = localStorage.getItem('lastSaved')
+    const saved = localStorage.getItem("incantation");
+    const timestamp = localStorage.getItem("lastSaved");
     if (saved) {
-      setIncantation(saved)
-      setLastSaved(timestamp ? new Date(timestamp) : null)
+      setIncantation(saved);
+      setLastSaved(timestamp ? new Date(timestamp) : null);
     }
-  }, [])
+  }, []);
 
   // Debounced save to localStorage
   useEffect(() => {
-    if (incantation === '') return // Don't save empty
+    if (incantation === "") return; // Don't save empty
 
-    setSaveStatus('saving')
+    setSaveStatus("saving");
 
     // Debounce: wait 1 second after user stops typing
     const timeoutId = setTimeout(() => {
-      localStorage.setItem('incantation', incantation)
-      const now = new Date().toISOString()
-      localStorage.setItem('lastSaved', now)
-      setLastSaved(new Date(now))
-      setSaveStatus('saved')
+      localStorage.setItem("incantation", incantation);
+      const now = new Date().toISOString();
+      localStorage.setItem("lastSaved", now);
+      setLastSaved(new Date(now));
+      setSaveStatus("saved");
 
       // Clear saved status after 2 seconds
-      setTimeout(() => setSaveStatus(''), 2000)
-    }, 1000)
+      setTimeout(() => setSaveStatus(""), 2000);
+    }, 1000);
 
     // Cleanup: cancel timeout if user types again
-    return () => clearTimeout(timeoutId)
-  }, [incantation])
+    return () => clearTimeout(timeoutId);
+  }, [incantation]);
 
   const clearIncantation = () => {
-    setIncantation('')
-    localStorage.removeItem('incantation')
-    localStorage.removeItem('lastSaved')
-    setLastSaved(null)
-  }
+    setIncantation("");
+    localStorage.removeItem("incantation");
+    localStorage.removeItem("lastSaved");
+    setLastSaved(null);
+  };
 
   return (
     <div className="app">
@@ -62,10 +62,10 @@ function App() {
 
         <div className="status-bar">
           <div className="save-status">
-            {saveStatus === 'saving' && (
+            {saveStatus === "saving" && (
               <span className="status saving">💾 Saving...</span>
             )}
-            {saveStatus === 'saved' && (
+            {saveStatus === "saved" && (
               <span className="status saved">✓ Saved!</span>
             )}
           </div>
@@ -92,7 +92,7 @@ function App() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

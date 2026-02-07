@@ -26,7 +26,7 @@ Each piece of state is independent!
 function train() {
   // ❌ Wrong: Don't mutate directly
   strength = strength + 5;
-  
+
   // ✅ Right: Use setter function
   setStrength(strength + 5);
 }
@@ -40,9 +40,7 @@ When state changes → component re-renders → UI updates automatically!
 
 ```jsx
 // Click button
-<button onClick={() => setStrength(strength + 5)}>
-  Train
-</button>
+<button onClick={() => setStrength(strength + 5)}>Train</button>
 
 // State updates → Component re-renders → New value displays
 ```
@@ -63,9 +61,3 @@ Recalculated every render based on current state!
 ✅ Don't duplicate state (compute instead)
 
 **Next**: Module 3 Quest 2 handles complex state!
-
-
-
-
-
-

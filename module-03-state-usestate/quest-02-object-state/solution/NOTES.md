@@ -8,7 +8,7 @@
 const [brewing, setBrewing] = useState({
   currentStep: 0,
   isComplete: false,
-  success: null
+  success: null,
 });
 ```
 
@@ -19,7 +19,7 @@ Group related state into a single object when values change together!
 ```jsx
 setBrewing({
   ...brewing,
-  currentStep: brewing.currentStep + 1
+  currentStep: brewing.currentStep + 1,
 });
 ```
 
@@ -48,11 +48,13 @@ Calculate display values from current state - don't store computed values.
 ## When to Use Object State
 
 **Use an object when:**
+
 - Values are conceptually related (all describe one "thing")
 - Values often change together
 - You want to reset multiple values at once
 
 **Use separate useState calls when:**
+
 - Values are independent
 - They change at different times
 - They're used in different parts of the component

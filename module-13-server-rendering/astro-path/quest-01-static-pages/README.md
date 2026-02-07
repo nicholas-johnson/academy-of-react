@@ -7,6 +7,7 @@
 ## Objective
 
 Build an Academy Knowledge Base with:
+
 - Static pages for spell documentation (zero JS!)
 - React island for interactive search
 - React island for filterable spell list
@@ -25,6 +26,7 @@ Build an Academy Knowledge Base with:
 ### 1. Static Spell Pages
 
 Create `src/pages/spells/index.astro`:
+
 ```astro
 ---
 import Layout from '../../layouts/Layout.astro';
@@ -35,7 +37,7 @@ const spells = await getCollection('spells');
 
 <Layout title="Spell Directory">
   <h1>All Spells</h1>
-  
+
   <!-- Pure HTML - No JavaScript shipped! -->
   {spells.map((spell) => (
     <div class="spell-card">
@@ -59,17 +61,19 @@ const spells = await getCollection('spells');
 ### 2. Interactive Search Island
 
 Create `src/islands/SearchBar.jsx`:
+
 ```jsx
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function SearchBar({ spells }) {
-  const [search, setSearch] = useState('');
-  
-  const filtered = spells.filter(spell =>
-    spell.data.name.toLowerCase().includes(search.toLowerCase()) ||
-    spell.data.description.toLowerCase().includes(search.toLowerCase())
+  const [search, setSearch] = useState("");
+
+  const filtered = spells.filter(
+    (spell) =>
+      spell.data.name.toLowerCase().includes(search.toLowerCase()) ||
+      spell.data.description.toLowerCase().includes(search.toLowerCase()),
   );
-  
+
   return (
     <div>
       <input
@@ -77,9 +81,9 @@ export default function SearchBar({ spells }) {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search spells..."
-        style={{ padding: '0.5rem', width: '100%' }}
+        style={{ padding: "0.5rem", width: "100%" }}
       />
-      
+
       <div>
         {filtered.length === 0 && <p>No spells found</p>}
         {filtered.map((spell) => (
@@ -97,6 +101,7 @@ export default function SearchBar({ spells }) {
 ### 3. Use Island in Page
 
 Update `src/pages/spells/search.astro`:
+
 ```astro
 ---
 import Layout from '../../layouts/Layout.astro';
@@ -108,7 +113,7 @@ const spells = await getCollection('spells');
 
 <Layout title="Search Spells">
   <h1>Search Spells</h1>
-  
+
   <!-- React island - loads immediately -->
   <SearchBar client:load spells={spells} />
 </Layout>
@@ -117,27 +122,29 @@ const spells = await getCollection('spells');
 ### 4. Content Collections
 
 Create `src/content/config.ts`:
+
 ```ts
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const spellsCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     name: z.string(),
-    type: z.enum(['fire', 'ice', 'lightning', 'healing', 'defense']),
+    type: z.enum(["fire", "ice", "lightning", "healing", "defense"]),
     power: z.number().min(1).max(100),
     manaCost: z.number(),
     description: z.string(),
-    difficulty: z.enum(['beginner', 'intermediate', 'advanced', 'master']),
-  })
+    difficulty: z.enum(["beginner", "intermediate", "advanced", "master"]),
+  }),
 });
 
 export const collections = {
-  spells: spellsCollection
+  spells: spellsCollection,
 };
 ```
 
 Create content files in `src/content/spells/`:
+
 ```markdown
 ---
 # src/content/spells/fireball.md
@@ -155,28 +162,30 @@ The Fireball spell is one of the most iconic offensive spells...
 ### 5. Filterable Spell List
 
 Create `src/islands/SpellFilter.jsx`:
+
 ```jsx
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function SpellFilter({ spells }) {
-  const [typeFilter, setTypeFilter] = useState('all');
-  
-  const filtered = typeFilter === 'all'
-    ? spells
-    : spells.filter(s => s.data.type === typeFilter);
-  
+  const [typeFilter, setTypeFilter] = useState("all");
+
+  const filtered =
+    typeFilter === "all"
+      ? spells
+      : spells.filter((s) => s.data.type === typeFilter);
+
   return (
     <div>
       <div>
-        <button onClick={() => setTypeFilter('all')}>All</button>
-        <button onClick={() => setTypeFilter('fire')}>Fire</button>
-        <button onClick={() => setTypeFilter('ice')}>Ice</button>
-        <button onClick={() => setTypeFilter('lightning')}>Lightning</button>
-        <button onClick={() => setTypeFilter('healing')}>Healing</button>
+        <button onClick={() => setTypeFilter("all")}>All</button>
+        <button onClick={() => setTypeFilter("fire")}>Fire</button>
+        <button onClick={() => setTypeFilter("ice")}>Ice</button>
+        <button onClick={() => setTypeFilter("lightning")}>Lightning</button>
+        <button onClick={() => setTypeFilter("healing")}>Healing</button>
       </div>
-      
+
       <div>
-        {filtered.map(spell => (
+        {filtered.map((spell) => (
           <div key={spell.id}>
             <h3>{spell.data.name}</h3>
             <p>{spell.data.description}</p>
@@ -189,6 +198,7 @@ export default function SpellFilter({ spells }) {
 ```
 
 Use with `client:visible` directive:
+
 ```astro
 <!-- Only loads JS when scrolled into view! -->
 <SpellFilter client:visible spells={spells} />
@@ -196,13 +206,13 @@ Use with `client:visible` directive:
 
 ## Client Directives Comparison
 
-| Directive | When to Use | JS Load Time |
-|-----------|-------------|--------------|
-| `client:load` | Above-the-fold, critical | Page load |
-| `client:idle` | Important but not critical | Browser idle |
-| `client:visible` | Below-the-fold content | Scrolls into view |
-| `client:media` | Responsive components | Media query matches |
-| (none) | Static only | Never! |
+| Directive        | When to Use                | JS Load Time        |
+| ---------------- | -------------------------- | ------------------- |
+| `client:load`    | Above-the-fold, critical   | Page load           |
+| `client:idle`    | Important but not critical | Browser idle        |
+| `client:visible` | Below-the-fold content     | Scrolls into view   |
+| `client:media`   | Responsive components      | Media query matches |
+| (none)           | Static only                | Never!              |
 
 ## File Structure
 
@@ -237,7 +247,7 @@ src/
 ✅ At least 5 spell content files  
 ✅ Detail pages for individual spells  
 ✅ TypeScript types from Content Collections  
-✅ Build succeeds (`npm run build`)  
+✅ Build succeeds (`npm run build`)
 
 ## Hints
 
@@ -261,6 +271,7 @@ const data = await fetchData();
   h1 { color: blue; }
 </style>
 ```
+
 </details>
 
 <details>
@@ -282,6 +293,7 @@ const fireSpells = await getCollection('spells', ({ data }) => {
 });
 ---
 ```
+
 </details>
 
 <details>
@@ -306,11 +318,13 @@ const { spell } = Astro.props;
 <h1>{spell.data.name}</h1>
 <p>{spell.data.description}</p>
 ```
+
 </details>
 
 ## Performance Comparison
 
 Check bundle sizes:
+
 ```bash
 npm run build
 # Check dist/ folder size
@@ -333,9 +347,3 @@ npm run build
 ---
 
 **Next Quest**: [Quest 2: Islands Architecture →](../quest-02-islands-architecture/)
-
-
-
-
-
-

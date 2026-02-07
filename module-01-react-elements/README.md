@@ -7,6 +7,7 @@ Welcome to the Arcane Academy! You've just arrived at the grand Enrollment Hall,
 ## Learning Objectives
 
 By the end of this module, you will:
+
 - Understand how React creates elements using JavaScript
 - Work with JavaScript objects and arrays to represent data
 - Render elements to the DOM using ReactDOM
@@ -39,6 +40,7 @@ Start with the introduction slides before the demos:
 4. Use arrow keys or buttons to navigate
 
 The slides cover:
+
 - What is React?
 - Why learn React?
 - Course structure and resources
@@ -62,6 +64,7 @@ The demo (`demo/app.js`) shows:
 3. **Rendering to the DOM** using ReactDOM
 
 Key points to notice:
+
 - `React.createElement(type, props, ...children)` creates a React element
 - The first argument is the HTML tag (string) or component
 - The second argument is an object of properties/attributes
@@ -71,13 +74,15 @@ Key points to notice:
 ## Quests
 
 ### Quest 1: Basic Elements
+
 **Difficulty**: ⭐ Beginner
 
 Create a student object with your wizard's stats and render it using `createElement()`.
 
 [Start Quest →](./quest-01-basic-elements/)
 
-### Quest 2: Rendering Arrays  
+### Quest 2: Rendering Arrays
+
 **Difficulty**: ⭐⭐ Beginner-Intermediate
 
 Build an array of multiple students and render them as a list using `.map()`.
@@ -91,6 +96,7 @@ Once you've completed both quests, try this:
 **The Student Comparison Tool**
 
 Create a small application that:
+
 - Has TWO student objects with different stats
 - Calculates and displays which student is more powerful
 - Shows a comparison of their stats side-by-side
@@ -109,4 +115,3 @@ This combines object manipulation, createElement, event handling, and DOM update
 ---
 
 **Next Module**: [Module 2: JSX and Components](../module-02-jsx-components/) — Learn the modern JSX syntax that makes React much easier to read and write!
-

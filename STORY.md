@@ -13,21 +13,25 @@ The Academy is divided into four great houses, each with its own traditions:
 ### The Four Houses
 
 **House Gryffin** 🦁
+
 - Colors: Crimson and Gold
 - Traits: Bravery, bold component design, rapid prototyping
 - Specialty: Action-heavy interfaces, battle systems
 
 **House Ravenclaw** 🦅
-- Colors: Azure and Silver  
+
+- Colors: Azure and Silver
 - Traits: Wisdom, elegant architecture, optimization
 - Specialty: Performance tuning, complex state management
 
 **House Hufflepuff** 🦡
+
 - Colors: Gold and Black
 - Traits: Loyalty, accessibility, user-focused design
 - Specialty: Forms, user experience, inclusive interfaces
 
 **House Slytherin** 🐍
+
 - Colors: Emerald and Silver
 - Traits: Ambition, advanced techniques, cutting-edge features
 - Specialty: TypeScript mastery, custom hooks, architecture
@@ -46,6 +50,7 @@ Students build complete magical systems — registration forms, inventory manage
 
 **Phase 3: The Grand Battle**
 The final phase! Students from competing academies face off in a massive battle simulation. They must build fully functional battle systems with real-time combat, complete with:
+
 - Team management
 - Spell casting mechanics
 - Health and mana tracking
@@ -56,29 +61,35 @@ The academy with the best-performing battle system wins eternal glory and braggi
 ## Key Characters
 
 ### Headmaster Renderius the Wise
+
 Ancient wizard who founded the Academy centuries ago. Inventor of the State Crystal and champion of component-based magic. Serves as narrator throughout the course.
 
-### Professor Hooksweasel  
+### Professor Hooksweasel
+
 Master of Custom Spells (Hooks). Teaches advanced magic in Phase 3. Eccentric but brilliant, known for creating the most elegant reusable enchantments.
 
 ### Archmage Optima
+
 Specialist in Performance Magic. Arrived from the Eastern Academies. In Module 12, she reveals the secrets of memoization and lazy loading.
 
 ### The Rival Academies
 
 **Shadowmere Academy**
+
 - Dark magic specialists (but not evil!)
 - Focus on minimalist, efficient code
 - Led by Chancellor Vim
 - Known for brutal optimization
 
 **Brightspire Institute**
+
 - Light magic users
 - Emphasize beautiful UI and animations
 - Led by Dean Luminara
 - Famous for stunning visual effects
 
 **The Compiler Consortium**
+
 - TypeScript purists from the North
 - Type safety above all else
 - Led by Lord Strictus
@@ -87,10 +98,13 @@ Specialist in Performance Magic. Arrived from the Eastern Academies. In Module 1
 ## The Student's Journey (Your Story)
 
 ### Arrival (Module 1)
+
 You arrive at the Academy gates, clutching your acceptance letter. The grand Enrollment Hall awaits. You must register yourself in the Academy systems using the ancient createElement() incantations. Your first task: create your wizard profile.
 
 ### Early Training (Modules 2-4)
+
 You learn the Academy's systems:
+
 - The modern JSX runic language (much easier than createElement!)
 - How to share magical properties between spells
 - The power of State Crystals to track changing values
@@ -98,30 +112,36 @@ You learn the Academy's systems:
 You're settling in, making friends, tracking your growing power...
 
 ### The Announcement (Module 4)
+
 At the start of Phase 2, Headmaster Renderius makes a shocking announcement during the Morning Assembly: "The Wizarding War approaches. In six months, rival academies will arrive. We must prepare."
 
 The Academy shifts into preparation mode. You must build official systems:
+
 - Battle registration forms
-- Student ranking leaderboards  
+- Student ranking leaderboards
 - Quest management systems
 - Resource tracking dashboards
 
 ### Rising Tension (Modules 6-7)
+
 Training intensifies. Competitions between houses heat up. You're learning advanced techniques — list manipulation and timed magic (useEffect). The Academy Dashboard goes live, tracking every student's readiness.
 
 Rumors spread about the rival academies. "Shadowmere has a new secret weapon." "Brightspire's battle animations are unbeatable." "The Consortium never has bugs."
 
 ### The Arrival (Module 9)
-They're here. Three great airships descend upon the Academy grounds. The rival schools have arrived for the Wizarding War. 
+
+They're here. Three great airships descend upon the Academy grounds. The rival schools have arrived for the Wizarding War.
 
 Headmaster Renderius reveals Phase 3 training: TypeScript magic. "You must build a battle system so robust, so type-safe, that nothing can fail during combat."
 
 You learn:
+
 - Direct DOM control with refs
 - Shared consciousness through Context
 - Custom spell creation (hooks)
 
 ### The Tournament Begins (Module 12)
+
 The final challenge: Build the ultimate Battle Arena. Students from all academies watch as your creation comes to life:
 
 - Teams of wizards take their positions
@@ -136,14 +156,18 @@ Victory! (Or honorable defeat — either way, you've mastered React!)
 ## Magical Systems Explained
 
 ### Spells
+
 Spells are the basic unit of magical power. Each spell has:
+
 - **Type**: Fire, Ice, Lightning, or Healing
 - **Power**: Damage dealt (or healing provided)
 - **Mana Cost**: Energy required to cast
 - **Description**: What the spell does
 
 ### Student Stats
+
 Every wizard tracks:
+
 - **Health**: Life force (0 = defeated)
 - **Mana**: Magical energy for casting spells
 - **Magic Level**: Overall power (0-100)
@@ -151,7 +175,9 @@ Every wizard tracks:
 - **Wins/Losses**: Battle record
 
 ### Battle Mechanics
+
 When two wizards battle:
+
 1. Each takes turns casting spells
 2. Spell power is calculated (attacker's magicLevel + spell power + random factor)
 3. Damage is applied to defender's health
@@ -160,7 +186,9 @@ When two wizards battle:
 6. Winner gains experience and fame
 
 ### The Mana Economy
+
 Mana is crucial:
+
 - Starts at 100
 - Each spell costs mana
 - Regenerates slowly over time (1 point per 3 seconds)
@@ -170,6 +198,7 @@ Mana is crucial:
 ## Victory Conditions
 
 The Wizarding War is won by the academy whose battle system:
+
 1. **Functions flawlessly** (no bugs, no crashes)
 2. **Performs optimally** (smooth, fast, responsive)
 3. **Handles edge cases** (what if mana runs out? What if both wizards die simultaneously?)
@@ -178,6 +207,7 @@ The Wizarding War is won by the academy whose battle system:
 ## Beyond the War
 
 Upon completing the course, graduates of the Arcane Academy receive:
+
 - Certificate of React Mastery
 - The title of "Full Stack Wizard"
 - Ability to build production-ready React applications
@@ -190,8 +220,7 @@ But all carry with them the lessons learned at the Academy: clean code, thoughtf
 
 ---
 
-*"May your components be pure, your state immutable, and your bugs few."*  
+_"May your components be pure, your state immutable, and your bugs few."_  
 — Academy Motto
 
 **Now, brave apprentice, your story begins...**
-

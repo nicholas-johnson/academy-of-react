@@ -32,14 +32,16 @@ function WizardCard({ name, house, level }) {
 ### 3. Rendering Arrays with map()
 
 ```jsx
-{wizards.map(wizard => (
-  <WizardCard
-    key={wizard.id}
-    name={wizard.name}
-    house={wizard.house}
-    level={wizard.level}
-  />
-))}
+{
+  wizards.map((wizard) => (
+    <WizardCard
+      key={wizard.id}
+      name={wizard.name}
+      house={wizard.house}
+      level={wizard.level}
+    />
+  ));
+}
 ```
 
 ### 4. The key Prop
@@ -79,10 +81,14 @@ App
 
 ```jsx
 // ❌ Warning in console
-{wizards.map(w => <WizardCard name={w.name} />)}
+{
+  wizards.map((w) => <WizardCard name={w.name} />);
+}
 
 // ✅ No warning
-{wizards.map(w => <WizardCard key={w.id} name={w.name} />)}
+{
+  wizards.map((w) => <WizardCard key={w.id} name={w.name} />);
+}
 ```
 
 ## What's Next?

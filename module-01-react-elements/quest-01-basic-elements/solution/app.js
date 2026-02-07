@@ -18,21 +18,21 @@ const WizardCard = React.createElement(
       "p",
       null,
       React.createElement("strong", null, "House: "),
-      wizard.house
+      wizard.house,
     ),
     React.createElement(
       "p",
       null,
       React.createElement("strong", null, "Level: "),
-      wizard.level
+      wizard.level,
     ),
     React.createElement(
       "p",
       null,
       React.createElement("strong", null, "Specialty: "),
-      wizard.specialty
-    )
-  )
+      wizard.specialty,
+    ),
+  ),
 );
 
 // Render to the page

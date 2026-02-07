@@ -5,12 +5,14 @@
 Build a static student directory using Next.js App Router and Static Site Generation (SSG).
 
 ### Learning Objectives
+
 - File-based routing with App Router
 - Static generation with `generateStaticParams`
 - Server Components by default
 - Metadata API
 
 ### Key Concepts
+
 ```typescript
 // app/students/[id]/page.tsx
 export async function generateStaticParams() {
@@ -25,6 +27,7 @@ export default async function StudentPage({ params }: { params: { id: string } }
 ```
 
 ### What You'll Build
+
 - `/` - Homepage with student list
 - `/students/[id]` - Individual student pages (static)
 - `/about` - Static about page
@@ -36,12 +39,14 @@ export default async function StudentPage({ params }: { params: { id: string } }
 Create a spell management system with Server Actions for mutations.
 
 ### Learning Objectives
+
 - Server Actions for mutations
 - Client Components with "use client"
 - Server vs Client Components
 - Form actions without JavaScript
 
 ### Key Concepts
+
 ```typescript
 // app/actions.ts
 'use server'
@@ -68,6 +73,7 @@ export default function SpellsPage() {
 ```
 
 ### What You'll Build
+
 - Spell list with real-time updates
 - Create spell form (Server Action)
 - Delete spell button (Server Action)
@@ -80,12 +86,14 @@ export default function SpellsPage() {
 Build a battle simulation with Streaming and Suspense for progressive loading.
 
 ### Learning Objectives
+
 - Streaming with Suspense
 - Loading UI with `loading.tsx`
 - Error boundaries with `error.tsx`
 - Parallel data fetching
 
 ### Key Concepts
+
 ```typescript
 // app/battle/loading.tsx
 export default function Loading() {
@@ -110,6 +118,7 @@ export default function BattlePage() {
 ```
 
 ### What You'll Build
+
 - Battle simulation with streaming updates
 - Parallel loading of stats and history
 - Error handling
@@ -126,6 +135,7 @@ npm run dev
 ```
 
 ## Resources
+
 - [Next.js Docs](https://nextjs.org/docs)
 - [Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components)
 - [Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)

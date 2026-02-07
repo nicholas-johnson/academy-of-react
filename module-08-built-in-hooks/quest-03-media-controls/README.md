@@ -7,6 +7,7 @@ The Battle Arena records fights! Build a replay system with play/pause/restart c
 ## Your Mission
 
 Create a battle replay interface that:
+
 - Simulates a battle timeline (0-60 seconds)
 - Has Play, Pause, Restart controls
 - Updates progress bar
@@ -33,6 +34,7 @@ Create a battle replay interface that:
 ## Starter Code
 
 Starter includes battle events data. Add:
+
 - Ref for interval ID
 - State for current time and playing status
 - Play/pause/restart logic
@@ -46,4 +48,5 @@ Starter includes battle events data. Add:
 - Progress: `(currentTime / maxTime) * 100`
 
 ---
+
 [Solution](./solution/) | [Back to Module](../../)

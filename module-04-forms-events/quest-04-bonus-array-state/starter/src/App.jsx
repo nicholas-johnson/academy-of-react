@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
   // TODO: Add state for students array
   // const [students, setStudents] = useState([]);
-  
+
   // TODO: Add state for form inputs
   // const [name, setName] = useState('');
   // const [house, setHouse] = useState('');
   // etc...
-  
+
   // TODO: Create function to add a new student
   // function handleAddStudent(e) {
   //   e.preventDefault();
@@ -17,17 +17,17 @@ function App() {
   //   // Add to students array
   //   // Clear form
   // }
-  
+
   // TODO: Create function to remove a student
   // function handleRemoveStudent(id) { }
-  
+
   // TODO: Create function to edit a student (bonus)
-  
+
   return (
     <div>
       <h1>Quest 3: Roster Manager</h1>
       <p>Create a full CRUD application for managing students!</p>
-      
+
       <div className="roster-container">
         <div className="form-panel">
           <h2>Add New Student</h2>
@@ -36,7 +36,7 @@ function App() {
             {/* TODO: Add submit button */}
           </form>
         </div>
-        
+
         <div className="students-panel">
           <h2>Current Students</h2>
           {/* TODO: Display list of students */}
@@ -48,8 +48,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-

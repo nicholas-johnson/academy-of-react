@@ -6,11 +6,11 @@
 
 ```jsx
 // main.jsx
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom";
 
 <BrowserRouter>
   <App />
-</BrowserRouter>
+</BrowserRouter>;
 ```
 
 BrowserRouter is a **context provider** that must wrap your entire app. It provides routing context to all components, enabling `Link`, `useNavigate`, `useParams`, etc. to work.
@@ -35,9 +35,9 @@ BrowserRouter is a **context provider** that must wrap your entire app. It provi
 ### 3. NavLink for Active Styling
 
 ```jsx
-<NavLink 
-  to="/students" 
-  className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+<NavLink
+  to="/students"
+  className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
 >
   Students
 </NavLink>
@@ -52,9 +52,9 @@ function Layout() {
   return (
     <div>
       <nav>...</nav>
-      <Outlet />  {/* Child routes render here */}
+      <Outlet /> {/* Child routes render here */}
     </div>
-  )
+  );
 }
 ```
 
@@ -63,7 +63,9 @@ Outlet is a placeholder where child routes render.
 ### 5. The `end` Prop
 
 ```jsx
-<NavLink to="/" end>Home</NavLink>
+<NavLink to="/" end>
+  Home
+</NavLink>
 ```
 
 The `end` prop ensures "/" only matches exactly "/", not "/students" etc.

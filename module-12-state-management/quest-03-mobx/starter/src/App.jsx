@@ -1,46 +1,46 @@
-import { useState } from 'react'
+import { useState } from "react";
 // TODO: Import observer from 'mobx-react-lite'
 // TODO: Import academyStore from './store'
-import './App.css'
+import "./App.css";
 
-const HOUSES = ['Gryffin', 'Slytherin', 'Ravenclaw', 'Hufflepuff']
+const HOUSES = ["Gryffin", "Slytherin", "Ravenclaw", "Hufflepuff"];
 const HOUSE_COLORS = {
-  Gryffin: '#ae0001',
-  Slytherin: '#1a472a',
-  Ravenclaw: '#0e1a40',
-  Hufflepuff: '#ecb939'
-}
+  Gryffin: "#ae0001",
+  Slytherin: "#1a472a",
+  Ravenclaw: "#0e1a40",
+  Hufflepuff: "#ecb939",
+};
 
 // TODO: Wrap this component with observer()
 function App() {
-  const [name, setName] = useState('')
-  const [house, setHouse] = useState('Gryffin')
-  const [power, setPower] = useState(50)
+  const [name, setName] = useState("");
+  const [house, setHouse] = useState("Gryffin");
+  const [power, setPower] = useState(50);
 
   // TODO: Use academyStore instead of placeholder data
   // Placeholder data - replace with MobX store
   const students = [
-    { id: 1, name: 'Harry', house: 'Gryffin', power: 85 },
-    { id: 2, name: 'Hermione', house: 'Ravenclaw', power: 95 },
-    { id: 3, name: 'Draco', house: 'Slytherin', power: 70 },
-  ]
-  const houseFilter = 'all'
-  const sortBy = 'name'
-  const totalPower = students.reduce((sum, s) => sum + s.power, 0)
-  const averagePower = Math.round(totalPower / students.length)
+    { id: 1, name: "Harry", house: "Gryffin", power: 85 },
+    { id: 2, name: "Hermione", house: "Ravenclaw", power: 95 },
+    { id: 3, name: "Draco", house: "Slytherin", power: 70 },
+  ];
+  const houseFilter = "all";
+  const sortBy = "name";
+  const totalPower = students.reduce((sum, s) => sum + s.power, 0);
+  const averagePower = Math.round(totalPower / students.length);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    if (!name.trim()) return
-    
+    e.preventDefault();
+    if (!name.trim()) return;
+
     // TODO: academyStore.addStudent({ name, house, power })
-    console.log('TODO: Add student', { name, house, power })
-    setName('')
-    setPower(50)
-  }
+    console.log("TODO: Add student", { name, house, power });
+    setName("");
+    setPower(50);
+  };
 
   // TODO: Replace with academyStore.sortedStudents
-  const displayStudents = students
+  const displayStudents = students;
 
   return (
     <div className="app">
@@ -77,8 +77,10 @@ function App() {
                 required
               />
               <select value={house} onChange={(e) => setHouse(e.target.value)}>
-                {HOUSES.map(h => (
-                  <option key={h} value={h}>{h}</option>
+                {HOUSES.map((h) => (
+                  <option key={h} value={h}>
+                    {h}
+                  </option>
                 ))}
               </select>
             </div>
@@ -94,7 +96,9 @@ function App() {
                 />
               </label>
             </div>
-            <button type="submit" className="btn primary">Enroll</button>
+            <button type="submit" className="btn primary">
+              Enroll
+            </button>
           </form>
         </section>
 
@@ -102,23 +106,25 @@ function App() {
           <div className="roster-header">
             <h2>Student Roster</h2>
             <div className="controls">
-              <select 
-                value={houseFilter} 
+              <select
+                value={houseFilter}
                 onChange={(e) => {
                   // TODO: academyStore.setHouseFilter(e.target.value)
-                  console.log('TODO: Set filter', e.target.value)
+                  console.log("TODO: Set filter", e.target.value);
                 }}
               >
                 <option value="all">All Houses</option>
-                {HOUSES.map(h => (
-                  <option key={h} value={h}>{h}</option>
+                {HOUSES.map((h) => (
+                  <option key={h} value={h}>
+                    {h}
+                  </option>
                 ))}
               </select>
-              <select 
-                value={sortBy} 
+              <select
+                value={sortBy}
                 onChange={(e) => {
                   // TODO: academyStore.setSortBy(e.target.value)
-                  console.log('TODO: Set sort', e.target.value)
+                  console.log("TODO: Set sort", e.target.value);
                 }}
               >
                 <option value="name">Sort by Name</option>
@@ -131,36 +137,47 @@ function App() {
             {displayStudents.length === 0 ? (
               <p className="empty">No students enrolled</p>
             ) : (
-              displayStudents.map(student => (
-                <div 
-                  key={student.id} 
+              displayStudents.map((student) => (
+                <div
+                  key={student.id}
                   className="student-card"
                   style={{ borderLeftColor: HOUSE_COLORS[student.house] }}
                 >
                   <div className="student-info">
                     <h3>{student.name}</h3>
-                    <span className="house-badge" style={{ backgroundColor: HOUSE_COLORS[student.house] }}>
+                    <span
+                      className="house-badge"
+                      style={{ backgroundColor: HOUSE_COLORS[student.house] }}
+                    >
                       {student.house}
                     </span>
                   </div>
                   <div className="student-power">
                     <span className="power-value">{student.power}</span>
                     <div className="power-controls">
-                      <button onClick={() => {
-                        // TODO: academyStore.boostPower(student.id, -5)
-                        console.log('TODO: Decrease power')
-                      }}>-</button>
-                      <button onClick={() => {
-                        // TODO: academyStore.boostPower(student.id, 5)
-                        console.log('TODO: Increase power')
-                      }}>+</button>
+                      <button
+                        onClick={() => {
+                          // TODO: academyStore.boostPower(student.id, -5)
+                          console.log("TODO: Decrease power");
+                        }}
+                      >
+                        -
+                      </button>
+                      <button
+                        onClick={() => {
+                          // TODO: academyStore.boostPower(student.id, 5)
+                          console.log("TODO: Increase power");
+                        }}
+                      >
+                        +
+                      </button>
                     </div>
                   </div>
-                  <button 
+                  <button
                     className="remove-btn"
                     onClick={() => {
                       // TODO: academyStore.removeStudent(student.id)
-                      console.log('TODO: Remove student')
+                      console.log("TODO: Remove student");
                     }}
                   >
                     ×
@@ -172,7 +189,7 @@ function App() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

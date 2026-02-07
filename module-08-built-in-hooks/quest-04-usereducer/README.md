@@ -57,43 +57,47 @@ Create a spell inventory with these features:
 <summary>Click for hints</summary>
 
 **Hint 1**: Define your initial state:
+
 ```javascript
 const initialState = {
   spells: [
-    { id: 1, name: 'Fireball', power: 50, isFavorite: true },
-    { id: 2, name: 'Ice Shard', power: 35, isFavorite: false },
-  ]
-}
+    { id: 1, name: "Fireball", power: 50, isFavorite: true },
+    { id: 2, name: "Ice Shard", power: 35, isFavorite: false },
+  ],
+};
 ```
 
 **Hint 2**: Basic reducer structure:
+
 ```javascript
 function spellReducer(state, action) {
   switch (action.type) {
-    case 'ADD_SPELL':
-      return { ...state, spells: [...state.spells, action.spell] }
-    case 'REMOVE_SPELL':
-      return { 
-        ...state, 
-        spells: state.spells.filter(s => s.id !== action.id) 
-      }
+    case "ADD_SPELL":
+      return { ...state, spells: [...state.spells, action.spell] };
+    case "REMOVE_SPELL":
+      return {
+        ...state,
+        spells: state.spells.filter((s) => s.id !== action.id),
+      };
     // ... other cases
     default:
-      return state
+      return state;
   }
 }
 ```
 
 **Hint 3**: Using the reducer:
+
 ```javascript
-const [state, dispatch] = useReducer(spellReducer, { spells: initialSpells })
+const [state, dispatch] = useReducer(spellReducer, { spells: initialSpells });
 
 // Dispatch actions
-dispatch({ type: 'ADD_SPELL', spell: newSpell })
-dispatch({ type: 'UPGRADE_SPELL', id: 123 })
+dispatch({ type: "ADD_SPELL", spell: newSpell });
+dispatch({ type: "UPGRADE_SPELL", id: 123 });
 ```
 
 **Hint 4**: Upgrade spell action:
+
 ```javascript
 case 'UPGRADE_SPELL':
   return {
@@ -118,12 +122,12 @@ case 'UPGRADE_SPELL':
 
 ## When to Use useReducer
 
-| useState | useReducer |
-|----------|------------|
-| Simple values | Complex objects/arrays |
-| Independent updates | Related state values |
-| Few update patterns | Many action types |
-| Quick prototyping | Predictable updates |
+| useState            | useReducer             |
+| ------------------- | ---------------------- |
+| Simple values       | Complex objects/arrays |
+| Independent updates | Related state values   |
+| Few update patterns | Many action types      |
+| Quick prototyping   | Predictable updates    |
 
 ---
 

@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 
 // Wizard data - same as Module 1
 const wizard = {
@@ -9,7 +9,7 @@ const wizard = {
 };
 
 // TODO: Convert the Module 1 createElement code to JSX
-// 
+//
 // In Module 1, this was:
 //   React.createElement("div", { className: "wizard-card" },
 //     React.createElement("h1", { className: "wizard-name" }, wizard.name),

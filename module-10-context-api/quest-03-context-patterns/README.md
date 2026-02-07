@@ -3,6 +3,7 @@
 Create an AuthContext for managing user authentication state. Includes login form, protected dashboard, and logout functionality.
 
 ## Requirements
+
 - AuthContext with user state
 - Login function that creates user object
 - Logout function that clears user
@@ -11,6 +12,7 @@ Create an AuthContext for managing user authentication state. Includes login for
 - Conditional rendering based on auth state
 
 ## Acceptance Criteria
+
 - [ ] Context stores user object (or null)
 - [ ] Login creates user and updates context
 - [ ] Logout clears user state
@@ -19,6 +21,7 @@ Create an AuthContext for managing user authentication state. Includes login for
 - [ ] No prop drilling for auth state
 
 ## Hints
+
 - User object: `{ id, name, house, level }`
 - `isAuthenticated` can be `!!user`
 - Wrap App component with AuthProvider

@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
   // TODO: Create state for form data (name, spellType, role)
@@ -52,7 +52,7 @@ function App() {
         </button>
       </form>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

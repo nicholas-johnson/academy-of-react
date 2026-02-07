@@ -1,5 +1,5 @@
 // TODO: Import Routes, Route, NavLink, Outlet from 'react-router-dom'
-import './App.css'
+import "./App.css";
 
 // TODO: Create a Layout component that:
 // - Has a header with the academy title
@@ -31,23 +31,23 @@ function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // Students page component
 function Students() {
   const students = [
-    { id: 1, name: 'Harry', house: 'Gryffin', level: 5 },
-    { id: 2, name: 'Hermione', house: 'Ravenclaw', level: 7 },
-    { id: 3, name: 'Ron', house: 'Gryffin', level: 4 },
-    { id: 4, name: 'Luna', house: 'Ravenclaw', level: 6 },
-  ]
+    { id: 1, name: "Harry", house: "Gryffin", level: 5 },
+    { id: 2, name: "Hermione", house: "Ravenclaw", level: 7 },
+    { id: 3, name: "Ron", house: "Gryffin", level: 4 },
+    { id: 4, name: "Luna", house: "Ravenclaw", level: 6 },
+  ];
 
   return (
     <div className="page">
       <h2>👥 Students</h2>
       <div className="student-list">
-        {students.map(student => (
+        {students.map((student) => (
           <div key={student.id} className="student-card">
             <h3>{student.name}</h3>
             <p>House: {student.house}</p>
@@ -56,23 +56,23 @@ function Students() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 // Spells page component
 function Spells() {
   const spells = [
-    { id: 1, name: 'Fireball', element: '🔥' },
-    { id: 2, name: 'Ice Shield', element: '❄️' },
-    { id: 3, name: 'Lightning Bolt', element: '⚡' },
-    { id: 4, name: 'Healing Wave', element: '💚' },
-  ]
+    { id: 1, name: "Fireball", element: "🔥" },
+    { id: 2, name: "Ice Shield", element: "❄️" },
+    { id: 3, name: "Lightning Bolt", element: "⚡" },
+    { id: 4, name: "Healing Wave", element: "💚" },
+  ];
 
   return (
     <div className="page">
       <h2>📜 Spells</h2>
       <div className="spell-list">
-        {spells.map(spell => (
+        {spells.map((spell) => (
           <div key={spell.id} className="spell-card">
             <span className="spell-icon">{spell.element}</span>
             <h3>{spell.name}</h3>
@@ -80,7 +80,7 @@ function Spells() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 // About page component
@@ -88,7 +88,10 @@ function About() {
   return (
     <div className="page">
       <h2>ℹ️ About</h2>
-      <p>The Battle Academy was founded to train the next generation of React developers.</p>
+      <p>
+        The Battle Academy was founded to train the next generation of React
+        developers.
+      </p>
       <p>Here you'll learn:</p>
       <ul>
         <li>React Router navigation</li>
@@ -97,7 +100,7 @@ function About() {
         <li>Protected routes</li>
       </ul>
     </div>
-  )
+  );
 }
 
 // TODO: Create a NotFound component for 404 pages
@@ -119,7 +122,7 @@ function App() {
       <p>Currently showing all pages at once (wrong!):</p>
       <Home />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

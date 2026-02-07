@@ -5,71 +5,73 @@
 ### 1. Creating an Observable Store
 
 ```jsx
-import { makeAutoObservable } from 'mobx'
+import { makeAutoObservable } from "mobx";
 
 class Store {
-  items = []
-  filter = 'all'
-  
+  items = [];
+  filter = "all";
+
   constructor() {
-    makeAutoObservable(this)
+    makeAutoObservable(this);
   }
-  
+
   // Actions - direct mutations!
   addItem(item) {
-    this.items.push(item)
+    this.items.push(item);
   }
-  
+
   // Computed values - automatically cached
   get filteredItems() {
-    if (this.filter === 'all') return this.items
-    return this.items.filter(i => i.type === this.filter)
+    if (this.filter === "all") return this.items;
+    return this.items.filter((i) => i.type === this.filter);
   }
 }
 
-export const store = new Store()
+export const store = new Store();
 ```
 
 ### 2. Observer Components
 
 ```jsx
-import { observer } from 'mobx-react-lite'
-import { store } from './store'
+import { observer } from "mobx-react-lite";
+import { store } from "./store";
 
 // Wrap component with observer()
 const MyComponent = observer(() => {
   return (
     <div>
-      {store.items.map(item => <Item key={item.id} item={item} />)}
+      {store.items.map((item) => (
+        <Item key={item.id} item={item} />
+      ))}
       <button onClick={() => store.addItem({ id: 1 })}>Add</button>
     </div>
-  )
-})
+  );
+});
 ```
 
 ### 3. Computed Values (Getters)
 
 ```jsx
 class Store {
-  items = []
-  
+  items = [];
+
   constructor() {
-    makeAutoObservable(this)
+    makeAutoObservable(this);
   }
-  
+
   // Computed - automatically cached and updated
   get totalCount() {
-    return this.items.length
+    return this.items.length;
   }
-  
+
   get totalValue() {
-    return this.items.reduce((sum, i) => sum + i.value, 0)
+    return this.items.reduce((sum, i) => sum + i.value, 0);
   }
-  
+
   // Computed can use other computed
   get average() {
-    if (this.totalCount === 0) return 0
-    return this.totalValue / this.totalCount
+    if (this.totalCount === 0) return 0;
+    return this.totalValue / this.totalCount;
   }
 }
 ```
@@ -98,6 +100,7 @@ removeItem(id) {
 ## Why MobX?
 
 ### Advantages
+
 - **Minimal Boilerplate** — Just classes and decorators
 - **Direct Mutations** — Write natural JavaScript
 - **Automatic Tracking** — MobX figures out dependencies
@@ -105,6 +108,7 @@ removeItem(id) {
 - **Fine-grained Updates** — Only affected components re-render
 
 ### When to Use
+
 - Complex derived/computed state
 - When you prefer OOP style
 - Apps with lots of interdependent data
@@ -120,6 +124,7 @@ constructor() {
 ```
 
 This automatically makes:
+
 - Properties → **observables**
 - Getters → **computed**
 - Methods → **actions**
@@ -128,31 +133,31 @@ This automatically makes:
 ## Reactions (Side Effects)
 
 ```jsx
-import { autorun, reaction } from 'mobx'
+import { autorun, reaction } from "mobx";
 
 // Runs whenever any accessed observable changes
 autorun(() => {
-  console.log('Items changed:', store.items.length)
-})
+  console.log("Items changed:", store.items.length);
+});
 
 // Runs when specific data changes
 reaction(
   () => store.filter,
   (filter) => {
-    console.log('Filter changed to:', filter)
-  }
-)
+    console.log("Filter changed to:", filter);
+  },
+);
 ```
 
 ## MobX vs Redux vs Zustand
 
-| Aspect | MobX | Redux | Zustand |
-|--------|------|-------|---------|
-| Mental Model | Observable | Actions/Reducers | Hooks |
-| Mutations | Direct | Immutable | Immutable |
-| Computed | Built-in | Selectors | Manual |
-| Boilerplate | Low | Medium | Low |
-| Learning Curve | Medium | Medium | Low |
+| Aspect         | MobX       | Redux            | Zustand   |
+| -------------- | ---------- | ---------------- | --------- |
+| Mental Model   | Observable | Actions/Reducers | Hooks     |
+| Mutations      | Direct     | Immutable        | Immutable |
+| Computed       | Built-in   | Selectors        | Manual    |
+| Boilerplate    | Low        | Medium           | Low       |
+| Learning Curve | Medium     | Medium           | Low       |
 
 ## Best Practices
 

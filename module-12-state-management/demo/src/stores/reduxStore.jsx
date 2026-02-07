@@ -1,56 +1,64 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit'
-import { Provider, useSelector, useDispatch } from 'react-redux'
+import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { Provider, useSelector, useDispatch } from "react-redux";
 
 // Redux Toolkit slice
 const spellSlice = createSlice({
-  name: 'spells',
+  name: "spells",
   initialState: {
     list: [
-      { id: 1, name: 'Fireball', power: 85, element: 'fire' },
-      { id: 2, name: 'Ice Lance', power: 70, element: 'ice' },
-    ]
+      { id: 1, name: "Fireball", power: 85, element: "fire" },
+      { id: 2, name: "Ice Lance", power: 70, element: "ice" },
+    ],
   },
   reducers: {
     addSpell: (state, action) => {
       // Immer allows "mutating" syntax that's actually immutable
-      state.list.push({ ...action.payload, id: Date.now() })
+      state.list.push({ ...action.payload, id: Date.now() });
     },
     removeSpell: (state, action) => {
-      state.list = state.list.filter(s => s.id !== action.payload)
-    }
-  }
-})
+      state.list = state.list.filter((s) => s.id !== action.payload);
+    },
+  },
+});
 
 // Export actions
-export const { addSpell, removeSpell } = spellSlice.actions
+export const { addSpell, removeSpell } = spellSlice.actions;
 
 // Create store
 const store = configureStore({
   reducer: {
-    spells: spellSlice.reducer
-  }
-})
+    spells: spellSlice.reducer,
+  },
+});
 
 // Selector
-const selectSpells = (state) => state.spells.list
-const selectTotalPower = (state) => state.spells.list.reduce((sum, s) => sum + s.power, 0)
+const selectSpells = (state) => state.spells.list;
+const selectTotalPower = (state) =>
+  state.spells.list.reduce((sum, s) => sum + s.power, 0);
 
 // Inner component using Redux hooks
 function ReduxDemoInner() {
-  const spells = useSelector(selectSpells)
-  const totalPower = useSelector(selectTotalPower)
-  const dispatch = useDispatch()
+  const spells = useSelector(selectSpells);
+  const totalPower = useSelector(selectTotalPower);
+  const dispatch = useDispatch();
 
   const handleAdd = () => {
-    const names = ['Thunder Strike', 'Healing Light', 'Shadow Bolt', 'Earth Shield']
-    const elements = ['lightning', 'holy', 'dark', 'earth']
-    const idx = Math.floor(Math.random() * names.length)
-    dispatch(addSpell({
-      name: names[idx],
-      power: Math.floor(Math.random() * 50) + 50,
-      element: elements[idx]
-    }))
-  }
+    const names = [
+      "Thunder Strike",
+      "Healing Light",
+      "Shadow Bolt",
+      "Earth Shield",
+    ];
+    const elements = ["lightning", "holy", "dark", "earth"];
+    const idx = Math.floor(Math.random() * names.length);
+    dispatch(
+      addSpell({
+        name: names[idx],
+        power: Math.floor(Math.random() * 50) + 50,
+        element: elements[idx],
+      }),
+    );
+  };
 
   return (
     <div className="demo">
@@ -81,11 +89,16 @@ dispatch(addSpell({ name: 'Fireball' }))`}</pre>
         </div>
 
         <div className="spell-list">
-          {spells.map(spell => (
+          {spells.map((spell) => (
             <div key={spell.id} className="spell-item">
               <span className="spell-name">{spell.name}</span>
               <span className="spell-power">⚡ {spell.power}</span>
-              <button onClick={() => dispatch(removeSpell(spell.id))} className="remove-btn">×</button>
+              <button
+                onClick={() => dispatch(removeSpell(spell.id))}
+                className="remove-btn"
+              >
+                ×
+              </button>
             </div>
           ))}
         </div>
@@ -95,7 +108,7 @@ dispatch(addSpell({ name: 'Fireball' }))`}</pre>
         </button>
       </div>
     </div>
-  )
+  );
 }
 
 // Wrapped with Provider
@@ -104,5 +117,5 @@ export function ReduxDemo() {
     <Provider store={store}>
       <ReduxDemoInner />
     </Provider>
-  )
+  );
 }

@@ -27,15 +27,15 @@
 //   students = []
 //   houseFilter = 'all'
 //   sortBy = 'name'
-//   
+//
 //   constructor() {
 //     makeAutoObservable(this)
 //   }
-//   
+//
 //   addStudent(student) {
 //     this.students.push({ ...student, id: Date.now() })
 //   }
-//   
+//
 //   get totalPower() {
 //     return this.students.reduce((sum, s) => sum + s.power, 0)
 //   }

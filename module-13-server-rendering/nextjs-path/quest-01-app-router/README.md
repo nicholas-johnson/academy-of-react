@@ -7,6 +7,7 @@
 ## Objective
 
 Build an Academy Portal with:
+
 - Server Components for data fetching
 - Client Components for search/filter
 - Streaming with Suspense
@@ -25,6 +26,7 @@ Build an Academy Portal with:
 ### 1. Student Directory (Server Component)
 
 Create `app/students/page.tsx`:
+
 - Fetch students from API or mock data
 - Display as cards/list
 - Make it an async Server Component
@@ -32,6 +34,7 @@ Create `app/students/page.tsx`:
 ### 2. Search Bar (Client Component)
 
 Create `components/SearchBar.tsx`:
+
 - Mark with `'use client'`
 - Accept students as prop
 - Filter based on search input
@@ -46,6 +49,7 @@ Create `components/SearchBar.tsx`:
 ### 4. Error Handling
 
 Create `app/students/error.tsx`:
+
 - Catch and display errors
 - Provide retry button
 
@@ -56,7 +60,7 @@ Create `app/students/error.tsx`:
 ✅ Search filters students without page reload  
 ✅ Suspense shows loading state for slow data  
 ✅ Error boundary catches and displays errors  
-✅ TypeScript types for Student interface  
+✅ TypeScript types for Student interface
 
 ## Hints
 
@@ -70,6 +74,7 @@ async function StudentsPage() {
   return <StudentList students={students} />;
 }
 ```
+
 </details>
 
 <details>
@@ -77,15 +82,16 @@ async function StudentsPage() {
 
 ```tsx
 // components/SearchBar.tsx
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export function SearchBar({ students }) {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   // Filter logic...
 }
 ```
+
 </details>
 
 <details>
@@ -96,6 +102,7 @@ export function SearchBar({ students }) {
   <SlowComponent />
 </Suspense>
 ```
+
 </details>
 
 ## Bonus Challenges
@@ -108,9 +115,3 @@ export function SearchBar({ students }) {
 ---
 
 **Next Quest**: [Quest 2: Battle Records →](../quest-02-server-actions/)
-
-
-
-
-
-

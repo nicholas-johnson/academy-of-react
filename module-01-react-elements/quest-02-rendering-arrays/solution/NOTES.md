@@ -11,9 +11,7 @@ This solution demonstrates rendering **lists of elements** with `React.createEle
 React can render arrays of elements:
 
 ```javascript
-students.map(student => 
-  h(StudentCard, { key: student.id, ...student })
-)
+students.map((student) => h(StudentCard, { key: student.id, ...student }));
 ```
 
 **Important**: Always provide a `key` prop when rendering lists! React uses keys to track which items have changed.
@@ -25,13 +23,11 @@ Components can be functions that accept a props object:
 ```javascript
 function StudentCard(student) {
   // student is the props object
-  return h('div', { className: 'student-card' },
-    h('h3', null, student.name)
-  );
+  return h("div", { className: "student-card" }, h("h3", null, student.name));
 }
 
 // Usage:
-h(StudentCard, { ...student })
+h(StudentCard, { ...student });
 ```
 
 ### 3. Dynamic Styling
@@ -40,9 +36,9 @@ Using JavaScript to compute styles:
 
 ```javascript
 const config = houseConfig[student.house];
-h('div', { 
-  style: { borderTopColor: config.color }
-})
+h("div", {
+  style: { borderTopColor: config.color },
+});
 ```
 
 ### 4. Re-rendering on User Input
@@ -57,9 +53,9 @@ function App() {
     // Re-render
     root.render(app);
   }
-  
+
   render(); // Initial render
-  
+
   // Buttons can call render() to update UI
   h('button', { onclick: render })
 }
@@ -79,7 +75,7 @@ const students = [
     house: "Wisdom",
     level: 42,
     specialty: "Elemental Magic",
-    status: "active"
+    status: "active",
   },
   // ...more students
 ];
@@ -107,21 +103,21 @@ App
 Uses a closure variable to track current filter:
 
 ```javascript
-let currentFilter = 'all';
+let currentFilter = "all";
 
 function filterStudents() {
-  return currentFilter === 'all'
+  return currentFilter === "all"
     ? students
-    : students.filter(s => s.house === currentFilter);
+    : students.filter((s) => s.house === currentFilter);
 }
 ```
 
 #### 2. Sort by Name or Level
 
 ```javascript
-let currentSort = 'name';
+let currentSort = "name";
 
-if (currentSort === 'name') {
+if (currentSort === "name") {
   filtered.sort((a, b) => a.name.localeCompare(b.name));
 } else {
   filtered.sort((a, b) => b.level - a.level);
@@ -135,7 +131,7 @@ Calculates stats from filtered results:
 ```javascript
 const totalStudents = studentsToShow.length;
 const avgLevel = Math.round(
-  studentsToShow.reduce((sum, s) => sum + s.level, 0) / totalStudents
+  studentsToShow.reduce((sum, s) => sum + s.level, 0) / totalStudents,
 );
 ```
 
@@ -144,7 +140,7 @@ const avgLevel = Math.round(
 ### ❌ Wrong: Missing key prop
 
 ```javascript
-students.map(student => h(StudentCard, { ...student }))
+students.map((student) => h(StudentCard, { ...student }));
 ```
 
 React warning: "Each child should have a unique 'key' prop"
@@ -152,7 +148,7 @@ React warning: "Each child should have a unique 'key' prop"
 ### ✅ Right: Always provide key
 
 ```javascript
-students.map(student => h(StudentCard, { key: student.id, ...student }))
+students.map((student) => h(StudentCard, { key: student.id, ...student }));
 ```
 
 ### ❌ Wrong: Modifying props object
@@ -160,7 +156,7 @@ students.map(student => h(StudentCard, { key: student.id, ...student }))
 ```javascript
 function StudentCard(props) {
   props.name = props.name.toUpperCase(); // NEVER mutate props!
-  return h('h3', null, props.name);
+  return h("h3", null, props.name);
 }
 ```
 
@@ -169,16 +165,14 @@ function StudentCard(props) {
 ```javascript
 function StudentCard(props) {
   const uppercaseName = props.name.toUpperCase();
-  return h('h3', null, uppercaseName);
+  return h("h3", null, uppercaseName);
 }
 ```
 
 ### ❌ Wrong: Using array index as key
 
 ```javascript
-students.map((student, index) => 
-  h(StudentCard, { key: index, ...student })
-)
+students.map((student, index) => h(StudentCard, { key: index, ...student }));
 ```
 
 Causes bugs when list order changes!
@@ -186,9 +180,7 @@ Causes bugs when list order changes!
 ### ✅ Right: Use stable, unique ID
 
 ```javascript
-students.map(student => 
-  h(StudentCard, { key: student.id, ...student })
-)
+students.map((student) => h(StudentCard, { key: student.id, ...student }));
 ```
 
 ## Performance Notes
@@ -279,13 +271,20 @@ In production code with JSX and state:
 
 ```javascript
 // This solution (createElement, manual render):
-let currentFilter = 'all';
-function render() { root.render(h(App)); }
-h('button', { onclick: () => { currentFilter = 'Valor'; render(); }})
+let currentFilter = "all";
+function render() {
+  root.render(h(App));
+}
+h("button", {
+  onclick: () => {
+    currentFilter = "Valor";
+    render();
+  },
+});
 
 // Real React (JSX, useState):
-const [filter, setFilter] = useState('all');
-<button onClick={() => setFilter('Valor')}>Valor</button>
+const [filter, setFilter] = useState("all");
+<button onClick={() => setFilter("Valor")}>Valor</button>;
 ```
 
 Much cleaner! But the underlying concepts are identical.
@@ -304,9 +303,3 @@ Much cleaner! But the underlying concepts are identical.
 **Module 2** converts this to JSX syntax - you'll appreciate how much cleaner it becomes!
 
 **Module 3** introduces proper state management with `useState` - no more manual re-rendering!
-
-
-
-
-
-

@@ -9,16 +9,17 @@ A reducer is a pure function that takes the current state and an action, and ret
 ```javascript
 function spellReducer(state, action) {
   switch (action.type) {
-    case 'ADD_SPELL':
-      return { ...state, spells: [...state.spells, action.spell] }
+    case "ADD_SPELL":
+      return { ...state, spells: [...state.spells, action.spell] };
     // ... other cases
     default:
-      return state
+      return state;
   }
 }
 ```
 
 **Rules for reducers:**
+
 - Must be pure (no side effects)
 - Must return new state object (don't mutate!)
 - Should handle unknown actions by returning current state
@@ -29,10 +30,10 @@ Instead of calling setters directly, dispatch action objects:
 
 ```javascript
 // With useState
-setSpells(spells.filter(s => s.id !== id))
+setSpells(spells.filter((s) => s.id !== id));
 
 // With useReducer
-dispatch({ type: 'REMOVE_SPELL', id })
+dispatch({ type: "REMOVE_SPELL", id });
 ```
 
 Actions describe **what happened**, not how to update the state.
@@ -56,12 +57,12 @@ case 'UPGRADE_SPELL':
 
 ## When to Use useReducer
 
-| useState | useReducer |
-|----------|------------|
+| useState                      | useReducer                      |
+| ----------------------------- | ------------------------------- |
 | Simple state (number, string) | Complex state (objects, arrays) |
-| 1-2 update patterns | Many action types |
-| Quick prototyping | Predictable, testable updates |
-| Independent values | Related state values |
+| 1-2 update patterns           | Many action types               |
+| Quick prototyping             | Predictable, testable updates   |
+| Independent values            | Related state values            |
 
 ## Benefits of useReducer
 
@@ -74,21 +75,24 @@ case 'UPGRADE_SPELL':
 ## Common Patterns
 
 ### Adding to an array
+
 ```javascript
-return { ...state, items: [...state.items, newItem] }
+return { ...state, items: [...state.items, newItem] };
 ```
 
 ### Removing from an array
+
 ```javascript
-return { ...state, items: state.items.filter(i => i.id !== action.id) }
+return { ...state, items: state.items.filter((i) => i.id !== action.id) };
 ```
 
 ### Updating an item in an array
+
 ```javascript
 return {
   ...state,
-  items: state.items.map(item =>
-    item.id === action.id ? { ...item, ...updates } : item
-  )
-}
+  items: state.items.map((item) =>
+    item.id === action.id ? { ...item, ...updates } : item,
+  ),
+};
 ```

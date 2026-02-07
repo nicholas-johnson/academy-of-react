@@ -42,6 +42,7 @@ Start with the introduction slides before the demos:
 4. Use arrow keys to navigate
 
 The slides cover:
+
 - Why JSX (the pain of createElement)
 - What JSX is and how it works
 - The 4 JSX rules
@@ -57,6 +58,7 @@ Starting in Module 2, we're switching from CDN + Babel to **Vite**, a modern bui
 In Module 1, you learned React basics using CDN links and directly opening HTML files. That's perfect for learning `createElement()`, but now that you're ready for JSX and real development, it's time to upgrade!
 
 **Problems with CDN + Babel Standalone:**
+
 - 🐌 Slow transformation (Babel Standalone isn't optimized)
 - ❌ CORS errors when opening `file://` URLs
 - 🚫 Not how professional React developers work
@@ -64,6 +66,7 @@ In Module 1, you learned React basics using CDN links and directly opening HTML 
 - 🐛 Harder to debug
 
 **Benefits of Vite:**
+
 - ⚡ Lightning-fast Hot Module Replacement (HMR) - see changes in milliseconds!
 - 🎯 Modern ES modules - proper imports and exports
 - 📦 Access to the entire npm ecosystem
@@ -86,17 +89,21 @@ Vite (French for "fast") is a modern build tool created by Evan You (creator of 
 **First time using Vite? Follow these steps:**
 
 1. **Navigate to the demo folder:**
+
    ```bash
    cd module-02-jsx-components/demo
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
+
    This downloads React and Vite (only needed once per project)
 
 3. **Start the dev server:**
+
    ```bash
    npm run dev
    ```
@@ -129,6 +136,7 @@ demo/
 ```
 
 **Key differences from CDN setup:**
+
 - ✅ `index.html` is in the project root (not inside `src/`)
 - ✅ No CDN script tags - React comes from npm
 - ✅ `<script type="module">` tag points to `src/main.jsx`
@@ -156,20 +164,24 @@ npm run preview      # Preview production build locally
 ### Troubleshooting
 
 **Port already in use?**
+
 - Another dev server might be running
 - Check terminals or use `Ctrl+C` to stop other servers
 - Vite will auto-assign a different port if 5173 is busy
 
 **Module not found?**
+
 - Run `npm install` to install dependencies
 - Check your import paths are correct
 
 **Changes not showing?**
+
 - Check the terminal for errors
 - Try stopping (`Ctrl+C`) and restarting (`npm run dev`)
 - Clear browser cache or hard refresh (`Cmd+Shift+R` / `Ctrl+Shift+R`)
 
 **Node.js not installed?**
+
 - Download from [nodejs.org](https://nodejs.org)
 - Restart your terminal after installing
 - Verify with `node --version`
@@ -187,6 +199,7 @@ The demo shows:
 Key differences from Module 1:
 
 **React Code:**
+
 ```javascript
 // Old way (createElement):
 React.createElement('h1', null, 'Hello')
@@ -196,12 +209,13 @@ React.createElement('h1', null, 'Hello')
 ```
 
 **Project Setup:**
+
 ```javascript
 // Module 1 (CDN):
-<script crossorigin src="https://unpkg.com/react@18/..."></script>
+<script crossorigin src="https://unpkg.com/react@18/..."></script>;
 
 // Module 2 (Vite):
-import React from 'react'  // From npm packages!
+import React from "react"; // From npm packages!
 ```
 
 Much easier to read and work with! JSX gets transformed to `createElement()` calls by Vite's build process.

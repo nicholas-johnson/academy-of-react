@@ -6,19 +6,20 @@
 
 ```jsx
 function ProtectedRoute({ children }) {
-  const { user } = useAuth()
-  const location = useLocation()
-  
+  const { user } = useAuth();
+  const location = useLocation();
+
   if (!user) {
     // Save where they wanted to go
-    return <Navigate to="/login" state={{ from: location }} replace />
+    return <Navigate to="/login" state={{ from: location }} replace />;
   }
-  
-  return children
+
+  return children;
 }
 ```
 
 Key points:
+
 - Check auth state from context
 - `Navigate` component handles the redirect
 - `state` prop passes data to the login page
@@ -28,16 +29,16 @@ Key points:
 
 ```jsx
 function Login() {
-  const location = useLocation()
-  const navigate = useNavigate()
-  
+  const location = useLocation();
+  const navigate = useNavigate();
+
   // Get saved location
-  const from = location.state?.from?.pathname || '/'
-  
+  const from = location.state?.from?.pathname || "/";
+
   const handleLogin = () => {
-    login(username)
-    navigate(from, { replace: true })  // Go back where they wanted
-  }
+    login(username);
+    navigate(from, { replace: true }); // Go back where they wanted
+  };
 }
 ```
 
@@ -45,23 +46,24 @@ function Login() {
 
 ```jsx
 function WarRoom() {
-  const [searchParams, setSearchParams] = useSearchParams()
-  
+  const [searchParams, setSearchParams] = useSearchParams();
+
   // Read from URL
-  const statusFilter = searchParams.get('status') || 'all'
-  
+  const statusFilter = searchParams.get("status") || "all";
+
   // Update URL
   const handleFilterChange = (status) => {
-    if (status === 'all') {
-      setSearchParams({})  // Remove param
+    if (status === "all") {
+      setSearchParams({}); // Remove param
     } else {
-      setSearchParams({ status })  // Set param
+      setSearchParams({ status }); // Set param
     }
-  }
+  };
 }
 ```
 
 Benefits:
+
 - Filter state in URL (shareable, bookmarkable)
 - Survives page refresh
 - Browser back/forward works
@@ -71,14 +73,15 @@ Benefits:
 
 ```jsx
 // Sender: pass state with Navigate
-<Navigate to="/login" state={{ from: location }} />
+<Navigate to="/login" state={{ from: location }} />;
 
 // Receiver: read state from location
-const location = useLocation()
-const from = location.state?.from?.pathname
+const location = useLocation();
+const from = location.state?.from?.pathname;
 ```
 
 State is:
+
 - Not visible in URL
 - Lost on page refresh
 - Good for temporary data like redirect targets

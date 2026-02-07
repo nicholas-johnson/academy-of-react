@@ -33,6 +33,7 @@ npm run dev
 ```
 
 **What it demonstrates:**
+
 - State stored in a module-level variable (`let count = 0`)
 - Event handlers that update the variable and call `render()` manually
 - The tedium and error-proneness of this approach
@@ -52,6 +53,7 @@ onClick={() => { count++; render(); }}
 ```
 
 **Ask students:**
+
 - "What happens if we forget to call `render()`?" (Nothing updates!)
 - "Is this scalable with 10 pieces of state?" (No way!)
 
@@ -81,13 +83,15 @@ const [count, setCount] = useState(0);
 // Click button → setCount(count + 1) → component re-renders automatically!
 
 // 2. Controlled Input
-const [name, setName] = useState('');
-<input value={name} onChange={(e) => setName(e.target.value)} />
+const [name, setName] = useState("");
+<input value={name} onChange={(e) => setName(e.target.value)} />;
 // Every keystroke updates state → input always shows current state
 
 // 3. Conditional Rendering
 const [isVisible, setIsVisible] = useState(true);
-{isVisible && <div>Secret content!</div>}
+{
+  isVisible && <div>Secret content!</div>;
+}
 // Toggle button flips the boolean → content appears/disappears
 ```
 
@@ -115,8 +119,8 @@ Students may not know this syntax. Explain briefly:
 // We destructure it into two variables
 
 const result = useState(0);
-const count = result[0];      // The current value
-const setCount = result[1];   // The setter function
+const count = result[0]; // The current value
+const setCount = result[1]; // The setter function
 
 // Same thing, shorter:
 const [count, setCount] = useState(0);
@@ -126,12 +130,12 @@ const [count, setCount] = useState(0);
 
 Drill these repeatedly:
 
-| Rule | Why |
-|------|-----|
-| Call at top level | React tracks hooks by call order — can't be conditional |
-| Use the setter | `count = 5` doesn't trigger re-render; `setCount(5)` does |
-| Updates are async | New value available on next render, not immediately |
-| Don't mutate | Create new objects/arrays instead of modifying |
+| Rule              | Why                                                       |
+| ----------------- | --------------------------------------------------------- |
+| Call at top level | React tracks hooks by call order — can't be conditional   |
+| Use the setter    | `count = 5` doesn't trigger re-render; `setCount(5)` does |
+| Updates are async | New value available on next render, not immediately       |
+| Don't mutate      | Create new objects/arrays instead of modifying            |
 
 ---
 
@@ -141,18 +145,20 @@ This is a crucial pattern for forms:
 
 ```jsx
 // The input's value ALWAYS reflects state
-<input 
-  value={name}                           // Display current state
-  onChange={(e) => setName(e.target.value)}  // Update state on change
+<input
+  value={name} // Display current state
+  onChange={(e) => setName(e.target.value)} // Update state on change
 />
 ```
 
 **Why "controlled"?**
+
 - React controls the input's value (not the DOM)
 - Single source of truth (state)
 - Enables validation, formatting, syncing
 
 **Common mistake:**
+
 ```jsx
 // ❌ This creates an uncontrolled input (can't set initial value properly)
 <input onChange={(e) => setName(e.target.value)} />
@@ -166,23 +172,27 @@ This is a crucial pattern for forms:
 ## Quests Overview
 
 ### Quest 1: Multiple State (Training System)
+
 **Difficulty**: ⭐⭐ Intermediate  
 **Time estimate**: 25-30 minutes
 
 Students create a wizard training interface with three stats (magicLevel, energy, mana) and buttons that update multiple pieces of state at once.
 
 **What they practice:**
+
 - Multiple `useState` calls
 - Event handlers with state updates
 - Conditional logic (preventing negative values)
 - Displaying state values
 
 **Common struggles:**
+
 - Forgetting that each state needs its own `useState`
 - Not understanding that `setX()` triggers re-render
 - Confusing when to use `count` vs `setCount`
 
 **Key teaching moment:**
+
 ```jsx
 // You CAN call multiple setters in one handler
 const handleTrain = () => {
@@ -195,33 +205,39 @@ const handleTrain = () => {
 ---
 
 ### Quest 2: Object State (Potion Brewing)
+
 **Difficulty**: ⭐⭐ Intermediate  
 **Time estimate**: 30-35 minutes
 
 Students build a potion brewing interface with checkboxes for ingredients, derived calculations, and conditional rendering.
 
 **What they practice:**
+
 - Arrays in state (`selectedIngredients`)
 - Controlled checkboxes
 - Adding/removing from arrays immutably
 - Derived values (total brew time)
 
 **Common struggles:**
+
 - Checkbox `checked` vs `value` props
 - Immutable array updates (spread operator)
 - Calculating derived values from state
 
 **Key teaching moment:**
+
 ```jsx
 // Adding to array (immutable)
 setSelectedIngredients([...selectedIngredients, newItem]);
 
 // Removing from array (immutable)
-setSelectedIngredients(selectedIngredients.filter(x => x !== itemToRemove));
+setSelectedIngredients(selectedIngredients.filter((x) => x !== itemToRemove));
 
 // Derived value (NOT state — calculate from state!)
-const totalBrewTime = selectedIngredients
-  .reduce((sum, ing) => sum + ing.brewTime, 0);
+const totalBrewTime = selectedIngredients.reduce(
+  (sum, ing) => sum + ing.brewTime,
+  0,
+);
 ```
 
 ---
@@ -278,17 +294,19 @@ A: That changes a variable, but React doesn't know about it. React only re-rende
 
 **Q: Why is my new value not showing up immediately after `setState`?**
 A: State updates are asynchronous. The new value is available on the NEXT render, not immediately after calling the setter. If you need to use the new value, calculate it first:
+
 ```jsx
 const newCount = count + 1;
 setCount(newCount);
-console.log(newCount);  // ✅ Use the calculated value
+console.log(newCount); // ✅ Use the calculated value
 ```
 
 **Q: Can I have multiple useState calls?**
 A: Yes! You can have as many as you need. Each one tracks a separate piece of state.
 
 **Q: When should I use one object vs multiple useState calls?**
-A: 
+A:
+
 - Related values that change together → one object
 - Independent values → separate useState calls
 - When in doubt, start with separate calls (simpler)
@@ -297,7 +315,8 @@ A:
 A: By default, HTML forms cause a page refresh when submitted. `e.preventDefault()` stops that behavior so React can handle the submission without losing all your state.
 
 **Q: What's the difference between state and props?**
-A: 
+A:
+
 - **Props**: Passed from parent, read-only, for configuration
 - **State**: Owned by component, can change, for interactivity
 
@@ -306,21 +325,26 @@ A:
 ## Troubleshooting
 
 ### "My button click does nothing"
+
 - Check: Is the setter being called? (`setCount` not just `count`)
 - Check: Is the handler attached? (`onClick={handleClick}` not `onclick`)
 - Check: Console for errors
 
 ### "My input won't let me type"
+
 - Missing `onChange` handler
 - Or `onChange` isn't calling the setter
 - Add: `onChange={(e) => setName(e.target.value)}`
 
 ### "My form refreshes the page"
+
 - Missing `e.preventDefault()` in submit handler
 - Or handler isn't attached to form's `onSubmit`
 
 ### "My array/object state isn't updating"
+
 - Probably mutating instead of creating new:
+
 ```jsx
 // ❌ Mutation (won't trigger re-render)
 students.push(newStudent);
@@ -331,6 +355,7 @@ setStudents([...students, newStudent]);
 ```
 
 ### "State shows old value right after setting"
+
 - This is expected! State updates are async
 - New value available on next render
 - Calculate the value first if you need it immediately
@@ -348,29 +373,31 @@ These are essential for array/object state:
 setItems([...items, newItem]);
 
 // Remove item by id
-setItems(items.filter(item => item.id !== targetId));
+setItems(items.filter((item) => item.id !== targetId));
 
 // Update item by id
-setItems(items.map(item => 
-  item.id === targetId ? { ...item, name: 'New Name' } : item
-));
+setItems(
+  items.map((item) =>
+    item.id === targetId ? { ...item, name: "New Name" } : item,
+  ),
+);
 
 // Update item at index
-setItems(items.map((item, i) => 
-  i === targetIndex ? { ...item, done: true } : item
-));
+setItems(
+  items.map((item, i) => (i === targetIndex ? { ...item, done: true } : item)),
+);
 ```
 
 ### Objects
 
 ```jsx
 // Update one property
-setUser({ ...user, name: 'New Name' });
+setUser({ ...user, name: "New Name" });
 
 // Update nested property
-setUser({ 
-  ...user, 
-  address: { ...user.address, city: 'New City' } 
+setUser({
+  ...user,
+  address: { ...user.address, city: "New City" },
 });
 ```
 

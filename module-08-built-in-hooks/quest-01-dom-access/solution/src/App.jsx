@@ -1,30 +1,30 @@
-import { useState, useRef, useEffect } from 'react'
-import './App.css'
+import { useState, useRef, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  const [spellInput, setSpellInput] = useState('')
-  const [history, setHistory] = useState([])
-  const inputRef = useRef(null)
+  const [spellInput, setSpellInput] = useState("");
+  const [history, setHistory] = useState([]);
+  const inputRef = useRef(null);
 
   // Auto-focus on mount
   useEffect(() => {
-    inputRef.current?.focus()
-  }, [])
+    inputRef.current?.focus();
+  }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (spellInput.trim()) {
-      setHistory([...history, spellInput])
-      setSpellInput('')
-      inputRef.current?.focus()
+      setHistory([...history, spellInput]);
+      setSpellInput("");
+      inputRef.current?.focus();
     }
-  }
+  };
 
   const handleClearAndFocus = () => {
-    setSpellInput('')
-    setHistory([])
-    inputRef.current?.focus()
-  }
+    setSpellInput("");
+    setHistory([]);
+    inputRef.current?.focus();
+  };
 
   return (
     <div className="app">
@@ -44,8 +44,8 @@ function App() {
           <button type="submit" className="btn btn-primary">
             Cast Spell
           </button>
-          <button 
-            type="button" 
+          <button
+            type="button"
             onClick={handleClearAndFocus}
             className="btn btn-secondary"
           >
@@ -70,7 +70,7 @@ function App() {
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

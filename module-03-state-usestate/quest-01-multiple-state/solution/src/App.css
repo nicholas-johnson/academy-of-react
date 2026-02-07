@@ -184,14 +184,9 @@
   .stats-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .summary {
     flex-direction: column;
     gap: 1rem;
   }
 }
-
-
-
-
-

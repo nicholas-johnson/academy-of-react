@@ -11,7 +11,7 @@ This solution demonstrates a complete multi-step form wizard in React, managing 
 Track current step as part of state:
 
 ```javascript
-const [currentStep, setCurrentStep] = useState(1) // or 'complete'
+const [currentStep, setCurrentStep] = useState(1); // or 'complete'
 ```
 
 Step can be a number (1, 2, 3) or string ('complete' for summary).
@@ -22,11 +22,11 @@ All form data in one state object:
 
 ```javascript
 const [formData, setFormData] = useState({
-  name: '',
-  house: '',
-  familiar: '',
-  wand: ''
-})
+  name: "",
+  house: "",
+  familiar: "",
+  wand: "",
+});
 ```
 
 Easier to pass around and validate than separate state variables.
@@ -36,10 +36,18 @@ Easier to pass around and validate than separate state variables.
 Show different UI based on current step:
 
 ```javascript
-{currentStep === 1 && <Step1Component />}
-{currentStep === 2 && <Step2Component />}
-{currentStep === 3 && <Step3Component />}
-{currentStep === 'complete' && <Summary />}
+{
+  currentStep === 1 && <Step1Component />;
+}
+{
+  currentStep === 2 && <Step2Component />;
+}
+{
+  currentStep === 3 && <Step3Component />;
+}
+{
+  currentStep === "complete" && <Summary />;
+}
 ```
 
 Only one step renders at a time.
@@ -51,12 +59,16 @@ Check if current step is complete before allowing "Next":
 ```javascript
 const isStepValid = () => {
   switch (currentStep) {
-    case 1: return formData.name.trim() !== '' && formData.house !== ''
-    case 2: return formData.familiar !== ''
-    case 3: return formData.wand !== ''
-    default: return false
+    case 1:
+      return formData.name.trim() !== "" && formData.house !== "";
+    case 2:
+      return formData.familiar !== "";
+    case 3:
+      return formData.wand !== "";
+    default:
+      return false;
   }
-}
+};
 ```
 
 ### 5. Navigation Functions
@@ -66,19 +78,19 @@ Separate functions for forward/backward navigation:
 ```javascript
 const handleNext = () => {
   if (currentStep === 3) {
-    setCurrentStep('complete')
+    setCurrentStep("complete");
   } else {
-    setCurrentStep(currentStep + 1)
+    setCurrentStep(currentStep + 1);
   }
-}
+};
 
 const handleBack = () => {
-  if (currentStep === 'complete') {
-    setCurrentStep(3)
+  if (currentStep === "complete") {
+    setCurrentStep(3);
   } else {
-    setCurrentStep(currentStep - 1)
+    setCurrentStep(currentStep - 1);
   }
-}
+};
 ```
 
 ### 6. Reusable Update Function
@@ -99,8 +111,10 @@ onClick={() => updateField('house', 'gryffin')}
 Visual feedback showing current position:
 
 ```javascript
-<div className={`step-circle ${currentStep >= 1 ? 'active' : ''} ${currentStep > 1 ? 'complete' : ''}`}>
-  {currentStep > 1 ? '✓' : '1'}
+<div
+  className={`step-circle ${currentStep >= 1 ? "active" : ""} ${currentStep > 1 ? "complete" : ""}`}
+>
+  {currentStep > 1 ? "✓" : "1"}
 </div>
 ```
 
@@ -112,8 +126,8 @@ Clickable cards for option selection:
 
 ```javascript
 <div
-  className={`option-card ${formData.house === 'gryffin' ? 'selected' : ''}`}
-  onClick={() => updateField('house', 'gryffin')}
+  className={`option-card ${formData.house === "gryffin" ? "selected" : ""}`}
+  onClick={() => updateField("house", "gryffin")}
 >
   {/* content */}
 </div>
@@ -126,7 +140,9 @@ Visual feedback with CSS class.
 Use array.find() to get full object from ID:
 
 ```javascript
-{HOUSES.find(h => h.id === formData.house)?.name}
+{
+  HOUSES.find((h) => h.id === formData.house)?.name;
+}
 ```
 
 Optional chaining (`?.`) prevents errors if not found.
@@ -137,9 +153,9 @@ Clear all data and return to start:
 
 ```javascript
 const handleReset = () => {
-  setFormData({ name: '', house: '', familiar: '', wand: '' })
-  setCurrentStep(1)
-}
+  setFormData({ name: "", house: "", familiar: "", wand: "" });
+  setCurrentStep(1);
+};
 ```
 
 ## Implementation Approach
@@ -148,12 +164,15 @@ const handleReset = () => {
 
 ```javascript
 // Step tracking
-const [currentStep, setCurrentStep] = useState(1)
+const [currentStep, setCurrentStep] = useState(1);
 
 // All form data in one object
 const [formData, setFormData] = useState({
-  name: '', house: '', familiar: '', wand: ''
-})
+  name: "",
+  house: "",
+  familiar: "",
+  wand: "",
+});
 ```
 
 ### Step Flow
@@ -178,24 +197,24 @@ Static arrays for houses, familiars, wands. Could be moved to JSON file or API i
 ### ❌ Wrong: Storing step as string always
 
 ```javascript
-const [currentStep, setCurrentStep] = useState('1') // String!
-setCurrentStep(currentStep + 1) // '11' not 2!
+const [currentStep, setCurrentStep] = useState("1"); // String!
+setCurrentStep(currentStep + 1); // '11' not 2!
 ```
 
 ### ✅ Right: Use numbers for numeric steps
 
 ```javascript
-const [currentStep, setCurrentStep] = useState(1) // Number
-setCurrentStep(currentStep + 1) // 2
+const [currentStep, setCurrentStep] = useState(1); // Number
+setCurrentStep(currentStep + 1); // 2
 ```
 
 ### ❌ Wrong: Separate state for each field
 
 ```javascript
-const [name, setName] = useState('')
-const [house, setHouse] = useState('')
-const [familiar, setFamiliar] = useState('')
-const [wand, setWand] = useState('')
+const [name, setName] = useState("");
+const [house, setHouse] = useState("");
+const [familiar, setFamiliar] = useState("");
+const [wand, setWand] = useState("");
 // Too many states to manage!
 ```
 
@@ -203,8 +222,11 @@ const [wand, setWand] = useState('')
 
 ```javascript
 const [formData, setFormData] = useState({
-  name: '', house: '', familiar: '', wand: ''
-})
+  name: "",
+  house: "",
+  familiar: "",
+  wand: "",
+});
 ```
 
 ### ❌ Wrong: No validation, allow progression anytime
@@ -217,7 +239,9 @@ const [formData, setFormData] = useState({
 ### ✅ Right: Disable when invalid
 
 ```javascript
-<button onClick={handleNext} disabled={!isStepValid()}>Next</button>
+<button onClick={handleNext} disabled={!isStepValid()}>
+  Next
+</button>
 ```
 
 ### ❌ Wrong: Rendering all steps always
@@ -232,21 +256,29 @@ const [formData, setFormData] = useState({
 ### ✅ Right: Conditional rendering
 
 ```javascript
-{currentStep === 1 && <Step1 />}
-{currentStep === 2 && <Step2 />}
+{
+  currentStep === 1 && <Step1 />;
+}
+{
+  currentStep === 2 && <Step2 />;
+}
 ```
 
 ### ❌ Wrong: Direct property access without optional chaining
 
 ```javascript
-{HOUSES.find(h => h.id === formData.house).name}
+{
+  HOUSES.find((h) => h.id === formData.house).name;
+}
 // Crashes if not found!
 ```
 
 ### ✅ Right: Use optional chaining
 
 ```javascript
-{HOUSES.find(h => h.id === formData.house)?.name}
+{
+  HOUSES.find((h) => h.id === formData.house)?.name;
+}
 ```
 
 ## Extensions and Improvements
@@ -279,31 +311,31 @@ const [formData, setFormData] = useState({
 React 19's useFormState can simplify multi-step forms:
 
 ```javascript
-import { useFormState } from 'react'
+import { useFormState } from "react";
 
 async function enrollAction(prevState, formData) {
-  const step = formData.get('step')
-  
-  if (step === '1') {
+  const step = formData.get("step");
+
+  if (step === "1") {
     // Validate step 1
-    const name = formData.get('name')
-    if (!name) return { step: 1, error: 'Name required' }
-    return { step: 2, data: { name } }
+    const name = formData.get("name");
+    if (!name) return { step: 1, error: "Name required" };
+    return { step: 2, data: { name } };
   }
-  
+
   // ... handle other steps
 }
 
 function Wizard() {
-  const [state, formAction] = useFormState(enrollAction, { step: 1 })
-  
+  const [state, formAction] = useFormState(enrollAction, { step: 1 });
+
   return (
     <form action={formAction}>
       <input type="hidden" name="step" value={state.step} />
       {state.step === 1 && <Step1 />}
       {state.step === 2 && <Step2 />}
     </form>
-  )
+  );
 }
 ```
 
@@ -332,6 +364,7 @@ function Wizard() {
 **Module 6: Lists, Keys, and Data Manipulation** will teach you how to work with collections of data efficiently, which is perfect for building features like student rosters, spell inventories, and battle rankings.
 
 This multi-step pattern you've learned is used everywhere:
+
 - E-commerce checkouts
 - Survey forms
 - Onboarding flows

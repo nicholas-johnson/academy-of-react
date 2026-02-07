@@ -1,56 +1,61 @@
-import { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { 
-  addBattle, 
-  updateStatus, 
-  addCombatant, 
-  removeBattle, 
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addBattle,
+  updateStatus,
+  addCombatant,
+  removeBattle,
   setFilter,
-  selectFilteredBattles, 
+  selectFilteredBattles,
   selectFilter,
-  selectBattleStats
-} from './battleSlice'
-import './App.css'
+  selectBattleStats,
+} from "./battleSlice";
+import "./App.css";
 
-const STATUSES = ['pending', 'active', 'victory', 'defeat']
+const STATUSES = ["pending", "active", "victory", "defeat"];
 
 function App() {
-  const [battleName, setBattleName] = useState('')
-  const [combatantName, setCombatantName] = useState('')
-  const [selectedBattle, setSelectedBattle] = useState(null)
+  const [battleName, setBattleName] = useState("");
+  const [combatantName, setCombatantName] = useState("");
+  const [selectedBattle, setSelectedBattle] = useState(null);
 
-  const battles = useSelector(selectFilteredBattles)
-  const filter = useSelector(selectFilter)
-  const stats = useSelector(selectBattleStats)
-  const dispatch = useDispatch()
+  const battles = useSelector(selectFilteredBattles);
+  const filter = useSelector(selectFilter);
+  const stats = useSelector(selectBattleStats);
+  const dispatch = useDispatch();
 
   const handleAddBattle = (e) => {
-    e.preventDefault()
-    if (!battleName.trim()) return
-    
-    dispatch(addBattle({ name: battleName }))
-    setBattleName('')
-  }
+    e.preventDefault();
+    if (!battleName.trim()) return;
+
+    dispatch(addBattle({ name: battleName }));
+    setBattleName("");
+  };
 
   const handleStatusChange = (battleId, newStatus) => {
-    dispatch(updateStatus({ id: battleId, status: newStatus }))
-  }
+    dispatch(updateStatus({ id: battleId, status: newStatus }));
+  };
 
   const handleAddCombatant = (battleId) => {
-    if (!combatantName.trim()) return
-    dispatch(addCombatant({ battleId, combatant: combatantName }))
-    setCombatantName('')
-    setSelectedBattle(null)
-  }
+    if (!combatantName.trim()) return;
+    dispatch(addCombatant({ battleId, combatant: combatantName }));
+    setCombatantName("");
+    setSelectedBattle(null);
+  };
 
   const handleFilterChange = (newFilter) => {
-    dispatch(setFilter(newFilter))
-  }
+    dispatch(setFilter(newFilter));
+  };
 
   const getStatusColor = (status) => {
-    const colors = { pending: '#f59e0b', active: '#3b82f6', victory: '#10b981', defeat: '#ef4444' }
-    return colors[status] || '#6b7280'
-  }
+    const colors = {
+      pending: "#f59e0b",
+      active: "#3b82f6",
+      victory: "#10b981",
+      defeat: "#ef4444",
+    };
+    return colors[status] || "#6b7280";
+  };
 
   return (
     <div className="app">
@@ -93,7 +98,9 @@ function App() {
               placeholder="Battle name"
               required
             />
-            <button type="submit" className="btn primary">Declare Battle</button>
+            <button type="submit" className="btn primary">
+              Declare Battle
+            </button>
           </form>
         </section>
 
@@ -101,10 +108,10 @@ function App() {
           <div className="tracker-header">
             <h2>Battle Log</h2>
             <div className="filter-tabs">
-              {['all', ...STATUSES].map(status => (
+              {["all", ...STATUSES].map((status) => (
                 <button
                   key={status}
-                  className={filter === status ? 'tab active' : 'tab'}
+                  className={filter === status ? "tab active" : "tab"}
                   onClick={() => handleFilterChange(status)}
                 >
                   {status}
@@ -117,21 +124,25 @@ function App() {
             {battles.length === 0 ? (
               <p className="empty">No battles recorded</p>
             ) : (
-              battles.map(battle => (
+              battles.map((battle) => (
                 <div key={battle.id} className="battle-card">
                   <div className="battle-header">
                     <h3>{battle.name}</h3>
                     <div className="battle-actions">
                       <select
                         value={battle.status}
-                        onChange={(e) => handleStatusChange(battle.id, e.target.value)}
+                        onChange={(e) =>
+                          handleStatusChange(battle.id, e.target.value)
+                        }
                         style={{ borderColor: getStatusColor(battle.status) }}
                       >
-                        {STATUSES.map(s => (
-                          <option key={s} value={s}>{s}</option>
+                        {STATUSES.map((s) => (
+                          <option key={s} value={s}>
+                            {s}
+                          </option>
                         ))}
                       </select>
-                      <button 
+                      <button
                         className="delete-btn"
                         onClick={() => dispatch(removeBattle(battle.id))}
                       >
@@ -139,17 +150,19 @@ function App() {
                       </button>
                     </div>
                   </div>
-                  
+
                   <div className="combatants">
                     <span className="label">Combatants:</span>
                     {battle.combatants.length === 0 ? (
                       <span className="none">None yet</span>
                     ) : (
                       battle.combatants.map((c, i) => (
-                        <span key={i} className="combatant">{c}</span>
+                        <span key={i} className="combatant">
+                          {c}
+                        </span>
                       ))
                     )}
-                    <button 
+                    <button
                       className="add-combatant-btn"
                       onClick={() => setSelectedBattle(battle.id)}
                     >
@@ -166,12 +179,16 @@ function App() {
                         placeholder="Combatant name"
                         autoFocus
                         onKeyDown={(e) => {
-                          if (e.key === 'Enter') handleAddCombatant(battle.id)
-                          if (e.key === 'Escape') setSelectedBattle(null)
+                          if (e.key === "Enter") handleAddCombatant(battle.id);
+                          if (e.key === "Escape") setSelectedBattle(null);
                         }}
                       />
-                      <button onClick={() => handleAddCombatant(battle.id)}>Add</button>
-                      <button onClick={() => setSelectedBattle(null)}>Cancel</button>
+                      <button onClick={() => handleAddCombatant(battle.id)}>
+                        Add
+                      </button>
+                      <button onClick={() => setSelectedBattle(null)}>
+                        Cancel
+                      </button>
                     </div>
                   )}
                 </div>
@@ -181,7 +198,7 @@ function App() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

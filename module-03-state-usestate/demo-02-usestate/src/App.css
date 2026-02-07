@@ -1,4 +1,5 @@
-h1, h2 {
+h1,
+h2 {
   color: #667eea;
 }
 
@@ -53,8 +54,3 @@ input {
   margin: 15px 0;
   border-left: 4px solid #4caf50;
 }
-
-
-
-
-

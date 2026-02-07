@@ -1,29 +1,29 @@
-import { useState } from 'react'
-import { observer } from 'mobx-react-lite'
-import { academyStore } from './store'
-import './App.css'
+import { useState } from "react";
+import { observer } from "mobx-react-lite";
+import { academyStore } from "./store";
+import "./App.css";
 
-const HOUSES = ['Gryffin', 'Slytherin', 'Ravenclaw', 'Hufflepuff']
+const HOUSES = ["Gryffin", "Slytherin", "Ravenclaw", "Hufflepuff"];
 const HOUSE_COLORS = {
-  Gryffin: '#ae0001',
-  Slytherin: '#1a472a',
-  Ravenclaw: '#0e1a40',
-  Hufflepuff: '#ecb939'
-}
+  Gryffin: "#ae0001",
+  Slytherin: "#1a472a",
+  Ravenclaw: "#0e1a40",
+  Hufflepuff: "#ecb939",
+};
 
 const App = observer(() => {
-  const [name, setName] = useState('')
-  const [house, setHouse] = useState('Gryffin')
-  const [power, setPower] = useState(50)
+  const [name, setName] = useState("");
+  const [house, setHouse] = useState("Gryffin");
+  const [power, setPower] = useState(50);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    if (!name.trim()) return
-    
-    academyStore.addStudent({ name, house, power })
-    setName('')
-    setPower(50)
-  }
+    e.preventDefault();
+    if (!name.trim()) return;
+
+    academyStore.addStudent({ name, house, power });
+    setName("");
+    setPower(50);
+  };
 
   return (
     <div className="app">
@@ -49,15 +49,21 @@ const App = observer(() => {
         </section>
 
         <section className="house-stats">
-          {HOUSES.map(h => {
-            const stats = academyStore.houseStats[h] || { count: 0, power: 0 }
+          {HOUSES.map((h) => {
+            const stats = academyStore.houseStats[h] || { count: 0, power: 0 };
             return (
-              <div key={h} className="house-stat" style={{ borderColor: HOUSE_COLORS[h] }}>
-                <span className="house-name" style={{ color: HOUSE_COLORS[h] }}>{h}</span>
+              <div
+                key={h}
+                className="house-stat"
+                style={{ borderColor: HOUSE_COLORS[h] }}
+              >
+                <span className="house-name" style={{ color: HOUSE_COLORS[h] }}>
+                  {h}
+                </span>
                 <span className="house-count">{stats.count} students</span>
                 <span className="house-power">{stats.power} power</span>
               </div>
-            )
+            );
           })}
         </section>
 
@@ -73,8 +79,10 @@ const App = observer(() => {
                 required
               />
               <select value={house} onChange={(e) => setHouse(e.target.value)}>
-                {HOUSES.map(h => (
-                  <option key={h} value={h}>{h}</option>
+                {HOUSES.map((h) => (
+                  <option key={h} value={h}>
+                    {h}
+                  </option>
                 ))}
               </select>
             </div>
@@ -90,7 +98,9 @@ const App = observer(() => {
                 />
               </label>
             </div>
-            <button type="submit" className="btn primary">Enroll</button>
+            <button type="submit" className="btn primary">
+              Enroll
+            </button>
           </form>
         </section>
 
@@ -98,17 +108,19 @@ const App = observer(() => {
           <div className="roster-header">
             <h2>Student Roster</h2>
             <div className="controls">
-              <select 
-                value={academyStore.houseFilter} 
+              <select
+                value={academyStore.houseFilter}
                 onChange={(e) => academyStore.setHouseFilter(e.target.value)}
               >
                 <option value="all">All Houses</option>
-                {HOUSES.map(h => (
-                  <option key={h} value={h}>{h}</option>
+                {HOUSES.map((h) => (
+                  <option key={h} value={h}>
+                    {h}
+                  </option>
                 ))}
               </select>
-              <select 
-                value={academyStore.sortBy} 
+              <select
+                value={academyStore.sortBy}
                 onChange={(e) => academyStore.setSortBy(e.target.value)}
               >
                 <option value="name">Sort by Name</option>
@@ -121,26 +133,37 @@ const App = observer(() => {
             {academyStore.sortedStudents.length === 0 ? (
               <p className="empty">No students enrolled</p>
             ) : (
-              academyStore.sortedStudents.map(student => (
-                <div 
-                  key={student.id} 
+              academyStore.sortedStudents.map((student) => (
+                <div
+                  key={student.id}
                   className="student-card"
                   style={{ borderLeftColor: HOUSE_COLORS[student.house] }}
                 >
                   <div className="student-info">
                     <h3>{student.name}</h3>
-                    <span className="house-badge" style={{ backgroundColor: HOUSE_COLORS[student.house] }}>
+                    <span
+                      className="house-badge"
+                      style={{ backgroundColor: HOUSE_COLORS[student.house] }}
+                    >
                       {student.house}
                     </span>
                   </div>
                   <div className="student-power">
                     <span className="power-value">{student.power}</span>
                     <div className="power-controls">
-                      <button onClick={() => academyStore.boostPower(student.id, -5)}>-</button>
-                      <button onClick={() => academyStore.boostPower(student.id, 5)}>+</button>
+                      <button
+                        onClick={() => academyStore.boostPower(student.id, -5)}
+                      >
+                        -
+                      </button>
+                      <button
+                        onClick={() => academyStore.boostPower(student.id, 5)}
+                      >
+                        +
+                      </button>
                     </div>
                   </div>
-                  <button 
+                  <button
                     className="remove-btn"
                     onClick={() => academyStore.removeStudent(student.id)}
                   >
@@ -153,7 +176,7 @@ const App = observer(() => {
         </section>
       </main>
     </div>
-  )
-})
+  );
+});
 
-export default App
+export default App;

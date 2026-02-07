@@ -1,42 +1,42 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [time, setTime] = useState(new Date().toLocaleTimeString())
+  const [count, setCount] = useState(0);
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
 
   // Effect 1: Runs after every render (no dependency array)
   // Use sparingly - usually you want dependencies!
   useEffect(() => {
-    document.title = `Count: ${count}`
-  })
+    document.title = `Count: ${count}`;
+  });
 
   // Effect 2: Runs only on mount (empty dependency array)
   useEffect(() => {
-    console.log('Component mounted!')
+    console.log("Component mounted!");
 
     // Cleanup function - runs on unmount
     return () => {
-      console.log('Component will unmount!')
-    }
-  }, [])
+      console.log("Component will unmount!");
+    };
+  }, []);
 
   // Effect 3: Runs when count changes (count in dependency array)
   useEffect(() => {
-    console.log(`Count changed to: ${count}`)
-  }, [count])
+    console.log(`Count changed to: ${count}`);
+  }, [count]);
 
   // Effect 4: Timer with cleanup
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setTime(new Date().toLocaleTimeString())
-    }, 1000)
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
 
     // Cleanup: clear interval when component unmounts
     return () => {
-      clearInterval(intervalId)
-    }
-  }, []) // Empty array = setup once, cleanup on unmount
+      clearInterval(intervalId);
+    };
+  }, []); // Empty array = setup once, cleanup on unmount
 
   return (
     <div className="app">
@@ -46,12 +46,8 @@ function App() {
       <div className="demo-section">
         <h2>Counter Example</h2>
         <p className="count-display">{count}</p>
-        <button onClick={() => setCount(count + 1)}>
-          Increment
-        </button>
-        <p className="hint">
-          Check document title and browser console!
-        </p>
+        <button onClick={() => setCount(count + 1)}>Increment</button>
+        <p className="hint">Check document title and browser console!</p>
       </div>
 
       <div className="demo-section">
@@ -63,14 +59,23 @@ function App() {
       <div className="info-box">
         <h3>🔑 useEffect Patterns</h3>
         <ul>
-          <li><code>useEffect(() =&gt; {"{}"})</code> - Runs after every render</li>
-          <li><code>useEffect(() =&gt; {"{}"}, [])</code> - Runs once on mount</li>
-          <li><code>useEffect(() =&gt; {"{}"}, [dep])</code> - Runs when dep changes</li>
-          <li><code>return () =&gt; {"{}"}</code> - Cleanup function</li>
+          <li>
+            <code>useEffect(() =&gt; {"{}"})</code> - Runs after every render
+          </li>
+          <li>
+            <code>useEffect(() =&gt; {"{}"}, [])</code> - Runs once on mount
+          </li>
+          <li>
+            <code>useEffect(() =&gt; {"{}"}, [dep])</code> - Runs when dep
+            changes
+          </li>
+          <li>
+            <code>return () =&gt; {"{}"}</code> - Cleanup function
+          </li>
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

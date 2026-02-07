@@ -13,6 +13,7 @@ This module introduces React fundamentals using `React.createElement()` without 
 ### Demo 1: Basic createElement (`demo/`)
 
 **What to show:**
+
 - Open `index.html` in browser
 - Walk through `app.js` line by line
 - Show the three arguments to `createElement(type, props, children)`
@@ -20,15 +21,17 @@ This module introduces React fundamentals using `React.createElement()` without 
 - Show how `createRoot()` and `render()` work
 
 **Key points to emphasize:**
+
 ```js
 // This is just a function call that returns an object!
-const element = React.createElement('h1', { className: 'title' }, 'Hello');
+const element = React.createElement("h1", { className: "title" }, "Hello");
 
 // The object looks something like:
 // { type: 'h1', props: { className: 'title', children: 'Hello' } }
 ```
 
 **Live coding suggestion:**
+
 - Create a simple element together
 - Add a child element
 - Show what happens if you `console.log()` the element
@@ -38,18 +41,21 @@ const element = React.createElement('h1', { className: 'title' }, 'Hello');
 ### Demo 2: Virtual DOM Speed (`demo-02-virtual-dom/`)
 
 **What to show:**
+
 - Open `index.html` in browser
 - Click "Render with DOM" and "Render with React" to show initial render
 - Click "Change Random Value → Then Render Both"
 - Point out the stats: DOM rebuilds ALL 10,000 nodes, React updates only 1
 
 **Key points to emphasize:**
+
 - Traditional DOM: destroys and rebuilds everything
 - React Virtual DOM: diffs old vs new, patches only what changed
 - This is WHY React is fast for dynamic UIs
 - Keys matter! (show the `key={item.id}` in code)
 
 **Console demo:**
+
 ```js
 // Change a value manually
 items[0].value = 999999;
@@ -61,15 +67,17 @@ items[0].value = 999999;
 ### Demo 3: Rendering Lists (`demo-03-lists/`)
 
 **What to show:**
+
 - Three examples of using `.map()` with createElement
 - Simple strings → list items
 - Objects → complex cards
 - Using the index parameter
 
 **Key points to emphasize:**
+
 ```js
 // The pattern: array.map(item => createElement(...))
-spells.map(spell => h('li', { key: spell.id }, spell.name))
+spells.map((spell) => h("li", { key: spell.id }, spell.name));
 ```
 
 - Always provide a `key` prop when rendering lists
@@ -77,6 +85,7 @@ spells.map(spell => h('li', { key: spell.id }, spell.name))
 - Index is okay for static lists, but problematic for dynamic ones
 
 **Common question**: "Why do we need keys?"
+
 - React uses keys to track which items changed/moved/were deleted
 - Without keys, React re-renders the entire list
 - Demo: remove the key and show the console warning
@@ -86,35 +95,41 @@ spells.map(spell => h('li', { key: spell.id }, spell.name))
 ## Quests Overview
 
 ### Quest 1: Basic Elements
+
 **Difficulty**: Beginner
 **Time estimate**: 15-20 minutes
 
 Students create a single wizard object and render it as a card.
 
 **What they practice:**
+
 - Creating JavaScript objects
 - Basic `createElement()` calls
 - Nesting elements
 - Rendering to the DOM
 
 **Common struggles:**
+
 - Forgetting the `null` for props when there are none
 - Nesting syntax confusion
 
 ---
 
 ### Quest 2: Rendering Arrays
+
 **Difficulty**: Beginner-Intermediate
 **Time estimate**: 20-30 minutes
 
 Students render an array of student objects as a list.
 
 **What they practice:**
+
 - Arrays of objects
 - Using `.map()` to transform data into elements
 - Keys for list items
 
 **Common struggles:**
+
 - Forgetting to return from the map callback
 - Missing keys (show them the console warning)
 - Arrow function syntax with implicit return
@@ -170,6 +185,7 @@ A: Understanding createElement helps students debug JSX issues and understand wh
 
 **Q: When would I actually use createElement in real code?**
 A: Rarely directly, but it's useful for:
+
 - Dynamic element types: `createElement(isButton ? 'button' : 'a', ...)`
 - Library code
 - Understanding build output
@@ -185,20 +201,24 @@ A: `createRoot()` is the React 18 way. The old `ReactDOM.render()` is deprecated
 ## Troubleshooting
 
 ### "React is not defined"
+
 - Check that the CDN scripts are loaded before app.js
 - Check for typos in the script src URLs
 - Ensure the browser isn't blocking CDN requests
 
 ### "Cannot read property 'render' of null"
+
 - The `#root` element doesn't exist
 - Script is running before DOM is ready
 - Check the element ID matches
 
 ### Console warning about keys
+
 - Show students where to add the `key` prop
 - Explain why keys matter (see Demo 2)
 
 ### Elements not updating
+
 - Students need to call `render()` again after changing data
 - This is intentional — state management comes in Module 3
 

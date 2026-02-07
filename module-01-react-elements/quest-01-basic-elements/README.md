@@ -39,7 +39,7 @@ const myWizard = {
   name: "Luna Moonwhisper",
   house: "Ravenclaw",
   magicLevel: 35,
-  health: 100
+  health: 100,
 };
 ```
 
@@ -59,28 +59,32 @@ const myWizard = {
 **Hint 1**: Start with the HTML structure from the demo. You need script tags for React and ReactDOM.
 
 **Hint 2**: The basic pattern for createElement is:
+
 ```javascript
-React.createElement('tagName', null, 'content')
+React.createElement("tagName", null, "content");
 ```
 
 **Hint 3**: To nest elements, pass them as additional arguments:
+
 ```javascript
 React.createElement(
-  'div',
+  "div",
   null,
-  React.createElement('h1', null, 'Title'),
-  React.createElement('p', null, 'Paragraph')
-)
+  React.createElement("h1", null, "Title"),
+  React.createElement("p", null, "Paragraph"),
+);
 ```
 
 **Hint 4**: You can use template strings to combine text and variables:
+
 ```javascript
-`House: ${student.house}`
+`House: ${student.house}`;
 ```
 
 **Hint 5**: Don't forget to create a root and call render():
+
 ```javascript
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(yourElements);
 ```
 
@@ -89,6 +93,7 @@ root.render(yourElements);
 ## Bonus Challenge
 
 Add a calculated property to display:
+
 - **Power Rating**: Calculated as `magicLevel + (health / 10)`
 - Display this with a special color or styling
 
@@ -97,4 +102,3 @@ Example: If magicLevel is 35 and health is 100, Power Rating would be 45.
 ---
 
 **Next Quest**: [Quest 2: Rendering Arrays](../quest-02-rendering-arrays/)
-

@@ -37,21 +37,21 @@ import { observer } from 'mobx-react-lite'
 class StudentStore {
   students = []
   filter = 'all'
-  
+
   constructor() {
     makeAutoObservable(this)
   }
-  
+
   // Actions - direct mutations are tracked
   addStudent(student) {
     this.students.push(student)
   }
-  
+
   // Computed - automatically cached
   get totalPower() {
     return this.students.reduce((sum, s) => sum + s.power, 0)
   }
-  
+
   get filteredStudents() {
     if (this.filter === 'all') return this.students
     return this.students.filter(s => s.house === this.filter)

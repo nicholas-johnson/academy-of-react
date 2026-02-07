@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { ZustandDemo } from './stores/zustandStore'
-import { ReduxDemo } from './stores/reduxStore'
-import { MobXDemo } from './stores/mobxStore'
-import './App.css'
+import { useState } from "react";
+import { ZustandDemo } from "./stores/zustandStore";
+import { ReduxDemo } from "./stores/reduxStore";
+import { MobXDemo } from "./stores/mobxStore";
+import "./App.css";
 
 function App() {
-  const [activeTab, setActiveTab] = useState('zustand')
+  const [activeTab, setActiveTab] = useState("zustand");
 
   return (
     <div className="app">
@@ -16,29 +16,29 @@ function App() {
 
       <nav className="tabs">
         <button
-          className={activeTab === 'zustand' ? 'tab active' : 'tab'}
-          onClick={() => setActiveTab('zustand')}
+          className={activeTab === "zustand" ? "tab active" : "tab"}
+          onClick={() => setActiveTab("zustand")}
         >
           🐻 Zustand
         </button>
         <button
-          className={activeTab === 'redux' ? 'tab active' : 'tab'}
-          onClick={() => setActiveTab('redux')}
+          className={activeTab === "redux" ? "tab active" : "tab"}
+          onClick={() => setActiveTab("redux")}
         >
           🔮 Redux Toolkit
         </button>
         <button
-          className={activeTab === 'mobx' ? 'tab active' : 'tab'}
-          onClick={() => setActiveTab('mobx')}
+          className={activeTab === "mobx" ? "tab active" : "tab"}
+          onClick={() => setActiveTab("mobx")}
         >
           👁️ MobX
         </button>
       </nav>
 
       <main className="main">
-        {activeTab === 'zustand' && <ZustandDemo />}
-        {activeTab === 'redux' && <ReduxDemo />}
-        {activeTab === 'mobx' && <MobXDemo />}
+        {activeTab === "zustand" && <ZustandDemo />}
+        {activeTab === "redux" && <ReduxDemo />}
+        {activeTab === "mobx" && <MobXDemo />}
       </main>
 
       <footer className="footer">
@@ -70,7 +70,7 @@ function App() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

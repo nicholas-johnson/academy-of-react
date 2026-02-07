@@ -5,12 +5,14 @@
 Build a student directory using Remix loaders for data fetching.
 
 ### Learning Objectives
+
 - Remix file-based routing
 - Data loading with loaders
 - useLoaderData hook
 - TypeScript with Remix
 
 ### Key Concepts
+
 ```typescript
 // app/routes/students.$id.tsx
 import { json, LoaderFunctionArgs } from '@remix-run/node'
@@ -28,6 +30,7 @@ export default function StudentRoute() {
 ```
 
 ### What You'll Build
+
 - `/students` - Student list (loader fetches data)
 - `/students/$id` - Student detail page
 - Automatic data invalidation
@@ -40,12 +43,14 @@ export default function StudentRoute() {
 Create a spell management system using Remix actions for mutations.
 
 ### Learning Objectives
+
 - Form submissions with actions
 - Progressive enhancement
 - useNavigation for loading states
 - Form validation
 
 ### Key Concepts
+
 ```typescript
 // app/routes/spells.new.tsx
 import { ActionFunctionArgs, redirect } from '@remix-run/node'
@@ -54,7 +59,7 @@ import { Form, useNavigation } from '@remix-run/react'
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData()
   const name = formData.get('name')
-  
+
   await db.spells.create({ name })
   return redirect('/spells')
 }
@@ -62,7 +67,7 @@ export async function action({ request }: ActionFunctionArgs) {
 export default function NewSpellRoute() {
   const navigation = useNavigation()
   const isSubmitting = navigation.state === 'submitting'
-  
+
   return (
     <Form method="post">
       <input name="name" required />
@@ -75,6 +80,7 @@ export default function NewSpellRoute() {
 ```
 
 ### What You'll Build
+
 - Create spell form (action)
 - Edit spell form (loader + action)
 - Delete spell (action)
@@ -87,12 +93,14 @@ export default function NewSpellRoute() {
 Build a complex layout system with nested routes and outlets.
 
 ### Learning Objectives
+
 - Nested routing with Outlet
 - Shared layouts
 - Pathless layouts
 - Index routes
 
 ### Key Concepts
+
 ```typescript
 // app/routes/academy.tsx
 import { Outlet } from '@remix-run/react'
@@ -118,6 +126,7 @@ export default function StudentsRoute() {
 ```
 
 ### What You'll Build
+
 - Academy layout with navigation
 - Nested student routes
 - Nested spell routes
@@ -134,6 +143,7 @@ npm run dev
 ```
 
 ## Resources
+
 - [Remix Docs](https://remix.run/docs)
 - [Loaders](https://remix.run/docs/en/main/route/loader)
 - [Actions](https://remix.run/docs/en/main/route/action)

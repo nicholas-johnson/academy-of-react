@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
 
 // TODO: Create ThemeContext using createContext()
 
@@ -15,27 +15,29 @@ import './App.css'
 
 function Header() {
   // TODO: Replace props with useTheme() hook
-  const theme = 'light'  // Remove this - get from context
-  const toggleTheme = () => {}  // Remove this - get from context
+  const theme = "light"; // Remove this - get from context
+  const toggleTheme = () => {}; // Remove this - get from context
 
   return (
     <header className="header">
       <h1>⚡ Battle Academy</h1>
       <button onClick={toggleTheme} className="theme-toggle">
-        {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+        {theme === "light" ? "🌙 Dark" : "☀️ Light"}
       </button>
     </header>
-  )
+  );
 }
 
 function Content() {
   // TODO: Replace props with useTheme() hook
-  const theme = 'light'  // Remove this - get from context
+  const theme = "light"; // Remove this - get from context
 
   return (
     <div className="content">
       <h2>Welcome, Wizard!</h2>
-      <p>Current theme: <strong>{theme}</strong></p>
+      <p>
+        Current theme: <strong>{theme}</strong>
+      </p>
       <p>This component accesses theme without prop drilling!</p>
 
       <div className="stats">
@@ -62,36 +64,36 @@ function Content() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function Footer() {
   // TODO: Replace props with useTheme() hook
-  const theme = 'light'  // Remove this - get from context
+  const theme = "light"; // Remove this - get from context
 
   return (
     <footer className="footer">
       <p>Theme persists across sessions thanks to localStorage</p>
       <p className="hint">Current: {theme} mode</p>
     </footer>
-  )
+  );
 }
 
 function App() {
   // This state management should move into ThemeProvider
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('theme')
-    return saved || 'light'
-  })
+    const saved = localStorage.getItem("theme");
+    return saved || "light";
+  });
 
   useEffect(() => {
-    localStorage.setItem('theme', theme)
-    document.body.className = theme
-  }, [theme])
+    localStorage.setItem("theme", theme);
+    document.body.className = theme;
+  }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   // TODO: Wrap with ThemeProvider instead of passing props
   // The child components should use useTheme() to access state
@@ -101,7 +103,7 @@ function App() {
       <Content theme={theme} />
       <Footer theme={theme} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

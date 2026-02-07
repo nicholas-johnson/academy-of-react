@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 // TODO: Create a Card component that uses children
 // - Accept a "variant" prop with default value "default"
@@ -38,7 +38,7 @@ function App() {
   return (
     <div>
       {/* TODO: Use Layout component with header, sidebar, and main content */}
-      
+
       {/* Example of what you should build:
       
       <Layout
@@ -51,9 +51,9 @@ function App() {
       */}
 
       {/* TODO: Inside the Layout, create Sections with Cards */}
-      
+
       {/* TODO: Add a Modal that opens with a button */}
-      
+
       <p>Replace this with your layout components!</p>
     </div>
   );

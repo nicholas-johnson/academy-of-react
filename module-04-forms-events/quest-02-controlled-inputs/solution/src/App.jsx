@@ -1,53 +1,118 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 // Sample spell data - 15 spells with various properties
 const SPELLS = [
-  { id: 1, name: 'Fireball', type: 'fire', level: 3, damage: 45, manaCost: 30 },
-  { id: 2, name: 'Ice Shard', type: 'ice', level: 2, damage: 30, manaCost: 20 },
-  { id: 3, name: 'Lightning Bolt', type: 'lightning', level: 4, damage: 60, manaCost: 40 },
-  { id: 4, name: 'Flame Strike', type: 'fire', level: 5, damage: 75, manaCost: 50 },
-  { id: 5, name: 'Frost Nova', type: 'ice', level: 3, damage: 40, manaCost: 35 },
-  { id: 6, name: 'Thunder Clap', type: 'lightning', level: 2, damage: 35, manaCost: 25 },
-  { id: 7, name: 'Blaze', type: 'fire', level: 1, damage: 20, manaCost: 15 },
-  { id: 8, name: 'Frozen Orb', type: 'ice', level: 5, damage: 70, manaCost: 55 },
-  { id: 9, name: 'Chain Lightning', type: 'lightning', level: 5, damage: 80, manaCost: 60 },
-  { id: 10, name: 'Heal', type: 'light', level: 2, damage: 0, manaCost: 25 },
-  { id: 11, name: 'Inferno', type: 'fire', level: 5, damage: 90, manaCost: 70 },
-  { id: 12, name: 'Glacial Spike', type: 'ice', level: 4, damage: 55, manaCost: 45 },
-  { id: 13, name: 'Storm Fury', type: 'lightning', level: 3, damage: 50, manaCost: 38 },
-  { id: 14, name: 'Holy Light', type: 'light', level: 3, damage: 0, manaCost: 30 },
-  { id: 15, name: 'Meteor', type: 'fire', level: 5, damage: 100, manaCost: 80 },
-]
+  { id: 1, name: "Fireball", type: "fire", level: 3, damage: 45, manaCost: 30 },
+  { id: 2, name: "Ice Shard", type: "ice", level: 2, damage: 30, manaCost: 20 },
+  {
+    id: 3,
+    name: "Lightning Bolt",
+    type: "lightning",
+    level: 4,
+    damage: 60,
+    manaCost: 40,
+  },
+  {
+    id: 4,
+    name: "Flame Strike",
+    type: "fire",
+    level: 5,
+    damage: 75,
+    manaCost: 50,
+  },
+  {
+    id: 5,
+    name: "Frost Nova",
+    type: "ice",
+    level: 3,
+    damage: 40,
+    manaCost: 35,
+  },
+  {
+    id: 6,
+    name: "Thunder Clap",
+    type: "lightning",
+    level: 2,
+    damage: 35,
+    manaCost: 25,
+  },
+  { id: 7, name: "Blaze", type: "fire", level: 1, damage: 20, manaCost: 15 },
+  {
+    id: 8,
+    name: "Frozen Orb",
+    type: "ice",
+    level: 5,
+    damage: 70,
+    manaCost: 55,
+  },
+  {
+    id: 9,
+    name: "Chain Lightning",
+    type: "lightning",
+    level: 5,
+    damage: 80,
+    manaCost: 60,
+  },
+  { id: 10, name: "Heal", type: "light", level: 2, damage: 0, manaCost: 25 },
+  { id: 11, name: "Inferno", type: "fire", level: 5, damage: 90, manaCost: 70 },
+  {
+    id: 12,
+    name: "Glacial Spike",
+    type: "ice",
+    level: 4,
+    damage: 55,
+    manaCost: 45,
+  },
+  {
+    id: 13,
+    name: "Storm Fury",
+    type: "lightning",
+    level: 3,
+    damage: 50,
+    manaCost: 38,
+  },
+  {
+    id: 14,
+    name: "Holy Light",
+    type: "light",
+    level: 3,
+    damage: 0,
+    manaCost: 30,
+  },
+  { id: 15, name: "Meteor", type: "fire", level: 5, damage: 100, manaCost: 80 },
+];
 
 function App() {
   // Filter state
-  const [searchTerm, setSearchTerm] = useState('')
-  const [typeFilter, setTypeFilter] = useState('all')
-  const [minLevel, setMinLevel] = useState(1)
+  const [searchTerm, setSearchTerm] = useState("");
+  const [typeFilter, setTypeFilter] = useState("all");
+  const [minLevel, setMinLevel] = useState(1);
 
   // Compute filtered spells based on current filters
   // This is "derived state" - calculated from other state
-  const filteredSpells = SPELLS.filter(spell => {
+  const filteredSpells = SPELLS.filter((spell) => {
     // Check search term (case-insensitive)
-    const matchesSearch = spell.name.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesSearch = spell.name
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
 
     // Check type filter
-    const matchesType = typeFilter === 'all' || spell.type === typeFilter
+    const matchesType = typeFilter === "all" || spell.type === typeFilter;
 
     // Check minimum level
-    const matchesLevel = spell.level >= minLevel
+    const matchesLevel = spell.level >= minLevel;
 
     // Spell must match ALL filters
-    return matchesSearch && matchesType && matchesLevel
-  })
+    return matchesSearch && matchesType && matchesLevel;
+  });
 
   // Clear all filters
   const handleClearFilters = () => {
-    setSearchTerm('')
-    setTypeFilter('all')
-    setMinLevel(1)
-  }
+    setSearchTerm("");
+    setTypeFilter("all");
+    setMinLevel(1);
+  };
 
   return (
     <div className="app">
@@ -104,7 +169,7 @@ function App() {
         <span>
           Showing {filteredSpells.length} of {SPELLS.length} spells
         </span>
-        {(searchTerm || typeFilter !== 'all' || minLevel > 1) && (
+        {(searchTerm || typeFilter !== "all" || minLevel > 1) && (
           <button onClick={handleClearFilters} className="clear-btn">
             Clear Filters
           </button>
@@ -117,12 +182,10 @@ function App() {
             No spells match your search criteria. Try different filters!
           </div>
         ) : (
-          filteredSpells.map(spell => (
+          filteredSpells.map((spell) => (
             <div key={spell.id} className="spell-card">
               <div className="spell-name">{spell.name}</div>
-              <span className={`spell-type ${spell.type}`}>
-                {spell.type}
-              </span>
+              <span className={`spell-type ${spell.type}`}>{spell.type}</span>
               <div className="spell-stats">
                 <div className="spell-stat">
                   <span className="stat-label">Level</span>
@@ -142,7 +205,7 @@ function App() {
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

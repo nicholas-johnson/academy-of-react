@@ -7,6 +7,7 @@ The Battle Command System needs instant input focus. When wizards enter combat, 
 ## Your Mission
 
 Build a battle command interface that:
+
 - Auto-focuses the spell input when mounted
 - Has a "Clear & Focus" button that clears input and refocuses
 - Displays command history
@@ -29,6 +30,7 @@ Build a battle command interface that:
 ## Starter Code
 
 The starter includes basic structure. Add:
+
 - Ref for input element
 - useEffect to auto-focus on mount
 - Clear & focus logic
@@ -41,4 +43,5 @@ The starter includes basic structure. Add:
 - Remember to check if ref is not null before using
 
 ---
+
 [Solution](./solution/) | [Back to Module](../../)

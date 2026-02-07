@@ -6,7 +6,7 @@ const students = [
     house: "Wisdom",
     level: 42,
     specialty: "Elemental Magic",
-    status: "active"
+    status: "active",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const students = [
     house: "Valor",
     level: 38,
     specialty: "Combat Magic",
-    status: "active"
+    status: "active",
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const students = [
     house: "Nature",
     level: 45,
     specialty: "Healing Arts",
-    status: "active"
+    status: "active",
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ const students = [
     house: "Mystery",
     level: 40,
     specialty: "Illusion Magic",
-    status: "active"
+    status: "active",
   },
   {
     id: 5,
@@ -38,7 +38,7 @@ const students = [
     house: "Valor",
     level: 35,
     specialty: "Defense Magic",
-    status: "training"
+    status: "training",
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const students = [
     house: "Wisdom",
     level: 48,
     specialty: "Astral Magic",
-    status: "active"
+    status: "active",
   },
   {
     id: 7,
@@ -54,7 +54,7 @@ const students = [
     house: "Nature",
     level: 33,
     specialty: "Beast Taming",
-    status: "active"
+    status: "active",
   },
   {
     id: 8,
@@ -62,8 +62,8 @@ const students = [
     house: "Mystery",
     level: 50,
     specialty: "Dark Arts",
-    status: "active"
-  }
+    status: "active",
+  },
 ];
 
 // Your code here...

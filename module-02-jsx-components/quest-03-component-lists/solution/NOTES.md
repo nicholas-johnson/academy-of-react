@@ -27,13 +27,13 @@ function Ingredient({ name }) {
 Mapping over an array of objects, each containing an array:
 
 ```jsx
-potions.map(potion => (
+potions.map((potion) => (
   <PotionCard key={potion.id}>
     {potion.ingredients.map((ingredient, index) => (
       <Ingredient key={index} name={ingredient} />
     ))}
   </PotionCard>
-))
+));
 ```
 
 **Best Practice**: Use unique IDs for keys when available, fall back to index only for static lists.
@@ -41,6 +41,7 @@ potions.map(potion => (
 ## Module 2 Complete!
 
 You now understand:
+
 - ✅ JSX syntax vs createElement
 - ✅ Reusable components
 - ✅ Component composition
@@ -48,9 +49,3 @@ You now understand:
 - ✅ Mapping over arrays
 
 **Next**: Module 3 introduces state with useState!
-
-
-
-
-
-

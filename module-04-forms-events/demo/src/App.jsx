@@ -1,48 +1,48 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-  const [errors, setErrors] = useState({})
-  const [submitted, setSubmitted] = useState(false)
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
   const validate = () => {
-    const newErrors = {}
-    if (!formData.name.trim()) newErrors.name = 'Name is required'
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required'
+      newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid'
+      newErrors.email = "Email is invalid";
     }
-    if (!formData.message.trim()) newErrors.message = 'Message is required'
-    return newErrors
-  }
+    if (!formData.message.trim()) newErrors.message = "Message is required";
+    return newErrors;
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const newErrors = validate()
-    
+    e.preventDefault();
+    const newErrors = validate();
+
     if (Object.keys(newErrors).length === 0) {
-      console.log('Form submitted:', formData)
-      setSubmitted(true)
-      setFormData({ name: '', email: '', message: '' })
+      console.log("Form submitted:", formData);
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
     } else {
-      setErrors(newErrors)
+      setErrors(newErrors);
     }
-  }
+  };
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
     // Clear error when user types
     if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }))
+      setErrors((prev) => ({ ...prev, [name]: "" }));
     }
-  }
+  };
 
   return (
     <div className="app">
@@ -50,9 +50,7 @@ function App() {
       <p>Send magical messages across the Academy</p>
 
       {submitted && (
-        <div className="success">
-          ✓ Your message has been sent via owl!
-        </div>
+        <div className="success">✓ Your message has been sent via owl!</div>
       )}
 
       <form onSubmit={handleSubmit} className="form">
@@ -64,7 +62,7 @@ function App() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className={errors.name ? 'error' : ''}
+            className={errors.name ? "error" : ""}
           />
           {errors.name && <span className="error-message">{errors.name}</span>}
         </div>
@@ -77,9 +75,11 @@ function App() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={errors.email ? 'error' : ''}
+            className={errors.email ? "error" : ""}
           />
-          {errors.email && <span className="error-message">{errors.email}</span>}
+          {errors.email && (
+            <span className="error-message">{errors.email}</span>
+          )}
         </div>
 
         <div className="form-group">
@@ -90,9 +90,11 @@ function App() {
             rows="5"
             value={formData.message}
             onChange={handleChange}
-            className={errors.message ? 'error' : ''}
+            className={errors.message ? "error" : ""}
           />
-          {errors.message && <span className="error-message">{errors.message}</span>}
+          {errors.message && (
+            <span className="error-message">{errors.message}</span>
+          )}
         </div>
 
         <button type="submit" className="submit-btn">
@@ -100,8 +102,7 @@ function App() {
         </button>
       </form>
     </div>
-  )
+  );
 }
 
-export default App
-
+export default App;

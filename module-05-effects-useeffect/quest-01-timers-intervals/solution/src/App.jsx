@@ -1,60 +1,63 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  const [minutes, setMinutes] = useState(5)
-  const [secondsRemaining, setSecondsRemaining] = useState(0)
-  const [isRunning, setIsRunning] = useState(false)
-  const [totalSeconds, setTotalSeconds] = useState(0)
+  const [minutes, setMinutes] = useState(5);
+  const [secondsRemaining, setSecondsRemaining] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+  const [totalSeconds, setTotalSeconds] = useState(0);
 
   // Start timer - convert minutes to seconds
   const startTimer = () => {
-    const total = minutes * 60
-    setSecondsRemaining(total)
-    setTotalSeconds(total)
-    setIsRunning(true)
-  }
+    const total = minutes * 60;
+    setSecondsRemaining(total);
+    setTotalSeconds(total);
+    setIsRunning(true);
+  };
 
   // Stop timer
   const stopTimer = () => {
-    setIsRunning(false)
-  }
+    setIsRunning(false);
+  };
 
   // Reset timer
   const resetTimer = () => {
-    setIsRunning(false)
-    setSecondsRemaining(0)
-    setTotalSeconds(0)
-  }
+    setIsRunning(false);
+    setSecondsRemaining(0);
+    setTotalSeconds(0);
+  };
 
   // Countdown effect
   useEffect(() => {
-    if (!isRunning || secondsRemaining <= 0) return
+    if (!isRunning || secondsRemaining <= 0) return;
 
     const intervalId = setInterval(() => {
-      setSecondsRemaining(prev => {
+      setSecondsRemaining((prev) => {
         if (prev <= 1) {
-          setIsRunning(false)
-          alert('🧘 Meditation complete! Your focus is restored.')
-          return 0
+          setIsRunning(false);
+          alert("🧘 Meditation complete! Your focus is restored.");
+          return 0;
         }
-        return prev - 1
-      })
-    }, 1000)
+        return prev - 1;
+      });
+    }, 1000);
 
     // Cleanup function - CRITICAL to prevent memory leaks!
-    return () => clearInterval(intervalId)
-  }, [isRunning, secondsRemaining])
+    return () => clearInterval(intervalId);
+  }, [isRunning, secondsRemaining]);
 
   // Format seconds as MM:SS
   const formatTime = (seconds) => {
-    const mins = Math.floor(seconds / 60)
-    const secs = seconds % 60
-    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
-  }
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+  };
 
   // Calculate progress percentage
-  const progress = totalSeconds > 0 ? ((totalSeconds - secondsRemaining) / totalSeconds) * 100 : 0
+  const progress =
+    totalSeconds > 0
+      ? ((totalSeconds - secondsRemaining) / totalSeconds) * 100
+      : 0;
 
   return (
     <div className="app">
@@ -75,9 +78,7 @@ function App() {
         </div>
       )}
 
-      <div className="timer-display">
-        {formatTime(secondsRemaining)}
-      </div>
+      <div className="timer-display">{formatTime(secondsRemaining)}</div>
 
       <div className="progress-bar">
         <div className="progress-fill" style={{ width: `${progress}%` }} />
@@ -106,7 +107,7 @@ function App() {
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

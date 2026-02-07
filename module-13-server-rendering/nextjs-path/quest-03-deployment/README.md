@@ -7,6 +7,7 @@
 ## Objective
 
 Build and deploy a complete Academy Portal with:
+
 - Multiple rendering strategies (SSG, ISR, Dynamic)
 - Protected admin routes
 - API routes for data
@@ -26,6 +27,7 @@ Build and deploy a complete Academy Portal with:
 ### 1. Multiple Rendering Strategies
 
 **Static (SSG)**:
+
 ```tsx
 // app/page.tsx - Home page (rarely changes)
 export default async function Home() {
@@ -34,6 +36,7 @@ export default async function Home() {
 ```
 
 **ISR**:
+
 ```tsx
 // app/students/page.tsx - Revalidate every hour
 export const revalidate = 3600;
@@ -45,9 +48,10 @@ export default async function StudentsPage() {
 ```
 
 **Dynamic**:
+
 ```tsx
 // app/battles/page.tsx - Always fresh
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export default async function BattlesPage() {
   const battles = await fetchBattles();
@@ -58,8 +62,9 @@ export default async function BattlesPage() {
 ### 2. API Route Handlers
 
 Create `app/api/students/route.ts`:
+
 ```tsx
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 export async function GET() {
   const students = await db.students.findMany();
@@ -76,22 +81,23 @@ export async function POST(request: Request) {
 ### 3. Protected Routes with Middleware
 
 Create `middleware.ts`:
+
 ```tsx
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  const token = request.cookies.get('auth-token');
-  
-  if (!token && request.nextUrl.pathname.startsWith('/admin')) {
-    return NextResponse.redirect(new URL('/login', request.url));
+  const token = request.cookies.get("auth-token");
+
+  if (!token && request.nextUrl.pathname.startsWith("/admin")) {
+    return NextResponse.redirect(new URL("/login", request.url));
   }
-  
+
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: '/admin/:path*',
+  matcher: "/admin/:path*",
 };
 ```
 
@@ -140,11 +146,12 @@ app/
 ✅ Environment variables configured  
 ✅ Production build optimized  
 ✅ TypeScript throughout  
-✅ Error boundaries in place  
+✅ Error boundaries in place
 
 ## Environment Variables
 
 Create `.env.local`:
+
 ```
 DATABASE_URL="your_database_url"
 NEXT_PUBLIC_API_URL="your_api_url"
@@ -180,6 +187,7 @@ export default async function StudentPage({ params }) {
   return <StudentProfile student={student} />;
 }
 ```
+
 </details>
 
 <details>
@@ -198,6 +206,7 @@ export async function POST(request: Request) {
   return NextResponse.json(battle, { status: 201 });
 }
 ```
+
 </details>
 
 <details>
@@ -207,13 +216,14 @@ export async function POST(request: Request) {
 // middleware.ts
 export function middleware(request: NextRequest) {
   const isAuthenticated = checkAuth(request);
-  const isAdminRoute = request.nextUrl.pathname.startsWith('/admin');
-  
+  const isAdminRoute = request.nextUrl.pathname.startsWith("/admin");
+
   if (isAdminRoute && !isAuthenticated) {
-    return NextResponse.redirect(new URL('/login', request.url));
+    return NextResponse.redirect(new URL("/login", request.url));
   }
 }
 ```
+
 </details>
 
 ## Bonus Challenges
@@ -241,9 +251,3 @@ export function middleware(request: NextRequest) {
 **Want more?** Try the [Remix Path](../../remix-path/) or [Astro Path](../../astro-path/) to see different approaches to server rendering.
 
 **Course Complete!** Return to the [main README](../../../README.md) to review your journey and explore next steps.
-
-
-
-
-
-

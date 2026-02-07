@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import battleReducer from './battleSlice'
+import { configureStore } from "@reduxjs/toolkit";
+import battleReducer from "./battleSlice";
 
 const store = configureStore({
   reducer: {
-    battles: battleReducer
-  }
-})
+    battles: battleReducer,
+  },
+});
 
-export default store
+export default store;

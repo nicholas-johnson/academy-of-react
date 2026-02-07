@@ -7,6 +7,7 @@
 ## Objective
 
 Build a Battle Records system with:
+
 - Display battles (Server Component)
 - Add new battles (Server Action)
 - Update battle results (Server Action)
@@ -26,6 +27,7 @@ Build a Battle Records system with:
 ### 1. Display Battles (Server Component)
 
 Create `app/battles/page.tsx`:
+
 - Fetch all battles
 - Display as list/cards
 - Show winner, date, participants
@@ -33,8 +35,9 @@ Create `app/battles/page.tsx`:
 ### 2. Add Battle Form (Server Action)
 
 Create `app/battles/actions.ts`:
+
 ```tsx
-'use server';
+"use server";
 
 export async function createBattle(formData: FormData) {
   // Validate, create, revalidate
@@ -44,6 +47,7 @@ export async function createBattle(formData: FormData) {
 ### 3. Delete Battle (Server Action)
 
 Add delete functionality:
+
 - Server Action for deletion
 - Confirmation UI
 - Revalidate after delete
@@ -51,10 +55,11 @@ Add delete functionality:
 ### 4. Optimistic Updates
 
 Use `useOptimistic()` for instant UI feedback:
+
 ```tsx
 const [optimisticBattles, addOptimisticBattle] = useOptimistic(
   battles,
-  (state, newBattle) => [...state, newBattle]
+  (state, newBattle) => [...state, newBattle],
 );
 ```
 
@@ -66,7 +71,7 @@ const [optimisticBattles, addOptimisticBattle] = useOptimistic(
 ✅ `revalidatePath()` called after mutations  
 ✅ Delete functionality works with confirmation  
 ✅ Form validation and error messages  
-✅ TypeScript types for Battle interface  
+✅ TypeScript types for Battle interface
 
 ## TypeScript Interface
 
@@ -88,27 +93,28 @@ interface Battle {
 
 ```tsx
 // app/battles/actions.ts
-'use server';
+"use server";
 
-import { revalidatePath } from 'next/cache';
+import { revalidatePath } from "next/cache";
 
 export async function createBattle(formData: FormData) {
-  const winner = formData.get('winner') as string;
-  
+  const winner = formData.get("winner") as string;
+
   // Validate
   if (!winner) {
-    return { error: 'Winner required' };
+    return { error: "Winner required" };
   }
-  
+
   // Create in database
   await db.battles.create({ data: { winner } });
-  
+
   // Revalidate to show new data
-  revalidatePath('/battles');
-  
+  revalidatePath("/battles");
+
   return { success: true };
 }
 ```
+
 </details>
 
 <details>
@@ -116,42 +122,42 @@ export async function createBattle(formData: FormData) {
 
 ```tsx
 // app/battles/page.tsx
-import { createBattle } from './actions';
+import { createBattle } from "./actions";
 
 <form action={createBattle}>
   <input name="winner" required />
   <button type="submit">Record Battle</button>
-</form>
+</form>;
 ```
+
 </details>
 
 <details>
 <summary>Hint 3: Optimistic Updates</summary>
 
 ```tsx
-'use client';
+"use client";
 
-import { useOptimistic } from 'react';
+import { useOptimistic } from "react";
 
 function BattleList({ battles }) {
   const [optimisticBattles, addOptimistic] = useOptimistic(
     battles,
-    (state, newBattle) => [newBattle, ...state]
+    (state, newBattle) => [newBattle, ...state],
   );
-  
+
   async function handleAdd(formData) {
-    const newBattle = { /* ... */ };
+    const newBattle = {
+      /* ... */
+    };
     addOptimistic(newBattle); // Instant UI update
     await createBattle(formData); // Actual mutation
   }
-  
-  return (
-    <form action={handleAdd}>
-      {/* Form fields */}
-    </form>
-  );
+
+  return <form action={handleAdd}>{/* Form fields */}</form>;
 }
 ```
+
 </details>
 
 ## Bonus Challenges
@@ -166,9 +172,3 @@ function BattleList({ battles }) {
 
 **Previous Quest**: [Quest 1: Academy Portal ←](../quest-01-academy-portal/)  
 **Next Quest**: [Quest 3: Deployment →](../quest-03-deployment/)
-
-
-
-
-
-

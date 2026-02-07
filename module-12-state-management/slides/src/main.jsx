@@ -1,75 +1,85 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route, useParams, useNavigate, Navigate } from 'react-router-dom'
-import { 
-  TitleSlide, 
-  StandardSlide, 
-  ComparisonSlide, 
-  CodeSlide, 
-  RulesSlide 
-} from 'slide-deck'
-import { slides } from './slides.js'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useParams,
+  useNavigate,
+  Navigate,
+} from "react-router-dom";
+import {
+  TitleSlide,
+  StandardSlide,
+  ComparisonSlide,
+  CodeSlide,
+  RulesSlide,
+} from "slide-deck";
+import { slides } from "./slides.js";
+import "./index.css";
 
 // Custom slide viewer that supports animated components
 function SlideViewer({ slides }) {
-  const { slideNumber } = useParams()
-  const navigate = useNavigate()
-  
-  const currentSlide = Math.max(0, Math.min(parseInt(slideNumber || '1', 10) - 1, slides.length - 1))
+  const { slideNumber } = useParams();
+  const navigate = useNavigate();
+
+  const currentSlide = Math.max(
+    0,
+    Math.min(parseInt(slideNumber || "1", 10) - 1, slides.length - 1),
+  );
 
   React.useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
-        e.preventDefault()
+      if (e.key === "ArrowRight" || e.key === " " || e.key === "Enter") {
+        e.preventDefault();
         if (currentSlide < slides.length - 1) {
-          navigate(`/${currentSlide + 2}`)
+          navigate(`/${currentSlide + 2}`);
         }
-      } else if (e.key === 'ArrowLeft' || e.key === 'Backspace') {
-        e.preventDefault()
+      } else if (e.key === "ArrowLeft" || e.key === "Backspace") {
+        e.preventDefault();
         if (currentSlide > 0) {
-          navigate(`/${currentSlide}`)
+          navigate(`/${currentSlide}`);
         }
-      } else if (e.key === 'Home') {
-        navigate('/1')
-      } else if (e.key === 'End') {
-        navigate(`/${slides.length}`)
+      } else if (e.key === "Home") {
+        navigate("/1");
+      } else if (e.key === "End") {
+        navigate(`/${slides.length}`);
       }
-    }
+    };
 
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [currentSlide, navigate, slides.length])
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentSlide, navigate, slides.length]);
 
-  const slide = slides[currentSlide]
+  const slide = slides[currentSlide];
 
   const renderSlide = () => {
     // Handle custom component slides
-    if (slide.type === 'custom' && slide.component) {
-      const Component = slide.component
-      return <Component />
+    if (slide.type === "custom" && slide.component) {
+      const Component = slide.component;
+      return <Component />;
     }
-    
+
     switch (slide.type) {
-      case 'title':
-        return <TitleSlide content={slide.content} />
-      case 'comparison':
-        return <ComparisonSlide content={slide.content} />
-      case 'code':
-        return <CodeSlide content={slide.content} />
-      case 'rules':
-        return <RulesSlide content={slide.content} />
+      case "title":
+        return <TitleSlide content={slide.content} />;
+      case "comparison":
+        return <ComparisonSlide content={slide.content} />;
+      case "code":
+        return <CodeSlide content={slide.content} />;
+      case "rules":
+        return <RulesSlide content={slide.content} />;
       default:
-        return <StandardSlide content={slide.content} />
+        return <StandardSlide content={slide.content} />;
     }
-  }
+  };
 
   return (
     <div className="w-screen h-screen flex flex-col bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
       {renderSlide()}
-      
+
       <div className="flex justify-center items-center gap-8 p-4 bg-slate-950 border-t border-slate-800">
-        <button 
+        <button
           onClick={() => navigate(`/${currentSlide}`)}
           disabled={currentSlide === 0}
           className="px-6 py-2 font-semibold rounded-lg bg-gradient-to-r from-primary to-secondary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
@@ -79,7 +89,7 @@ function SlideViewer({ slides }) {
         <span className="text-lg text-gray-400 font-semibold min-w-[80px] text-center">
           {currentSlide + 1} / {slides.length}
         </span>
-        <button 
+        <button
           onClick={() => navigate(`/${currentSlide + 2}`)}
           disabled={currentSlide === slides.length - 1}
           className="px-6 py-2 font-semibold rounded-lg bg-gradient-to-r from-primary to-secondary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
@@ -87,12 +97,12 @@ function SlideViewer({ slides }) {
           Next →
         </button>
       </div>
-      
+
       <div className="text-center py-2 text-sm text-slate-600 bg-slate-950">
         Use ← → arrow keys or click buttons to navigate
       </div>
     </div>
-  )
+  );
 }
 
 function App() {
@@ -103,11 +113,11 @@ function App() {
         <Route path="/" element={<Navigate to="/1" replace />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
-)
+  </React.StrictMode>,
+);

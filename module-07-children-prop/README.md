@@ -29,7 +29,7 @@ Everything between a component's opening and closing tags becomes `children`:
 <Card>
   <h2>Title</h2>
   <p>Any content can go here!</p>
-</Card>
+</Card>;
 
 // Inside Card:
 function Card({ children }) {

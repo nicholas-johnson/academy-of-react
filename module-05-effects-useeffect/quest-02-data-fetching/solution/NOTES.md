@@ -17,6 +17,7 @@ public/
 Vite serves files from `public/` at the root URL, so we can fetch `/api/intelligence.json`.
 
 **Why this approach?**
+
 - Uses real `fetch()` - not mocked data
 - Works offline (no external API dependency)
 - Students see the actual fetch/response pattern
@@ -29,12 +30,12 @@ Vite serves files from `public/` at the root URL, so we can fetch `/api/intellig
 ```javascript
 useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch('/api/intelligence.json')
-    const data = await response.json()
-    setIntel(data.reports)
-  }
-  fetchData()
-}, []) // Empty array = run once on mount
+    const response = await fetch("/api/intelligence.json");
+    const data = await response.json();
+    setIntel(data.reports);
+  };
+  fetchData();
+}, []); // Empty array = run once on mount
 ```
 
 ### The Fetch Pattern
@@ -42,28 +43,28 @@ useEffect(() => {
 ```javascript
 useEffect(() => {
   const fetchData = async () => {
-    setLoading(true)
-    setError(null)
-    
+    setLoading(true);
+    setError(null);
+
     try {
-      const response = await fetch('/api/intelligence.json')
-      
+      const response = await fetch("/api/intelligence.json");
+
       // Always check response.ok!
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-      
-      const data = await response.json()
-      setIntel(data.reports)
+
+      const data = await response.json();
+      setIntel(data.reports);
     } catch (err) {
-      setError(err.message)
+      setError(err.message);
     } finally {
-      setLoading(false)  // Always runs, success or error
+      setLoading(false); // Always runs, success or error
     }
-  }
-  
-  fetchData()
-}, [])
+  };
+
+  fetchData();
+}, []);
 ```
 
 **Note**: Can't make useEffect callback itself async. Create async function inside.
@@ -71,12 +72,13 @@ useEffect(() => {
 ### Three-State Pattern
 
 ```javascript
-const [data, setData] = useState([])
-const [loading, setLoading] = useState(true)
-const [error, setError] = useState(null)
+const [data, setData] = useState([]);
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState(null);
 ```
 
 Essential for good UX with async operations:
+
 - `loading`: Show spinner while fetching
 - `error`: Show error message if fetch fails
 - `data`: Render the actual content
@@ -84,9 +86,9 @@ Essential for good UX with async operations:
 ### Conditional Rendering
 
 ```javascript
-if (loading) return <Loading />
-if (error) return <Error />
-return <Data />
+if (loading) return <Loading />;
+if (error) return <Error />;
+return <Data />;
 ```
 
 ## Common Pitfalls
@@ -113,18 +115,18 @@ useEffect(() => {
 ❌ **Forgetting to check response.ok**
 
 ```javascript
-const response = await fetch(url)
-const data = await response.json()  // Might fail silently!
+const response = await fetch(url);
+const data = await response.json(); // Might fail silently!
 ```
 
 ✅ **Always check the response**
 
 ```javascript
-const response = await fetch(url)
+const response = await fetch(url);
 if (!response.ok) {
-  throw new Error(`HTTP error! status: ${response.status}`)
+  throw new Error(`HTTP error! status: ${response.status}`);
 }
-const data = await response.json()
+const data = await response.json();
 ```
 
 ## Testing

@@ -1,80 +1,80 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
   // Form data state - stores all input values
   const [formData, setFormData] = useState({
-    name: '',
-    spellType: '',
-    role: ''
-  })
+    name: "",
+    spellType: "",
+    role: "",
+  });
 
   // Validation errors state - stores error messages per field
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({});
 
   // Success state - tracks if form was successfully submitted
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
 
   // Validation function - returns object with error messages
   const validate = () => {
-    const newErrors = {}
+    const newErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Wizard name is required'
+      newErrors.name = "Wizard name is required";
     } else if (formData.name.trim().length < 3) {
-      newErrors.name = 'Name must be at least 3 characters'
+      newErrors.name = "Name must be at least 3 characters";
     }
 
     if (!formData.spellType) {
-      newErrors.spellType = 'Please select your spell specialization'
+      newErrors.spellType = "Please select your spell specialization";
     }
 
     if (!formData.role) {
-      newErrors.role = 'Please select your battle role'
+      newErrors.role = "Please select your battle role";
     }
 
-    return newErrors
-  }
+    return newErrors;
+  };
 
   // Handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault() // Prevent page reload
+    e.preventDefault(); // Prevent page reload
 
-    const newErrors = validate()
+    const newErrors = validate();
 
     if (Object.keys(newErrors).length === 0) {
       // Form is valid - submit it
-      console.log('Battle registration submitted:', formData)
-      setSubmitted(true)
+      console.log("Battle registration submitted:", formData);
+      setSubmitted(true);
 
       // Clear the form
-      setFormData({ name: '', spellType: '', role: '' })
+      setFormData({ name: "", spellType: "", role: "" });
 
       // Hide success message after 3 seconds
-      setTimeout(() => setSubmitted(false), 3000)
+      setTimeout(() => setSubmitted(false), 3000);
     } else {
       // Form has errors - show them
-      setErrors(newErrors)
-      setSubmitted(false)
+      setErrors(newErrors);
+      setSubmitted(false);
     }
-  }
+  };
 
   // Handle input changes - works for text inputs and selects
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
-    }))
+      [name]: value,
+    }));
 
     // Clear error for this field when user starts typing
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
-      }))
+        [name]: "",
+      }));
     }
-  }
+  };
 
   return (
     <div className="app">
@@ -98,11 +98,9 @@ function App() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Enter your wizard name"
-            className={errors.name ? 'error' : ''}
+            className={errors.name ? "error" : ""}
           />
-          {errors.name && (
-            <span className="error-message">{errors.name}</span>
-          )}
+          {errors.name && <span className="error-message">{errors.name}</span>}
         </div>
 
         {/* Spell Type Select */}
@@ -113,7 +111,7 @@ function App() {
             name="spellType"
             value={formData.spellType}
             onChange={handleChange}
-            className={errors.spellType ? 'error' : ''}
+            className={errors.spellType ? "error" : ""}
           >
             <option value="">-- Select Spell Type --</option>
             <option value="fire">Fire Magic</option>
@@ -137,7 +135,7 @@ function App() {
                 id="attacker"
                 name="role"
                 value="attacker"
-                checked={formData.role === 'attacker'}
+                checked={formData.role === "attacker"}
                 onChange={handleChange}
               />
               <label htmlFor="attacker">Attacker</label>
@@ -148,7 +146,7 @@ function App() {
                 id="defender"
                 name="role"
                 value="defender"
-                checked={formData.role === 'defender'}
+                checked={formData.role === "defender"}
                 onChange={handleChange}
               />
               <label htmlFor="defender">Defender</label>
@@ -159,15 +157,13 @@ function App() {
                 id="support"
                 name="role"
                 value="support"
-                checked={formData.role === 'support'}
+                checked={formData.role === "support"}
                 onChange={handleChange}
               />
               <label htmlFor="support">Support</label>
             </div>
           </div>
-          {errors.role && (
-            <span className="error-message">{errors.role}</span>
-          )}
+          {errors.role && <span className="error-message">{errors.role}</span>}
         </div>
 
         <button type="submit" className="submit-btn">
@@ -175,7 +171,7 @@ function App() {
         </button>
       </form>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

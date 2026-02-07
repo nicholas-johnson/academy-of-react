@@ -2,13 +2,14 @@
 
 ## Story Context
 
-Your wizard is growing stronger! But there's a problem: everything we've built so far is **static**. Props flow down, but they never change. How do we track a wizard's health after taking damage? How do we update mana after casting spells? 
+Your wizard is growing stronger! But there's a problem: everything we've built so far is **static**. Props flow down, but they never change. How do we track a wizard's health after taking damage? How do we update mana after casting spells?
 
 Enter **state** — React's way of remembering values that can change over time. Professor Hooksweasel reveals the State Crystal: "With the `useState` hook, your components come alive!"
 
 ## Learning Objectives
 
 By the end of this module, you will:
+
 - Understand what state is and why it's needed
 - Use the `useState` hook to create stateful variables
 - Update state with setter functions
@@ -45,6 +46,7 @@ npm run dev
 ```
 
 The slides cover:
+
 - Why we need state (the problem with static components)
 - What state is and how it differs from props
 - The useState hook syntax
@@ -67,6 +69,7 @@ Continuing with Vite for this module!
 ### Demo 1: Manual Re-rendering (The Problem)
 
 Before `useState`, we had to manage state manually:
+
 - Store values in module-level variables
 - Manually call `render()` after every change
 - This is tedious and error-prone!
@@ -82,6 +85,7 @@ The demo shows:
 3. **Conditional Rendering** — Showing/hiding based on state
 
 Key concepts:
+
 - `useState` returns [value, setter function]
 - Calling the setter function triggers a re-render automatically!
 - State is **local** to each component instance
@@ -90,18 +94,18 @@ Key concepts:
 ## The useState Hook
 
 ```jsx
-import { useState } from 'react'; // In real apps
+import { useState } from "react"; // In real apps
 // With CDN: const { useState } = React;
 
 function Counter() {
   // Declare state variable
   const [count, setCount] = useState(0);
-  
+
   // Update state
   const increment = () => {
     setCount(count + 1);
   };
-  
+
   return (
     <div>
       <p>Count: {count}</p>
@@ -114,6 +118,7 @@ function Counter() {
 ## Quests
 
 ### Quest 1: Multiple State
+
 **Difficulty**: ⭐⭐ Intermediate
 
 Create an interface with multiple useState hooks that interact.
@@ -121,6 +126,7 @@ Create an interface with multiple useState hooks that interact.
 [Start Quest →](./quest-01-multiple-state/)
 
 ### Quest 2: Object State
+
 **Difficulty**: ⭐⭐ Intermediate
 
 Build an interface that manages state as objects with nested properties.
@@ -132,6 +138,7 @@ Build an interface that manages state as objects with nested properties.
 **The Battle Simulator**
 
 Create a two-wizard battle:
+
 - Each wizard has health and mana (state)
 - Buttons to cast spells (costs mana, damages opponent)
 - Button to rest (restores mana)
@@ -154,11 +161,11 @@ This combines multiple state variables, calculations, conditional rendering, and
 
 ## State vs Props
 
-| Props | State |
-|-------|-------|
-| Passed from parent | Owned by component |
-| Read-only | Can be updated |
-| Used for configuration | Used for interactivity |
+| Props                   | State                   |
+| ----------------------- | ----------------------- |
+| Passed from parent      | Owned by component      |
+| Read-only               | Can be updated          |
+| Used for configuration  | Used for interactivity  |
 | Like function arguments | Like function variables |
 
 ---
@@ -166,4 +173,3 @@ This combines multiple state variables, calculations, conditional rendering, and
 **Previous Module**: [Module 2: JSX and Components](../module-02-jsx-components/)
 
 **Next Module**: [Module 4: Forms and Events](../module-04-forms-events/) — Master form handling, validation, and controlled inputs!
-

@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
 
 // TODO: Fetch intelligence data from /api/intelligence.json
-// 
+//
 // The JSON file is already in public/api/intelligence.json
 // Vite serves files from public/ at the root URL
 //
@@ -14,9 +14,9 @@ import './App.css'
 // 5. Add a refresh button
 
 function App() {
-  const [intel, setIntel] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [intel, setIntel] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   // TODO: Add useEffect to fetch data on mount
   // Hint: fetch('/api/intelligence.json')
@@ -35,7 +35,7 @@ function App() {
           <p>Gathering intelligence...</p>
         </div>
       </div>
-    )
+    );
   }
 
   // Error state
@@ -45,12 +45,10 @@ function App() {
         <h1>🔍 War Intelligence</h1>
         <div className="error">
           <p>❌ Error: {error}</p>
-          <button className="btn-primary">
-            Retry
-          </button>
+          <button className="btn-primary">Retry</button>
         </div>
       </div>
-    )
+    );
   }
 
   // Success state - render the data
@@ -59,16 +57,16 @@ function App() {
       <h1>🔍 War Intelligence</h1>
       <p>Latest reports on rival academies</p>
 
-      <button className="refresh-btn">
-        🔄 Refresh Intelligence
-      </button>
+      <button className="refresh-btn">🔄 Refresh Intelligence</button>
 
       <div className="intel-grid">
-        {intel.map(report => (
+        {intel.map((report) => (
           <div key={report.id} className="intel-card">
             <div className="card-header">
               <h3>{report.academy}</h3>
-              <span className={`threat-badge ${report.threatLevel.toLowerCase()}`}>
+              <span
+                className={`threat-badge ${report.threatLevel.toLowerCase()}`}
+              >
                 {report.threatLevel}
               </span>
             </div>
@@ -82,7 +80,7 @@ function App() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

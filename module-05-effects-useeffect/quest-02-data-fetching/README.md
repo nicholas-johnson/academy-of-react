@@ -3,6 +3,7 @@
 Fetch data from JSONPlaceholder or local JSON file with war updates, rival academy info, threat levels. Display news cards. Show loading and error states.
 
 ## Requirements
+
 - Fetch from API on mount
 - Loading spinner/message
 - Error handling
@@ -10,6 +11,7 @@ Fetch data from JSONPlaceholder or local JSON file with war updates, rival acade
 - Refresh button
 
 ## Acceptance Criteria
+
 - [ ] Data fetches on mount
 - [ ] Loading state shows
 - [ ] Error state handles failures
@@ -17,4 +19,3 @@ Fetch data from JSONPlaceholder or local JSON file with war updates, rival acade
 - [ ] Refresh works
 
 [Next →](../quest-03-effect-cleanup/)
-

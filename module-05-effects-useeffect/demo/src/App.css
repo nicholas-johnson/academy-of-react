@@ -1,13 +1,76 @@
-.app { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
-h1 { color: #667eea; margin-bottom: 10px; font-size: 2.2rem; }
-.demo-section { background: #f9fafb; padding: 24px; border-radius: 12px; margin: 20px 0; }
-.demo-section h2 { color: #333; margin-bottom: 16px; font-size: 1.3rem; }
-.count-display, .time-display { font-size: 3rem; font-weight: 700; color: #667eea; margin: 20px 0; text-align: center; }
-button { padding: 12px 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s; }
-button:hover { transform: translateY(-2px); }
-.hint { color: #666; font-size: 0.9rem; margin-top: 12px; font-style: italic; }
-.info-box { background: #f0f4ff; border: 2px solid #667eea; border-radius: 12px; padding: 24px; margin-top: 30px; }
-.info-box h3 { color: #667eea; margin-bottom: 12px; }
-.info-box ul { list-style: none; padding: 0; }
-.info-box li { padding: 8px 0; color: #4b5563; }
-.info-box code { background: white; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', monospace; color: #667eea; }
+.app {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  color: #667eea;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+.demo-section {
+  background: #f9fafb;
+  padding: 24px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+.demo-section h2 {
+  color: #333;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+}
+.count-display,
+.time-display {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #667eea;
+  margin: 20px 0;
+  text-align: center;
+}
+button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+button:hover {
+  transform: translateY(-2px);
+}
+.hint {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  font-style: italic;
+}
+.info-box {
+  background: #f0f4ff;
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 30px;
+}
+.info-box h3 {
+  color: #667eea;
+  margin-bottom: 12px;
+}
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+.info-box li {
+  padding: 8px 0;
+  color: #4b5563;
+}
+.info-box code {
+  background: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  color: #667eea;
+}

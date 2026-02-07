@@ -5,7 +5,10 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   background: #0f172a;
   color: #e2e8f0;
   min-height: 100vh;
@@ -206,13 +209,13 @@ body {
   .layout-body {
     flex-direction: column;
   }
-  
+
   .layout-sidebar {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #334155;
   }
-  
+
   .sidebar-nav {
     flex-direction: row;
     flex-wrap: wrap;

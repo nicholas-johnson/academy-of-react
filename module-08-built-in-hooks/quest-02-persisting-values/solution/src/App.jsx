@@ -1,28 +1,28 @@
-import { useRef } from 'react'
-import './App.css'
+import { useRef } from "react";
+import "./App.css";
 
 const SPELLS = [
-  { id: 1, name: 'Fireball', animation: 'shake', icon: '🔥' },
-  { id: 2, name: 'Ice Blast', animation: 'spin', icon: '❄️' },
-  { id: 3, name: 'Lightning Strike', animation: 'flash', icon: '⚡' },
-  { id: 4, name: 'Healing Wave', animation: 'pulse', icon: '💚' },
-]
+  { id: 1, name: "Fireball", animation: "shake", icon: "🔥" },
+  { id: 2, name: "Ice Blast", animation: "spin", icon: "❄️" },
+  { id: 3, name: "Lightning Strike", animation: "flash", icon: "⚡" },
+  { id: 4, name: "Healing Wave", animation: "pulse", icon: "💚" },
+];
 
 function App() {
-  const spellRefs = useRef([])
+  const spellRefs = useRef([]);
 
   const triggerAnimation = (index, animationClass) => {
-    const element = spellRefs.current[index]
-    if (!element) return
+    const element = spellRefs.current[index];
+    if (!element) return;
 
     // Add animation class
-    element.classList.add(animationClass)
+    element.classList.add(animationClass);
 
     // Remove after animation completes
     setTimeout(() => {
-      element.classList.remove(animationClass)
-    }, 600)
-  }
+      element.classList.remove(animationClass);
+    }, 600);
+  };
 
   return (
     <div className="app">
@@ -48,14 +48,16 @@ function App() {
         <h3>🎯 How It Works</h3>
         <ul>
           <li>Each spell card has a ref stored in an array</li>
-          <li>Click triggers <code>classList.add()</code> via ref</li>
+          <li>
+            Click triggers <code>classList.add()</code> via ref
+          </li>
           <li>CSS animation plays</li>
           <li>setTimeout removes class to reset</li>
           <li>This is imperative DOM manipulation!</li>
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -26,14 +26,14 @@ Create a Vite React project with:
 1. Proper Vite project structure (`src/`, `package.json`, `vite.config.js`)
 2. Components that:
 
-1. A list of 5+ ingredients, each with:
+3. A list of 5+ ingredients, each with:
    - Name
    - Brew time contribution (in hours)
-2. Checkboxes to select ingredients
-3. Display selected ingredients
-4. Calculate and display total brew time
-5. A "Start Brewing" button
-6. Show "Brewing..." message when active
+4. Checkboxes to select ingredients
+5. Display selected ingredients
+6. Calculate and display total brew time
+7. A "Start Brewing" button
+8. Show "Brewing..." message when active
 
 ## Example Ingredients
 
@@ -43,7 +43,7 @@ const ingredients = [
   { name: "Dragon Scale", brewTime: 3 },
   { name: "Phoenix Tear", brewTime: 2 },
   { name: "Starlight Essence", brewTime: 1 },
-  { name: "Shadow Herb", brewTime: 2 }
+  { name: "Shadow Herb", brewTime: 2 },
 ];
 ```
 
@@ -64,18 +64,20 @@ const ingredients = [
 <summary>Click for hints</summary>
 
 **Hint 1**: Track selected ingredients in state:
+
 ```jsx
 const [selectedIngredients, setSelectedIngredients] = useState([]);
 const [isBrewing, setIsBrewing] = useState(false);
 ```
 
 **Hint 2**: Handle checkbox changes:
+
 ```jsx
 const handleIngredientToggle = (ingredient) => {
   if (selectedIngredients.includes(ingredient.name)) {
     // Remove it
     setSelectedIngredients(
-      selectedIngredients.filter(name => name !== ingredient.name)
+      selectedIngredients.filter((name) => name !== ingredient.name),
     );
   } else {
     // Add it
@@ -85,36 +87,43 @@ const handleIngredientToggle = (ingredient) => {
 ```
 
 **Hint 3**: Render checkboxes:
+
 ```jsx
-{ingredients.map((ingredient, index) => (
-  <div key={index}>
-    <label>
-      <input
-        type="checkbox"
-        checked={selectedIngredients.includes(ingredient.name)}
-        onChange={() => handleIngredientToggle(ingredient)}
-      />
-      {ingredient.name} ({ingredient.brewTime}h)
-    </label>
-  </div>
-))}
+{
+  ingredients.map((ingredient, index) => (
+    <div key={index}>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedIngredients.includes(ingredient.name)}
+          onChange={() => handleIngredientToggle(ingredient)}
+        />
+        {ingredient.name} ({ingredient.brewTime}h)
+      </label>
+    </div>
+  ));
+}
 ```
 
 **Hint 4**: Calculate total brew time:
+
 ```jsx
 const totalBrewTime = ingredients
-  .filter(ing => selectedIngredients.includes(ing.name))
+  .filter((ing) => selectedIngredients.includes(ing.name))
   .reduce((total, ing) => total + ing.brewTime, 0);
 ```
 
 **Hint 5**: Conditional rendering for brewing:
+
 ```jsx
-{isBrewing && (
-  <div className="brewing-message">
-    🧪 Brewing potion with {selectedIngredients.length} ingredients...
-    <p>Time remaining: {totalBrewTime} hours</p>
-  </div>
-)}
+{
+  isBrewing && (
+    <div className="brewing-message">
+      🧪 Brewing potion with {selectedIngredients.length} ingredients...
+      <p>Time remaining: {totalBrewTime} hours</p>
+    </div>
+  );
+}
 ```
 
 </details>
@@ -128,6 +137,7 @@ Enhance your potion brewer:
 2. **Clear Selection**: Add a "Clear All" button
 
 3. **Potion Effects**: Give each ingredient an effect, show combined effects:
+
    ```javascript
    const ingredients = [
      { name: "Moonflower", brewTime: 1, effect: "Healing" },
@@ -157,4 +167,3 @@ Enhance your potion brewer:
 ---
 
 **Next Module**: [Module 4: Forms and Events](../../module-04-forms-events/) — Master form handling and controlled inputs!
-

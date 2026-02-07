@@ -25,6 +25,7 @@ Welcome to modern React development with **Vite** — a blazing-fast build tool 
 ## Learning Objectives
 
 By the end of this module, you will:
+
 - Set up and use Vite for React development
 - Master complex form patterns
 - Implement form validation
@@ -70,6 +71,7 @@ By the end of this module, you will:
 ## Demo Walkthrough
 
 The demo shows a contact form with:
+
 - Multiple controlled inputs
 - Validation logic
 - Error messages
@@ -89,6 +91,7 @@ Study how validation is implemented and how errors are displayed.
 ## Quests
 
 ### Quest 1: Form Validation
+
 **Difficulty**: ⭐⭐ Intermediate
 
 Create a registration form with field-level validation.
@@ -96,6 +99,7 @@ Create a registration form with field-level validation.
 [Start Quest →](./quest-01-form-validation/)
 
 ### Quest 2: Controlled Inputs
+
 **Difficulty**: ⭐⭐ Intermediate
 
 Build a searchable directory with live filtering using controlled inputs.
@@ -103,6 +107,7 @@ Build a searchable directory with live filtering using controlled inputs.
 [Start Quest →](./quest-02-controlled-inputs/)
 
 ### Quest 3: Form Submission
+
 **Difficulty**: ⭐⭐⭐ Advanced
 
 Create a multi-step form with proper submission handling.
@@ -110,6 +115,7 @@ Create a multi-step form with proper submission handling.
 [Start Quest →](./quest-03-form-submission/)
 
 ### Bonus Quest: Roster Manager (Array State)
+
 **Difficulty**: ⭐⭐⭐ Advanced
 
 Combine forms with array state management — add, edit, delete, and filter a dynamic list.
@@ -121,6 +127,7 @@ Combine forms with array state management — add, edit, delete, and filter a dy
 **The Complete Registration System**
 
 Combine all three quests into one application:
+
 - Tab 1: Battle Signup Form
 - Tab 2: Spell Search
 - Tab 3: Sorting Ceremony
@@ -134,6 +141,7 @@ React 19 introduces **Actions** - a revolutionary pattern for handling form subm
 ### What are Actions?
 
 Actions are async functions that React tracks automatically. When passed to a `<form action={}>`, React handles:
+
 - ✅ Pending states automatically
 - ✅ Error boundaries integration
 - ✅ Optimistic updates support
@@ -142,6 +150,7 @@ Actions are async functions that React tracks automatically. When passed to a `<
 ### Traditional vs React 19 Approach
 
 **Traditional Way (still valid for learning)**:
+
 ```jsx
 function BattleSignup() {
   const [formData, setFormData] = useState({});
@@ -165,19 +174,20 @@ function BattleSignup() {
 ```
 
 **React 19 Way with Actions**:
+
 ```jsx
 async function signupAction(formData) {
-  'use server'; // If using Server Components
-  
-  const name = formData.get('name');
-  const spellType = formData.get('spellType');
-  
+  "use server"; // If using Server Components
+
+  const name = formData.get("name");
+  const spellType = formData.get("spellType");
+
   // Validation
-  if (!name) throw new Error('Name required');
-  
+  if (!name) throw new Error("Name required");
+
   // Submit (async operation)
   await submitToServer({ name, spellType });
-  
+
   // React automatically tracks this as "pending"!
 }
 
@@ -193,10 +203,10 @@ function BattleSignup() {
 
 function SubmitButton() {
   const { pending } = useFormStatus(); // React 19 hook!
-  
+
   return (
     <button type="submit" disabled={pending}>
-      {pending ? 'Registering...' : 'Sign Up for Battle'}
+      {pending ? "Registering..." : "Sign Up for Battle"}
     </button>
   );
 }
@@ -215,14 +225,14 @@ function SubmitButton() {
 For client-side actions with state:
 
 ```jsx
-import { useActionState } from 'react';
+import { useActionState } from "react";
 
 async function submitAction(prevState, formData) {
-  const name = formData.get('name');
-  
+  const name = formData.get("name");
+
   try {
     await registerStudent(name);
-    return { success: true, message: 'Registered!' };
+    return { success: true, message: "Registered!" };
   } catch (error) {
     return { success: false, error: error.message };
   }
@@ -230,7 +240,7 @@ async function submitAction(prevState, formData) {
 
 function BattleForm() {
   const [state, formAction, isPending] = useActionState(submitAction, {});
-  
+
   return (
     <form action={formAction}>
       <input name="name" />
@@ -245,12 +255,14 @@ function BattleForm() {
 ### When to Use Actions
 
 ✅ **Use Actions for**:
+
 - Form submissions
 - Data mutations
 - Async operations with UI feedback
 - Server-side operations (with Server Components)
 
 ❌ **Stick with traditional handlers for**:
+
 - Simple onClick handlers
 - Immediate synchronous operations
 - Complex multi-step validation
@@ -259,6 +271,7 @@ function BattleForm() {
 ### Quest Integration
 
 In the quests, you'll see both approaches:
+
 - **Primary approach**: Traditional (for learning fundamentals)
 - **Bonus section**: React 19 Actions (modern pattern)
 
@@ -282,4 +295,3 @@ This teaches you **why** Actions are better by showing the evolution!
 **Previous Module**: [Module 3: State with useState](../module-03-state-usestate/)
 
 **Next Module**: [Module 5: Side Effects with useEffect](../module-05-effects-useeffect/)
-

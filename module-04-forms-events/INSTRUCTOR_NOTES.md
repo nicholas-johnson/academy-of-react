@@ -35,6 +35,7 @@ npm run dev
 ```
 
 **What it demonstrates:**
+
 - Form state as an object (`{ name, email, message }`)
 - Single `handleChange` function for all inputs
 - Validation on submit
@@ -47,28 +48,28 @@ npm run dev
 ```jsx
 // 1. Form state as object
 const [formData, setFormData] = useState({
-  name: '',
-  email: '',
-  message: ''
+  name: "",
+  email: "",
+  message: "",
 });
 
 // 2. Dynamic field update
 const handleChange = (e) => {
   const { name, value } = e.target;
-  setFormData(prev => ({ ...prev, [name]: value }));
+  setFormData((prev) => ({ ...prev, [name]: value }));
 };
 
 // 3. Validation function
 const validate = () => {
   const errors = {};
-  if (!formData.name.trim()) errors.name = 'Required';
-  if (!formData.email.includes('@')) errors.email = 'Invalid email';
+  if (!formData.name.trim()) errors.name = "Required";
+  if (!formData.email.includes("@")) errors.email = "Invalid email";
   return errors;
 };
 
 // 4. Submit handler
 const handleSubmit = (e) => {
-  e.preventDefault();  // CRITICAL!
+  e.preventDefault(); // CRITICAL!
   const errors = validate();
   if (Object.keys(errors).length === 0) {
     // Success path
@@ -79,6 +80,7 @@ const handleSubmit = (e) => {
 ```
 
 **Walk through these patterns:**
+
 1. How `name` attribute matches state keys
 2. Why `[name]: value` uses computed property names
 3. How errors clear when user starts typing
@@ -93,13 +95,14 @@ const handleSubmit = (e) => {
 The fundamental pattern:
 
 ```jsx
-<input 
-  value={state}                          // Display state
-  onChange={(e) => setState(e.target.value)}  // Update on change
+<input
+  value={state} // Display state
+  onChange={(e) => setState(e.target.value)} // Update on change
 />
 ```
 
 **Why controlled?**
+
 - React is the "source of truth"
 - Input value always equals state
 - Enables validation, formatting, etc.
@@ -123,8 +126,8 @@ The fundamental pattern:
 </select>
 
 // Radio buttons
-<input type="radio" name="role" value="attacker" 
-       checked={role === 'attacker'} 
+<input type="radio" name="role" value="attacker"
+       checked={role === 'attacker'}
        onChange={e => setRole(e.target.value)} />
 
 // Textarea
@@ -146,9 +149,9 @@ The fundamental pattern:
 
 ```jsx
 const handleSubmit = (e) => {
-  e.preventDefault();  // Stop the refresh!
+  e.preventDefault(); // Stop the refresh!
   // Now process the form data
-  console.log('Submitting:', formData);
+  console.log("Submitting:", formData);
 };
 ```
 
@@ -163,12 +166,12 @@ const handleSubmit = (e) => {
 ```jsx
 const handleSubmit = (e) => {
   e.preventDefault();
-  
+
   if (!name) {
-    setError('Name is required');
-    return;  // Stop here
+    setError("Name is required");
+    return; // Stop here
   }
-  
+
   // Proceed with valid data
 };
 ```
@@ -180,20 +183,20 @@ const [errors, setErrors] = useState({});
 
 const validate = () => {
   const newErrors = {};
-  if (!name) newErrors.name = 'Name required';
-  if (!email.includes('@')) newErrors.email = 'Invalid email';
+  if (!name) newErrors.name = "Name required";
+  if (!email.includes("@")) newErrors.email = "Invalid email";
   return newErrors;
 };
 
 const handleSubmit = (e) => {
   e.preventDefault();
   const newErrors = validate();
-  
+
   if (Object.keys(newErrors).length > 0) {
     setErrors(newErrors);
     return;
   }
-  
+
   // All valid!
 };
 ```
@@ -212,9 +215,9 @@ const handleSubmit = (e) => {
 **Separate state (simple forms):**
 
 ```jsx
-const [name, setName] = useState('');
-const [email, setEmail] = useState('');
-const [house, setHouse] = useState('');
+const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [house, setHouse] = useState("");
 ```
 
 **Object state (scales better):**
@@ -238,6 +241,7 @@ const handleChange = (e) => {
 ```
 
 **When to use which:**
+
 - 1-2 inputs → separate state is fine
 - 3+ inputs → object state is cleaner
 - Need to reset all at once → object state (`setForm(initialState)`)
@@ -247,12 +251,14 @@ const handleChange = (e) => {
 ## Quests Overview
 
 ### Quest 1: Battle Signup (Form Validation)
+
 **Difficulty**: ⭐⭐ Intermediate  
 **Time estimate**: 25-30 minutes
 
 Students create a battle registration form with text input, select dropdown, and radio buttons.
 
 **What they practice:**
+
 - Multiple controlled input types
 - Form submission with `e.preventDefault()`
 - Per-field validation
@@ -260,46 +266,52 @@ Students create a battle registration form with text input, select dropdown, and
 - Success state handling
 
 **Common struggles:**
+
 - Forgetting `e.preventDefault()` (page refreshes!)
 - Radio button `checked` vs `value` confusion
 - Not clearing errors when user fixes input
 
 **Key teaching moment:**
+
 ```jsx
 // Radio buttons need both checked AND onChange
-<input 
-  type="radio" 
-  name="role" 
+<input
+  type="radio"
+  name="role"
   value="attacker"
-  checked={role === 'attacker'}  // Is this one selected?
-  onChange={(e) => setRole(e.target.value)}  // Update on click
+  checked={role === "attacker"} // Is this one selected?
+  onChange={(e) => setRole(e.target.value)} // Update on click
 />
 ```
 
 ---
 
 ### Quest 2: Spell Search (Controlled Inputs + Filtering)
+
 **Difficulty**: ⭐⭐ Intermediate  
 **Time estimate**: 25-30 minutes
 
 Students build a searchable spell directory with live filtering.
 
 **What they practice:**
+
 - Controlled text input
 - Filtering arrays based on state
 - Displaying filtered results
 - Clearing/resetting state
 
 **Common struggles:**
+
 - Case-sensitive search (need `.toLowerCase()`)
 - Filter logic (use `.includes()` or `.startsWith()`)
 - Updating results on every keystroke
 
 **Key teaching moment:**
+
 ```jsx
 // Filter is derived from state, NOT stored in state
-const filteredSpells = spells.filter(spell =>
-  spell.name.toLowerCase().includes(search.toLowerCase())
+const filteredSpells = spells.filter((spell) =>
+  spell.name.toLowerCase().includes(search.toLowerCase()),
 );
 
 // NOT: setFilteredSpells(...)
@@ -309,12 +321,14 @@ const filteredSpells = spells.filter(spell =>
 ---
 
 ### Quest 3: Sorting Ceremony (Multi-Step Form)
+
 **Difficulty**: ⭐⭐⭐ Advanced  
 **Time estimate**: 35-40 minutes
 
 Students build a 3-step wizard form with navigation.
 
 **What they practice:**
+
 - Step state tracking
 - Conditional rendering (which step to show)
 - Next/Back navigation logic
@@ -322,64 +336,76 @@ Students build a 3-step wizard form with navigation.
 - Final summary display
 
 **Common struggles:**
+
 - Tracking current step (`useState(1)`)
 - Preventing empty step submissions
 - Keeping data from previous steps
 
 **Key teaching moment:**
+
 ```jsx
 const [step, setStep] = useState(1);
 const [data, setData] = useState({
-  name: '', house: '',    // Step 1
-  familiar: '',           // Step 2
-  wand: ''                // Step 3
+  name: "",
+  house: "", // Step 1
+  familiar: "", // Step 2
+  wand: "", // Step 3
 });
 
 // Render based on step
-{step === 1 && <StepOne />}
-{step === 2 && <StepTwo />}
-{step === 3 && <StepThree />}
-{step === 4 && <Summary data={data} />}
+{
+  step === 1 && <StepOne />;
+}
+{
+  step === 2 && <StepTwo />;
+}
+{
+  step === 3 && <StepThree />;
+}
+{
+  step === 4 && <Summary data={data} />;
+}
 
 // Navigation
-const nextStep = () => setStep(s => s + 1);
-const prevStep = () => setStep(s => s - 1);
+const nextStep = () => setStep((s) => s + 1);
+const prevStep = () => setStep((s) => s - 1);
 ```
 
 ---
 
 ### Bonus Quest: Roster Manager (Array State)
+
 **Difficulty**: ⭐⭐⭐ Advanced  
 **Time estimate**: 35-40 minutes
 
 Students combine forms with array CRUD operations.
 
 **What they practice:**
+
 - Form submission to add items to array
 - Deleting items from array (filter)
 - Editing items (map + conditional update)
 - Derived calculations (count, average)
 
 **Common struggles:**
+
 - Generating unique IDs (`Date.now()` or counter)
 - Immutable array updates
 - Clearing form after submission
 
 **Key teaching moment:**
+
 ```jsx
 // Add to array
 const handleAdd = (e) => {
   e.preventDefault();
-  setStudents([
-    ...students,
-    { id: Date.now(), name, house, level }
-  ]);
-  setName('');  // Clear form
+  setStudents([...students, { id: Date.now(), name, house, level }]);
+  setName(""); // Clear form
 };
 
 // Remove from array
 const handleDelete = (id) => {
-  setStudents(students.filter(s => s.id !== id));
+  setStudents(students.filter((s) => s.id !== id));
 };
 ```
 
@@ -439,11 +465,13 @@ A: Missing `e.preventDefault()` in your submit handler. By default, HTML forms r
 
 **Q: What's the difference between `value` and `checked` on inputs?**
 A:
+
 - Text, number, select, textarea → use `value`
 - Checkbox, radio → use `checked` (and still use `onChange`)
 
 **Q: Why use object state instead of separate useState calls?**
-A: 
+A:
+
 - Easier to reset the whole form: `setForm(initialState)`
 - One handler for all inputs (using `name` attribute)
 - Scales better with more fields
@@ -454,22 +482,24 @@ A: You have `value={...}` but no `onChange` handler. Without `onChange`, React p
 
 **Q: How do I validate as the user types?**
 A: Run validation in your `onChange` handler:
+
 ```jsx
 const handleChange = (e) => {
   const value = e.target.value;
   setName(value);
-  
+
   // Validate immediately
   if (value.length < 3) {
-    setError('Name must be at least 3 characters');
+    setError("Name must be at least 3 characters");
   } else {
-    setError('');
+    setError("");
   }
 };
 ```
 
 **Q: Should I validate on blur instead of change?**
 A: Both are valid approaches:
+
 - On change: Immediate feedback, but can be annoying
 - On blur: Waits until user leaves field, less intrusive
 - On submit: Simplest, validates all at once
@@ -479,31 +509,38 @@ A: Both are valid approaches:
 ## Troubleshooting
 
 ### "Page refreshes when I submit"
+
 - Missing `e.preventDefault()` in submit handler
 - Make sure handler is attached to form's `onSubmit`, not button's `onClick`
 
 ### "Input shows [object Object]"
+
 - You're setting state to an event object instead of its value
 - Use `e.target.value`, not just `e`
 
 ### "Checkbox doesn't toggle"
+
 - Using `value` instead of `checked`
 - Use: `checked={isChecked}` and `onChange={e => setIsChecked(e.target.checked)}`
 
 ### "Radio buttons all select at once"
+
 - Same `name` but wrong `checked` logic
 - Each radio needs: `checked={state === 'thisValue'}`
 
 ### "Select dropdown doesn't show initial value"
+
 - Default `<option>` needs same value as initial state
 - Or add: `<option value="">Select...</option>`
 
 ### "Filter shows no results"
+
 - Case sensitivity: use `.toLowerCase()` on both sides
 - Typo in property name (check `spell.name` exists)
 - Filter function returns false for everything
 
 ### "Multi-step form loses data"
+
 - Each step overwrites state instead of merging
 - Use spread: `setData({ ...data, newField: value })`
 
@@ -514,6 +551,7 @@ A: Both are valid approaches:
 ### The `e.target` Object
 
 When an input changes, `e.target` contains:
+
 - `value` — Current input value (text, number, select)
 - `checked` — Boolean for checkbox/radio
 - `name` — The name attribute (useful for object state)
@@ -521,9 +559,9 @@ When an input changes, `e.target` contains:
 
 ```jsx
 const handleChange = (e) => {
-  console.log(e.target.value);   // "hello"
-  console.log(e.target.name);    // "username"
-  console.log(e.target.type);    // "text"
+  console.log(e.target.value); // "hello"
+  console.log(e.target.name); // "username"
+  console.log(e.target.type); // "text"
 };
 ```
 
@@ -531,7 +569,7 @@ const handleChange = (e) => {
 
 ```jsx
 // Inline handler (simple cases)
-<input onChange={(e) => setName(e.target.value)} />
+<input onChange={(e) => setName(e.target.value)} />;
 
 // Named handler (more complex)
 const handleNameChange = (e) => {
@@ -539,14 +577,14 @@ const handleNameChange = (e) => {
   // validation, formatting, etc.
   setName(value);
 };
-<input onChange={handleNameChange} />
+<input onChange={handleNameChange} />;
 
 // Generic handler (object state)
 const handleChange = (e) => {
   const { name, value } = e.target;
   setForm({ ...form, [name]: value });
 };
-<input name="email" onChange={handleChange} />
+<input name="email" onChange={handleChange} />;
 ```
 
 ---
@@ -601,6 +639,7 @@ module-04-forms-events/
 The README mentions React 19 Actions (`useFormStatus`, `useActionState`). These are covered in the README's "React 19" section as an advanced/optional topic. For the main teaching flow, focus on traditional controlled component patterns first — they build the foundation for understanding why Actions are useful.
 
 If students ask about Actions:
+
 - They're a newer pattern for form submission
 - Automatically track pending states
 - Integrate with Server Components

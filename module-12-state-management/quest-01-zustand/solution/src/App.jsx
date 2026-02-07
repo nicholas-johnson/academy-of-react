@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
-import './App.css'
+import { useState } from "react";
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
+import "./App.css";
 
 // Zustand store with localStorage persistence
 const useSpellStore = create(
@@ -9,13 +9,15 @@ const useSpellStore = create(
     (set, get) => ({
       spells: [],
 
-      addSpell: (spell) => set((state) => ({
-        spells: [...state.spells, { ...spell, id: Date.now() }]
-      })),
+      addSpell: (spell) =>
+        set((state) => ({
+          spells: [...state.spells, { ...spell, id: Date.now() }],
+        })),
 
-      removeSpell: (id) => set((state) => ({
-        spells: state.spells.filter(s => s.id !== id)
-      })),
+      removeSpell: (id) =>
+        set((state) => ({
+          spells: state.spells.filter((s) => s.id !== id),
+        })),
 
       clearAll: () => set({ spells: [] }),
 
@@ -23,44 +25,52 @@ const useSpellStore = create(
       getTotalPower: () => get().spells.reduce((sum, s) => sum + s.power, 0),
     }),
     {
-      name: 'spell-inventory', // localStorage key
-    }
-  )
-)
+      name: "spell-inventory", // localStorage key
+    },
+  ),
+);
 
-const ELEMENTS = ['fire', 'ice', 'lightning', 'holy', 'dark', 'earth']
+const ELEMENTS = ["fire", "ice", "lightning", "holy", "dark", "earth"];
 
 function App() {
-  const [name, setName] = useState('')
-  const [power, setPower] = useState(50)
-  const [element, setElement] = useState('fire')
-  const [filterElement, setFilterElement] = useState('all')
+  const [name, setName] = useState("");
+  const [power, setPower] = useState(50);
+  const [element, setElement] = useState("fire");
+  const [filterElement, setFilterElement] = useState("all");
 
   // Get state and actions from Zustand store
-  const spells = useSpellStore((state) => state.spells)
-  const addSpell = useSpellStore((state) => state.addSpell)
-  const removeSpell = useSpellStore((state) => state.removeSpell)
-  const clearAll = useSpellStore((state) => state.clearAll)
-  const totalPower = useSpellStore((state) => state.getTotalPower())
+  const spells = useSpellStore((state) => state.spells);
+  const addSpell = useSpellStore((state) => state.addSpell);
+  const removeSpell = useSpellStore((state) => state.removeSpell);
+  const clearAll = useSpellStore((state) => state.clearAll);
+  const totalPower = useSpellStore((state) => state.getTotalPower());
 
   // Filter spells based on filterElement
-  const filteredSpells = filterElement === 'all'
-    ? spells
-    : spells.filter(s => s.element === filterElement)
+  const filteredSpells =
+    filterElement === "all"
+      ? spells
+      : spells.filter((s) => s.element === filterElement);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    if (!name.trim()) return
+    e.preventDefault();
+    if (!name.trim()) return;
 
-    addSpell({ name, power, element })
-    setName('')
-    setPower(50)
-  }
+    addSpell({ name, power, element });
+    setName("");
+    setPower(50);
+  };
 
   const getElementEmoji = (el) => {
-    const emojis = { fire: '🔥', ice: '❄️', lightning: '⚡', holy: '✨', dark: '🌑', earth: '🪨' }
-    return emojis[el] || '🔮'
-  }
+    const emojis = {
+      fire: "🔥",
+      ice: "❄️",
+      lightning: "⚡",
+      holy: "✨",
+      dark: "🌑",
+      earth: "🪨",
+    };
+    return emojis[el] || "🔮";
+  };
 
   return (
     <div className="app">
@@ -81,9 +91,14 @@ function App() {
                 placeholder="Spell name"
                 required
               />
-              <select value={element} onChange={(e) => setElement(e.target.value)}>
-                {ELEMENTS.map(el => (
-                  <option key={el} value={el}>{getElementEmoji(el)} {el}</option>
+              <select
+                value={element}
+                onChange={(e) => setElement(e.target.value)}
+              >
+                {ELEMENTS.map((el) => (
+                  <option key={el} value={el}>
+                    {getElementEmoji(el)} {el}
+                  </option>
                 ))}
               </select>
             </div>
@@ -99,7 +114,9 @@ function App() {
                 />
               </label>
             </div>
-            <button type="submit" className="btn primary">Add Spell</button>
+            <button type="submit" className="btn primary">
+              Add Spell
+            </button>
           </form>
         </section>
 
@@ -107,10 +124,15 @@ function App() {
           <div className="inventory-header">
             <h2>Spell Inventory</h2>
             <div className="controls">
-              <select value={filterElement} onChange={(e) => setFilterElement(e.target.value)}>
+              <select
+                value={filterElement}
+                onChange={(e) => setFilterElement(e.target.value)}
+              >
                 <option value="all">All Elements</option>
-                {ELEMENTS.map(el => (
-                  <option key={el} value={el}>{getElementEmoji(el)} {el}</option>
+                {ELEMENTS.map((el) => (
+                  <option key={el} value={el}>
+                    {getElementEmoji(el)} {el}
+                  </option>
                 ))}
               </select>
               {spells.length > 0 && (
@@ -134,11 +156,15 @@ function App() {
 
           <div className="spell-list">
             {filteredSpells.length === 0 ? (
-              <p className="empty">No spells in inventory. Add some spells above!</p>
+              <p className="empty">
+                No spells in inventory. Add some spells above!
+              </p>
             ) : (
-              filteredSpells.map(spell => (
+              filteredSpells.map((spell) => (
                 <div key={spell.id} className="spell-card">
-                  <span className="spell-element">{getElementEmoji(spell.element)}</span>
+                  <span className="spell-element">
+                    {getElementEmoji(spell.element)}
+                  </span>
                   <div className="spell-info">
                     <h3>{spell.name}</h3>
                     <p>Power: {spell.power}</p>
@@ -160,7 +186,7 @@ function App() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

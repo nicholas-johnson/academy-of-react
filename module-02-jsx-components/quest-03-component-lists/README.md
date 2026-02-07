@@ -28,10 +28,10 @@ Create a Vite React project with:
    - `effect` - What the potion does
    - `ingredients` - Array of ingredient names
    - `brewTime` - Hours needed to brew
-2. Display all information including the list of ingredients
-3. Create an array of at least 6 different potions
-4. Use `.map()` to render all PotionCards from the array
-5. Each rendered item should have a `key` prop
+3. Display all information including the list of ingredients
+4. Create an array of at least 6 different potions
+5. Use `.map()` to render all PotionCards from the array
+6. Each rendered item should have a `key` prop
 
 ## Example Data
 
@@ -41,38 +41,38 @@ const potions = [
     name: "Healing Elixir",
     effect: "Restores 50 health points",
     ingredients: ["Moonflower", "Crystal Water", "Phoenix Tear"],
-    brewTime: 2
+    brewTime: 2,
   },
   {
     name: "Mana Potion",
     effect: "Restores 30 mana points",
     ingredients: ["Starlight Essence", "Blue Sage", "Spring Water"],
-    brewTime: 1
+    brewTime: 1,
   },
   {
     name: "Strength Tonic",
     effect: "Increases magic power by 20% for 1 hour",
     ingredients: ["Dragon Scale", "Iron Root", "Fire Blossom", "Honey"],
-    brewTime: 4
+    brewTime: 4,
   },
   {
     name: "Invisibility Brew",
     effect: "Makes drinker invisible for 10 minutes",
     ingredients: ["Shadow Herb", "Moonstone Dust", "Ghost Mushroom"],
-    brewTime: 3
+    brewTime: 3,
   },
   {
     name: "Antidote",
     effect: "Cures poison and disease",
     ingredients: ["Healing Herb", "Silver Leaf", "Clean Water"],
-    brewTime: 1
+    brewTime: 1,
   },
   {
     name: "Wisdom Draft",
     effect: "Enhances mental clarity for studying",
     ingredients: ["Sage", "Ginkgo Leaf", "Honey", "Lavender"],
-    brewTime: 2
-  }
+    brewTime: 2,
+  },
 ];
 ```
 
@@ -93,6 +93,7 @@ const potions = [
 <summary>Click for hints</summary>
 
 **Hint 1**: Destructure props for cleaner code:
+
 ```jsx
 function PotionCard({ name, effect, ingredients, brewTime }) {
   return (
@@ -106,6 +107,7 @@ function PotionCard({ name, effect, ingredients, brewTime }) {
 ```
 
 **Hint 2**: Render an array of strings (ingredients):
+
 ```jsx
 <ul>
   {ingredients.map((ingredient, index) => (
@@ -115,26 +117,31 @@ function PotionCard({ name, effect, ingredients, brewTime }) {
 ```
 
 **Hint 3**: Render the potions array:
+
 ```jsx
-{potions.map((potion, index) => (
-  <PotionCard 
-    key={index}
-    name={potion.name}
-    effect={potion.effect}
-    ingredients={potion.ingredients}
-    brewTime={potion.brewTime}
-  />
-))}
+{
+  potions.map((potion, index) => (
+    <PotionCard
+      key={index}
+      name={potion.name}
+      effect={potion.effect}
+      ingredients={potion.ingredients}
+      brewTime={potion.brewTime}
+    />
+  ));
+}
 ```
 
 **Hint 4**: You can also spread the object properties:
+
 ```jsx
-{potions.map((potion, index) => (
-  <PotionCard key={index} {...potion} />
-))}
+{
+  potions.map((potion, index) => <PotionCard key={index} {...potion} />);
+}
 ```
 
 **Hint 5**: Style ingredient lists:
+
 ```css
 .ingredients {
   list-style: none;
@@ -167,7 +174,7 @@ Enhance your potion inventory:
    - Quick (1 hour)
    - Medium (2-3 hours)
    - Long (4+ hours)
-   
+
    Hint: Use a state variable and filter the array before mapping
 
 4. **Color-Coded Effects**: Give different color backgrounds based on effect type:
@@ -188,4 +195,3 @@ Enhance your potion inventory:
 **Congratulations!** You've completed Module 2!
 
 **Next Module**: [Module 3: State with useState](../../module-03-state-usestate/) — Learn how to make your components interactive with state!
-

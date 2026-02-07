@@ -9,6 +9,7 @@ The Academy's building is organized into distinct areas: the Grand Hall (header)
 ## Objective
 
 Build a set of reusable components that use the `children` prop:
+
 - **Card** — wraps any content with styling
 - **Section** — groups content with a title
 - **Modal** — displays content in a dialog
@@ -26,6 +27,7 @@ Build a set of reusable components that use the `children` prop:
 Create a Vite React project with:
 
 1. **Card Component** — Wraps content with card styling
+
    ```jsx
    <Card>
      <h3>Title</h3>
@@ -34,6 +36,7 @@ Create a Vite React project with:
    ```
 
 2. **Section Component** — Adds a title above content
+
    ```jsx
    <Section title="Student Info">
      <p>Content here...</p>
@@ -41,6 +44,7 @@ Create a Vite React project with:
    ```
 
 3. **Modal Component** — Dialog that wraps any content
+
    ```jsx
    <Modal isOpen={showModal} onClose={closeModal} title="Confirm">
      <p>Are you sure?</p>
@@ -70,17 +74,15 @@ Create a Vite React project with:
 <summary>Click for hints</summary>
 
 **Hint 1**: Card component structure:
+
 ```jsx
 function Card({ children, variant = "default" }) {
-  return (
-    <div className={`card card-${variant}`}>
-      {children}
-    </div>
-  );
+  return <div className={`card card-${variant}`}>{children}</div>;
 }
 ```
 
 **Hint 2**: Section component:
+
 ```jsx
 function Section({ title, children }) {
   return (
@@ -93,13 +95,14 @@ function Section({ title, children }) {
 ```
 
 **Hint 3**: Modal component:
+
 ```jsx
 function Modal({ isOpen, onClose, title, children }) {
   if (!isOpen) return null;
-  
+
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal" onClick={e => e.stopPropagation()}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
         <h3>{title}</h3>
         {children}
         <button onClick={onClose}>Close</button>
@@ -110,6 +113,7 @@ function Modal({ isOpen, onClose, title, children }) {
 ```
 
 **Hint 4**: Layout with CSS Grid:
+
 ```css
 .layout {
   display: grid;
@@ -128,9 +132,12 @@ function Modal({ isOpen, onClose, title, children }) {
 1. **Card Variants**: Add `variant` prop (primary, secondary, outlined)
 
 2. **Responsive Layout**: Collapse sidebar on mobile
+
    ```css
    @media (max-width: 768px) {
-     .layout { grid-template-columns: 1fr; }
+     .layout {
+       grid-template-columns: 1fr;
+     }
    }
    ```
 

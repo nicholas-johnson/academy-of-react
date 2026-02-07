@@ -1,30 +1,30 @@
 export const slides = [
   {
-    type: 'title',
+    type: "title",
     content: {
-      title: 'Context API',
-      subtitle: 'Module 10: Global State Without Prop Drilling',
-      emoji: '🌐'
-    }
+      title: "Context API",
+      subtitle: "Module 10: Global State Without Prop Drilling",
+      emoji: "🌐",
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'The Prop Drilling Problem',
-      emoji: '😫',
+      title: "The Prop Drilling Problem",
+      emoji: "😫",
       points: [
-        'Props must pass through every component in the tree',
-        'Intermediate components don\'t need the data',
-        'Changes require updating multiple components',
-        'Makes refactoring difficult',
-        'Code becomes hard to maintain'
-      ]
-    }
+        "Props must pass through every component in the tree",
+        "Intermediate components don't need the data",
+        "Changes require updating multiple components",
+        "Makes refactoring difficult",
+        "Code becomes hard to maintain",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Prop Drilling Example',
+      title: "Prop Drilling Example",
       code: `// Without Context - props pass through every level
 function App() {
   const [theme, setTheme] = useState('light')
@@ -46,16 +46,16 @@ function ThemeToggle({ theme, setTheme }) {
   </button>
 }`,
       highlights: [
-        'Props travel through Layout → Sidebar → ThemeToggle',
-        'Layout and Sidebar don\'t use theme - just pass it',
-        'Adding new props means updating every component',
-      ]
-    }
+        "Props travel through Layout → Sidebar → ThemeToggle",
+        "Layout and Sidebar don't use theme - just pass it",
+        "Adding new props means updating every component",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Creating Context',
+      title: "Creating Context",
       code: `import { createContext } from 'react'
 
 // 1. Create the context
@@ -68,16 +68,16 @@ const ThemeContext = createContext(undefined)
 // - Provider: sends data down
 // - useContext: receives data`,
       highlights: [
-        'createContext() creates a new context',
-        'Default value used when no Provider exists',
-        'Think of it as a broadcast channel'
-      ]
-    }
+        "createContext() creates a new context",
+        "Default value used when no Provider exists",
+        "Think of it as a broadcast channel",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Creating a Provider',
+      title: "Creating a Provider",
       code: `function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('light')
 
@@ -95,17 +95,17 @@ const ThemeContext = createContext(undefined)
   )
 }`,
       highlights: [
-        'Provider wraps children components',
-        'value prop contains shared state',
-        'All descendants can access this value',
-        'State changes trigger re-renders in consumers'
-      ]
-    }
+        "Provider wraps children components",
+        "value prop contains shared state",
+        "All descendants can access this value",
+        "State changes trigger re-renders in consumers",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Consuming Context',
+      title: "Consuming Context",
       code: `import { useContext } from 'react'
 
 function ThemeToggle() {
@@ -121,16 +121,16 @@ function ThemeToggle() {
 
 // No props needed - data comes from context`,
       highlights: [
-        'useContext reads from nearest Provider',
-        'Component re-renders when context value changes',
-        'No props passed through intermediate components!'
-      ]
-    }
+        "useContext reads from nearest Provider",
+        "Component re-renders when context value changes",
+        "No props passed through intermediate components!",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Custom Hook Pattern',
+      title: "Custom Hook Pattern",
       code: `// Always wrap useContext in a custom hook!
 function useTheme() {
   const context = useContext(ThemeContext)
@@ -150,17 +150,17 @@ function ThemeToggle() {
   // ...
 }`,
       highlights: [
-        'Custom hook provides better error messages',
-        'Catches missing Provider immediately',
-        'Cleaner API for consumers',
-        'Hides implementation details'
-      ]
-    }
+        "Custom hook provides better error messages",
+        "Catches missing Provider immediately",
+        "Cleaner API for consumers",
+        "Hides implementation details",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Complete Pattern',
+      title: "Complete Pattern",
       code: `// 1. Create context
 const CounterContext = createContext(undefined)
 
@@ -183,16 +183,16 @@ function useCounter() {
   return context
 }`,
       highlights: [
-        '3-part pattern: Context, Provider, Hook',
-        'Provider manages state',
-        'Hook provides safe access'
-      ]
-    }
+        "3-part pattern: Context, Provider, Hook",
+        "Provider manages state",
+        "Hook provides safe access",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Using the Pattern',
+      title: "Using the Pattern",
       code: `// Wrap your app (or part of it)
 function App() {
   return (
@@ -215,45 +215,45 @@ function Content() {
   return <button onClick={increment}>Add</button>
 }`,
       highlights: [
-        'Provider at the top wraps consumers',
-        'Header and Content access same state',
-        'No props passed through App!'
-      ]
-    }
+        "Provider at the top wraps consumers",
+        "Header and Content access same state",
+        "No props passed through App!",
+      ],
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'When to Use Context',
-      emoji: '✅',
+      title: "When to Use Context",
+      emoji: "✅",
       points: [
-        'Theme (dark/light mode)',
-        'User authentication state',
-        'Language/locale preferences',
-        'UI state (sidebar open/closed)',
-        'Shopping cart (small apps)',
-        'Feature flags'
-      ]
-    }
+        "Theme (dark/light mode)",
+        "User authentication state",
+        "Language/locale preferences",
+        "UI state (sidebar open/closed)",
+        "Shopping cart (small apps)",
+        "Feature flags",
+      ],
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'When NOT to Use Context',
-      emoji: '⚠️',
+      title: "When NOT to Use Context",
+      emoji: "⚠️",
       points: [
-        'Data that changes very frequently',
-        'Complex state with many actions',
-        'State needed by only 1-2 components',
-        'Server-fetched data (use React Query)',
-        'Large applications (use Redux/Zustand)'
-      ]
-    }
+        "Data that changes very frequently",
+        "Complex state with many actions",
+        "State needed by only 1-2 components",
+        "Server-fetched data (use React Query)",
+        "Large applications (use Redux/Zustand)",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Multiple Contexts',
+      title: "Multiple Contexts",
       code: `// You can have multiple contexts!
 function App() {
   return (
@@ -276,16 +276,16 @@ function Header() {
   return <h1>{t('welcome')}, {user.name}</h1>
 }`,
       highlights: [
-        'Nest multiple providers',
-        'Each manages its own state',
-        'Components can use any/all contexts'
-      ]
-    }
+        "Nest multiple providers",
+        "Each manages its own state",
+        "Components can use any/all contexts",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Context with Reducer',
+      title: "Context with Reducer",
       code: `function CartProvider({ children }) {
   const [state, dispatch] = useReducer(cartReducer, {
     items: [],
@@ -307,56 +307,56 @@ function Header() {
   )
 }`,
       highlights: [
-        'useReducer for complex state logic',
-        'Actions wrapped in helper functions',
-        'Clean API for consumers'
-      ]
-    }
+        "useReducer for complex state logic",
+        "Actions wrapped in helper functions",
+        "Clean API for consumers",
+      ],
+    },
   },
   {
-    type: 'comparison',
+    type: "comparison",
     content: {
-      title: 'Props vs Context',
+      title: "Props vs Context",
       left: {
-        title: 'Props',
+        title: "Props",
         items: [
-          'Explicit data flow',
-          'Easy to trace',
-          'Good for direct parent-child',
-          'Component is self-contained',
-          'Better for reusable components'
-        ]
+          "Explicit data flow",
+          "Easy to trace",
+          "Good for direct parent-child",
+          "Component is self-contained",
+          "Better for reusable components",
+        ],
       },
       right: {
-        title: 'Context',
+        title: "Context",
         items: [
-          'Implicit data flow',
-          'Harder to trace',
-          'Good for deeply nested',
-          'Component depends on context',
-          'Better for app-wide state'
-        ]
-      }
-    }
+          "Implicit data flow",
+          "Harder to trace",
+          "Good for deeply nested",
+          "Component depends on context",
+          "Better for app-wide state",
+        ],
+      },
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'Context Best Practices',
-      emoji: '💡',
+      title: "Context Best Practices",
+      emoji: "💡",
       points: [
-        'Keep context focused (one concern per context)',
-        'Always use custom hooks for consumption',
-        'Memoize context values if they contain objects',
-        'Split frequently updating state from static state',
-        'Place Provider as close to consumers as needed'
-      ]
-    }
+        "Keep context focused (one concern per context)",
+        "Always use custom hooks for consumption",
+        "Memoize context values if they contain objects",
+        "Split frequently updating state from static state",
+        "Place Provider as close to consumers as needed",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Optimizing Context',
+      title: "Optimizing Context",
       code: `function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('light')
 
@@ -375,22 +375,22 @@ function Header() {
   )
 }`,
       highlights: [
-        'useMemo prevents new object on every render',
-        'Only creates new value when theme changes',
-        'Important for performance with many consumers'
-      ]
-    }
+        "useMemo prevents new object on every render",
+        "Only creates new value when theme changes",
+        "Important for performance with many consumers",
+      ],
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'Module 10 Quests',
-      emoji: '📋',
+      title: "Module 10 Quests",
+      emoji: "📋",
       points: [
-        'Quest 1: Theme Switcher - Light/dark mode with persistence',
-        'Quest 2: Language Support - i18n with translation context',
-        'Quest 3: User Session - Authentication context pattern'
-      ]
-    }
-  }
-]
+        "Quest 1: Theme Switcher - Light/dark mode with persistence",
+        "Quest 2: Language Support - i18n with translation context",
+        "Quest 3: User Session - Authentication context pattern",
+      ],
+    },
+  },
+];

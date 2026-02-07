@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
   // TODO: State for minutes input
@@ -24,7 +24,7 @@ function App() {
       {/* TODO: Progress bar */}
       {/* TODO: Start/Stop/Reset buttons */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

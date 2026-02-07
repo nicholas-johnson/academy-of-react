@@ -1,32 +1,32 @@
 export const slides = [
   {
-    type: 'title',
+    type: "title",
     content: {
-      title: 'The Children Prop',
-      subtitle: 'Module 7: Building Wrapper Components',
-      emoji: '📦'
-    }
+      title: "The Children Prop",
+      subtitle: "Module 7: Building Wrapper Components",
+      emoji: "📦",
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'The Problem',
+      title: "The Problem",
       points: [
-        'We want reusable Card, Modal, Layout components',
-        'But we don\'t know what content goes inside',
-        'Prop-based approach is too rigid',
+        "We want reusable Card, Modal, Layout components",
+        "But we don't know what content goes inside",
+        "Prop-based approach is too rigid",
         'We need a way to "wrap" any content',
-        'Enter: the children prop!'
+        "Enter: the children prop!",
       ],
-      emoji: '🤔'
-    }
+      emoji: "🤔",
+    },
   },
   {
-    type: 'comparison',
+    type: "comparison",
     content: {
-      title: 'Props vs Children',
+      title: "Props vs Children",
       left: {
-        label: 'Props (Rigid)',
+        label: "Props (Rigid)",
         code: `// Limited to specific props
 <Card 
   title="Hello"
@@ -35,24 +35,24 @@ export const slides = [
 
 // What if you want a button?
 // Or an image? Or a list?
-// Need to add more props...`
+// Need to add more props...`,
       },
       right: {
-        label: 'Children (Flexible)',
+        label: "Children (Flexible)",
         code: `// Put anything inside!
 <Card>
   <h2>Hello</h2>
   <p>Some text</p>
   <button>Click</button>
   <img src="..." />
-</Card>`
-      }
-    }
+</Card>`,
+      },
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'What is children?',
+      title: "What is children?",
       code: `// When you use a component like this:
 <Card>
   <h2>Title</h2>
@@ -68,31 +68,31 @@ function Card({ children }) {
   );
 }`,
       highlights: [
-        'children = whatever is between the tags',
-        'Destructure it like any other prop',
-        'Render it with {children}',
-        'Card doesn\'t need to know what\'s inside!'
-      ]
-    }
-  },
-  {
-    type: 'standard',
-    content: {
-      title: 'Common Use Cases',
-      points: [
-        '📦 Card — Wraps any content with styling',
-        '🪟 Modal — Dialog that contains anything',
-        '📐 Layout — Page structure with slots',
-        '📋 Section — Groups content with a title',
-        '🔘 Button — Wraps text, icons, or both'
+        "children = whatever is between the tags",
+        "Destructure it like any other prop",
+        "Render it with {children}",
+        "Card doesn't need to know what's inside!",
       ],
-      emoji: '🛠️'
-    }
+    },
   },
   {
-    type: 'code',
+    type: "standard",
     content: {
-      title: 'Building a Card Component',
+      title: "Common Use Cases",
+      points: [
+        "📦 Card — Wraps any content with styling",
+        "🪟 Modal — Dialog that contains anything",
+        "📐 Layout — Page structure with slots",
+        "📋 Section — Groups content with a title",
+        "🔘 Button — Wraps text, icons, or both",
+      ],
+      emoji: "🛠️",
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Building a Card Component",
       code: `function Card({ children, variant = "default" }) {
   return (
     <div className={\`card card-\${variant}\`}>
@@ -112,17 +112,17 @@ function Card({ children }) {
   <h3>Elara Moonwhisper</h3>
 </Card>`,
       highlights: [
-        'Card provides structure and styling',
-        'Content is completely flexible',
-        'Combine with other props (variant)',
-        'Same component, endless possibilities'
-      ]
-    }
+        "Card provides structure and styling",
+        "Content is completely flexible",
+        "Combine with other props (variant)",
+        "Same component, endless possibilities",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Layout with Multiple Slots',
+      title: "Layout with Multiple Slots",
       code: `function PageLayout({ header, sidebar, children }) {
   return (
     <div className="layout">
@@ -142,17 +142,17 @@ function Card({ children }) {
   <p>Main content goes here...</p>
 </PageLayout>`,
       highlights: [
-        'Named props for specific slots (header, sidebar)',
-        'children for the main/default content',
-        'Flexible page layouts without repetition',
-        'Each slot can contain any JSX'
-      ]
-    }
+        "Named props for specific slots (header, sidebar)",
+        "children for the main/default content",
+        "Flexible page layouts without repetition",
+        "Each slot can contain any JSX",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Modal Example',
+      title: "Modal Example",
       code: `function Modal({ isOpen, onClose, title, children }) {
   if (!isOpen) return null;
   
@@ -175,83 +175,99 @@ function Card({ children }) {
   <button onClick={handleConfirm}>Yes, cast it!</button>
 </Modal>`,
       highlights: [
-        'Modal handles open/close logic',
-        'title prop for the header',
-        'children for the body content',
-        'Reusable for any confirmation/dialog'
-      ]
-    }
+        "Modal handles open/close logic",
+        "title prop for the header",
+        "children for the body content",
+        "Reusable for any confirmation/dialog",
+      ],
+    },
   },
   {
-    type: 'rules',
+    type: "rules",
     content: {
-      title: 'When to Use children',
+      title: "When to Use children",
       rules: [
-        { rule: 'Wrapper components', example: 'Card, Modal, Section', icon: '📦' },
-        { rule: 'Layout components', example: 'PageLayout, Container', icon: '📐' },
-        { rule: 'Unknown content', example: 'User provides the content', icon: '❓' },
-        { rule: 'Flexible composition', example: 'Mix any elements inside', icon: '🧩' }
-      ]
-    }
+        {
+          rule: "Wrapper components",
+          example: "Card, Modal, Section",
+          icon: "📦",
+        },
+        {
+          rule: "Layout components",
+          example: "PageLayout, Container",
+          icon: "📐",
+        },
+        {
+          rule: "Unknown content",
+          example: "User provides the content",
+          icon: "❓",
+        },
+        {
+          rule: "Flexible composition",
+          example: "Mix any elements inside",
+          icon: "🧩",
+        },
+      ],
+    },
   },
   {
-    type: 'comparison',
+    type: "comparison",
     content: {
-      title: 'Props vs Children',
+      title: "Props vs Children",
       left: {
-        label: 'Use Props When',
+        label: "Use Props When",
         items: [
-          'Content is simple (string, number)',
-          'You need to transform the data',
-          'Component controls the rendering',
-          'Specific structure required'
-        ]
+          "Content is simple (string, number)",
+          "You need to transform the data",
+          "Component controls the rendering",
+          "Specific structure required",
+        ],
       },
       right: {
-        label: 'Use Children When',
+        label: "Use Children When",
         items: [
-          'Content is complex (JSX)',
-          'User decides what to render',
-          'Component just wraps/decorates',
-          'Maximum flexibility needed'
-        ]
-      }
-    }
+          "Content is complex (JSX)",
+          "User decides what to render",
+          "Component just wraps/decorates",
+          "Maximum flexibility needed",
+        ],
+      },
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'This is Composition!',
+      title: "This is Composition!",
       points: [
-        'Small components combine into larger ones',
-        'Each component has one job',
-        'Card doesn\'t care what\'s inside',
-        'Layout doesn\'t care what\'s in each slot',
-        'Flexible, reusable, maintainable!'
+        "Small components combine into larger ones",
+        "Each component has one job",
+        "Card doesn't care what's inside",
+        "Layout doesn't care what's in each slot",
+        "Flexible, reusable, maintainable!",
       ],
-      emoji: '🧩'
-    }
+      emoji: "🧩",
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'Module 7 Goals',
+      title: "Module 7 Goals",
       points: [
-        'Understand the children prop',
-        'Build wrapper components (Card, Section)',
-        'Create layout components with slots',
-        'Know when to use children vs props',
-        'Compose complex UIs from simple pieces'
+        "Understand the children prop",
+        "Build wrapper components (Card, Section)",
+        "Create layout components with slots",
+        "Know when to use children vs props",
+        "Compose complex UIs from simple pieces",
       ],
-      emoji: '🎯'
-    }
+      emoji: "🎯",
+    },
   },
   {
-    type: 'title',
+    type: "title",
     content: {
-      title: 'Let\'s Compose!',
-      subtitle: 'Time to build reusable components',
-      emoji: '🚀'
-    }
-  }
+      title: "Let's Compose!",
+      subtitle: "Time to build reusable components",
+      emoji: "🚀",
+    },
+  },
 ];

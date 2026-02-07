@@ -7,6 +7,7 @@
 ## Objective
 
 Build an Academy Portal with:
+
 - Route loaders for data fetching
 - Nested routes and layouts
 - Error boundaries
@@ -26,9 +27,10 @@ Build an Academy Portal with:
 ### 1. Student Directory Route
 
 Create `app/routes/students._index.tsx`:
+
 ```tsx
-import { json } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 
 export async function loader() {
   const students = await fetchStudents();
@@ -37,11 +39,11 @@ export async function loader() {
 
 export default function StudentsIndex() {
   const { students } = useLoaderData<typeof loader>();
-  
+
   return (
     <div>
       <h1>Student Directory</h1>
-      {students.map(student => (
+      {students.map((student) => (
         <StudentCard key={student.id} student={student} />
       ))}
     </div>
@@ -52,8 +54,9 @@ export default function StudentsIndex() {
 ### 2. Nested Layout
 
 Create `app/routes/students.tsx`:
+
 ```tsx
-import { Outlet } from '@remix-run/react';
+import { Outlet } from "@remix-run/react";
 
 export default function StudentsLayout() {
   return (
@@ -70,10 +73,11 @@ export default function StudentsLayout() {
 ### 3. Error Boundary
 
 Add to `app/routes/students._index.tsx`:
+
 ```tsx
 export function ErrorBoundary() {
   const error = useRouteError();
-  
+
   return (
     <div>
       <h1>Error Loading Students</h1>
@@ -86,26 +90,27 @@ export function ErrorBoundary() {
 ### 4. Streaming with defer()
 
 Create `app/routes/dashboard.tsx`:
+
 ```tsx
-import { defer } from '@remix-run/node';
-import { Await, useLoaderData } from '@remix-run/react';
-import { Suspense } from 'react';
+import { defer } from "@remix-run/node";
+import { Await, useLoaderData } from "@remix-run/react";
+import { Suspense } from "react";
 
 export async function loader() {
   return defer({
-    students: fetchStudents(),      // Fast
-    battleStats: fetchBattleStats() // Slow - streams
+    students: fetchStudents(), // Fast
+    battleStats: fetchBattleStats(), // Slow - streams
   });
 }
 
 export default function Dashboard() {
   const { students, battleStats } = useLoaderData<typeof loader>();
-  
+
   return (
     <div>
       {/* Renders immediately */}
       <StudentList students={students} />
-      
+
       {/* Streams when ready */}
       <Suspense fallback={<LoadingStats />}>
         <Await resolve={battleStats}>
@@ -140,7 +145,7 @@ app/
 ✅ Error boundary catches and displays errors  
 ✅ Dashboard uses `defer()` for streaming  
 ✅ TypeScript types inferred from loader  
-✅ Progressive enhancement (works without JS!)  
+✅ Progressive enhancement (works without JS!)
 
 ## Hints
 
@@ -154,6 +159,7 @@ export async function loader() {
   return json({ data }); // Serialize to JSON
 }
 ```
+
 </details>
 
 <details>
@@ -164,6 +170,7 @@ export async function loader() {
 - `students.$id.tsx` - Renders at `/students/:id`
 
 The `.` creates nesting!
+
 </details>
 
 <details>
@@ -179,6 +186,7 @@ export default function Component() {
   const { students } = useLoaderData<typeof loader>();
 }
 ```
+
 </details>
 
 ## Bonus Challenges
@@ -192,9 +200,3 @@ export default function Component() {
 ---
 
 **Next Quest**: [Quest 2: Battle Records →](../quest-02-loaders-actions/)
-
-
-
-
-
-

@@ -7,6 +7,7 @@
 ## Objective
 
 Build a Battle Visualizer with:
+
 - Static battle history (Content Collections)
 - Interactive battle simulator (React island)
 - Live damage calculator
@@ -38,28 +39,29 @@ duration: 45
 outcome: decisive
 spellsUsed: 23
 ---
-
 The legendary duel at Silverpine Forest...
 ```
 
 Configure collection:
+
 ```ts
 // src/content/config.ts
 const battlesCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     date: z.date(),
     winner: z.string(),
     loser: z.string(),
     duration: z.number(),
-    outcome: z.enum(['decisive', 'close', 'draw']),
+    outcome: z.enum(["decisive", "close", "draw"]),
     spellsUsed: z.number(),
-  })
+  }),
 });
 ```
 
 Display statically:
+
 ```astro
 ---
 // src/pages/battles/index.astro
@@ -84,23 +86,24 @@ const battles = await getCollection('battles');
 ### 2. Interactive Battle Simulator
 
 Create `src/islands/BattleSimulator.jsx`:
+
 ```jsx
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function BattleSimulator() {
-  const [wizard1, setWizard1] = useState({ name: '', hp: 100, mana: 50 });
-  const [wizard2, setWizard2] = useState({ name: '', hp: 100, mana: 50 });
+  const [wizard1, setWizard1] = useState({ name: "", hp: 100, mana: 50 });
+  const [wizard2, setWizard2] = useState({ name: "", hp: 100, mana: 50 });
   const [log, setLog] = useState([]);
-  
+
   const castSpell = (caster, target, spell) => {
     if (caster.mana < spell.cost) {
-      setLog(prev => [...prev, `${caster.name} doesn't have enough mana!`]);
+      setLog((prev) => [...prev, `${caster.name} doesn't have enough mana!`]);
       return;
     }
-    
+
     // Calculate damage
     const damage = Math.floor(Math.random() * spell.power + spell.power / 2);
-    
+
     // Update states
     if (caster === wizard1) {
       setWizard1({ ...wizard1, mana: wizard1.mana - spell.cost });
@@ -109,19 +112,19 @@ export default function BattleSimulator() {
       setWizard2({ ...wizard2, mana: wizard2.mana - spell.cost });
       setWizard1({ ...wizard1, hp: Math.max(0, wizard1.hp - damage) });
     }
-    
-    setLog(prev => [
+
+    setLog((prev) => [
       ...prev,
-      `${caster.name} cast ${spell.name} dealing ${damage} damage!`
+      `${caster.name} cast ${spell.name} dealing ${damage} damage!`,
     ]);
   };
-  
+
   const spells = [
-    { name: 'Fireball', power: 30, cost: 15 },
-    { name: 'Ice Shard', power: 20, cost: 10 },
-    { name: 'Lightning', power: 40, cost: 20 },
+    { name: "Fireball", power: 30, cost: 15 },
+    { name: "Ice Shard", power: 20, cost: 10 },
+    { name: "Lightning", power: 40, cost: 20 },
   ];
-  
+
   return (
     <div className="simulator">
       <div className="wizards">
@@ -134,7 +137,7 @@ export default function BattleSimulator() {
           <div>HP: {wizard1.hp}</div>
           <div>Mana: {wizard1.mana}</div>
           <div className="spells">
-            {spells.map(spell => (
+            {spells.map((spell) => (
               <button
                 key={spell.name}
                 onClick={() => castSpell(wizard1, wizard2, spell)}
@@ -145,7 +148,7 @@ export default function BattleSimulator() {
             ))}
           </div>
         </div>
-        
+
         <div className="wizard">
           <input
             value={wizard2.name}
@@ -155,7 +158,7 @@ export default function BattleSimulator() {
           <div>HP: {wizard2.hp}</div>
           <div>Mana: {wizard2.mana}</div>
           <div className="spells">
-            {spells.map(spell => (
+            {spells.map((spell) => (
               <button
                 key={spell.name}
                 onClick={() => castSpell(wizard2, wizard1, spell)}
@@ -167,12 +170,14 @@ export default function BattleSimulator() {
           </div>
         </div>
       </div>
-      
+
       <div className="battle-log">
         <h3>Battle Log</h3>
-        {log.map((entry, i) => <p key={i}>{entry}</p>)}
+        {log.map((entry, i) => (
+          <p key={i}>{entry}</p>
+        ))}
       </div>
-      
+
       {(wizard1.hp === 0 || wizard2.hp === 0) && (
         <div className="winner">
           {wizard1.hp === 0 ? wizard2.name : wizard1.name} wins!
@@ -186,6 +191,7 @@ export default function BattleSimulator() {
 ### 3. Strategic Island Placement
 
 Create `src/pages/simulator.astro`:
+
 ```astro
 ---
 import Layout from '../layouts/Layout.astro';
@@ -200,19 +206,19 @@ import Newsletter from '../islands/Newsletter.jsx';
     <h1>Interactive Battle Simulator</h1>
     <p>Test your battle strategies in real-time!</p>
   </div>
-  
+
   <!-- Critical interactive content - Load immediately -->
   <BattleSimulator client:load />
-  
+
   <!-- Static content about battles -->
   <section>
     <h2>Battle Rules</h2>
     <p>Each wizard starts with 100 HP and 50 mana...</p>
   </section>
-  
+
   <!-- Below fold - Load when visible -->
   <Comments client:visible postId="simulator" />
-  
+
   <!-- Way below fold - Load when idle -->
   <Newsletter client:idle />
 </Layout>
@@ -221,6 +227,7 @@ import Newsletter from '../islands/Newsletter.jsx';
 ### 4. Performance Measurement
 
 Create a comparison page:
+
 ```astro
 ---
 // src/pages/performance.astro
@@ -228,7 +235,7 @@ Create a comparison page:
 
 <Layout title="Performance Comparison">
   <h1>Islands Architecture Performance</h1>
-  
+
   <div class="comparison">
     <div class="metric">
       <h3>JavaScript Bundle</h3>
@@ -236,21 +243,21 @@ Create a comparison page:
       <p>Full React SPA: ~120KB</p>
       <p class="savings">Savings: 87.5%</p>
     </div>
-    
+
     <div class="metric">
       <h3>Time to Interactive</h3>
       <p>Astro Islands: ~0.5s</p>
       <p>Full React SPA: ~2.5s</p>
       <p class="savings">5x faster!</p>
     </div>
-    
+
     <div class="metric">
       <h3>Lighthouse Score</h3>
       <p>Astro Islands: 98-100</p>
       <p>Full React SPA: 70-85</p>
     </div>
   </div>
-  
+
   <h2>Bundle Size Breakdown</h2>
   <pre>
     dist/
@@ -260,7 +267,7 @@ Create a comparison page:
     │   └── Newsletter.[hash].js         # 2KB
     └── (pages are static HTML)
   </pre>
-  
+
   <h2>Run Your Own Test</h2>
   <ol>
     <li>Build: <code>npm run build</code></li>
@@ -280,7 +287,7 @@ Create a comparison page:
 ✅ Performance comparison page  
 ✅ Build size documented  
 ✅ Working battle simulator logic  
-✅ At least 3 battle content files  
+✅ At least 3 battle content files
 
 ## Strategic Hydration Decision Tree
 
@@ -321,6 +328,7 @@ ls -lh dist/_astro/
 # Compare page sizes
 du -sh dist/*.html
 ```
+
 </details>
 
 <details>
@@ -348,9 +356,3 @@ du -sh dist/*.html
 
 **Previous Quest**: [Quest 1: Knowledge Base ←](../quest-01-knowledge-base/)  
 **Next Quest**: [Quest 3: Deployment →](../quest-03-deployment/)
-
-
-
-
-
-

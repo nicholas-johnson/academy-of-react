@@ -7,7 +7,8 @@
   margin-top: 20px;
 }
 
-.form-panel, .students-panel {
+.form-panel,
+.students-panel {
   padding: 20px;
   border: 2px solid #764ba2;
   border-radius: 8px;
@@ -19,7 +20,8 @@ form {
   gap: 15px;
 }
 
-input, select {
+input,
+select {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -39,8 +41,3 @@ button {
 button:hover {
   background: #667eea;
 }
-
-
-
-
-

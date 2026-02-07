@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 // TODO: Create AuthContext using createContext()
 
@@ -15,18 +15,18 @@ import './App.css'
 // - Throws an error if used outside AuthProvider
 
 function LoginForm({ onLogin }) {
-  const [name, setName] = useState('')
-  const [house, setHouse] = useState('gryffin')
+  const [name, setName] = useState("");
+  const [house, setHouse] = useState("gryffin");
 
   // TODO: Replace onLogin prop with useAuth() hook
   // Get login function from context instead
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (name.trim()) {
-      onLogin(name, house)
+      onLogin(name, house);
     }
-  }
+  };
 
   return (
     <div className="login-container">
@@ -56,14 +56,14 @@ function LoginForm({ onLogin }) {
         </button>
       </form>
     </div>
-  )
+  );
 }
 
 function Dashboard({ user, onLogout }) {
   // TODO: Replace props with useAuth() hook
   // Get user and logout from context instead
 
-  if (!user) return null
+  if (!user) return null;
 
   return (
     <div className="dashboard">
@@ -128,12 +128,12 @@ function Dashboard({ user, onLogout }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function App() {
   // This state management should move into AuthProvider
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
 
   const login = (name, house) => {
     const newUser = {
@@ -141,17 +141,17 @@ function App() {
       name,
       house,
       level: 1,
-    }
-    setUser(newUser)
-    localStorage.setItem('user', JSON.stringify(newUser))
-  }
+    };
+    setUser(newUser);
+    localStorage.setItem("user", JSON.stringify(newUser));
+  };
 
   const logout = () => {
-    setUser(null)
-    localStorage.removeItem('user')
-  }
+    setUser(null);
+    localStorage.removeItem("user");
+  };
 
-  const isAuthenticated = !!user
+  const isAuthenticated = !!user;
 
   // TODO: Wrap with AuthProvider
   // Child components should use useAuth() instead of props
@@ -176,7 +176,7 @@ function App() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

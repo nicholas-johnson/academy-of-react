@@ -61,16 +61,16 @@ npm install react-router-dom
 
 ```jsx
 // main.jsx
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>
-)
+  </BrowserRouter>,
+);
 
 // App.jsx
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -80,66 +80,66 @@ function App() {
       <Route path="/spells/:id" element={<SpellDetail />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-  )
+  );
 }
 ```
 
 ### Navigation with Link and NavLink
 
 ```jsx
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
     <nav>
       {/* Basic link */}
       <Link to="/">Home</Link>
-      
+
       {/* NavLink adds "active" class when route matches */}
-      <NavLink 
+      <NavLink
         to="/spells"
-        className={({ isActive }) => isActive ? 'active' : ''}
+        className={({ isActive }) => (isActive ? "active" : "")}
       >
         Spells
       </NavLink>
     </nav>
-  )
+  );
 }
 ```
 
 ### URL Parameters
 
 ```jsx
-import { useParams } from 'react-router-dom'
+import { useParams } from "react-router-dom";
 
 // Route: /spells/:spellId
 function SpellDetail() {
-  const { spellId } = useParams()
-  
-  return <div>Viewing spell: {spellId}</div>
+  const { spellId } = useParams();
+
+  return <div>Viewing spell: {spellId}</div>;
 }
 ```
 
 ### Programmatic Navigation
 
 ```jsx
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 function BattleResult() {
-  const navigate = useNavigate()
-  
+  const navigate = useNavigate();
+
   const handleVictory = () => {
     // Navigate to results page
-    navigate('/results')
-    
+    navigate("/results");
+
     // Or go back
-    navigate(-1)
-    
+    navigate(-1);
+
     // With state
-    navigate('/results', { state: { winner: 'Gryffin' } })
-  }
-  
-  return <button onClick={handleVictory}>Claim Victory</button>
+    navigate("/results", { state: { winner: "Gryffin" } });
+  };
+
+  return <button onClick={handleVictory}>Claim Victory</button>;
 }
 ```
 
@@ -153,10 +153,10 @@ function BattleResult() {
     <Route path="students" element={<Students />} />
     <Route path="spells" element={<Spells />} />
   </Route>
-</Routes>
+</Routes>;
 
 // AcademyLayout.jsx
-import { Outlet, NavLink } from 'react-router-dom'
+import { Outlet, NavLink } from "react-router-dom";
 
 function AcademyLayout() {
   return (
@@ -166,30 +166,30 @@ function AcademyLayout() {
         <NavLink to="/academy/students">Students</NavLink>
         <NavLink to="/academy/spells">Spells</NavLink>
       </nav>
-      
+
       {/* Child routes render here */}
       <Outlet />
     </div>
-  )
+  );
 }
 ```
 
 ### Search Parameters
 
 ```jsx
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams } from "react-router-dom";
 
 // URL: /spells?type=fire&level=5
 function SpellSearch() {
-  const [searchParams, setSearchParams] = useSearchParams()
-  
-  const type = searchParams.get('type') // 'fire'
-  const level = searchParams.get('level') // '5'
-  
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const type = searchParams.get("type"); // 'fire'
+  const level = searchParams.get("level"); // '5'
+
   const handleFilterChange = (newType) => {
-    setSearchParams({ type: newType, level: level || '' })
-  }
-  
+    setSearchParams({ type: newType, level: level || "" });
+  };
+
   return (
     <div>
       <select onChange={(e) => handleFilterChange(e.target.value)}>
@@ -197,41 +197,42 @@ function SpellSearch() {
         <option value="ice">Ice</option>
       </select>
     </div>
-  )
+  );
 }
 ```
 
 ### Protected Routes
 
 ```jsx
-import { Navigate, useLocation } from 'react-router-dom'
+import { Navigate, useLocation } from "react-router-dom";
 
 function ProtectedRoute({ children }) {
-  const { user } = useAuth() // From your auth context
-  const location = useLocation()
-  
+  const { user } = useAuth(); // From your auth context
+  const location = useLocation();
+
   if (!user) {
     // Redirect to login, remembering where they wanted to go
-    return <Navigate to="/login" state={{ from: location }} replace />
+    return <Navigate to="/login" state={{ from: location }} replace />;
   }
-  
-  return children
+
+  return children;
 }
 
 // Usage
-<Route 
-  path="/war-room" 
+<Route
+  path="/war-room"
   element={
     <ProtectedRoute>
       <WarRoom />
     </ProtectedRoute>
-  } 
-/>
+  }
+/>;
 ```
 
 ## Quests
 
 ### Quest 1: Academy Navigation
+
 **Difficulty**: ⭐⭐ Intermediate
 
 Create a multi-page Academy portal with navigation between Home, Students, Spells, and About pages.
@@ -239,6 +240,7 @@ Create a multi-page Academy portal with navigation between Home, Students, Spell
 [Start Quest →](./quest-01-academy-navigation/)
 
 ### Quest 2: Spell Directory
+
 **Difficulty**: ⭐⭐ Intermediate
 
 Build a spell directory with dynamic routes. View spell lists and individual spell details using URL parameters.
@@ -246,6 +248,7 @@ Build a spell directory with dynamic routes. View spell lists and individual spe
 [Start Quest →](./quest-02-spell-directory/)
 
 ### Quest 3: War Room
+
 **Difficulty**: ⭐⭐⭐ Advanced
 
 Create a protected War Room that only authenticated users can access. Includes login flow, protected routes, and search parameters for filtering battle data.
@@ -257,6 +260,7 @@ Create a protected War Room that only authenticated users can access. Includes l
 **The Complete Academy Portal**
 
 Combine all routing patterns into a full application:
+
 - Public pages (Home, About, Spell Library)
 - Protected pages (War Room, Battle History)
 - Nested routes (Academy dashboard with sub-pages)
@@ -287,6 +291,7 @@ This module teaches **client-side routing** — the browser handles navigation w
 - Routes can render on the server for SEO and performance
 
 Both patterns are valuable:
+
 - **Client-side (React Router)**: Great for SPAs, dashboards, apps behind login
 - **Server-side (Next.js/Remix)**: Great for public sites, SEO, content sites
 

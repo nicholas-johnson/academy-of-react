@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
   // TODO: Create state for current step (1, 2, 3, or 'complete')
@@ -35,7 +35,7 @@ function App() {
 
       {/* TODO: Add navigation buttons (Back/Next) */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -19,48 +19,48 @@ By the end of this module, you will:
 
 ### State Hooks
 
-| Hook | Purpose |
-|------|---------|
-| `useState` | Local component state |
+| Hook         | Purpose                    |
+| ------------ | -------------------------- |
+| `useState`   | Local component state      |
 | `useReducer` | Complex state with actions |
 
 ### Context Hooks
 
-| Hook | Purpose |
-|------|---------|
+| Hook         | Purpose               |
+| ------------ | --------------------- |
 | `useContext` | Access context values |
 
 ### Ref Hooks
 
-| Hook | Purpose |
-|------|---------|
-| `useRef` | DOM access, mutable values |
+| Hook                  | Purpose                         |
+| --------------------- | ------------------------------- |
+| `useRef`              | DOM access, mutable values      |
 | `useImperativeHandle` | Customize ref exposed to parent |
 
 ### Effect Hooks
 
-| Hook | Purpose |
-|------|---------|
-| `useEffect` | Side effects (data fetching, subscriptions) |
-| `useLayoutEffect` | Synchronous effects (before paint) |
-| `useInsertionEffect` | CSS-in-JS library use only |
+| Hook                 | Purpose                                     |
+| -------------------- | ------------------------------------------- |
+| `useEffect`          | Side effects (data fetching, subscriptions) |
+| `useLayoutEffect`    | Synchronous effects (before paint)          |
+| `useInsertionEffect` | CSS-in-JS library use only                  |
 
 ### Performance Hooks
 
-| Hook | Purpose |
-|------|---------|
-| `useMemo` | Memoize expensive calculations |
-| `useCallback` | Memoize functions |
-| `useTransition` | Non-blocking UI updates |
-| `useDeferredValue` | Defer non-urgent updates |
+| Hook               | Purpose                        |
+| ------------------ | ------------------------------ |
+| `useMemo`          | Memoize expensive calculations |
+| `useCallback`      | Memoize functions              |
+| `useTransition`    | Non-blocking UI updates        |
+| `useDeferredValue` | Defer non-urgent updates       |
 
 ### Other Hooks
 
-| Hook | Purpose |
-|------|---------|
-| `useId` | Generate unique IDs (SSR-safe) |
-| `useSyncExternalStore` | Subscribe to external stores |
-| `useDebugValue` | Custom hook debugging |
+| Hook                   | Purpose                        |
+| ---------------------- | ------------------------------ |
+| `useId`                | Generate unique IDs (SSR-safe) |
+| `useSyncExternalStore` | Subscribe to external stores   |
+| `useDebugValue`        | Custom hook debugging          |
 
 ## Slides
 
@@ -95,14 +95,14 @@ npm run dev
 
 ## Where Each Hook is Covered
 
-| Hook | Module |
-|------|--------|
-| useState | Module 3 |
-| useEffect | Module 5 |
-| useRef | **This module** |
-| useContext | Module 10 |
-| useMemo, useCallback | Module 12 |
-| useReducer | **This module** |
+| Hook                 | Module          |
+| -------------------- | --------------- |
+| useState             | Module 3        |
+| useEffect            | Module 5        |
+| useRef               | **This module** |
+| useContext           | Module 10       |
+| useMemo, useCallback | Module 12       |
+| useReducer           | **This module** |
 
 ## Key Takeaways
 

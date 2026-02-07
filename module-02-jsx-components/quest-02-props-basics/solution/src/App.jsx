@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 
 // Wizard data
 const wizards = [
@@ -12,8 +12,12 @@ function WizardCard({ name, house, level }) {
   return (
     <div className="wizard-card">
       <h2 className="wizard-name">{name}</h2>
-      <p><strong>House:</strong> {house}</p>
-      <p><strong>Level:</strong> {level}</p>
+      <p>
+        <strong>House:</strong> {house}
+      </p>
+      <p>
+        <strong>Level:</strong> {level}
+      </p>
     </div>
   );
 }
@@ -32,13 +36,10 @@ function Header({ title, subtitle }) {
 function App() {
   return (
     <div className="app">
-      <Header 
-        title="Wizard Academy" 
-        subtitle="Meet our wizards" 
-      />
-      
+      <Header title="Wizard Academy" subtitle="Meet our wizards" />
+
       <div className="wizard-list">
-        {wizards.map(wizard => (
+        {wizards.map((wizard) => (
           <WizardCard
             key={wizard.id}
             name={wizard.name}

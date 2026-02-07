@@ -17,6 +17,7 @@ This is a significant shift from Module 1. Take time to:
 3. **Show HMR** — Edit a file, save, watch the browser update instantly (this is the "wow" moment!)
 
 **Common student confusion:**
+
 - "Why do I need a terminal now?"
 - "What is npm?"
 - "Why can't I just open the HTML file?"
@@ -30,6 +31,7 @@ This is a significant shift from Module 1. Take time to:
 ### Demo: JSX and Components (`demo/`)
 
 **Setup:**
+
 ```bash
 cd module-02-jsx-components/demo
 npm install
@@ -48,13 +50,14 @@ npm run dev
 
 ```jsx
 // This JSX:
-<h1>Hello</h1>
+<h1>Hello</h1>;
 
 // Compiles to this (what you learned in Module 1):
-React.createElement('h1', null, 'Hello')
+React.createElement("h1", null, "Hello");
 ```
 
 **Live coding suggestion:**
+
 - Add a new prop to StudentCard (e.g., `specialty`)
 - Show how it flows from usage → props parameter → JSX output
 - Break something intentionally to show error messages
@@ -124,18 +127,21 @@ return (
 ## Quests Overview
 
 ### Quest 1: JSX Conversion
+
 **Difficulty**: Beginner  
 **Time estimate**: 20-25 minutes
 
 Students convert their Module 1 createElement code to JSX.
 
 **What they practice:**
+
 - JSX syntax
 - Vite project setup
 - ES module imports
 - className and curly braces
 
 **Common struggles:**
+
 - Forgetting `npm install` before `npm run dev`
 - Mixing up when to use `{}` vs quotes
 - Not understanding file structure
@@ -145,23 +151,27 @@ Students convert their Module 1 createElement code to JSX.
 ---
 
 ### Quest 2: Props Basics
+
 **Difficulty**: Beginner-Intermediate  
 **Time estimate**: 25-30 minutes
 
 Students create their first reusable component with props.
 
 **What they practice:**
+
 - Function components
 - Props (receiving and using)
 - Component reusability
 - Numbers as props need `{}`
 
 **Common struggles:**
+
 - Forgetting to pass props when using the component
 - Confusing `props.name` with just `name`
 - String vs number props: `manaCost={20}` not `manaCost="20"`
 
 **Key teaching moment:**
+
 ```jsx
 // Props flow DOWN from parent to child
 <SpellCard name="Fireball" power={35} />
@@ -174,12 +184,14 @@ function SpellCard(props) {
 ---
 
 ### Quest 3: Component Lists
+
 **Difficulty**: Intermediate  
 **Time estimate**: 30-35 minutes
 
 Students render a list of components using `.map()` and handle arrays as props.
 
 **What they practice:**
+
 - Arrays as props
 - `.map()` to render lists
 - Keys for list items
@@ -187,21 +199,23 @@ Students render a list of components using `.map()` and handle arrays as props.
 - Nested `.map()` (for ingredients)
 
 **Common struggles:**
+
 - Forgetting the `key` prop (show console warning)
 - Not returning from the map callback
 - Nested map for ingredients array
 
 **Key teaching moment:**
+
 ```jsx
 // Outer map: render each potion
-{potions.map(potion => (
-  <PotionCard key={potion.name} {...potion} />
-))}
+{
+  potions.map((potion) => <PotionCard key={potion.name} {...potion} />);
+}
 
 // Inner map (inside PotionCard): render each ingredient
-{ingredients.map((ing, i) => (
-  <li key={i}>{ing}</li>
-))}
+{
+  ingredients.map((ing, i) => <li key={i}>{ing}</li>);
+}
 ```
 
 ---
@@ -252,9 +266,9 @@ Students render a list of components using `.map()` and handle arrays as props.
    - Help with key placement
 
 9. **Wrap-up** (5 min)
-    - Recap: JSX is just prettier createElement
-    - Preview: Module 3 introduces useState for interactive components
-    - Mention: Module 4 will go deeper into props and composition patterns
+   - Recap: JSX is just prettier createElement
+   - Preview: Module 3 introduces useState for interactive components
+   - Mention: Module 4 will go deeper into props and composition patterns
 
 ---
 
@@ -264,7 +278,8 @@ Students render a list of components using `.map()` and handle arrays as props.
 A: A function can only return one thing. JSX compiles to `createElement()` calls, and you can only return one element. Use a `<div>` wrapper or `<>` Fragment.
 
 **Q: When do I use quotes vs curly braces?**
-A: 
+A:
+
 - Quotes for literal strings: `className="card"`
 - Curly braces for JavaScript: `className={dynamicClass}`, `count={42}`
 
@@ -282,30 +297,36 @@ A: No. `class` is a reserved word in JavaScript, so React uses `className`. Same
 ## Troubleshooting
 
 ### "npm: command not found"
+
 - Node.js isn't installed
 - Download from [nodejs.org](https://nodejs.org)
 - Restart terminal after installing
 
 ### "Module not found" errors
+
 - Run `npm install` first
 - Check import paths (case-sensitive on Linux/Mac)
 - Make sure file extensions are `.jsx` not `.js` for JSX files
 
 ### Port 5173 already in use
+
 - Another dev server is running
 - Kill it with `Ctrl+C` in that terminal
 - Or Vite will auto-use a different port
 
 ### Changes not appearing
+
 - Check terminal for errors (red text)
 - Try `Ctrl+C` then `npm run dev` again
 - Hard refresh: `Cmd+Shift+R` (Mac) or `Ctrl+Shift+R` (Windows)
 
 ### "Adjacent JSX elements must be wrapped"
+
 - Missing parent element
 - Wrap in `<div>` or `<>` Fragment
 
 ### Console warning about keys
+
 - Add `key` prop to mapped elements
 - Use unique IDs or index as last resort
 
@@ -318,12 +339,12 @@ Show both patterns and let students choose:
 ```jsx
 // Pattern 1: props.name
 function SpellCard(props) {
-  return <h3>{props.name}</h3>
+  return <h3>{props.name}</h3>;
 }
 
 // Pattern 2: Destructuring (cleaner)
 function SpellCard({ name, type, power }) {
-  return <h3>{name}</h3>
+  return <h3>{name}</h3>;
 }
 ```
 

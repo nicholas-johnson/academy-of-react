@@ -3,6 +3,7 @@
 Create spell practice interface where user types incantation. Auto-save to localStorage after 1 second of no typing (debounced). Load saved progress on mount.
 
 ## Requirements
+
 - Text input for incantation
 - Debounced save (1 second delay)
 - Save to localStorage
@@ -10,6 +11,7 @@ Create spell practice interface where user types incantation. Auto-save to local
 - Show last saved timestamp
 
 ## Acceptance Criteria
+
 - [ ] Input debounces correctly
 - [ ] Saves to localStorage
 - [ ] Loads on mount
@@ -17,4 +19,3 @@ Create spell practice interface where user types incantation. Auto-save to local
 - [ ] No excessive saves
 
 [Complete! →](../../module-06-styling/)
-

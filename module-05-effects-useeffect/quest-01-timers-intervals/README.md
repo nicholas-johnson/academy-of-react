@@ -3,6 +3,7 @@
 Create a focus timer for spell practice. User sets minutes, timer counts down in real time, shows progress bar. Alert when done. Proper cleanup.
 
 ## Requirements
+
 - Input for minutes
 - Start/Stop buttons
 - Countdown in MM:SS format
@@ -11,6 +12,7 @@ Create a focus timer for spell practice. User sets minutes, timer counts down in
 - Cleanup on unmount
 
 ## Acceptance Criteria
+
 - [ ] Timer counts down correctly
 - [ ] Progress bar updates
 - [ ] Start/Stop/Reset work
@@ -18,4 +20,3 @@ Create a focus timer for spell practice. User sets minutes, timer counts down in
 - [ ] No memory leaks
 
 [Next →](../quest-02-data-fetching/)
-

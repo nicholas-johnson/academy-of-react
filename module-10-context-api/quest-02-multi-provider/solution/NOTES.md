@@ -7,21 +7,21 @@
 ```javascript
 const translations = {
   common: {
-    title: 'Battle Academy',
-    welcome: 'Welcome, Adventurer!',
+    title: "Battle Academy",
+    welcome: "Welcome, Adventurer!",
     // ... more keys
   },
   elvish: {
-    title: 'Magor Academy',
-    welcome: 'Mae govannen, Roquen!',
+    title: "Magor Academy",
+    welcome: "Mae govannen, Roquen!",
     // ... same keys, different values
   },
   draconic: {
-    title: 'Kepesk Arcaniss',
-    welcome: 'Thric, Munthrek!',
+    title: "Kepesk Arcaniss",
+    welcome: "Thric, Munthrek!",
     // ... same keys, different values
   },
-}
+};
 ```
 
 All languages must have the same keys for the translation function to work consistently.
@@ -29,21 +29,21 @@ All languages must have the same keys for the translation function to work consi
 ### 2. Language Context Provider
 
 ```javascript
-const LanguageContext = createContext(undefined)
+const LanguageContext = createContext(undefined);
 
 function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState('common')
+  const [language, setLanguage] = useState("common");
 
   // Translation function - the key feature!
   const t = (key) => {
-    return translations[language][key] || key
-  }
+    return translations[language][key] || key;
+  };
 
   return (
     <LanguageContext.Provider value={{ language, setLang: setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
-  )
+  );
 }
 ```
 
@@ -51,14 +51,14 @@ function LanguageProvider({ children }) {
 
 ```javascript
 function SpellList() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <div>
-      <h2>{t('spells')}</h2>
-      <div>{t('fireball')}</div>
+      <h2>{t("spells")}</h2>
+      <div>{t("fireball")}</div>
     </div>
-  )
+  );
 }
 ```
 
@@ -73,11 +73,13 @@ function SpellList() {
 ## Common i18n Libraries
 
 For production apps, consider:
+
 - **react-i18next** - Full-featured i18n
 - **FormatJS (react-intl)** - Internationalization with formatting
 - **LinguiJS** - Compile-time extraction
 
 These add features like:
+
 - Pluralization rules
 - Date/number formatting
 - Missing translation warnings

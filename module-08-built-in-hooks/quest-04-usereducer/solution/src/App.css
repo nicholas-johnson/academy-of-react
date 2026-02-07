@@ -79,7 +79,9 @@ h1 {
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s, opacity 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
 
 .add-spell button:hover {
@@ -102,7 +104,9 @@ h1 {
   background: #1e293b;
   border-radius: 0.75rem;
   border: 1px solid #334155;
-  transition: border-color 0.2s, transform 0.2s;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
 }
 
 .spell-list li:hover {
@@ -111,7 +115,11 @@ h1 {
 
 .spell-list li.favorite {
   border-color: #667eea;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
 }
 
 .spell-info {
@@ -141,7 +149,9 @@ h1 {
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 0.875rem;
-  transition: transform 0.2s, opacity 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
 
 .spell-actions button:hover {

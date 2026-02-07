@@ -28,18 +28,19 @@ const [formData, setFormData] = useState({
 ### 2. Form Validation Pattern
 
 Three-state validation approach:
+
 - **formData**: Current input values
 - **errors**: Validation error messages
 - **submitted**: Success state
 
 ```javascript
 const validate = () => {
-  const newErrors = {}
+  const newErrors = {};
   if (!formData.name.trim()) {
-    newErrors.name = 'Name is required'
+    newErrors.name = "Name is required";
   }
-  return newErrors
-}
+  return newErrors;
+};
 ```
 
 ### 3. Event Handling
@@ -48,9 +49,9 @@ const validate = () => {
 
 ```javascript
 const handleSubmit = (e) => {
-  e.preventDefault() // Stops page reload!
+  e.preventDefault(); // Stops page reload!
   // ... handle submission
-}
+};
 ```
 
 ### 4. Dynamic Input Handler
@@ -59,9 +60,9 @@ One handler works for all inputs by using `name` attribute:
 
 ```javascript
 const handleChange = (e) => {
-  const { name, value } = e.target
-  setFormData(prev => ({ ...prev, [name]: value }))
-}
+  const { name, value } = e.target;
+  setFormData((prev) => ({ ...prev, [name]: value }));
+};
 ```
 
 ### 5. Radio Button Handling
@@ -73,7 +74,7 @@ Radio buttons use `checked` prop, not `value`:
   type="radio"
   name="role"
   value="attacker"
-  checked={formData.role === 'attacker'}
+  checked={formData.role === "attacker"}
   onChange={handleChange}
 />
 ```
@@ -83,9 +84,9 @@ Radio buttons use `checked` prop, not `value`:
 Conditional rendering of error messages per field:
 
 ```javascript
-{errors.name && (
-  <span className="error-message">{errors.name}</span>
-)}
+{
+  errors.name && <span className="error-message">{errors.name}</span>;
+}
 ```
 
 ### 7. User Experience Enhancements
@@ -102,16 +103,16 @@ Conditional rendering of error messages per field:
 ```javascript
 // Flat object for form data
 const [formData, setFormData] = useState({
-  name: '',
-  spellType: '',
-  role: ''
-})
+  name: "",
+  spellType: "",
+  role: "",
+});
 
 // Parallel object for errors
-const [errors, setErrors] = useState({})
+const [errors, setErrors] = useState({});
 
 // Boolean for success
-const [submitted, setSubmitted] = useState(false)
+const [submitted, setSubmitted] = useState(false);
 ```
 
 ### Validation Logic
@@ -133,7 +134,7 @@ const [submitted, setSubmitted] = useState(false)
 
 ```javascript
 if (errors[name]) {
-  setErrors(prev => ({ ...prev, [name]: '' }))
+  setErrors((prev) => ({ ...prev, [name]: "" }));
 }
 ```
 
@@ -151,12 +152,7 @@ This improves UX - errors disappear as user fixes them.
 ### ✅ Right: Controlled inputs
 
 ```javascript
-<input 
-  type="text" 
-  name="name"
-  value={formData.name}
-  onChange={handleChange}
-/>
+<input type="text" name="name" value={formData.name} onChange={handleChange} />
 ```
 
 ### ❌ Wrong: Forgetting preventDefault
@@ -164,37 +160,33 @@ This improves UX - errors disappear as user fixes them.
 ```javascript
 const handleSubmit = (e) => {
   // Page will reload!
-  const errors = validate()
-}
+  const errors = validate();
+};
 ```
 
 ### ✅ Right: Always preventDefault on forms
 
 ```javascript
 const handleSubmit = (e) => {
-  e.preventDefault() // First line!
-  const errors = validate()
-}
+  e.preventDefault(); // First line!
+  const errors = validate();
+};
 ```
 
 ### ❌ Wrong: Radio buttons with value prop only
 
 ```javascript
-<input 
-  type="radio" 
-  value="attacker"
-  onChange={handleChange}
-/>
+<input type="radio" value="attacker" onChange={handleChange} />
 // Not controlled!
 ```
 
 ### ✅ Right: Radio buttons need checked prop
 
 ```javascript
-<input 
-  type="radio" 
+<input
+  type="radio"
   value="attacker"
-  checked={formData.role === 'attacker'}
+  checked={formData.role === "attacker"}
   onChange={handleChange}
 />
 ```
@@ -203,29 +195,29 @@ const handleSubmit = (e) => {
 
 ```javascript
 const handleChange = (e) => {
-  formData.name = e.target.value // Mutating state!
-}
+  formData.name = e.target.value; // Mutating state!
+};
 ```
 
 ### ✅ Right: Immutable state updates
 
 ```javascript
 const handleChange = (e) => {
-  setFormData(prev => ({ ...prev, [name]: value }))
-}
+  setFormData((prev) => ({ ...prev, [name]: value }));
+};
 ```
 
 ### ❌ Wrong: Inline validation logic in JSX
 
 ```javascript
-<input className={formData.name === '' ? 'error' : ''} />
+<input className={formData.name === "" ? "error" : ""} />
 // Logic belongs in validation function
 ```
 
 ### ✅ Right: Use errors object
 
 ```javascript
-<input className={errors.name ? 'error' : ''} />
+<input className={errors.name ? "error" : ""} />
 ```
 
 ## Extensions and Improvements
@@ -258,38 +250,39 @@ const handleChange = (e) => {
 React 19 introduces a cleaner pattern for forms using Actions:
 
 ```javascript
-import { useActionState } from 'react'
+import { useActionState } from "react";
 
 async function signupAction(prevState, formData) {
-  const name = formData.get('name')
-  const spellType = formData.get('spellType')
-  
+  const name = formData.get("name");
+  const spellType = formData.get("spellType");
+
   // Validation
-  if (!name) return { error: 'Name required' }
-  
+  if (!name) return { error: "Name required" };
+
   // Simulate async submission
-  await new Promise(resolve => setTimeout(resolve, 1000))
-  
-  return { success: true, message: 'Registered!' }
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  return { success: true, message: "Registered!" };
 }
 
 function BattleSignup() {
-  const [state, formAction, isPending] = useActionState(signupAction, {})
-  
+  const [state, formAction, isPending] = useActionState(signupAction, {});
+
   return (
     <form action={formAction}>
       <input name="name" required />
       <select name="spellType">...</select>
       <button disabled={isPending}>
-        {isPending ? 'Registering...' : 'Register'}
+        {isPending ? "Registering..." : "Register"}
       </button>
       {state.error && <p className="error">{state.error}</p>}
     </form>
-  )
+  );
 }
 ```
 
 **Benefits:**
+
 - Automatic pending state
 - Less boilerplate
 - Built-in error handling

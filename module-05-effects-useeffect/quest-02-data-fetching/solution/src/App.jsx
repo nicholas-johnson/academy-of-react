@@ -1,53 +1,54 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  const [intel, setIntel] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [intel, setIntel] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     // Fetch data when component mounts
     const fetchIntelligence = async () => {
-      setLoading(true)
-      setError(null)
+      setLoading(true);
+      setError(null);
 
       try {
         // Fetch from local JSON file (served by Vite from public/)
-        const response = await fetch('/api/intelligence.json')
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-        
-        const data = await response.json()
-        setIntel(data.reports)
-      } catch (err) {
-        setError(err.message)
-      } finally {
-        setLoading(false)
-      }
-    }
+        const response = await fetch("/api/intelligence.json");
 
-    fetchIntelligence()
-  }, []) // Empty array = run once on mount
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setIntel(data.reports);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchIntelligence();
+  }, []); // Empty array = run once on mount
 
   // Manual refresh function
   const handleRefresh = async () => {
-    setLoading(true)
-    setError(null)
+    setLoading(true);
+    setError(null);
 
     try {
-      const response = await fetch('/api/intelligence.json')
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
-      const data = await response.json()
-      setIntel(data.reports)
+      const response = await fetch("/api/intelligence.json");
+      if (!response.ok)
+        throw new Error(`HTTP error! status: ${response.status}`);
+      const data = await response.json();
+      setIntel(data.reports);
     } catch (err) {
-      setError(err.message)
+      setError(err.message);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   if (loading) {
     return (
@@ -58,7 +59,7 @@ function App() {
           <p>Gathering intelligence...</p>
         </div>
       </div>
-    )
+    );
   }
 
   if (error) {
@@ -72,7 +73,7 @@ function App() {
           </button>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -85,11 +86,13 @@ function App() {
       </button>
 
       <div className="intel-grid">
-        {intel.map(report => (
+        {intel.map((report) => (
           <div key={report.id} className="intel-card">
             <div className="card-header">
               <h3>{report.academy}</h3>
-              <span className={`threat-badge ${report.threatLevel.toLowerCase()}`}>
+              <span
+                className={`threat-badge ${report.threatLevel.toLowerCase()}`}
+              >
                 {report.threatLevel}
               </span>
             </div>
@@ -103,7 +106,7 @@ function App() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

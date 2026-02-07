@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 
 // ============================================
 // STEP 1: Function Components
@@ -60,33 +60,24 @@ function App() {
   return (
     <div className="app">
       <h1>⚡ Module 2 Demo: JSX & Components</h1>
-      
+
       {/* Step 1: Basic component */}
       <section className="demo-section">
         <h2>Step 1: Function Component</h2>
-        <StudentCard 
-          name="Aria Spellweaver" 
-          house="Wisdom" 
-          magicLevel={45} 
-        />
+        <StudentCard name="Aria Spellweaver" house="Wisdom" magicLevel={45} />
       </section>
-      
+
       {/* Step 2: Component with more props */}
       <section className="demo-section">
         <h2>Step 2: Props</h2>
-        <SpellCard 
-          name="Fireball" 
-          icon="🔥" 
-          power={40} 
-          manaCost={25} 
-        />
+        <SpellCard name="Fireball" icon="🔥" power={40} manaCost={25} />
       </section>
-      
+
       {/* Step 3: Rendering a list with .map() */}
       <section className="demo-section">
         <h2>Step 3: Lists with .map()</h2>
         <div className="spell-grid">
-          {spells.map(spell => (
+          {spells.map((spell) => (
             <SpellCard
               key={spell.id}
               name={spell.name}

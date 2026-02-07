@@ -1,44 +1,44 @@
 export const slides = [
   {
-    type: 'title',
+    type: "title",
     content: {
-      title: 'Custom Hooks',
-      subtitle: 'Module 9: Reusable Stateful Logic',
-      emoji: '🪝'
-    }
+      title: "Custom Hooks",
+      subtitle: "Module 9: Reusable Stateful Logic",
+      emoji: "🪝",
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'The Problem',
+      title: "The Problem",
       points: [
-        'Multiple components need the same logic',
-        'Copy-pasting useState + useEffect everywhere',
-        'Logic gets duplicated across the codebase',
-        'Hard to test and maintain',
-        'We need a way to share stateful logic!'
+        "Multiple components need the same logic",
+        "Copy-pasting useState + useEffect everywhere",
+        "Logic gets duplicated across the codebase",
+        "Hard to test and maintain",
+        "We need a way to share stateful logic!",
       ],
-      emoji: '🤔'
-    }
+      emoji: "🤔",
+    },
   },
   {
-    type: 'standard',
+    type: "standard",
     content: {
-      title: 'What is a Custom Hook?',
+      title: "What is a Custom Hook?",
       points: [
-        'A function that uses other hooks',
-        'Extracts reusable stateful logic',
+        "A function that uses other hooks",
+        "Extracts reusable stateful logic",
         'Must start with "use" prefix',
-        'Can use any built-in hooks inside',
-        'Returns whatever you want (value, array, object)'
+        "Can use any built-in hooks inside",
+        "Returns whatever you want (value, array, object)",
       ],
-      emoji: '🪝'
-    }
+      emoji: "🪝",
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Your First Custom Hook',
+      title: "Your First Custom Hook",
       code: `// Custom Hook: useToggle
 function useToggle(initialValue = false) {
   const [value, setValue] = useState(initialValue)
@@ -63,28 +63,44 @@ function App() {
 }`,
       highlights: [
         'Name starts with "use"',
-        'Uses useState inside',
-        'Returns value + function',
-        'Can be reused anywhere!'
-      ]
-    }
+        "Uses useState inside",
+        "Returns value + function",
+        "Can be reused anywhere!",
+      ],
+    },
   },
   {
-    type: 'rules',
+    type: "rules",
     content: {
-      title: 'Rules of Custom Hooks',
+      title: "Rules of Custom Hooks",
       rules: [
-        { rule: 'Name starts with "use"', example: 'useLocalStorage, useFetch', icon: '📛' },
-        { rule: 'Call hooks at the top level', example: 'Not in loops or conditions', icon: '⬆️' },
-        { rule: 'Only call from React functions', example: 'Components or other hooks', icon: '⚛️' },
-        { rule: 'Can use any hooks inside', example: 'useState, useEffect, useRef...', icon: '🪝' }
-      ]
-    }
+        {
+          rule: 'Name starts with "use"',
+          example: "useLocalStorage, useFetch",
+          icon: "📛",
+        },
+        {
+          rule: "Call hooks at the top level",
+          example: "Not in loops or conditions",
+          icon: "⬆️",
+        },
+        {
+          rule: "Only call from React functions",
+          example: "Components or other hooks",
+          icon: "⚛️",
+        },
+        {
+          rule: "Can use any hooks inside",
+          example: "useState, useEffect, useRef...",
+          icon: "🪝",
+        },
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'useLocalStorage',
+      title: "useLocalStorage",
       code: `function useLocalStorage(key, initialValue) {
   // Initialize from localStorage or use default
   const [value, setValue] = useState(() => {
@@ -104,17 +120,17 @@ function App() {
 const [theme, setTheme] = useLocalStorage('theme', 'light')
 const [user, setUser] = useLocalStorage('user', null)`,
       highlights: [
-        'Combines useState + useEffect',
-        'Lazy initialization reads from localStorage',
-        'Effect syncs changes back',
-        'Same API as useState!'
-      ]
-    }
+        "Combines useState + useEffect",
+        "Lazy initialization reads from localStorage",
+        "Effect syncs changes back",
+        "Same API as useState!",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'useFetch',
+      title: "useFetch",
       code: `function useFetch(url) {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -142,17 +158,17 @@ const [user, setUser] = useLocalStorage('user', null)`,
 // Usage
 const { data, loading, error } = useFetch('/api/spells')`,
       highlights: [
-        'Encapsulates fetch + loading + error pattern',
-        'Refetches when URL changes',
-        'Returns object with all states',
-        'Reusable for any API endpoint'
-      ]
-    }
+        "Encapsulates fetch + loading + error pattern",
+        "Refetches when URL changes",
+        "Returns object with all states",
+        "Reusable for any API endpoint",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'useDebounce',
+      title: "useDebounce",
       code: `function useDebounce(value, delay) {
   const [debouncedValue, setDebouncedValue] = useState(value)
 
@@ -177,33 +193,33 @@ useEffect(() => {
   searchAPI(debouncedQuery)
 }, [debouncedQuery])`,
       highlights: [
-        'Delays value updates',
-        'Cleanup cancels pending timeout',
-        'Great for search/filter inputs',
-        'Reduces unnecessary API calls'
-      ]
-    }
-  },
-  {
-    type: 'standard',
-    content: {
-      title: 'Why Custom Hooks?',
-      points: [
-        '♻️ Reusability — Use same logic in many components',
-        '🧪 Testability — Test logic separately from UI',
-        '📦 Encapsulation — Hide complex implementation',
-        '🧹 Clean Code — Components stay focused on rendering',
-        '🤝 Sharing — Publish hooks as npm packages'
+        "Delays value updates",
+        "Cleanup cancels pending timeout",
+        "Great for search/filter inputs",
+        "Reduces unnecessary API calls",
       ],
-      emoji: '✨'
-    }
+    },
   },
   {
-    type: 'comparison',
+    type: "standard",
     content: {
-      title: 'Before vs After Custom Hooks',
+      title: "Why Custom Hooks?",
+      points: [
+        "♻️ Reusability — Use same logic in many components",
+        "🧪 Testability — Test logic separately from UI",
+        "📦 Encapsulation — Hide complex implementation",
+        "🧹 Clean Code — Components stay focused on rendering",
+        "🤝 Sharing — Publish hooks as npm packages",
+      ],
+      emoji: "✨",
+    },
+  },
+  {
+    type: "comparison",
+    content: {
+      title: "Before vs After Custom Hooks",
       left: {
-        label: 'Without Custom Hook',
+        label: "Without Custom Hook",
         code: `// Repeated in every component
 const [data, setData] = useState(null)
 const [loading, setLoading] = useState(true)
@@ -215,24 +231,24 @@ useEffect(() => {
     .then(setData)
     .catch(setError)
     .finally(() => setLoading(false))
-}, [url])`
+}, [url])`,
       },
       right: {
-        label: 'With Custom Hook',
+        label: "With Custom Hook",
         code: `// All logic extracted
 const { data, loading, error } = useFetch(url)
 
 // Component focuses on rendering
 if (loading) return <Spinner />
 if (error) return <Error />
-return <DataList data={data} />`
-      }
-    }
+return <DataList data={data} />`,
+      },
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'Hook Composition',
+      title: "Hook Composition",
       code: `// Custom hooks can use other custom hooks!
 function useSearchWithDebounce(initialQuery = '') {
   const [query, setQuery] = useState(initialQuery)
@@ -252,17 +268,17 @@ function useSearchWithDebounce(initialQuery = '') {
 // Usage - complex logic, simple interface
 const { query, setQuery, results, isSearching } = useSearchWithDebounce()`,
       highlights: [
-        'Combine useDebounce + useFetch',
-        'Each hook does one thing well',
-        'Compose into powerful abstractions',
-        'Single clean API for consumers'
-      ]
-    }
+        "Combine useDebounce + useFetch",
+        "Each hook does one thing well",
+        "Compose into powerful abstractions",
+        "Single clean API for consumers",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'useWindowSize',
+      title: "useWindowSize",
       code: `function useWindowSize() {
   const [size, setSize] = useState({
     width: window.innerWidth,
@@ -288,17 +304,17 @@ const { query, setQuery, results, isSearching } = useSearchWithDebounce()`,
 const { width, height } = useWindowSize()
 const isMobile = width < 768`,
       highlights: [
-        'Tracks browser window dimensions',
-        'Cleanup removes event listener',
-        'Returns current size object',
-        'Useful for responsive logic'
-      ]
-    }
+        "Tracks browser window dimensions",
+        "Cleanup removes event listener",
+        "Returns current size object",
+        "Useful for responsive logic",
+      ],
+    },
   },
   {
-    type: 'code',
+    type: "code",
     content: {
-      title: 'useCounter',
+      title: "useCounter",
       code: `function useCounter(initialValue = 0) {
   const [count, setCount] = useState(initialValue)
   
@@ -318,61 +334,77 @@ const { count, increment, decrement, reset } = useCounter(10)
 <button onClick={increment}>+</button>
 <button onClick={reset}>Reset</button>`,
       highlights: [
-        'Encapsulates counter logic',
-        'Returns value + multiple actions',
-        'Can be used for any counting need',
-        'Shows object return pattern'
-      ]
-    }
-  },
-  {
-    type: 'standard',
-    content: {
-      title: 'Common Custom Hooks',
-      points: [
-        '💾 useLocalStorage — Persist state in browser',
-        '📡 useFetch — Data fetching with loading/error',
-        '⏱️ useDebounce — Delay value updates',
-        '📏 useWindowSize — Track window dimensions',
-        '🔄 usePrevious — Access previous value',
-        '⌨️ useKeyPress — Detect key presses'
+        "Encapsulates counter logic",
+        "Returns value + multiple actions",
+        "Can be used for any counting need",
+        "Shows object return pattern",
       ],
-      emoji: '🧰'
-    }
+    },
   },
   {
-    type: 'rules',
+    type: "standard",
     content: {
-      title: 'When to Create a Custom Hook',
+      title: "Common Custom Hooks",
+      points: [
+        "💾 useLocalStorage — Persist state in browser",
+        "📡 useFetch — Data fetching with loading/error",
+        "⏱️ useDebounce — Delay value updates",
+        "📏 useWindowSize — Track window dimensions",
+        "🔄 usePrevious — Access previous value",
+        "⌨️ useKeyPress — Detect key presses",
+      ],
+      emoji: "🧰",
+    },
+  },
+  {
+    type: "rules",
+    content: {
+      title: "When to Create a Custom Hook",
       rules: [
-        { rule: 'Logic is used in 2+ components', example: 'Extract and share it', icon: '♻️' },
-        { rule: 'Component is getting complex', example: 'Separate concerns', icon: '🧹' },
-        { rule: 'You want to test logic', example: 'Test hook independently', icon: '🧪' },
-        { rule: 'You see useState + useEffect together', example: 'Often a hook waiting to happen', icon: '🪝' }
-      ]
-    }
-  },
-  {
-    type: 'standard',
-    content: {
-      title: 'Module 9 Goals',
-      points: [
-        'Understand what custom hooks are',
-        'Follow the "use" naming convention',
-        'Build useLocalStorage from scratch',
-        'Build useFetch for data fetching',
-        'Build useDebounce for performance',
-        'Compose hooks together'
+        {
+          rule: "Logic is used in 2+ components",
+          example: "Extract and share it",
+          icon: "♻️",
+        },
+        {
+          rule: "Component is getting complex",
+          example: "Separate concerns",
+          icon: "🧹",
+        },
+        {
+          rule: "You want to test logic",
+          example: "Test hook independently",
+          icon: "🧪",
+        },
+        {
+          rule: "You see useState + useEffect together",
+          example: "Often a hook waiting to happen",
+          icon: "🪝",
+        },
       ],
-      emoji: '🎯'
-    }
+    },
   },
   {
-    type: 'title',
+    type: "standard",
+    content: {
+      title: "Module 9 Goals",
+      points: [
+        "Understand what custom hooks are",
+        'Follow the "use" naming convention',
+        "Build useLocalStorage from scratch",
+        "Build useFetch for data fetching",
+        "Build useDebounce for performance",
+        "Compose hooks together",
+      ],
+      emoji: "🎯",
+    },
+  },
+  {
+    type: "title",
     content: {
       title: "Let's Build Hooks!",
-      subtitle: 'Time to extract reusable logic',
-      emoji: '🚀'
-    }
-  }
+      subtitle: "Time to extract reusable logic",
+      emoji: "🚀",
+    },
+  },
 ];

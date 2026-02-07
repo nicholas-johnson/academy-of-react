@@ -9,7 +9,7 @@ This solution demonstrates the fundamentals of React using **only** `React.creat
 ### 1. React.createElement() Basics
 
 ```javascript
-React.createElement(type, props, ...children)
+React.createElement(type, props, ...children);
 ```
 
 - **type**: HTML element string ('div', 'h1') or React component function
@@ -22,7 +22,7 @@ Components are just JavaScript functions that return React elements:
 
 ```javascript
 function WizardCard() {
-  return h('div', { className: 'wizard-card' }, /* children */);
+  return h("div", { className: "wizard-card" } /* children */);
 }
 ```
 
@@ -31,12 +31,12 @@ function WizardCard() {
 Inline styles passed as objects:
 
 ```javascript
-h('div', {
+h("div", {
   style: {
     width: `${percentage}%`,
-    backgroundColor: houseColor
-  }
-})
+    backgroundColor: houseColor,
+  },
+});
 ```
 
 ### 4. Nested Components
@@ -70,6 +70,7 @@ function WizardCard() {
 ### Why No JSX?
 
 This quest specifically teaches `createElement()` to:
+
 - Understand what JSX compiles to
 - Appreciate JSX syntax in Module 2
 - Learn React fundamentals without magic
@@ -87,37 +88,37 @@ This quest specifically teaches `createElement()` to:
 ### ❌ Wrong: String concatenation for children
 
 ```javascript
-h('div', null, 'Level: ' + wizard.level)
+h("div", null, "Level: " + wizard.level);
 ```
 
 ### ✅ Right: Multiple children as separate arguments
 
 ```javascript
-h('div', null, 'Level: ', h('span', null, wizard.level))
+h("div", null, "Level: ", h("span", null, wizard.level));
 ```
 
 ### ❌ Wrong: Forgetting className (not class)
 
 ```javascript
-h('div', { class: 'wizard-card' }) // Won't work!
+h("div", { class: "wizard-card" }); // Won't work!
 ```
 
 ### ✅ Right: Using className
 
 ```javascript
-h('div', { className: 'wizard-card' })
+h("div", { className: "wizard-card" });
 ```
 
 ### ❌ Wrong: Inline styles as strings
 
 ```javascript
-h('div', { style: 'color: red; width: 100px;' }) // Won't work!
+h("div", { style: "color: red; width: 100px;" }); // Won't work!
 ```
 
 ### ✅ Right: Inline styles as objects (camelCase properties)
 
 ```javascript
-h('div', { style: { color: 'red', width: '100px' } })
+h("div", { style: { color: "red", width: "100px" } });
 ```
 
 ## Extensions and Improvements
@@ -182,9 +183,3 @@ h('div', { className: 'wizard-card' },
 ```
 
 Much better! 🎉
-
-
-
-
-
-

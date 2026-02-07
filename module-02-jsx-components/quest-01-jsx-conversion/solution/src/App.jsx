@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 
 // Wizard data - same as Module 1
 const wizard = {

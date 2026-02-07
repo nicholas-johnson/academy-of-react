@@ -2,7 +2,7 @@
   background: white;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -36,7 +36,8 @@ label {
   color: #333;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 6px;
@@ -44,12 +45,14 @@ input, textarea {
   font-family: inherit;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
   border-color: #667eea;
 }
 
-input.error, textarea.error {
+input.error,
+textarea.error {
   border-color: #dc3545;
 }
 
@@ -78,4 +81,3 @@ input.error, textarea.error {
 .submit-btn:active {
   transform: scale(0.98);
 }
-

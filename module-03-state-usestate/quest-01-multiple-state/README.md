@@ -25,17 +25,17 @@ Create a Vite React project with:
 1. Proper Vite project structure (`src/`, `package.json`, `vite.config.js`)
 2. Components that:
 
-1. A wizard with at least 3 stats in state:
+3. A wizard with at least 3 stats in state:
    - `magicLevel` (starts around 20-50)
    - `energy` (starts at 100)
    - `mana` (starts at 80-100)
-2. Three buttons:
+4. Three buttons:
    - **Train**: Increases magicLevel by 5, decreases energy by 20
    - **Rest**: Increases energy by 30 (max 100)
    - **Cast Spell**: Decreases mana by 15, increases magicLevel by 2
-3. Display all three stats clearly
-4. Stats should update when buttons are clicked
-5. Optional: Prevent actions if stat would go negative
+5. Display all three stats clearly
+6. Stats should update when buttons are clicked
+7. Optional: Prevent actions if stat would go negative
 
 ## Example Starting State
 
@@ -62,6 +62,7 @@ const [mana, setMana] = useState(80);
 <summary>Click for hints</summary>
 
 **Hint 1**: Declare multiple state variables:
+
 ```jsx
 const { useState } = React;
 
@@ -69,12 +70,13 @@ function WizardTraining() {
   const [magicLevel, setMagicLevel] = useState(25);
   const [energy, setEnergy] = useState(100);
   const [mana, setMana] = useState(80);
-  
+
   // Your component JSX here
 }
 ```
 
 **Hint 2**: Create handler functions:
+
 ```jsx
 const handleTrain = () => {
   setMagicLevel(magicLevel + 5);
@@ -92,6 +94,7 @@ const handleCastSpell = () => {
 ```
 
 **Hint 3**: Connect handlers to buttons:
+
 ```jsx
 <button onClick={handleTrain}>Train</button>
 <button onClick={handleRest}>Rest</button>
@@ -99,6 +102,7 @@ const handleCastSpell = () => {
 ```
 
 **Hint 4**: Display stats:
+
 ```jsx
 <div>
   <p>Magic Level: {magicLevel}</p>
@@ -108,6 +112,7 @@ const handleCastSpell = () => {
 ```
 
 **Hint 5**: Prevent negative values:
+
 ```jsx
 const handleTrain = () => {
   if (energy >= 20) {
@@ -118,6 +123,7 @@ const handleTrain = () => {
 ```
 
 Or cap maximum values:
+
 ```jsx
 const handleRest = () => {
   setEnergy(Math.min(energy + 30, 100));
@@ -133,11 +139,9 @@ Enhance the training system:
 1. **Visual Feedback**: Add colored progress bars for each stat
 
 2. **Disable Buttons**: Disable buttons when stat requirements aren't met
+
    ```jsx
-   <button 
-     onClick={handleTrain} 
-     disabled={energy < 20}
-   >
+   <button onClick={handleTrain} disabled={energy < 20}>
      Train
    </button>
    ```
@@ -156,4 +160,3 @@ Enhance the training system:
 ---
 
 **Next Quest**: [Quest 2: Object State](../quest-02-object-state/)
-

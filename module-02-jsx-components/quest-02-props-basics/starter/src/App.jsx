@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 
 // Wizard data
 const wizards = [
@@ -18,7 +18,7 @@ function App() {
     <div className="app">
       {/* TODO: Use your Header component here */}
       <h1>Quest 2: Props Basics</h1>
-      
+
       {/* TODO: Map over wizards and render a WizardCard for each */}
       <div className="wizard-list">
         <p>Create WizardCard components for each wizard!</p>

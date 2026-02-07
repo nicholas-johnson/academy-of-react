@@ -1,10 +1,10 @@
-import { createContext, useContext, useState } from 'react'
-import './App.css'
+import { createContext, useContext, useState } from "react";
+import "./App.css";
 
-const AuthContext = createContext(undefined)
+const AuthContext = createContext(undefined);
 
 function AuthProvider({ children }) {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
 
   const login = (name, house) => {
     const newUser = {
@@ -12,42 +12,44 @@ function AuthProvider({ children }) {
       name,
       house,
       level: 1,
-    }
-    setUser(newUser)
-    localStorage.setItem('user', JSON.stringify(newUser))
-  }
+    };
+    setUser(newUser);
+    localStorage.setItem("user", JSON.stringify(newUser));
+  };
 
   const logout = () => {
-    setUser(null)
-    localStorage.removeItem('user')
-  }
+    setUser(null);
+    localStorage.removeItem("user");
+  };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated: !!user }}>
+    <AuthContext.Provider
+      value={{ user, login, logout, isAuthenticated: !!user }}
+    >
       {children}
     </AuthContext.Provider>
-  )
+  );
 }
 
 function useAuth() {
-  const context = useContext(AuthContext)
+  const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within AuthProvider')
+    throw new Error("useAuth must be used within AuthProvider");
   }
-  return context
+  return context;
 }
 
 function LoginForm() {
-  const [name, setName] = useState('')
-  const [house, setHouse] = useState('gryffin')
-  const { login } = useAuth()
+  const [name, setName] = useState("");
+  const [house, setHouse] = useState("gryffin");
+  const { login } = useAuth();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (name.trim()) {
-      login(name, house)
+      login(name, house);
     }
-  }
+  };
 
   return (
     <div className="login-container">
@@ -77,13 +79,13 @@ function LoginForm() {
         </button>
       </form>
     </div>
-  )
+  );
 }
 
 function Dashboard() {
-  const { user, logout } = useAuth()
+  const { user, logout } = useAuth();
 
-  if (!user) return null
+  if (!user) return null;
 
   return (
     <div className="dashboard">
@@ -148,11 +150,11 @@ function Dashboard() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function App() {
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated } = useAuth();
 
   return (
     <div className="app">
@@ -171,7 +173,7 @@ function App() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
 function AppWithProvider() {
@@ -179,7 +181,7 @@ function AppWithProvider() {
     <AuthProvider>
       <App />
     </AuthProvider>
-  )
+  );
 }
 
-export default AppWithProvider
+export default AppWithProvider;
