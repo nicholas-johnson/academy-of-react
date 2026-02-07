@@ -37,6 +37,230 @@ export const slides = [
     },
   },
 
+  // HOW HOOKS WORK UNDER THE HOOD
+  {
+    type: "title",
+    content: {
+      title: "How Hooks Work",
+      subtitle: "Under the Hood",
+      emoji: "🔬",
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Where Is Hook Data Stored?",
+      code: `// Your component
+function Counter() {
+  const [count, setCount] = useState(0)    // Hook 1
+  const [name, setName] = useState('')     // Hook 2
+  const ref = useRef(null)                 // Hook 3
+  // ...
+}
+
+// React creates a "Fiber node" for each component
+// Each Fiber has a linked list of hook data:
+
+Fiber {
+  memoizedState: {
+    value: 0,           // useState #1
+    next: {
+      value: '',        // useState #2  
+      next: {
+        value: null,    // useRef #3
+        next: null
+      }
+    }
+  }
+}`,
+      highlights: [
+        "Each component instance has a Fiber node",
+        "Fiber stores hooks as a linked list",
+        "Hooks are identified by POSITION, not name",
+        "React walks the list on each render",
+      ],
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Why Call Order Matters",
+      code: `// ❌ BAD: Conditional hook call
+function Profile({ user }) {
+  if (user) {
+    const [name, setName] = useState(user.name)  // Sometimes Hook 1
+  }
+  const [age, setAge] = useState(0)              // Sometimes Hook 1 or 2!
+}
+
+// First render (user exists):
+//   Hook 1 → name state
+//   Hook 2 → age state
+
+// Second render (user is null):
+//   Hook 1 → age state  ← WRONG! React expects name here
+//   💥 State is now corrupted!`,
+      highlights: [
+        "React matches hooks by call ORDER",
+        "No names or keys — just position in the list",
+        "Changing order corrupts state mapping",
+        "This is why hooks can't be conditional",
+      ],
+    },
+  },
+  {
+    type: "rules",
+    content: {
+      title: "The Rules of Hooks",
+      rules: [
+        {
+          rule: "Only call at top level",
+          example: "Not in loops, conditions, or nested functions",
+          icon: "1️⃣",
+        },
+        {
+          rule: "Only call from React functions",
+          example: "Components or custom hooks, not regular JS",
+          icon: "2️⃣",
+        },
+        {
+          rule: "Same order every render",
+          example: "React relies on consistent call sequence",
+          icon: "3️⃣",
+        },
+        {
+          rule: 'Start with "use"',
+          example: "Convention that enables lint rules",
+          icon: "4️⃣",
+        },
+      ],
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Correct Patterns",
+      code: `// ✅ GOOD: Unconditional hooks, conditional logic inside
+function Profile({ user }) {
+  const [name, setName] = useState('')  // Always called
+  const [age, setAge] = useState(0)     // Always called
+  
+  useEffect(() => {
+    if (user) {              // Condition INSIDE the hook
+      setName(user.name)
+    }
+  }, [user])
+  
+  return user ? <div>{name}</div> : <div>Loading...</div>
+}
+
+// ✅ GOOD: Early return AFTER all hooks
+function Profile({ user }) {
+  const [data, setData] = useState(null)
+  
+  if (!user) return <Loading />  // After hooks is OK
+  
+  return <div>{data}</div>
+}`,
+      highlights: [
+        "Call ALL hooks before any early returns",
+        "Put conditions INSIDE hooks, not around them",
+        "Hooks must run every render, in same order",
+      ],
+    },
+  },
+  {
+    type: "title",
+    content: {
+      title: "The Math Behind Hooks",
+      subtitle: "Algebraic Effects",
+      emoji: "📐",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Algebraic Effects",
+      points: [
+        "Hooks are inspired by algebraic effects from programming language theory",
+        "An effect is an operation that 'escapes' normal function execution",
+        "Examples: reading state, writing to DOM, fetching data",
+        "The key insight: separate WHAT you want from HOW it happens",
+        "Your component describes effects; React handles execution",
+      ],
+      emoji: "🧮",
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Effects as 'Capabilities'",
+      code: `// Traditional approach: function does everything
+function fetchUser() {
+  const response = fetch('/api/user')  // Side effect!
+  return response.json()
+}
+
+// Algebraic effects approach: declare what you need
+function UserProfile() {
+  // "I need state" — React provides it
+  const [user, setUser] = useState(null)
+  
+  // "I need to run code after render" — React schedules it
+  useEffect(() => {
+    fetchUser().then(setUser)
+  }, [])
+  
+  // Component is "pure" — just describes what effects it needs
+  // React (the "handler") decides how/when to execute them
+}`,
+      highlights: [
+        "Hooks 'perform' effects, React 'handles' them",
+        "Component stays declarative and testable",
+        "React controls timing and batching",
+        "Similar to dependency injection",
+      ],
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Why This Matters",
+      points: [
+        "Components describe intent, not implementation",
+        "React can optimize, batch, and schedule effects",
+        "Enables features like Concurrent Mode and Suspense",
+        "Makes time-travel debugging possible",
+        "Components remain pure and predictable",
+      ],
+      emoji: "💡",
+    },
+  },
+  {
+    type: "comparison",
+    content: {
+      title: "Class Components vs Hooks",
+      left: {
+        label: "Class Components",
+        items: [
+          "State stored in this.state",
+          "Lifecycle methods: componentDidMount, etc.",
+          "this binding issues",
+          "Logic scattered across methods",
+        ],
+      },
+      right: {
+        label: "Hooks (Algebraic Effects)",
+        items: [
+          "State stored in Fiber linked list",
+          "Effects declared, React handles timing",
+          "No this — just closures",
+          "Logic grouped by concern",
+        ],
+      },
+    },
+  },
+
   // STATE HOOKS
   {
     type: "title",
@@ -62,14 +286,14 @@ const [data, setData] = useState(() => computeExpensiveValue())
 // Updating based on previous value
 setCount(prev => prev + 1)
 
-// TypeScript
-const [score, setScore] = useState<number>(0)
-const [wizard, setWizard] = useState<Wizard | null>(null)`,
+// Array state
+const [items, setItems] = useState([])
+setItems(prev => [...prev, newItem])`,
       highlights: [
         "Returns [value, setter] tuple",
         "Triggers re-render when updated",
         "Use callback form for updates based on previous value",
-        "TypeScript: specify type in generic",
+        "Lazy init runs only on first render",
       ],
     },
   },
@@ -175,7 +399,7 @@ function Button() {
     content: {
       title: "useRef",
       code: `// DOM reference
-const inputRef = useRef<HTMLInputElement>(null)
+const inputRef = useRef(null)
 
 useEffect(() => {
   inputRef.current?.focus()  // Auto-focus on mount
@@ -206,7 +430,7 @@ useEffect(() => {
       title: "useImperativeHandle",
       code: `// Child component with custom ref API
 const FancyInput = forwardRef((props, ref) => {
-  const inputRef = useRef<HTMLInputElement>(null)
+  const inputRef = useRef(null)
 
   useImperativeHandle(ref, () => ({
     focus: () => inputRef.current?.focus(),
@@ -593,22 +817,21 @@ useDebugValue(date, date => date.toISOString())`,
   {
     type: "standard",
     content: {
-      title: "TypeScript is Here!",
+      title: "Module 8 Quests",
       points: [
-        "This module introduces TypeScript",
-        "Add types to all hooks for safety",
-        "Catch errors at compile time",
-        "Better IDE autocomplete",
-        "Quests use .tsx files",
+        "Quest 1: DOM Access — Focus inputs with useRef",
+        "Quest 2: Persisting Values — Track renders without re-rendering",
+        "Quest 3: Media Controls — Build a video player",
+        "Quest 4: useReducer — Manage complex spell inventory",
       ],
-      emoji: "📘",
+      emoji: "📋",
     },
   },
   {
     type: "title",
     content: {
       title: "Let's Practice!",
-      subtitle: "Time to master useRef with TypeScript",
+      subtitle: "Time to master React's built-in hooks",
       emoji: "🚀",
     },
   },

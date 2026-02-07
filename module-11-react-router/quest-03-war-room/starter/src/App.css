@@ -1,0 +1,229 @@
+.app {
+  min-height: 100vh;
+  background: #1a1a2e;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+  color: white;
+}
+.header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+.nav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.nav-link {
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.nav-link.active {
+  background: rgba(229, 62, 62, 0.3);
+  color: #fc8181;
+}
+.nav-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.page {
+  animation: fadeIn 0.3s ease;
+  color: #e2e8f0;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.page h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.page p {
+  color: #a0aec0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Welcome box */
+.welcome-box {
+  margin-top: 32px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.welcome-box p {
+  margin-bottom: 16px;
+}
+
+/* Login */
+.login-box {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 48px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.login-box input {
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+}
+.login-box input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.login-box input:focus {
+  outline: none;
+  border-color: #e53e3e;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+.filters span {
+  color: #a0aec0;
+}
+.filter-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #a0aec0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+.filter-btn.active {
+  background: #e53e3e;
+  border-color: #e53e3e;
+  color: white;
+}
+
+/* Battle cards */
+.battle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.battle-card {
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid #a0aec0;
+}
+.battle-card.victory {
+  border-left-color: #48bb78;
+}
+.battle-card.defeat {
+  border-left-color: #e53e3e;
+}
+.battle-card.ongoing {
+  border-left-color: #ecc94b;
+}
+.battle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.battle-header h3 {
+  color: white;
+  margin: 0;
+}
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.status-badge.victory {
+  background: rgba(72, 187, 120, 0.2);
+  color: #48bb78;
+}
+.status-badge.defeat {
+  background: rgba(229, 62, 62, 0.2);
+  color: #fc8181;
+}
+.status-badge.ongoing {
+  background: rgba(236, 201, 75, 0.2);
+  color: #ecc94b;
+}
+.battle-info {
+  display: flex;
+  gap: 24px;
+  color: #a0aec0;
+  font-size: 0.9rem;
+}

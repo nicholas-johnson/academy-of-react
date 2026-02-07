@@ -1,0 +1,164 @@
+.app {
+  min-height: 100vh;
+  background: white;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+.header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+.nav {
+  display: flex;
+  gap: 8px;
+}
+.nav-link {
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.main {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.page {
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.page h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.page p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.page ul {
+  padding-left: 24px;
+  color: #555;
+}
+.page li {
+  padding: 8px 0;
+}
+
+/* Features grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+.feature {
+  padding: 24px;
+  background: #f9fafb;
+  border-radius: 12px;
+  text-align: center;
+}
+.feature span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+.feature h3 {
+  color: #333;
+  margin-bottom: 8px;
+}
+.feature p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Student cards */
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.student-card {
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+.student-card h3 {
+  color: #333;
+  margin-bottom: 8px;
+}
+.student-card p {
+  color: #666;
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+/* Spell cards */
+.spell-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.spell-card {
+  padding: 24px;
+  background: #f9fafb;
+  border-radius: 12px;
+  text-align: center;
+}
+.spell-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+.spell-card h3 {
+  color: #333;
+  margin: 0;
+}
+
+/* 404 page */
+.not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+.not-found h2 {
+  color: #ef4444;
+  font-size: 3rem;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}

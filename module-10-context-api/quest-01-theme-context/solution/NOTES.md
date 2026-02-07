@@ -1,64 +1,60 @@
 # Quest 1: Theme Switcher - Solution Notes
 
 ## Overview
-Global theme state using Context API. Header, content, and footer all access theme without prop drilling. Persists to localStorage.
+Theme context that manages light/dark mode across the entire app. Demonstrates the core Context API pattern with localStorage persistence.
 
 ## Key Concepts
 
-### Typed Context Creation
-```typescript
-type Theme = 'light' | 'dark'
-interface ThemeContextType {
-  theme: Theme
-  toggleTheme: () => void
+### The 3-Part Context Pattern
+
+```javascript
+// 1. Create context
+const ThemeContext = createContext(undefined)
+
+// 2. Create provider
+function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState('light')
+  // ... state logic
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  )
 }
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
-```
 
-TypeScript ensures type safety.
-
-### Provider with localStorage
-```typescript
-const [theme, setTheme] = useState<Theme>(() => {
-  const saved = localStorage.getItem('theme')
-  return (saved as Theme) || 'light'
-})
-
-useEffect(() => {
-  localStorage.setItem('theme', theme)
-}, [theme])
-```
-
-Initialize from storage, save on change.
-
-### Custom Hook Pattern
-```typescript
+// 3. Create custom hook
 function useTheme() {
   const context = useContext(ThemeContext)
-  if (!context) {
-    throw new Error('useTheme must be used within ThemeProvider')
-  }
+  if (!context) throw new Error('useTheme must be used within ThemeProvider')
   return context
 }
 ```
 
-Validates context exists, provides better error messages.
+### Persistence with localStorage
 
-### Consuming Context
-```typescript
-function Header() {
-  const { theme, toggleTheme } = useTheme()
-  // No props needed!
-}
+```javascript
+// Initialize from localStorage
+const [theme, setTheme] = useState(() => {
+  const saved = localStorage.getItem('theme')
+  return saved || 'light'
+})
+
+// Sync to localStorage
+useEffect(() => {
+  localStorage.setItem('theme', theme)
+  document.body.className = theme
+}, [theme])
 ```
 
-Any component can access theme without passing props down.
+### Why Custom Hook?
+
+1. **Better errors** - Catch missing provider immediately
+2. **Cleaner API** - `useTheme()` vs `useContext(ThemeContext)`
+3. **Encapsulation** - Hide context implementation details
+4. **Type safety** - In TypeScript, guarantees non-null return
 
 ## Testing
-1. Toggle theme - UI should update
-2. Refresh page - theme persists
-3. Multiple components access theme
-4. No prop drilling
-
-## What's Next
-Quest 2 builds notification system with context and advanced patterns.
+1. Toggle theme - should switch light/dark
+2. Refresh page - theme should persist
+3. Check body class changes
+4. All components update without props

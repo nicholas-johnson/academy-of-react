@@ -1,41 +1,26 @@
 # Quest 1: Theme Switcher
 
-## Story
-
-The Academy needs light/dark mode! Students study at all hours. Use Context API to provide global theme state accessible throughout the app.
-
-## Your Mission
-
-Build a theme system that:
-- Has ThemeProvider wrapping the app
-- Provides theme ('light' or 'dark') and toggle function
-- Multiple components consume theme without props
-- Persists to localStorage
-- TypeScript types for theme context
+Create a ThemeContext for managing light/dark mode across the application. Theme should persist to localStorage.
 
 ## Requirements
+- ThemeContext with current theme state
+- ThemeProvider wraps the app
+- useTheme custom hook for consuming context
+- Toggle between light and dark themes
+- Persist theme to localStorage
+- Apply theme class to document body
 
-1. Create ThemeContext with TypeScript
-2. ThemeProvider component managing theme state
-3. Custom `useTheme()` hook
-4. Theme toggle button accessible anywhere
-5. Different styles for light/dark
-6. Save theme to localStorage
-
-## Learning Objectives
-
-- Create typed context
-- Build provider component
-- Custom hooks for context
-- localStorage with context
-- Avoid prop drilling
+## Acceptance Criteria
+- [ ] Context stores current theme ('light' or 'dark')
+- [ ] Toggle button switches themes
+- [ ] Theme persists after page refresh
+- [ ] Body class updates with theme
+- [ ] Multiple components access theme without props
+- [ ] Custom hook throws error if used outside provider
 
 ## Hints
+- Initialize state with `useState(() => localStorage.getItem('theme') || 'light')`
+- Use `useEffect` to sync theme to localStorage and body class
+- Provide `{ theme, toggleTheme }` as context value
 
-- Type: `'light' | 'dark'`
-- Context: `createContext<ThemeContextType | undefined>(undefined)`
-- Load from localStorage in provider useState initializer
-- Save to localStorage in toggle function
-
----
-[Solution](./solution/) | [Back to Module](../../)
+[Next →](../quest-02-multi-provider/)

@@ -1,22 +1,26 @@
 # Quest 2: Language Support
 
-Create LanguageContext for Common, Elvish, Draconic languages. Toggle button in header. Multiple components show translated text (spell names, UI labels).
+Create a LanguageContext for Common, Elvish, and Draconic languages. Add a toggle button in the header. Multiple components show translated text (spell names, UI labels).
 
-## Requirements (TypeScript)
-- LanguageContext with current language
+## Requirements
+- LanguageContext with current language state
 - Translation objects for each language
-- Toggle function to switch languages
+- Toggle/select function to switch languages
 - useLanguage custom hook
 - 3+ components use translations
-- TypeScript types for translations
+- No hardcoded strings in components
 
 ## Acceptance Criteria
 - [ ] Context stores current language
-- [ ] Toggle switches languages
+- [ ] Selector switches between languages
 - [ ] Translations display correctly
-- [ ] Multiple components update
-- [ ] Translation object typed
-- [ ] No hardcoded strings
+- [ ] Multiple components update when language changes
+- [ ] Custom hook provides `t(key)` translation function
+- [ ] All UI text comes from translation objects
+
+## Hints
+- Create a translations object with nested language objects
+- The `t(key)` function looks up `translations[language][key]`
+- Fall back to the key itself if translation is missing
 
 [Next →](../quest-03-context-patterns/)
-
