@@ -206,93 +206,54 @@ Students render a list of components using `.map()` and handle arrays as props.
 
 ---
 
-### Quest 4: Events and State Preview
-**Difficulty**: Intermediate  
-**Time estimate**: 30-40 minutes
-
-Students build an interactive spell calculator with event handlers.
-
-**What they practice:**
-- Event handlers (`onClick`, `onInput`)
-- Manual re-rendering pattern
-- Calculations based on user input
-- Multiple interacting values
-
-**Common struggles:**
-- Forgetting to call `render()` after state changes
-- Understanding why module-level variables work (before useState)
-- Event handler syntax in JSX
-
-**Key teaching moment:**
-```jsx
-// The pattern before useState:
-let count = 0;
-
-const handleClick = () => {
-  count = count + 1;  // Update the variable
-  render();           // Tell React to re-render!
-};
-```
-
-**Transition to Module 3:**
-"Now you understand events, but this manual re-rendering is tedious. In Module 3, you'll learn `useState` which handles this automatically!"
-
----
-
 ## Teaching Sequence
 
 ### Suggested Flow
 
-1. **Introduction + Setup** (15 min)
-   - Explain why we're switching to Vite
+1. **Slides: JSX Introduction** (10 min)
+   - Run from `slides/` folder: `npm install && npm run dev`
+   - Cover: Why JSX, the 4 rules, Vite intro
+   - Use arrow keys to navigate
+
+2. **Setup + First Look** (15 min)
    - Walk through `npm install` and `npm run dev` together
    - Show HMR — edit and save to see instant updates
    - Point out project structure
 
-2. **Demo: JSX Basics** (15 min)
+3. **Demo: JSX Basics** (15 min)
    - Walk through App.jsx
    - Show createElement ↔ JSX equivalence
    - Emphasize the four JSX rules
    - Live code a small addition
 
-3. **Quest 1** (20-25 min)
+4. **Quest 1** (20-25 min)
    - Students convert Module 1 code to JSX
    - Circulate to help with setup issues
    - Common issue: forgetting `npm install`
 
-4. **Demo: Components and Props** (10 min)
+5. **Demo: Components and Props** (10 min)
    - Show StudentCard component
    - Explain props as "function arguments for components"
    - Show destructuring: `function Card({ name, level })`
 
-5. **Quest 2** (25-30 min)
-   - Students create SpellCard component
+6. **Quest 2** (25-30 min)
+   - Students create WizardCard component
    - Help with props confusion
    - Emphasize number props need `{}`
 
-6. **Demo: Lists and Keys** (10 min)
+7. **Demo: Lists and Keys** (10 min)
    - Show `.map()` pattern for lists
    - Explain why keys matter
    - Show the console warning without keys
 
-7. **Quest 3** (30-35 min)
+8. **Quest 3** (30-35 min)
    - Students build PotionCard with array rendering
    - Two levels of `.map()` — potions and ingredients
    - Help with key placement
 
-8. **Demo: Events Pattern** (10 min)
-   - Show manual re-render pattern in JSX
-   - Click handlers, input handlers
-   - Explain this leads to useState in Module 3
-
-9. **Quest 4** (30-40 min)
-   - Students build interactive spell calculator
-   - Focus on event handling and render()
-   - More challenging, may need hints
-
-10. **Wrap-up** (5 min)
+9. **Wrap-up** (5 min)
     - Recap: JSX is just prettier createElement
-    - Preview: Module 3 introduces useState to replace manual re-rendering
+    - Preview: Module 3 introduces useState for interactive components
     - Mention: Module 4 will go deeper into props and composition patterns
 
 ---
@@ -393,11 +354,7 @@ module-02-jsx-components/
 │   ├── README.md
 │   ├── starter/
 │   └── solution/
-├── quest-03-component-lists/
-│   ├── README.md
-│   ├── starter/
-│   └── solution/
-└── quest-04-events-state/
+└── quest-03-component-lists/
     ├── README.md
     ├── starter/
     └── solution/

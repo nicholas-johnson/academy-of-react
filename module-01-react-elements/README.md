@@ -29,6 +29,21 @@ By the end of this module, you will:
 - Template strings (for concatenation)
 - DOM manipulation basics
 
+## Slides
+
+Start with the introduction slides before the demos:
+
+1. Navigate to the `slides/` folder
+2. Run `npm install` then `npm run dev`
+3. Open http://localhost:5173
+4. Use arrow keys or buttons to navigate
+
+The slides cover:
+- What is React?
+- Why learn React?
+- Course structure and resources
+- What to expect in Module 1
+
 ## Setup Instructions
 
 This module uses React from a CDN, so no build tools are required!

@@ -32,6 +32,22 @@ By the end of this module, you will:
 - Arrow functions
 - Function parameters
 
+## Slides
+
+Start with the introduction slides before the demos:
+
+1. Navigate to the `slides/` folder
+2. Run `npm install` then `npm run dev`
+3. Open http://localhost:5173
+4. Use arrow keys to navigate
+
+The slides cover:
+- Why JSX (the pain of createElement)
+- What JSX is and how it works
+- The 4 JSX rules
+- Introduction to Vite
+- Module 2 goals
+
 ## Welcome to Vite! ⚡
 
 Starting in Module 2, we're switching from CDN + Babel to **Vite**, a modern build tool that makes React development fast and enjoyable.
@@ -250,14 +266,6 @@ Create a reusable SpellCard component that receives data via props.
 Build a PotionCard component and render a list using `.map()` with keys.
 
 [Start Quest →](./quest-03-component-lists/)
-
-### Quest 4: Events and State Preview
-
-**Difficulty**: ⭐⭐ Intermediate
-
-Build an interactive spell calculator with event handlers and manual re-rendering.
-
-[Start Quest →](./quest-04-events-state/)
 
 ## Bonus Mastery Challenge
 

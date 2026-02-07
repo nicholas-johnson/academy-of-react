@@ -38,16 +38,25 @@ By the end of this module, you will:
 
 Continuing with Vite for this module!
 
-1. Navigate to the `demo/` folder
+1. Navigate to a demo folder (e.g., `demo-01-manual-rerender/`)
 2. Install dependencies: `npm install`
 3. Start dev server: `npm run dev`
 4. Open http://localhost:5173
-5. Interact with the buttons and inputs
-6. Study how state updates trigger re-renders
 
 **New to Vite?** See the comprehensive setup guide in [Module 2](../module-02-jsx-components/README.md#welcome-to-vite-).
 
 ## Demo Walkthrough
+
+### Demo 1: Manual Re-rendering (The Problem)
+
+Before `useState`, we had to manage state manually:
+- Store values in module-level variables
+- Manually call `render()` after every change
+- This is tedious and error-prone!
+
+This demo shows WHY we need `useState`.
+
+### Demo 2: useState (The Solution)
 
 The demo shows:
 
@@ -57,7 +66,7 @@ The demo shows:
 
 Key concepts:
 - `useState` returns [value, setter function]
-- Calling the setter function triggers a re-render
+- Calling the setter function triggers a re-render automatically!
 - State is **local** to each component instance
 - Never mutate state directly (always use setter)
 

@@ -125,33 +125,39 @@ Students render an array of student objects as a list.
 
 ### Suggested Flow
 
-1. **Introduction** (5 min)
+1. **Slides: Course Introduction** (15 min)
+   - Run from `slides/` folder: `npm install && npm run dev`
+   - Cover: What is React, Why React, Course structure, Resources
+   - Set expectations for the module
+   - Use arrow keys to navigate
+
+2. **Introduction to createElement** (5 min)
    - Why learn createElement? (It's what JSX compiles to)
    - React elements are just objects
    - No build tools needed for this module
 
-2. **Demo 1: Basic createElement** (15 min)
+3. **Demo 1: Basic createElement** (15 min)
    - Live code a simple element
    - Show nesting
    - Render to the DOM
 
-3. **Quest 1** (15-20 min)
+4. **Quest 1** (15-20 min)
    - Students work independently
    - Circulate and help with syntax issues
 
-4. **Demo 3: Lists with Map** (10 min)
-   - Show the map pattern
-   - Emphasize keys
-
-5. **Quest 2** (20-30 min)
-   - Students work independently
-   - Help with map/key issues
-
-6. **Demo 2: Virtual DOM** (10 min)
+5. **Demo 2: Virtual DOM** (10 min)
    - Show why React is fast
    - Explain diffing conceptually
 
-7. **Wrap-up** (5 min)
+6. **Demo 3: Lists with Map** (10 min)
+   - Show the map pattern
+   - Emphasize keys
+
+7. **Quest 2** (20-30 min)
+   - Students work independently
+   - Help with map/key issues
+
+8. **Wrap-up** (5 min)
    - Recap: createElement is the foundation
    - Preview: JSX makes this much easier (Module 2)
 

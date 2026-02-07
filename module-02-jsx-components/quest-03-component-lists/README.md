@@ -185,5 +185,7 @@ Enhance your potion inventory:
 
 ---
 
-**Next Quest**: [Quest 4: Events and State Preview](../quest-04-events-state/)
+**Congratulations!** You've completed Module 2!
+
+**Next Module**: [Module 3: State with useState](../../module-03-state-usestate/) — Learn how to make your components interactive with state!
 
