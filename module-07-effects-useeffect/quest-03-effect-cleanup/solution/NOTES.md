@@ -73,4 +73,4 @@ useEffect(() => {
 5. Check browser DevTools > Application > localStorage
 
 ## What's Next
-Module 8 teaches managing multiple pieces of state together - essential for complex UIs.
+Module 8 introduces React Router for navigation between different views in your application.

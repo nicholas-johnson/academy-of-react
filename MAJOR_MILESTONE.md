@@ -13,8 +13,8 @@
 **Module 7: Side Effects with useEffect** (JavaScript)
 - Demo + 3 complete quests (Meditation Timer, War Intelligence, Auto-Save)
 
-**Module 8: Managing Multiple State** (JavaScript)
-- Demo + 3 complete quests (Resource Dashboard, House Tabs, Creature Gallery)
+**Module 8: React Router** (TypeScript) ⭐
+- Demo + 3 complete quests (Academy Navigation, Spell Directory, War Room)
 
 **Module 9: useRef and DOM References** (TypeScript) ⭐
 - Demo + 3 complete quests (Battle Prompt, Animation Trigger, Replay Controls)
@@ -52,7 +52,7 @@
 ✅ Custom Hooks with TypeScript
 
 ### TypeScript Integration
-- Full TS configuration for Modules 9-11
+- Full TS configuration for Modules 8-11
 - Generic types in custom hooks
 - Type-safe props and state
 - Interface definitions
@@ -115,8 +115,8 @@ With 50 complete quests across 7 modules, you can:
 ### Student Learning Path
 Students progress through:
 1. **Weeks 1-2**: Forms, Lists, Events (Modules 5-6)
-2. **Week 3**: Side Effects & State (Modules 7-8)
-3. **Weeks 4-5**: Advanced Patterns (Modules 9-11)
+2. **Week 3**: Side Effects (Module 7)
+3. **Weeks 4-5**: Routing & Advanced Patterns (Modules 8-11)
 4. **Weeks 6-7**: Performance & SSR (Modules 12-13)
 
 ### Production-Ready Examples
@@ -187,7 +187,7 @@ This implementation represents:
 **You have an exceptionally strong foundation.** With 7 complete modules (50 quests), you can confidently teach React to students TODAY. The remaining 2 modules add advanced optimization and modern SSR, but are not required for a solid React fundamentals course.
 
 Consider your options:
-1. **Launch Now**: Use existing 50 quests for comprehensive course
+1. **Launch Now**: Use existing quests for comprehensive course
 2. **Add Module 12**: Complete performance optimization
 3. **Full Course**: Include all 13 modules for cutting-edge curriculum
 

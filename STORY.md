@@ -62,7 +62,7 @@ Ancient wizard who founded the Academy centuries ago. Inventor of the State Crys
 Master of Custom Spells (Hooks). Teaches advanced magic in Phase 3. Eccentric but brilliant, known for creating the most elegant reusable enchantments.
 
 ### Archmage Optima
-Specialist in Performance Magic. Arrived from the Eastern Academies. In Module 13, she reveals the secrets of memoization and lazy loading.
+Specialist in Performance Magic. Arrived from the Eastern Academies. In Module 12, she reveals the secrets of memoization and lazy loading.
 
 ### The Rival Academies
 
@@ -106,12 +106,12 @@ The Academy shifts into preparation mode. You must build official systems:
 - Quest management systems
 - Resource tracking dashboards
 
-### Rising Tension (Modules 6-8)
-Training intensifies. Competitions between houses heat up. You're learning advanced techniques — list manipulation, timed magic (useEffect), complex state management. The Academy Dashboard goes live, tracking every student's readiness.
+### Rising Tension (Modules 6-7)
+Training intensifies. Competitions between houses heat up. You're learning advanced techniques — list manipulation and timed magic (useEffect). The Academy Dashboard goes live, tracking every student's readiness.
 
 Rumors spread about the rival academies. "Shadowmere has a new secret weapon." "Brightspire's battle animations are unbeatable." "The Consortium never has bugs."
 
-### The Arrival (Module 10)
+### The Arrival (Module 9)
 They're here. Three great airships descend upon the Academy grounds. The rival schools have arrived for the Wizarding War. 
 
 Headmaster Renderius reveals Phase 3 training: TypeScript magic. "You must build a battle system so robust, so type-safe, that nothing can fail during combat."
@@ -121,7 +121,7 @@ You learn:
 - Shared consciousness through Context
 - Custom spell creation (hooks)
 
-### The Tournament Begins (Module 13)
+### The Tournament Begins (Module 12)
 The final challenge: Build the ultimate Battle Arena. Students from all academies watch as your creation comes to life:
 
 - Teams of wizards take their positions

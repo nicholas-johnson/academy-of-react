@@ -33,4 +33,4 @@ Navigate to `demo/`, run `npm install`, then `npm run dev`.
 3. **Auto-Save** - Debounced localStorage sync
 
 ---
-[Previous](../module-06-lists-keys/) | [Next](../module-08-managing-state/)
+[Previous](../module-06-lists-keys/) | [Next](../module-08-react-router/)
