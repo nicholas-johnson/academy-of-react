@@ -583,4 +583,4 @@ Create a dashboard layout with:
 
 ---
 
-**This is an extras module** — not part of the main course flow. Complete this anytime after Module 5 (Forms) when you're comfortable with React components and want to level up your styling.
+**This is an extras module** — not part of the main course flow. Complete this anytime after Module 4 (Forms) when you're comfortable with React components and want to level up your styling.

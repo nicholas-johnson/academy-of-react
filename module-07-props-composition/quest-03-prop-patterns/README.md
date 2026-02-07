@@ -215,7 +215,7 @@ function AcademySummary({ students }) {
 
 ---
 
-**Congratulations!** You've completed Module 5!
+**Congratulations!** You've completed Module 7!
 
-**Next Module**: [Module 6: Lists, Keys, and Data Manipulation](../../module-06-lists-keys/) — Master rendering lists and data transformations!
+**Next Module**: [Module 8: React Router](../../module-08-react-router/) — Learn client-side routing for single-page applications!
 

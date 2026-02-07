@@ -10,8 +10,11 @@
 **Module 6: Lists, Keys, and Data Manipulation** (JavaScript)
 - Demo + 3 complete quests (Battle Rankings, Spell Inventory, Quest Pagination)
 
-**Module 7: Side Effects with useEffect** (JavaScript)
+**Module 5: Side Effects with useEffect** (JavaScript)
 - Demo + 3 complete quests (Meditation Timer, War Intelligence, Auto-Save)
+
+**Module 7: Props and Composition** (JavaScript)
+- Demo + 3 complete quests (Stat Display, Layout Component, House Roster)
 
 **Module 8: React Router** (TypeScript) ⭐
 - Demo + 3 complete quests (Academy Navigation, Spell Directory, War Room)
@@ -114,8 +117,8 @@ With 50 complete quests across 7 modules, you can:
 
 ### Student Learning Path
 Students progress through:
-1. **Weeks 1-2**: Forms, Lists, Events (Modules 5-6)
-2. **Week 3**: Side Effects (Module 7)
+1. **Weeks 1-2**: Forms, Effects, Lists (Modules 4-6)
+2. **Week 3**: Props & Composition (Module 7)
 3. **Weeks 4-5**: Routing & Advanced Patterns (Modules 8-11)
 4. **Weeks 6-7**: Performance & SSR (Modules 12-13)
 

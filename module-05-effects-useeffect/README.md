@@ -1,8 +1,8 @@
-# Module 7: Side Effects with useEffect
+# Module 5: Side Effects with useEffect
 
 ## Story Context
 
-The Wizarding War approaches! Intelligence gathering begins. Students must master the useEffect hook to handle timers, fetch battle intelligence from external sources, and implement auto-save functionality.
+The Academy's information systems need to connect to the outside world! Students must master the useEffect hook to fetch data from magical APIs, handle timers, and implement auto-save functionality. This is where React becomes truly powerful — connecting to real data sources.
 
 ## Learning Objectives
 
@@ -33,4 +33,7 @@ Navigate to `demo/`, run `npm install`, then `npm run dev`.
 3. **Auto-Save** - Debounced localStorage sync
 
 ---
-[Previous](../module-06-lists-keys/) | [Next](../module-08-react-router/)
+
+**Previous Module**: [Module 4: Forms and Events](../module-04-forms-events/)
+
+**Next Module**: [Module 6: Lists, Keys, and Data Manipulation](../module-06-lists-keys/)

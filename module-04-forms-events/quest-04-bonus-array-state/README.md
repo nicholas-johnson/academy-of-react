@@ -201,7 +201,7 @@ Take your roster manager to the next level:
      localStorage.setItem('students', JSON.stringify(students));
    }, [students]);
    ```
-   Note: useEffect is covered in Module 7, but you can try it as a preview!
+   Note: useEffect is covered in Module 5!
 
 8. **Bulk Actions**: Add "Select All" checkbox and "Delete Selected" button
 
@@ -216,5 +216,5 @@ You've mastered:
 - ✅ Derived calculations from state
 - ✅ Dynamic list rendering with keys
 
-**Next Module**: [Module 5: Props and Composition](../../module-05-props-composition/) — Learn component composition and advanced prop patterns!
+**Next Module**: [Module 5: Side Effects with useEffect](../../module-05-effects-useeffect/) — Learn to fetch data from APIs and handle side effects!
 

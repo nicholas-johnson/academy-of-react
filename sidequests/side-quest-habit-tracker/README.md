@@ -36,22 +36,22 @@ For notifications, you can optionally use the browser's Notification API.
 - Name, icon/emoji, color, frequency
 - Edit and delete habits
 
-### After Module 5: Props & Composition
-- Create `HabitList`, `HabitCard`, `StreakBadge` components
-- Pass habit data via props
-- Compose daily view with header and list
+### After Module 5: Effects (useEffect)
+- Persist habits and history to localStorage
+- Calculate streaks on date change
+- Auto-reset daily completions at midnight
+- Optional: Browser notifications for reminders
+- Multiple views: Today / All Habits / Statistics
 
 ### After Module 6: Lists & Keys
 - Render habits with proper keys
 - Sort by: streak, name, completion status
 - Filter by: completed today, category, frequency
 
-### After Module 7: Effects
-- Persist habits and history to localStorage
-- Calculate streaks on date change
-- Auto-reset daily completions at midnight
-- Optional: Browser notifications for reminders
-- Multiple views: Today / All Habits / Statistics
+### After Module 7: Props & Composition
+- Create `HabitList`, `HabitCard`, `StreakBadge` components
+- Pass habit data via props
+- Compose daily view with header and list
 
 ### After Module 8: React Router
 - Route-based views for calendar and statistics

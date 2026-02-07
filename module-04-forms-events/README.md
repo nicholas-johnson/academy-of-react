@@ -281,5 +281,5 @@ This teaches you **why** Actions are better by showing the evolution!
 
 **Previous Module**: [Module 3: State with useState](../module-03-state-usestate/)
 
-**Next Module**: [Module 5: Props and Composition](../module-05-props-composition/)
+**Next Module**: [Module 5: Side Effects with useEffect](../module-05-effects-useeffect/)
 

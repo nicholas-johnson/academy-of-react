@@ -40,22 +40,22 @@ For an optional backend later, consider:
 - Date picker
 - Edit existing transactions
 
-### After Module 5: Props & Composition
-- Create `TransactionList`, `Transaction`, and `Balance` components
-- Pass transaction data via props
-- Compose a summary card showing totals
+### After Module 5: Effects (useEffect)
+- Persist to localStorage
+- Load saved transactions on mount
+- Auto-calculate monthly summaries
+- Optional: Sync to mock API
+- Multiple views: Transactions / Budgets / Reports
 
 ### After Module 6: Lists & Keys
 - Render transactions with proper keys
 - Sort by: date, amount, category
 - Filter by: category, type, date range
 
-### After Module 7: Effects
-- Persist to localStorage
-- Load saved transactions on mount
-- Auto-calculate monthly summaries
-- Optional: Sync to mock API
-- Multiple views: Transactions / Budgets / Reports
+### After Module 7: Props & Composition
+- Create `TransactionList`, `Transaction`, and `Balance` components
+- Pass transaction data via props
+- Compose a summary card showing totals
 
 ### After Module 8: React Router
 - Route-based views for transactions, budgets, reports

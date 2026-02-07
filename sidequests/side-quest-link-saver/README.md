@@ -41,22 +41,22 @@ For metadata fetching, options include:
 - Tag input with autocomplete
 - Edit existing links
 
-### After Module 5: Props & Composition
-- Create `LinkList`, `LinkCard`, `TagBadge` components
-- Pass link data via props
-- Compose card with image preview, title, tags
+### After Module 5: Effects (useEffect)
+- Fetch metadata when URL is added
+- Persist to localStorage
+- Load saved links on mount
+- Debounce search
+- Multiple views: All / Unread / Archive / By Tag
 
 ### After Module 6: Lists & Keys
 - Render links with proper keys
 - Sort by: date added, title, domain
 - Filter by: tag, read status, domain
 
-### After Module 7: Effects
-- Fetch metadata when URL is added
-- Persist to localStorage
-- Load saved links on mount
-- Debounce search
-- Multiple views: All / Unread / Archive / By Tag
+### After Module 7: Props & Composition
+- Create `LinkList`, `LinkCard`, `TagBadge` components
+- Pass link data via props
+- Compose card with image preview, title, tags
 - Collection management
 
 ### After Module 8: React Router

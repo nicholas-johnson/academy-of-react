@@ -17,5 +17,5 @@ Show 50 available quests (title, difficulty, reward gold). Display 8 per page. P
 - [ ] Current page indicator
 - [ ] Buttons disabled at edges
 
-[Complete! →](../../module-07-effects-useeffect/)
+[Complete! →](../../module-07-props-composition/)
 

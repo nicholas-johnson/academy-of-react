@@ -27,9 +27,9 @@ Learn fundamental JavaScript and basic React concepts. You'll track student stat
 
 Build complete Academy systems using modern tooling. Master props, lists, and side effects as you prepare for the coming war.
 
-- Module 5: Props and Composition
+- Module 5: Side Effects with useEffect
 - Module 6: Lists, Keys, and Data Manipulation
-- Module 7: Side Effects with useEffect
+- Module 7: Props and Composition
 
 ### Phase 3: Routing + Advanced (Modules 8-12)
 **Technology**: Vite + TypeScript
@@ -133,18 +133,18 @@ Track your journey through the Academy:
   - [ ] Bonus: Roster Manager (Array State)
 
 ### Phase 2: Core React
-- [ ] Module 5: Props and Composition
-  - [ ] Quest 1: Stat Display
-  - [ ] Quest 2: Layout Component
-  - [ ] Quest 3: House Roster
+- [ ] Module 5: Side Effects with useEffect
+  - [ ] Quest 1: Meditation Timer
+  - [ ] Quest 2: War Intelligence
+  - [ ] Quest 3: Auto-Save
 - [ ] Module 6: Lists, Keys, and Data Manipulation
   - [ ] Quest 1: Battle Rankings
   - [ ] Quest 2: Spell Inventory
   - [ ] Quest 3: Quest Pagination
-- [ ] Module 7: Side Effects with useEffect
-  - [ ] Quest 1: Meditation Timer
-  - [ ] Quest 2: War Intelligence
-  - [ ] Quest 3: Auto-Save
+- [ ] Module 7: Props and Composition
+  - [ ] Quest 1: Stat Display
+  - [ ] Quest 2: Layout Component
+  - [ ] Quest 3: House Roster
 
 ### Phase 3: Routing + Advanced
 - [ ] Module 8: React Router

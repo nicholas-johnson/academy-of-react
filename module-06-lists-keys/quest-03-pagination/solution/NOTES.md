@@ -32,4 +32,4 @@ pageNumbers.map(page => <button onClick={() => goToPage(page)}>{page}</button>)
 4. Check page info displays correctly
 
 ## What's Next
-Module 7 teaches useEffect for side effects like data fetching and timers.
+Module 7 covers props and composition for building complex, reusable components.

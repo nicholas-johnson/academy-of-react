@@ -57,7 +57,7 @@ You now master:
 - ✅ Passing arrays/objects
 - ✅ Mapping over data
 
-**Next**: Module 5 adds forms and event handling patterns!
+**Next**: Module 8 introduces React Router for multi-page navigation!
 
 
 

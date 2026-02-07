@@ -12,7 +12,7 @@ Master TypeScript fundamentals and React-specific patterns. Covers types, interf
 ### [Tailwind CSS](./tailwind-css/)
 Learn utility-first CSS styling with Tailwind. Covers setup, core concepts, responsive design, dark mode, and React patterns.
 
-**Best after**: Module 5 (Forms) — when you're comfortable with React components
+**Best after**: Module 4 (Forms) — when you're comfortable with React components
 
 ---
 

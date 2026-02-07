@@ -399,9 +399,9 @@ Use expressions instead:
 
 **Module 3**: Add interactivity with useState
 
-**Module 4**: Pass data with props and composition patterns
+**Module 4**: Handle forms and user events
 
-**Module 5+**: Forms, events, and advanced React with the Vite setup you're now using!
+**Module 5+**: Fetch data with useEffect, then master lists, props, and advanced patterns!
 
 ## Key Takeaway
 

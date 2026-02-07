@@ -36,22 +36,22 @@ This project uses [The Movie Database (TMDB) API](https://www.themoviedb.org/doc
 - Filter watchlist by status
 - Add notes/review form for movies
 
-### After Module 5: Props & Composition
-- Create `MovieList`, `MovieCard`, and `Rating` components
-- Pass movie data via props
-- Use composition for card layouts
+### After Module 5: Effects (useEffect)
+- Fetch movies from TMDB API on search
+- Debounce search input
+- Persist watchlist to localStorage
+- Load saved data on mount
+- Multiple views: Search / Watchlist / Statistics
 
 ### After Module 6: Lists & Keys
 - Render movie lists with proper keys
 - Sort by: date added, rating, title, year
 - Filter by: status, genre, rating
 
-### After Module 7: Effects
-- Fetch movies from TMDB API on search
-- Debounce search input
-- Persist watchlist to localStorage
-- Load saved data on mount
-- Multiple views: Search / Watchlist / Statistics
+### After Module 7: Props & Composition
+- Create `MovieList`, `MovieCard`, and `Rating` components
+- Pass movie data via props
+- Use composition for card layouts
 
 ### After Module 8: React Router
 - Route-based views for search and watchlist

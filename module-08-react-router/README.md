@@ -292,6 +292,6 @@ Both patterns are valuable:
 
 ---
 
-**Previous Module**: [Module 7: Side Effects with useEffect](../module-07-effects-useeffect/)
+**Previous Module**: [Module 7: Props and Composition](../module-07-props-composition/)
 
 **Next Module**: [Module 9: useRef and DOM References](../module-09-refs-useref/)

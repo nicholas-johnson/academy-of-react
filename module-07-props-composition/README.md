@@ -1,8 +1,8 @@
-# Module 5: Props and Composition
+# Module 7: Props and Composition
 
 ## Story Context
 
-The Academy's information systems are growing more complex. You need to build layouts, organize data by houses, and create components that work together. Professor Hooksweasel introduces you to the art of **component composition** — building large applications by combining smaller, focused components. "Great wizards compose spells," she explains. "Great React developers compose components."
+Now that you can fetch data and render lists, it's time to organize your components! The Academy's information systems are growing more complex. You need to build layouts, organize data by houses, and create components that work together. Professor Hooksweasel introduces you to the art of **component composition** — building large applications by combining smaller, focused components. "Great wizards compose spells," she explains. "Great React developers compose components."
 
 ## Learning Objectives
 
@@ -127,6 +127,6 @@ Build a complex composed interface:
 
 ---
 
-**Previous Module**: [Module 4: Forms and Events](../module-04-forms-events/)
+**Previous Module**: [Module 6: Lists, Keys, and Data Manipulation](../module-06-lists-keys/)
 
-**Next Module**: [Module 6: Lists, Keys, and Data Manipulation](../module-06-lists-keys/)
+**Next Module**: [Module 8: React Router](../module-08-react-router/)
