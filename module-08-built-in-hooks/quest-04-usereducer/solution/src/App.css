@@ -1,0 +1,171 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  text-align: center;
+  background: #1e293b;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #334155;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.add-spell {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-spell input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  background: #1e293b;
+  color: white;
+  font-size: 1rem;
+}
+
+.add-spell input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.add-spell input::placeholder {
+  color: #64748b;
+}
+
+.add-spell button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.add-spell button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.spell-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.spell-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: #1e293b;
+  border-radius: 0.75rem;
+  border: 1px solid #334155;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.spell-list li:hover {
+  border-color: #475569;
+}
+
+.spell-list li.favorite {
+  border-color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+}
+
+.spell-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.spell-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.spell-power {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.spell-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.spell-actions button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.spell-actions button:hover {
+  transform: scale(1.05);
+}
+
+.btn-favorite {
+  background: #1e293b;
+  border: 1px solid #334155 !important;
+}
+
+.btn-upgrade {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.btn-remove {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.empty-message {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem;
+  font-style: italic;
+}

@@ -33,4 +33,6 @@ TypeScript + Vite. Run `npm install` then `npm run dev`.
 3. **Lazy Academy** - Code splitting with lazy/Suspense
 
 ---
-[Previous](../module-11-custom-hooks/) | [Next](../module-13-server-rendering/)
+**Previous Module**: [Module 11: React Router](../module-11-react-router/)
+
+**Next Module**: [Module 13: Server Rendering](../module-13-server-rendering/)

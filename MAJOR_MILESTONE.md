@@ -16,17 +16,17 @@
 **Module 7: The Children Prop** (JavaScript)
 - Demo + 3 complete quests (Stat Display, Layout Component, House Roster)
 
-**Module 8: React Router** (TypeScript) ⭐
-- Demo + 3 complete quests (Academy Navigation, Spell Directory, War Room)
+**Module 8: Built-in React Hooks** (JavaScript) ⭐
+- Demo + 4 complete quests (DOM Access, Persisting Values, Media Controls, Spell Inventory)
 
-**Module 9: useRef and DOM References** (TypeScript) ⭐
-- Demo + 3 complete quests (Battle Prompt, Animation Trigger, Replay Controls)
+**Module 9: Custom Hooks** (JavaScript) ⭐
+- Demo + 3 complete quests (useLocalStorage, useFetch, useDebounce)
 
-**Module 10: Context API for Global State** (TypeScript) ⭐
+**Module 10: Context API for Global State** (JavaScript) ⭐
 - Demo + 3 complete quests (Theme Switcher, Battle Notifications, User Session)
 
-**Module 11: Custom Hooks** (TypeScript) ⭐
-- Demo + 3 complete quests (useLocalStorage, useFetch, useDebounce)
+**Module 11: React Router** (JavaScript) ⭐
+- Demo + 3 complete quests (Academy Navigation, Spell Directory, War Room)
 
 ### 📈 STATISTICS
 

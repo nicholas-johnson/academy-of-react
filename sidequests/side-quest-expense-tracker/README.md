@@ -65,7 +65,7 @@ For an optional backend later, consider:
 - Pass transaction data via props
 - Compose a summary card showing totals
 
-### After Module 8: React Router
+### After Module 9: React Router
 
 - Route-based views for transactions, budgets, reports
 - URL parameters for specific months/years

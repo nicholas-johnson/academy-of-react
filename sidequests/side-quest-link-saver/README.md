@@ -68,7 +68,7 @@ For metadata fetching, options include:
 - Compose card with image preview, title, tags
 - Collection management
 
-### After Module 8: React Router
+### After Module 9: React Router
 
 - Route-based views for different sections
 - URL parameters for tag/collection views

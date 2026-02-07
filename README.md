@@ -39,10 +39,10 @@ Build complete Academy systems using modern tooling. Master side effects, stylin
 
 The war begins! Learn client-side routing, build the battle system with TypeScript for type safety, and master advanced patterns and optimization techniques.
 
-- Module 8: React Router
-- Module 9: useRef and DOM References
+- Module 8: Built-in React Hooks
+- Module 9: Custom Hooks
 - Module 10: Context API for Global State
-- Module 11: Custom Hooks
+- Module 11: React Router
 - Module 12: Performance and Code Splitting
 
 ### Phase 4: Modern Server Rendering (Module 13) - **Capstone**
@@ -156,22 +156,23 @@ Track your journey through the Academy:
 
 ### Phase 3: Routing + Advanced
 
-- [ ] Module 8: React Router
+- [ ] Module 8: Built-in React Hooks
+  - [ ] Quest 1: DOM Access (useRef)
+  - [ ] Quest 2: Persisting Values (useRef)
+  - [ ] Quest 3: Media Controls (useRef)
+  - [ ] Quest 4: Spell Inventory (useReducer)
+- [ ] Module 9: Custom Hooks
+  - [ ] Quest 1: useLocalStorage
+  - [ ] Quest 2: useFetch
+  - [ ] Quest 3: useDebounce
+- [ ] Module 10: Context API for Global State
+  - [ ] Quest 1: Theme Switcher
+  - [ ] Quest 2: Battle Notifications
+  - [ ] Quest 3: User Session
+- [ ] Module 11: React Router
   - [ ] Quest 1: Academy Navigation
   - [ ] Quest 2: Spell Directory
   - [ ] Quest 3: War Room
-- [ ] Module 9: useRef and DOM References
-  - [ ] Quest 1: Battle Prompt
-  - [ ] Quest 2: Animation Trigger
-  - [ ] Quest 3: Replay Controls
-- [ ] Module 10: Context API for Global State
-  - [ ] Quest 1: Auth System
-  - [ ] Quest 2: Language Support
-  - [ ] Quest 3: Battle Resources
-- [ ] Module 11: Custom Hooks
-  - [ ] Quest 1: useBattleStat
-  - [ ] Quest 2: useSpellDelay
-  - [ ] Quest 3: useBattleArena
 - [ ] Module 12: Performance and Code Splitting
   - [ ] Quest 1: Damage Calculator
   - [ ] Quest 2: Army Roster

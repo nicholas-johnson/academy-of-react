@@ -73,4 +73,4 @@ useEffect(() => {
 5. Check browser DevTools > Application > localStorage
 
 ## What's Next
-Module 8 introduces React Router for navigation between different views in your application.
+Module 6 introduces styling in React with CSS Modules, Styled Components, and Tailwind CSS.

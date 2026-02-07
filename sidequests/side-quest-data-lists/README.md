@@ -53,7 +53,7 @@ This project uses **local JSON data** — no external API required! The data fil
 - Compose filter controls
 - Build a generic `DataGrid` component
 
-### After Module 8: React Router
+### After Module 9: React Router
 - URL-based pagination (`/rankings?page=2`)
 - Filter state in URL params
 - Deep linking to specific views

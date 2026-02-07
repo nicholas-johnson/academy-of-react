@@ -91,4 +91,4 @@ Build reusable layout components using the `children` prop: Card, Section, Modal
 
 **Previous Module**: [Module 6: Styling in React](../module-06-styling/)
 
-**Next Module**: [Module 8: React Router](../module-08-react-router/)
+**Next Module**: [Module 8: Built-in React Hooks](../module-08-built-in-hooks/)

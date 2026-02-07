@@ -936,4 +936,4 @@ Create `useFetch<T>` hook with:
 
 ---
 
-**This is an extras module** — not part of the main course flow. TypeScript is introduced in Module 9 (useRef), but this reference covers fundamentals more deeply. Use it as a reference or primer before Phase 3.
+**This is an extras module** — not part of the main course flow. TypeScript is introduced in Module 8 (Built-in Hooks), but this reference covers fundamentals more deeply. Use it as a reference or primer before Phase 3.

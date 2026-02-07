@@ -60,7 +60,7 @@ This project uses [The Movie Database (TMDB) API](https://www.themoviedb.org/doc
 - Pass movie data via props
 - Use composition for card layouts
 
-### After Module 8: React Router
+### After Module 9: React Router
 
 - Route-based views for search and watchlist
 - URL parameters for movie details

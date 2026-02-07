@@ -9,21 +9,20 @@ The Academy's battle system needs **global coordination**! When one wizard casts
 - Create and use React Context
 - Provide context to component tree
 - Consume context with useContext
-- Type-safe context with TypeScript
 - Understand prop drilling problem
 - Context vs Redux/Zustand
 
-## React + TypeScript Concepts
+## React Concepts
 
-- Typed context creation
+- Context creation
 - Context provider patterns
-- Consumer hooks with types
-- Interface for context shape
+- Consumer hooks
+- Context shape
 - Default context values
 
 ## Setup
 
-TypeScript + Vite. Run `npm install` then `npm run dev`.
+Run `npm install` then `npm run dev`.
 
 ## Quests
 
@@ -32,4 +31,7 @@ TypeScript + Vite. Run `npm install` then `npm run dev`.
 3. **User Session** - Authentication context
 
 ---
-[Previous](../module-09-refs-useref/) | [Next](../module-11-custom-hooks/)
+
+**Previous Module**: [Module 9: Custom Hooks](../module-09-custom-hooks/)
+
+**Next Module**: [Module 11: React Router](../module-11-react-router/)

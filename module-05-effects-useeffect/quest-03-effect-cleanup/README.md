@@ -16,5 +16,5 @@ Create spell practice interface where user types incantation. Auto-save to local
 - [ ] Timestamp displays
 - [ ] No excessive saves
 
-[Complete! →](../../module-08-react-router/)
+[Complete! →](../../module-06-styling/)
 

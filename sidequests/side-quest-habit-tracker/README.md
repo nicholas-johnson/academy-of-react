@@ -60,7 +60,7 @@ For notifications, you can optionally use the browser's Notification API.
 - Pass habit data via props
 - Compose daily view with header and list
 
-### After Module 8: React Router
+### After Module 9: React Router
 
 - Route-based views for calendar and statistics
 - URL parameters for specific dates
