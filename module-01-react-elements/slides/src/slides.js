@@ -84,7 +84,7 @@ function Counter() {
     content: {
       title: "Course Structure",
       points: [
-        "📚 14 Modules covering React fundamentals to advanced",
+        "📚 13 Modules covering React fundamentals to advanced",
         "🎯 Each module has demos and quests",
         "✨ Demos: Watch and learn",
         "⚔️ Quests: Hands-on practice",
@@ -100,10 +100,10 @@ function Counter() {
       modules: [
         { num: "1-2", name: "React Elements & JSX", icon: "🧱" },
         { num: "3-4", name: "State & Forms", icon: "⚡" },
-        { num: "5-6", name: "Effects & Lists", icon: "📝" },
-        { num: "7-8", name: "Props & Router", icon: "🔄" },
-        { num: "9-10", name: "Refs & Context", icon: "🧭" },
-        { num: "11-13", name: "Hooks, Perf & SSR", icon: "🚀" },
+        { num: "5-6", name: "Effects & Styling", icon: "🎨" },
+        { num: "7-8", name: "Children & Hooks", icon: "🪝" },
+        { num: "9-10", name: "Custom Hooks & Context", icon: "🧭" },
+        { num: "11-13", name: "Router, State Mgmt & SSR", icon: "🚀" },
       ],
     },
   },
