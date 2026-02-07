@@ -25,5 +25,5 @@ Navigate to `demo/`, run `npm install`, then `npm run dev`.
 3. **Quest Pagination** - Paginated list of 50 quests
 
 ---
-[Previous](../module-05-forms-events/) | [Next](../module-07-effects-useeffect/)
+[Previous](../module-05-props-composition/) | [Next](../module-07-effects-useeffect/)
 

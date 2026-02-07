@@ -1,10 +1,10 @@
-# Quest 3: Roster Manager
+# Bonus Quest: Roster Manager (Array State)
 
 > **Quick Start:** A starter template is available in the `starter/` folder with Vite already configured. Just run `npm install` and `npm run dev` to begin!
 
 ## Story Introduction
 
-The final CDN quest! The Academy needs a complete student management system. You must build an interface where administrators can add new students, remove existing ones, and see live statistics. This combines everything you've learned: state, forms, lists, calculations, and events. Master this, and you're ready for professional React development with Vite!
+The Academy needs a complete student management system! You must build an interface where administrators can add new students, remove existing ones, and see live statistics. This combines everything you've learned: state, forms, lists, calculations, and events.
 
 ## Objective
 
@@ -207,19 +207,14 @@ Take your roster manager to the next level:
 
 ---
 
-**Congratulations!** You've completed all 4 CDN-based modules!
+**Congratulations!** You've completed the Module 4 bonus quest!
 
 You've mastered:
-- ✅ React elements and createElement()
-- ✅ JSX syntax
-- ✅ Components and props
-- ✅ Composition patterns
-- ✅ State with useState
-- ✅ Forms and events
-- ✅ Dynamic lists
-- ✅ Interactive UIs
+- ✅ Forms and controlled inputs
+- ✅ Form submission and validation
+- ✅ Array state (add, remove, update)
+- ✅ Derived calculations from state
+- ✅ Dynamic list rendering with keys
 
-**Next Module**: [Module 4: Props and Composition](../../module-04-props-composition/) 
-
-🎉 Time to level up! Module 5 onwards uses **Vite** for modern development with hot module reloading, better performance, and a proper project structure. The real wizarding war preparation begins!
+**Next Module**: [Module 5: Props and Composition](../../module-05-props-composition/) — Learn component composition and advanced prop patterns!
 

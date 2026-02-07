@@ -156,5 +156,5 @@ Enhance your potion brewer:
 
 ---
 
-**Next Quest**: [Quest 3: Array State](../quest-03-array-state/)
+**Next Module**: [Module 4: Forms and Events](../../module-04-forms-events/) — Master form handling and controlled inputs!
 

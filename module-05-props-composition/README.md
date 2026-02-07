@@ -1,4 +1,4 @@
-# Module 4: Props and Composition
+# Module 5: Props and Composition
 
 ## Story Context
 
@@ -127,6 +127,6 @@ Build a complex composed interface:
 
 ---
 
-**Previous Module**: [Module 3: State with useState](../module-03-state-usestate/)
+**Previous Module**: [Module 4: Forms and Events](../module-04-forms-events/)
 
-**Next Module**: [Module 5: Forms and Events](../module-05-forms-events/)
+**Next Module**: [Module 6: Lists, Keys, and Data Manipulation](../module-06-lists-keys/)

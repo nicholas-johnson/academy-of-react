@@ -103,22 +103,21 @@ body {
   margin-bottom: 1rem;
 }
 
-.timer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.timer-value {
-  font-size: 3rem;
+.complete-step-btn {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #7e22ce;
+  color: white;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.timer-label {
-  font-size: 0.875rem;
-  color: #64748b;
-  text-transform: uppercase;
+.complete-step-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
 }
 
 .steps-list {
@@ -270,9 +269,3 @@ body {
   body {padding: 1rem;}
   .controls {flex-direction: column;}
 }
-
-
-
-
-
-

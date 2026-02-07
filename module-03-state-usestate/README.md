@@ -34,6 +34,23 @@ By the end of this module, you will:
 - Immutability patterns
 - Callback functions
 
+## Slides
+
+Start with the slide deck to introduce state concepts:
+
+```bash
+cd slides
+npm install
+npm run dev
+```
+
+The slides cover:
+- Why we need state (the problem with static components)
+- What state is and how it differs from props
+- The useState hook syntax
+- Rules of state
+- Controlled components
+
 ## Setup Instructions
 
 Continuing with Vite for this module!
@@ -110,13 +127,6 @@ Build an interface that manages state as objects with nested properties.
 
 [Start Quest →](./quest-02-object-state/)
 
-### Quest 3: Array State
-**Difficulty**: ⭐⭐⭐ Intermediate-Advanced
-
-Create a dynamic list with add/remove/update functionality on arrays.
-
-[Start Quest →](./quest-03-array-state/)
-
 ## Bonus Mastery Challenge
 
 **The Battle Simulator**
@@ -155,5 +165,5 @@ This combines multiple state variables, calculations, conditional rendering, and
 
 **Previous Module**: [Module 2: JSX and Components](../module-02-jsx-components/)
 
-**Next Module**: [Module 4: Props and Composition](../module-04-props-composition/) — Learn advanced prop patterns and component composition!
+**Next Module**: [Module 4: Forms and Events](../module-04-forms-events/) — Master form handling, validation, and controlled inputs!
 

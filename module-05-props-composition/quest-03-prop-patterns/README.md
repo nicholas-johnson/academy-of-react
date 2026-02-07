@@ -215,7 +215,7 @@ function AcademySummary({ students }) {
 
 ---
 
-**Congratulations!** You've completed Module 4!
+**Congratulations!** You've completed Module 5!
 
-**Next Module**: [Module 5: Forms and Events](../../module-05-forms-events/) — Master complex forms and event handling patterns!
+**Next Module**: [Module 6: Lists, Keys, and Data Manipulation](../../module-06-lists-keys/) — Master rendering lists and data transformations!
 

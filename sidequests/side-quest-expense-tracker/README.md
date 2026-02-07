@@ -34,16 +34,16 @@ For an optional backend later, consider:
 - Running balance calculation
 - Delete transaction functionality
 
-### After Module 4: Props & Composition
-- Create `TransactionList`, `Transaction`, and `Balance` components
-- Pass transaction data via props
-- Compose a summary card showing totals
-
-### After Module 5: Forms
+### After Module 4: Forms
 - Full transaction form with validation
 - Category selection dropdown
 - Date picker
 - Edit existing transactions
+
+### After Module 5: Props & Composition
+- Create `TransactionList`, `Transaction`, and `Balance` components
+- Pass transaction data via props
+- Compose a summary card showing totals
 
 ### After Module 6: Lists & Keys
 - Render transactions with proper keys

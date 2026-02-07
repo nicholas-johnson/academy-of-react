@@ -11,15 +11,18 @@ This solution demonstrates real-time search and filtering in React, combining co
 The filtered spells are NOT stored in state - they're calculated from existing state:
 
 ```javascript
-const filteredSpells = SPELLS.filter(spell => {
-  const matchesSearch = spell.name.toLowerCase().includes(searchTerm.toLowerCase())
-  const matchesType = typeFilter === 'all' || spell.type === typeFilter
-  const matchesLevel = spell.level >= minLevel
-  return matchesSearch && matchesType && matchesLevel
-})
+const filteredSpells = SPELLS.filter((spell) => {
+  const matchesSearch = spell.name
+    .toLowerCase()
+    .includes(searchTerm.toLowerCase());
+  const matchesType = typeFilter === "all" || spell.type === typeFilter;
+  const matchesLevel = spell.level >= minLevel;
+  return matchesSearch && matchesType && matchesLevel;
+});
 ```
 
 **Why not store filtered results in state?**
+
 - Single source of truth (filters are in state)
 - Auto-updates when filters change
 - No risk of sync issues
@@ -30,9 +33,9 @@ const filteredSpells = SPELLS.filter(spell => {
 Core JavaScript method for filtering arrays:
 
 ```javascript
-const filtered = array.filter(item => {
-  return /* boolean condition */
-})
+const filtered = array.filter((item) => {
+  return; /* boolean condition */
+});
 ```
 
 Returns new array with only items that pass the test.
@@ -40,7 +43,7 @@ Returns new array with only items that pass the test.
 ### 3. Case-Insensitive Search
 
 ```javascript
-spell.name.toLowerCase().includes(searchTerm.toLowerCase())
+spell.name.toLowerCase().includes(searchTerm.toLowerCase());
 ```
 
 Convert both to lowercase so "Fire" matches "fire", "FIRE", etc.
@@ -50,7 +53,7 @@ Convert both to lowercase so "Fire" matches "fire", "FIRE", etc.
 Use logical AND (`&&`) to require ALL conditions:
 
 ```javascript
-return matchesSearch && matchesType && matchesLevel
+return matchesSearch && matchesType && matchesLevel;
 ```
 
 Item must pass ALL three filters to be included.
@@ -60,10 +63,7 @@ Item must pass ALL three filters to be included.
 Every filter is controlled by state:
 
 ```javascript
-<input 
-  value={searchTerm}
-  onChange={(e) => setSearchTerm(e.target.value)}
-/>
+<input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
 ```
 
 As user types, state updates, which triggers re-render with new filtered results.
@@ -92,19 +92,17 @@ Input values are always strings - convert to number when needed.
 Show "Clear Filters" only when filters are active:
 
 ```javascript
-{(searchTerm || typeFilter !== 'all' || minLevel > 1) && (
-  <button onClick={handleClearFilters}>Clear Filters</button>
-)}
+{
+  (searchTerm || typeFilter !== "all" || minLevel > 1) && (
+    <button onClick={handleClearFilters}>Clear Filters</button>
+  );
+}
 ```
 
 ### 9. Array.map() for Rendering
 
 ```javascript
-filteredSpells.map(spell => (
-  <div key={spell.id}>
-    {spell.name}
-  </div>
-))
+filteredSpells.map((spell) => <div key={spell.id}>{spell.name}</div>);
 ```
 
 Transform data array into array of JSX elements.
@@ -129,9 +127,9 @@ Static array of spell objects with consistent properties:
 
 ```javascript
 const SPELLS = [
-  { id: 1, name: 'Fireball', type: 'fire', level: 3, damage: 45, manaCost: 30 },
+  { id: 1, name: "Fireball", type: "fire", level: 3, damage: 45, manaCost: 30 },
   // ... more spells
-]
+];
 ```
 
 ### Filter State
@@ -139,9 +137,9 @@ const SPELLS = [
 Three separate pieces of state for different filter types:
 
 ```javascript
-const [searchTerm, setSearchTerm] = useState('')
-const [typeFilter, setTypeFilter] = useState('all')
-const [minLevel, setMinLevel] = useState(1)
+const [searchTerm, setSearchTerm] = useState("");
+const [typeFilter, setTypeFilter] = useState("all");
+const [minLevel, setMinLevel] = useState(1);
 ```
 
 ### Filtering Logic
@@ -158,10 +156,10 @@ Reset all filter state to defaults:
 
 ```javascript
 const handleClearFilters = () => {
-  setSearchTerm('')
-  setTypeFilter('all')
-  setMinLevel(1)
-}
+  setSearchTerm("");
+  setTypeFilter("all");
+  setMinLevel(1);
+};
 ```
 
 ## Common Pitfalls to Avoid
@@ -188,51 +186,47 @@ const filteredSpells = SPELLS.filter(...)
 ### ❌ Wrong: Case-sensitive search
 
 ```javascript
-spell.name.includes(searchTerm) // Won't match "fire" with "Fire"
+spell.name.includes(searchTerm); // Won't match "fire" with "Fire"
 ```
 
 ### ✅ Right: Case-insensitive
 
 ```javascript
-spell.name.toLowerCase().includes(searchTerm.toLowerCase())
+spell.name.toLowerCase().includes(searchTerm.toLowerCase());
 ```
 
 ### ❌ Wrong: Using OR for multiple filters
 
 ```javascript
-return matchesSearch || matchesType || matchesLevel
+return matchesSearch || matchesType || matchesLevel;
 // Shows items that match ANY filter (too permissive)
 ```
 
 ### ✅ Right: Using AND
 
 ```javascript
-return matchesSearch && matchesType && matchesLevel
+return matchesSearch && matchesType && matchesLevel;
 // Shows items that match ALL filters
 ```
 
 ### ❌ Wrong: Forgetting key prop
 
 ```javascript
-filteredSpells.map(spell => (
-  <div>{spell.name}</div>
-))
+filteredSpells.map((spell) => <div>{spell.name}</div>);
 // React warning!
 ```
 
 ### ✅ Right: Always use key
 
 ```javascript
-filteredSpells.map(spell => (
-  <div key={spell.id}>{spell.name}</div>
-))
+filteredSpells.map((spell) => <div key={spell.id}>{spell.name}</div>);
 ```
 
 ### ❌ Wrong: Mutating original array
 
 ```javascript
-const filtered = SPELLS
-filtered.sort() // Mutates SPELLS!
+const filtered = SPELLS;
+filtered.sort(); // Mutates SPELLS!
 ```
 
 ### ✅ Right: Create new array

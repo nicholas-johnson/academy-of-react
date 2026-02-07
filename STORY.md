@@ -97,7 +97,7 @@ You learn the Academy's systems:
 
 You're settling in, making friends, tracking your growing power...
 
-### The Announcement (Module 5)
+### The Announcement (Module 4)
 At the start of Phase 2, Headmaster Renderius makes a shocking announcement during the Morning Assembly: "The Wizarding War approaches. In six months, rival academies will arrive. We must prepare."
 
 The Academy shifts into preparation mode. You must build official systems:

@@ -20,14 +20,14 @@ Learn fundamental JavaScript and basic React concepts. You'll track student stat
 - Module 1: React Elements with createElement()
 - Module 2: JSX and Components
 - Module 3: State with useState
-- Module 4: Props and Composition
+- Module 4: Forms and Event Handling
 
 ### Phase 2: Core React (Modules 5-7)
 **Technology**: Vite + JavaScript
 
-Build complete Academy systems using modern tooling. Master forms, lists, and side effects as you prepare for the coming war.
+Build complete Academy systems using modern tooling. Master props, lists, and side effects as you prepare for the coming war.
 
-- Module 5: Forms and Event Handling
+- Module 5: Props and Composition
 - Module 6: Lists, Keys, and Data Manipulation
 - Module 7: Side Effects with useEffect
 
@@ -125,18 +125,18 @@ Track your journey through the Academy:
   - [ ] Quest 3: Potion Cards
 - [ ] Module 3: State with useState
   - [ ] Quest 1: Multiple State
-  - [ ] Quest 2: Layout
-  - [ ] Quest 3: House Roster
-- [ ] Module 4: Props and Composition
-  - [ ] Quest 1: Stat Display
-  - [ ] Quest 2: Component Composition
-  - [ ] Quest 3: Prop Patterns
+  - [ ] Quest 2: Object State
+- [ ] Module 4: Forms and Event Handling
+  - [ ] Quest 1: Form Validation
+  - [ ] Quest 2: Controlled Inputs
+  - [ ] Quest 3: Form Submission
+  - [ ] Bonus: Roster Manager (Array State)
 
 ### Phase 2: Core React
-- [ ] Module 5: Forms and Event Handling
-  - [ ] Quest 1: Battle Signup
-  - [ ] Quest 2: Spell Search
-  - [ ] Quest 3: Sorting Ceremony
+- [ ] Module 5: Props and Composition
+  - [ ] Quest 1: Stat Display
+  - [ ] Quest 2: Layout Component
+  - [ ] Quest 3: House Roster
 - [ ] Module 6: Lists, Keys, and Data Manipulation
   - [ ] Quest 1: Battle Rankings
   - [ ] Quest 2: Spell Inventory

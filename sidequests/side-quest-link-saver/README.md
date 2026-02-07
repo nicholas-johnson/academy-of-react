@@ -36,15 +36,15 @@ For metadata fetching, options include:
 - Toggle read/unread status
 - Delete links
 
-### After Module 4: Props & Composition
-- Create `LinkList`, `LinkCard`, `TagBadge` components
-- Pass link data via props
-- Compose card with image preview, title, tags
-
-### After Module 5: Forms
+### After Module 4: Forms
 - Full link form (URL, title override, notes, tags)
 - Tag input with autocomplete
 - Edit existing links
+
+### After Module 5: Props & Composition
+- Create `LinkList`, `LinkCard`, `TagBadge` components
+- Pass link data via props
+- Compose card with image preview, title, tags
 
 ### After Module 6: Lists & Keys
 - Render links with proper keys

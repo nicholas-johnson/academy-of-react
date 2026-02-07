@@ -31,15 +31,15 @@ This project uses [The Movie Database (TMDB) API](https://www.themoviedb.org/doc
 - Toggle between "Want to Watch" / "Watching" / "Completed"
 - Track user ratings with star selection
 
-### After Module 4: Props & Composition
-- Create `MovieList`, `MovieCard`, and `Rating` components
-- Pass movie data via props
-- Use composition for card layouts
-
-### After Module 5: Forms
+### After Module 4: Forms
 - Build a search form
 - Filter watchlist by status
 - Add notes/review form for movies
+
+### After Module 5: Props & Composition
+- Create `MovieList`, `MovieCard`, and `Rating` components
+- Pass movie data via props
+- Use composition for card layouts
 
 ### After Module 6: Lists & Keys
 - Render movie lists with proper keys

@@ -1,4 +1,18 @@
-# Module 5: Forms and Event Handling
+# Module 4: Forms and Event Handling
+
+## Slides
+
+Run the presentation slides from the `slides/` folder:
+
+```bash
+cd slides
+npm install
+npm run dev
+```
+
+Covers: Controlled components, form submission, e.preventDefault(), validation patterns, and managing form state.
+
+---
 
 ## Story Context
 
@@ -94,6 +108,13 @@ Build a searchable directory with live filtering using controlled inputs.
 Create a multi-step form with proper submission handling.
 
 [Start Quest →](./quest-03-form-submission/)
+
+### Bonus Quest: Roster Manager (Array State)
+**Difficulty**: ⭐⭐⭐ Advanced
+
+Combine forms with array state management — add, edit, delete, and filter a dynamic list.
+
+[Start Bonus Quest →](./quest-04-bonus-array-state/)
 
 ## Bonus Mastery Challenge
 
@@ -258,7 +279,7 @@ This teaches you **why** Actions are better by showing the evolution!
 
 ---
 
-**Previous Module**: [Module 4: Props and Composition](../module-04-props-composition/)
+**Previous Module**: [Module 3: State with useState](../module-03-state-usestate/)
 
-**Next Module**: [Module 6: Lists, Keys, and Data Manipulation](../module-06-lists-keys/)
+**Next Module**: [Module 5: Props and Composition](../module-05-props-composition/)
 

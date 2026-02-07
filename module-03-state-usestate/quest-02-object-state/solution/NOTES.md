@@ -2,68 +2,66 @@
 
 ## Key Concepts
 
-### 1. Multiple Related State Variables
+### 1. State as an Object
 
 ```jsx
-const [currentStep, setCurrentStep] = useState(0);
-const [timeLeft, setTimeLeft] = useState(5);
-const [isActive, setIsActive] = useState(false);
-const [success, setSuccess] = useState(null);
+const [brewing, setBrewing] = useState({
+  currentStep: 0,
+  isComplete: false,
+  success: null
+});
 ```
 
-Multiple pieces of state working together!
+Group related state into a single object when values change together!
 
-### 2. State-Based Rendering
+### 2. Updating Object State (Spread Operator)
 
 ```jsx
-if (success !== null) {
+setBrewing({
+  ...brewing,
+  currentStep: brewing.currentStep + 1
+});
+```
+
+Always spread the existing state, then override the properties you want to change.
+
+### 3. State-Based Rendering
+
+```jsx
+if (brewing.isComplete) {
   return <SuccessScreen />;
 }
 
 return <BrewingScreen />;
 ```
 
-Conditional rendering based on state.
+Conditional rendering based on state properties.
 
-### 3. Computed Values from State
-
-```jsx
-const progress = (currentStep / steps.length) * 100;
-```
-
-Calculate display values from current state.
-
-### 4. useEffect for Timer (Bonus)
+### 4. Computed Values from State
 
 ```jsx
-useEffect(() => {
-  const interval = setInterval(() => {
-    setTimeLeft(t => t - 1);
-  }, 1000);
-  
-  return () => clearInterval(interval);
-}, [isActive]);
+const progress = (brewing.currentStep / steps.length) * 100;
 ```
 
-Side effects for timers, subscriptions, etc.
+Calculate display values from current state - don't store computed values.
 
-## State Management Patterns
+## When to Use Object State
 
-**Sequential State**: Current step determines what displays  
-**Timed State**: Countdown affects progression  
-**Success/Failure**: Final result affects UI
+**Use an object when:**
+- Values are conceptually related (all describe one "thing")
+- Values often change together
+- You want to reset multiple values at once
+
+**Use separate useState calls when:**
+- Values are independent
+- They change at different times
+- They're used in different parts of the component
 
 ## Best Practices
 
-✅ Keep related state together
-✅ Use boolean flags for UI states
-✅ Compute derived values (don't store)
-✅ Clear intervals/timers in cleanup
+- Always create a NEW object when updating (immutability)
+- Use spread operator: `{ ...oldState, newProp: value }`
+- Never mutate state directly: `brewing.currentStep++` is WRONG
+- Compute derived values, don't store them
 
-**Next**: Module 3 Quest 3 handles array state!
-
-
-
-
-
-
+**Next**: Module 4 covers forms and events! (Array state is in Module 4's bonus quest)

@@ -4,7 +4,7 @@
 
 ### ✅ FULLY COMPLETED (7 Modules)
 
-**Module 5: Forms and Event Handling** (JavaScript)
+**Module 4: Forms and Event Handling** (JavaScript)
 - Demo + 3 complete quests (Battle Signup, Spell Search, Sorting Ceremony)
 
 **Module 6: Lists, Keys, and Data Manipulation** (JavaScript)

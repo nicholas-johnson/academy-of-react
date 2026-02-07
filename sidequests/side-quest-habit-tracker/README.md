@@ -31,15 +31,15 @@ For notifications, you can optionally use the browser's Notification API.
 - Track current streak
 - Add simple habit creation
 
-### After Module 4: Props & Composition
-- Create `HabitList`, `HabitCard`, `StreakBadge` components
-- Pass habit data via props
-- Compose daily view with header and list
-
-### After Module 5: Forms
+### After Module 4: Forms
 - Full habit creation form
 - Name, icon/emoji, color, frequency
 - Edit and delete habits
+
+### After Module 5: Props & Composition
+- Create `HabitList`, `HabitCard`, `StreakBadge` components
+- Pass habit data via props
+- Compose daily view with header and list
 
 ### After Module 6: Lists & Keys
 - Render habits with proper keys
