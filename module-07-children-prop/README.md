@@ -74,7 +74,7 @@ Navigate to `demo/`, run `npm install`, then `npm run dev`.
 
 ### Quest 1: Layout Components
 
-**Difficulty**: ⭐⭐ Intermediate
+**Difficulty**: Intermediate
 
 Build reusable layout components using the `children` prop: Card, Section, Modal, and a two-column Layout.
 

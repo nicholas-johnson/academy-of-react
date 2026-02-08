@@ -216,7 +216,7 @@ const WizardList = observer(() => {
 
 ### Quest 1: Zustand Spell Inventory
 
-**Difficulty**: ⭐⭐ Intermediate
+**Difficulty**: Intermediate
 
 Build a spell inventory system using Zustand. Add, remove, and filter spells with a minimal, hooks-based store.
 
@@ -224,7 +224,7 @@ Build a spell inventory system using Zustand. Add, remove, and filter spells wit
 
 ### Quest 2: Redux Battle Tracker
 
-**Difficulty**: ⭐⭐⭐ Advanced
+**Difficulty**: Advanced
 
 Create a battle tracking system using Redux Toolkit. Manage battles, combatants, and battle history with slices and actions.
 
@@ -232,7 +232,7 @@ Create a battle tracking system using Redux Toolkit. Manage battles, combatants,
 
 ### Quest 3: MobX Academy Dashboard
 
-**Difficulty**: ⭐⭐⭐ Advanced
+**Difficulty**: Advanced
 
 Build an Academy dashboard with MobX. Track students, courses, and computed statistics using observables.
 

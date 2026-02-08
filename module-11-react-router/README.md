@@ -233,7 +233,7 @@ function ProtectedRoute({ children }) {
 
 ### Quest 1: Academy Navigation
 
-**Difficulty**: ⭐⭐ Intermediate
+**Difficulty**: Intermediate
 
 Create a multi-page Academy portal with navigation between Home, Students, Spells, and About pages.
 
@@ -249,7 +249,7 @@ Build a spell directory with dynamic routes. View spell lists and individual spe
 
 ### Quest 3: War Room
 
-**Difficulty**: ⭐⭐⭐ Advanced
+**Difficulty**: Advanced
 
 Create a protected War Room that only authenticated users can access. Includes login flow, protected routes, and search parameters for filtering battle data.
 

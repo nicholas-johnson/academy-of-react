@@ -82,17 +82,17 @@ Study how validation is implemented and how errors are displayed.
 
 ## Vite Benefits
 
-- ⚡ Lightning-fast hot module replacement (HMR)
-- 📦 Modern ES modules
-- 🎯 Optimized builds
-- 🔧 Easy configuration
-- 💪 Better developer experience
+- Lightning-fast hot module replacement (HMR)
+- Modern ES modules
+- Optimized builds
+- Easy configuration
+- Better developer experience
 
 ## Quests
 
 ### Quest 1: Form Validation
 
-**Difficulty**: ⭐⭐ Intermediate
+**Difficulty**: Intermediate
 
 Create a registration form with field-level validation.
 
@@ -100,7 +100,7 @@ Create a registration form with field-level validation.
 
 ### Quest 2: Controlled Inputs
 
-**Difficulty**: ⭐⭐ Intermediate
+**Difficulty**: Intermediate
 
 Build a searchable directory with live filtering using controlled inputs.
 
@@ -108,7 +108,7 @@ Build a searchable directory with live filtering using controlled inputs.
 
 ### Quest 3: Form Submission
 
-**Difficulty**: ⭐⭐⭐ Advanced
+**Difficulty**: Advanced
 
 Create a multi-step form with proper submission handling.
 
@@ -116,7 +116,7 @@ Create a multi-step form with proper submission handling.
 
 ### Bonus Quest: Roster Manager (Array State)
 
-**Difficulty**: ⭐⭐⭐ Advanced
+**Difficulty**: Advanced
 
 Combine forms with array state management — add, edit, delete, and filter a dynamic list.
 
