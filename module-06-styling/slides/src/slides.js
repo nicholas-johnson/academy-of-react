@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "Styling in React",
       subtitle: "Module 6: CSS Modules, Styled Components & Tailwind",
-      emoji: "🎨",
+      icon: "palette",
     },
   },
   {
@@ -18,7 +18,7 @@ export const slides = [
         "Different approaches for different needs",
         'No single "right" answer!',
       ],
-      emoji: "🤔",
+      icon: "help-circle",
     },
   },
   {
@@ -26,13 +26,13 @@ export const slides = [
     content: {
       title: "Three Popular Approaches",
       points: [
-        "📦 CSS Modules — Scoped CSS files",
-        "💅 Styled Components — CSS-in-JS",
-        "🌊 Tailwind CSS — Utility classes",
+        "CSS Modules — Scoped CSS files",
+        "Styled Components — CSS-in-JS",
+        "Tailwind CSS — Utility classes",
         "Each has pros and cons",
         "Choose based on project needs",
       ],
-      emoji: "🛠️",
+      icon: "wrench",
     },
   },
   {
@@ -40,7 +40,7 @@ export const slides = [
     content: {
       title: "CSS Modules",
       subtitle: "Scoped CSS made simple",
-      emoji: "📦",
+      icon: "package",
     },
   },
   {
@@ -54,7 +54,7 @@ export const slides = [
         "Works with any CSS you already know",
         "Built into Vite (no extra setup!)",
       ],
-      emoji: "📋",
+      icon: "clipboard",
     },
   },
   {
@@ -119,7 +119,7 @@ function Button({ variant }) {
     content: {
       title: "Styled Components",
       subtitle: "CSS-in-JS with superpowers",
-      emoji: "💅",
+      icon: "sparkles",
     },
   },
   {
@@ -133,7 +133,7 @@ function Button({ variant }) {
         "Automatic vendor prefixing",
         "Theming built in",
       ],
-      emoji: "✨",
+      icon: "sparkles",
     },
   },
   {
@@ -262,7 +262,7 @@ const FancyCard = styled(Card)\`
     content: {
       title: "Tailwind CSS",
       subtitle: "Utility-first styling",
-      emoji: "🌊",
+      icon: "waves",
     },
   },
   {
@@ -276,7 +276,7 @@ const FancyCard = styled(Card)\`
         "Purges unused CSS — tiny bundles",
         "Responsive design built in",
       ],
-      emoji: "⚡",
+      icon: "zap",
     },
   },
   {
@@ -312,13 +312,13 @@ function Button({ primary, children }) {
     content: {
       title: "Common Tailwind Utilities",
       rules: [
-        { rule: "Spacing", example: "p-4, m-2, px-6, py-3, gap-4", icon: "📏" },
-        { rule: "Colors", example: "bg-blue-500, text-gray-100", icon: "🎨" },
-        { rule: "Layout", example: "flex, grid, items-center", icon: "📐" },
+        { rule: "Spacing", example: "p-4, m-2, px-6, py-3, gap-4", icon: "ruler" },
+        { rule: "Colors", example: "bg-blue-500, text-gray-100", icon: "palette" },
+        { rule: "Layout", example: "flex, grid, items-center", icon: "square" },
         {
           rule: "Effects",
           example: "hover:, focus:, transition-all",
-          icon: "✨",
+          icon: "sparkles",
         },
       ],
     },
@@ -352,7 +352,7 @@ function Button({ primary, children }) {
     content: {
       title: "Choosing an Approach",
       subtitle: "Which one should you use?",
-      emoji: "🤷",
+      icon: "help-circle",
     },
   },
   {
@@ -366,7 +366,7 @@ function Button({ primary, children }) {
         "Working with React Server Components",
         "Want IDE CSS autocomplete",
       ],
-      emoji: "📦",
+      icon: "package",
     },
   },
   {
@@ -380,7 +380,7 @@ function Button({ primary, children }) {
         "Heavy use of prop-based styling",
         "Don't mind the runtime cost",
       ],
-      emoji: "💅",
+      icon: "sparkles",
     },
   },
   {
@@ -394,7 +394,7 @@ function Button({ primary, children }) {
         "Building for production (small bundles)",
         "Using React Server Components",
       ],
-      emoji: "🌊",
+      icon: "waves",
     },
   },
   {
@@ -408,7 +408,7 @@ function Button({ primary, children }) {
         "Apply utility-first styling with Tailwind",
         "Choose the right approach for your project",
       ],
-      emoji: "🎯",
+      icon: "target",
     },
   },
   {
@@ -416,7 +416,7 @@ function Button({ primary, children }) {
     content: {
       title: "Let's Style!",
       subtitle: "Time to make things beautiful",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

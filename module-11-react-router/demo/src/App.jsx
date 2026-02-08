@@ -46,7 +46,7 @@ function Layout() {
   return (
     <div className="app">
       <header className="header">
-        <h1>🏰 Battle Academy</h1>
+        <h1>Battle Academy</h1>
         <nav className="nav">
           <NavLink
             to="/"
@@ -91,21 +91,18 @@ function Home() {
 
       <div className="info-cards">
         <div className="info-card">
-          <span className="card-icon">🧭</span>
           <h3>Navigation</h3>
           <p>
             Use <code>Link</code> and <code>NavLink</code> to move between pages
           </p>
         </div>
         <div className="info-card">
-          <span className="card-icon">🔗</span>
           <h3>URL Parameters</h3>
           <p>
             Dynamic routes with <code>useParams</code>
           </p>
         </div>
         <div className="info-card">
-          <span className="card-icon">📍</span>
           <h3>Nested Routes</h3>
           <p>
             Layouts with <code>Outlet</code>
@@ -126,7 +123,7 @@ function Home() {
 function SpellList() {
   return (
     <div className="page">
-      <h2>📜 Spell Library</h2>
+      <h2>Spell Library</h2>
       <p>Click a spell to view details</p>
 
       <div className="spell-grid">
@@ -136,9 +133,6 @@ function SpellList() {
             to={`/spells/${spell.id}`}
             className="spell-card"
           >
-            <span className="spell-element">
-              {getElementEmoji(spell.element)}
-            </span>
             <h3>{spell.name}</h3>
             <p>Power: {spell.power}</p>
           </Link>
@@ -174,7 +168,6 @@ function SpellDetail() {
       </button>
 
       <div className="spell-detail">
-        <span className="detail-element">{getElementEmoji(spell.element)}</span>
         <h2>{spell.name}</h2>
         <p className="spell-description">{spell.description}</p>
 
@@ -248,17 +241,6 @@ function NotFound() {
       </Link>
     </div>
   );
-}
-
-// Helper function
-function getElementEmoji(element) {
-  const emojis = {
-    fire: "🔥",
-    ice: "❄️",
-    lightning: "⚡",
-    holy: "✨",
-  };
-  return emojis[element] || "🔮";
 }
 
 // Main App with routes

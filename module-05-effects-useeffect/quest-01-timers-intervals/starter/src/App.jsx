@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🧘 Meditation Timer</h1>
+      <h1>Meditation Timer</h1>
       <p>Focus your magical energy</p>
 
       {/* TODO: Input for minutes */}

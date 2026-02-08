@@ -1,12 +1,5 @@
 import styles from "./HouseBadge.module.css";
 
-const houseEmojis = {
-  Phoenix: "🔥",
-  Dragon: "🐉",
-  Griffin: "🦅",
-  Serpent: "🐍",
-};
-
 function HouseBadge({ house, selected, onClick }) {
   // Convert house name to lowercase for CSS class lookup
   const houseClass = house.toLowerCase();
@@ -20,9 +13,8 @@ function HouseBadge({ house, selected, onClick }) {
 
   return (
     <button className={className} onClick={onClick}>
-      <span className={styles.emoji}>{houseEmojis[house]}</span>
       <span className={styles.name}>{house}</span>
-      {selected && <span className={styles.checkmark}>✓</span>}
+      {selected && <span className={styles.checkmark}>Selected</span>}
     </button>
   );
 }

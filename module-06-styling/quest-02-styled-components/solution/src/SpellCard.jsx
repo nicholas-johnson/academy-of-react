@@ -9,14 +9,6 @@ const elementColors = {
   arcane: "#8b5cf6",
 };
 
-const elementEmojis = {
-  fire: "🔥",
-  water: "💧",
-  earth: "🌿",
-  air: "💨",
-  arcane: "✨",
-};
-
 // Animation for the glow effect
 const pulse = keyframes`
   0%, 100% { opacity: 0.5; }
@@ -144,7 +136,6 @@ function SpellCard({ spell }) {
   return (
     <Card $element={element}>
       <Header>
-        <ElementBadge>{elementEmojis[element]}</ElementBadge>
         <SpellName>{name}</SpellName>
       </Header>
 
@@ -154,7 +145,7 @@ function SpellCard({ spell }) {
         <Stat>
           <StatLabel>Mana:</StatLabel>
           <StatValue $element={element} $highlight>
-            💎 {manaCost}
+            {manaCost}
           </StatValue>
         </Stat>
         <Stat>

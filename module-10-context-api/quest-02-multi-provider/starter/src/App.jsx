@@ -66,7 +66,7 @@ const translations = {
 function Header({ language, setLang, t }) {
   return (
     <header className="header">
-      <h1>⚔️ {t("title")}</h1>
+      <h1>{t("title")}</h1>
       <div className="language-selector">
         <label>{t("language")}:</label>
         <select value={language} onChange={(e) => setLang(e.target.value)}>
@@ -83,10 +83,10 @@ function Header({ language, setLang, t }) {
 function Navigation({ t }) {
   return (
     <nav className="navigation">
-      <button className="nav-btn active">📜 {t("spells")}</button>
-      <button className="nav-btn">🎒 {t("inventory")}</button>
-      <button className="nav-btn">⚔️ {t("quests")}</button>
-      <button className="nav-btn">⚙️ {t("settings")}</button>
+      <button className="nav-btn active">{t("spells")}</button>
+      <button className="nav-btn">{t("inventory")}</button>
+      <button className="nav-btn">{t("quests")}</button>
+      <button className="nav-btn">{t("settings")}</button>
     </nav>
   );
 }
@@ -107,19 +107,18 @@ function WelcomeMessage({ t, language }) {
 // Spell list component - currently using props
 function SpellList({ t }) {
   const spells = [
-    { key: "fireball", icon: "🔥", power: 45, mana: 30 },
-    { key: "iceBlast", icon: "❄️", power: 35, mana: 25 },
-    { key: "heal", icon: "💚", power: 40, mana: 35 },
-    { key: "shield", icon: "🛡️", power: 0, mana: 20 },
+    { key: "fireball", power: 45, mana: 30 },
+    { key: "iceBlast", power: 35, mana: 25 },
+    { key: "heal", power: 40, mana: 35 },
+    { key: "shield", power: 0, mana: 20 },
   ];
 
   return (
     <div className="section">
-      <h2>📜 {t("spells")}</h2>
+      <h2>{t("spells")}</h2>
       <div className="spell-grid">
         {spells.map((spell) => (
           <div key={spell.key} className="spell-card">
-            <span className="spell-icon">{spell.icon}</span>
             <div className="spell-info">
               <div className="spell-name">{t(spell.key)}</div>
               <div className="spell-stats">
@@ -158,7 +157,7 @@ function App() {
         <SpellList t={t} />
       </main>
       <div className="info-box">
-        <h3>🌐 Language Context Pattern</h3>
+        <h3>Language Context Pattern</h3>
         <ul>
           <li>
             Translation function <code>t(key)</code> available globally

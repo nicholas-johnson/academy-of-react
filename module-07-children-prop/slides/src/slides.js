@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "The Children Prop",
       subtitle: "Module 7: Building Wrapper Components",
-      emoji: "📦",
+      icon: "package",
     },
   },
   {
@@ -18,7 +18,7 @@ export const slides = [
         'We need a way to "wrap" any content',
         "Enter: the children prop!",
       ],
-      emoji: "🤔",
+      icon: "help-circle",
     },
   },
   {
@@ -80,13 +80,13 @@ function Card({ children }) {
     content: {
       title: "Common Use Cases",
       points: [
-        "📦 Card — Wraps any content with styling",
-        "🪟 Modal — Dialog that contains anything",
-        "📐 Layout — Page structure with slots",
-        "📋 Section — Groups content with a title",
-        "🔘 Button — Wraps text, icons, or both",
+        "Card — Wraps any content with styling",
+        "Modal — Dialog that contains anything",
+        "Layout — Page structure with slots",
+        "Section — Groups content with a title",
+        "Button — Wraps text, icons, or both",
       ],
-      emoji: "🛠️",
+      icon: "wrench",
     },
   },
   {
@@ -190,22 +190,22 @@ function Card({ children }) {
         {
           rule: "Wrapper components",
           example: "Card, Modal, Section",
-          icon: "📦",
+          icon: "package",
         },
         {
           rule: "Layout components",
           example: "PageLayout, Container",
-          icon: "📐",
+          icon: "square",
         },
         {
           rule: "Unknown content",
           example: "User provides the content",
-          icon: "❓",
+          icon: "help-circle",
         },
         {
           rule: "Flexible composition",
           example: "Mix any elements inside",
-          icon: "🧩",
+          icon: "puzzle",
         },
       ],
     },
@@ -245,7 +245,7 @@ function Card({ children }) {
         "Layout doesn't care what's in each slot",
         "Flexible, reusable, maintainable!",
       ],
-      emoji: "🧩",
+      icon: "puzzle",
     },
   },
   {
@@ -259,7 +259,7 @@ function Card({ children }) {
         "Know when to use children vs props",
         "Compose complex UIs from simple pieces",
       ],
-      emoji: "🎯",
+      icon: "target",
     },
   },
   {
@@ -267,7 +267,7 @@ function Card({ children }) {
     content: {
       title: "Let's Compose!",
       subtitle: "Time to build reusable components",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

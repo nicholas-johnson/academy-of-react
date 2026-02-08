@@ -5,7 +5,6 @@ const potions = [
     id: 1,
     name: "Health Elixir",
     effect: "healing",
-    icon: "🧪",
     potency: 90,
     brewTime: 30,
     ingredients: ["Dragon's Blood", "Moonflower", "Crystal Water"],
@@ -15,7 +14,6 @@ const potions = [
     id: 2,
     name: "Mana Potion",
     effect: "energy",
-    icon: "💙",
     potency: 75,
     brewTime: 20,
     ingredients: ["Stardust", "Sage", "Pure Spring Water"],
@@ -25,7 +23,6 @@ const potions = [
     id: 3,
     name: "Strength Tonic",
     effect: "power",
-    icon: "💪",
     potency: 85,
     brewTime: 45,
     ingredients: ["Giant's Tooth", "Iron Root", "Bear Claw"],
@@ -35,7 +32,6 @@ const potions = [
     id: 4,
     name: "Invisibility Draught",
     effect: "stealth",
-    icon: "👻",
     potency: 70,
     brewTime: 60,
     ingredients: ["Shadow Essence", "Ghost Orchid", "Void Crystal"],
@@ -44,10 +40,10 @@ const potions = [
 ];
 
 const effectConfig = {
-  healing: { color: "#16a34a", label: "Healing", symbol: "💚" },
-  energy: { color: "#2563eb", label: "Energy", symbol: "💙" },
-  power: { color: "#dc2626", label: "Power", symbol: "🔴" },
-  stealth: { color: "#7c3aed", label: "Stealth", symbol: "🟣" },
+  healing: { color: "#16a34a", label: "Healing" },
+  energy: { color: "#2563eb", label: "Energy" },
+  power: { color: "#dc2626", label: "Power" },
+  stealth: { color: "#7c3aed", label: "Stealth" },
 };
 
 // Ingredient component
@@ -64,7 +60,6 @@ function Ingredient({ name }) {
 function PotionCard({
   name,
   effect,
-  icon,
   potency,
   brewTime,
   ingredients,
@@ -75,18 +70,17 @@ function PotionCard({
   return (
     <div className="potion-card">
       <div className="card-header" style={{ borderTopColor: config.color }}>
-        <div className="potion-icon">{icon}</div>
         <div>
           <h3 className="potion-name">{name}</h3>
           <span className="potion-effect" style={{ color: config.color }}>
-            {config.symbol} {config.label}
+            {config.label}
           </span>
         </div>
       </div>
 
       <div className="card-body">
         <div className="stat-row">
-          <span className="stat-label">⚡ Potency:</span>
+          <span className="stat-label">Potency:</span>
           <div className="potency-bar">
             <div
               className="potency-fill"
@@ -100,12 +94,12 @@ function PotionCard({
         </div>
 
         <div className="stat-row">
-          <span className="stat-label">⏱️ Brew Time:</span>
+          <span className="stat-label">Brew Time:</span>
           <span className="stat-value">{brewTime} min</span>
         </div>
 
         <div className="ingredients-section">
-          <h4 className="section-title">📋 Ingredients:</h4>
+          <h4 className="section-title">Ingredients:</h4>
           <div className="ingredients-list">
             {ingredients.map((ingredient, index) => (
               <Ingredient key={index} name={ingredient} />
@@ -114,7 +108,7 @@ function PotionCard({
         </div>
 
         <div className="price-tag" style={{ backgroundColor: config.color }}>
-          💰 {price} Gold
+          {price} Gold
         </div>
       </div>
     </div>
@@ -125,7 +119,7 @@ function App() {
   return (
     <div className="app-container">
       <div className="quest-header">
-        <h1>⚡ Quest 3: Potion Cards</h1>
+        <h1>Quest 3: Potion Cards</h1>
         <p className="quest-subtitle">Component composition with ingredients</p>
       </div>
 

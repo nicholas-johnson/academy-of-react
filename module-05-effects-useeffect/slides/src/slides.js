@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "Side Effects with useEffect",
       subtitle: "Module 5: Connecting to the Outside World",
-      emoji: "🌐",
+      icon: "globe",
     },
   },
   {
@@ -19,7 +19,7 @@ export const slides = [
         "Directly modifying the DOM",
         "Saving to localStorage",
       ],
-      emoji: "🔌",
+      icon: "plug",
     },
   },
   {
@@ -33,7 +33,7 @@ export const slides = [
         "Where do we put this code?",
         "Enter: useEffect!",
       ],
-      emoji: "🤔",
+      icon: "help-circle",
     },
   },
   {
@@ -41,7 +41,7 @@ export const slides = [
     content: {
       title: "useEffect",
       subtitle: "The escape hatch for side effects",
-      emoji: "🪝",
+      icon: "anchor",
     },
   },
   {
@@ -71,7 +71,7 @@ function MyComponent() {
     content: {
       title: "The Dependency Array",
       subtitle: "Controlling when effects run",
-      emoji: "📦",
+      icon: "package",
     },
   },
   {
@@ -79,12 +79,12 @@ function MyComponent() {
     content: {
       title: "Three Dependency Options",
       rules: [
-        { rule: "No array", example: "Runs after EVERY render", icon: "🔄" },
-        { rule: "Empty array []", example: "Runs ONCE on mount", icon: "1️⃣" },
+        { rule: "No array", example: "Runs after EVERY render", icon: "refresh" },
+        { rule: "Empty array []", example: "Runs ONCE on mount", icon: "circle-dot" },
         {
           rule: "With deps [a, b]",
           example: "Runs when a or b changes",
-          icon: "👀",
+          icon: "eye",
         },
       ],
     },
@@ -166,7 +166,7 @@ function MyComponent() {
     content: {
       title: "Data Fetching",
       subtitle: "The most common use case",
-      emoji: "📡",
+      icon: "radio",
     },
   },
   {
@@ -229,7 +229,7 @@ function MyComponent() {
     content: {
       title: "Cleanup Functions",
       subtitle: "Preventing memory leaks",
-      emoji: "🧹",
+      icon: "eraser",
     },
   },
   {
@@ -243,7 +243,7 @@ function MyComponent() {
         "Memory leaks slow your app",
         'React warns: "Can\'t update unmounted component"',
       ],
-      emoji: "⚠️",
+      icon: "alert-triangle",
     },
   },
   {
@@ -302,22 +302,22 @@ function MyComponent() {
         {
           rule: "Timers",
           example: "clearInterval() / clearTimeout()",
-          icon: "⏱️",
+          icon: "timer",
         },
         {
           rule: "Event Listeners",
           example: "removeEventListener()",
-          icon: "👂",
+          icon: "volume-2",
         },
         {
           rule: "Subscriptions",
           example: "unsubscribe() / disconnect()",
-          icon: "🔔",
+          icon: "bell",
         },
         {
           rule: "Fetch (optional)",
           example: "AbortController.abort()",
-          icon: "🛑",
+          icon: "ban",
         },
       ],
     },
@@ -327,7 +327,7 @@ function MyComponent() {
     content: {
       title: "Common Patterns",
       subtitle: "useEffect in practice",
-      emoji: "📚",
+      icon: "book-open",
     },
   },
   {
@@ -382,7 +382,7 @@ function MyComponent() {
     content: {
       title: "Common Pitfalls",
       subtitle: "Mistakes to avoid",
-      emoji: "🚨",
+      icon: "siren",
     },
   },
   {
@@ -390,7 +390,7 @@ function MyComponent() {
     content: {
       title: "Infinite Loop!",
       left: {
-        label: "❌ Wrong",
+        label: "Wrong",
         items: [
           "useEffect(() => {",
           "  setCount(count + 1);",
@@ -399,7 +399,7 @@ function MyComponent() {
         ],
       },
       right: {
-        label: "✅ Right",
+        label: "Right",
         items: [
           "useEffect(() => {",
           "  setCount(count + 1);",
@@ -414,7 +414,7 @@ function MyComponent() {
     content: {
       title: "Missing Dependencies",
       left: {
-        label: "❌ Wrong",
+        label: "Wrong",
         items: [
           "useEffect(() => {",
           "  fetch(`/api/${id}`)",
@@ -423,7 +423,7 @@ function MyComponent() {
         ],
       },
       right: {
-        label: "✅ Right",
+        label: "Right",
         items: [
           "useEffect(() => {",
           "  fetch(`/api/${id}`)",
@@ -444,7 +444,7 @@ function MyComponent() {
         "List ALL values used inside the effect",
         "If something shouldn't trigger re-run, rethink your approach",
       ],
-      emoji: "🔍",
+      icon: "search",
     },
   },
   {
@@ -458,7 +458,7 @@ function MyComponent() {
         "Fetch data from APIs properly",
         "Write cleanup functions to prevent leaks",
       ],
-      emoji: "🎯",
+      icon: "target",
     },
   },
   {
@@ -466,7 +466,7 @@ function MyComponent() {
     content: {
       title: "Let's Fetch Some Data!",
       subtitle: "Time to connect to APIs",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "Forms and Events",
       subtitle: "Module 4: Capturing User Input",
-      emoji: "📝",
+      icon: "file-text",
     },
   },
   {
@@ -18,7 +18,7 @@ export const slides = [
         "Validate before submitting",
         "Handle the submission properly",
       ],
-      emoji: "🤔",
+      icon: "help-circle",
     },
   },
   {
@@ -26,7 +26,7 @@ export const slides = [
     content: {
       title: "Controlled Components",
       subtitle: "React controls the input",
-      emoji: "🎮",
+      icon: "gamepad",
     },
   },
   {
@@ -40,7 +40,7 @@ export const slides = [
         'React is the "single source of truth"',
         "Every keystroke flows through React",
       ],
-      emoji: "🔄",
+      icon: "refresh",
     },
   },
   {
@@ -75,22 +75,22 @@ export const slides = [
         {
           rule: "Text Input",
           example: '<input type="text" value={text} onChange={...} />',
-          icon: "📝",
+          icon: "file-text",
         },
         {
           rule: "Number Input",
           example: '<input type="number" value={num} onChange={...} />',
-          icon: "🔢",
+          icon: "hash",
         },
         {
           rule: "Checkbox",
           example: '<input type="checkbox" checked={bool} onChange={...} />',
-          icon: "☑️",
+          icon: "check-square",
         },
         {
           rule: "Select",
           example: "<select value={choice} onChange={...}>...</select>",
-          icon: "📋",
+          icon: "clipboard",
         },
       ],
     },
@@ -134,18 +134,18 @@ const [role, setRole] = useState('attacker');
         {
           rule: "email",
           example: "Shows @ keyboard on mobile, validates format",
-          icon: "📧",
+          icon: "mail",
         },
-        { rule: "tel", example: "Shows phone keypad on mobile", icon: "📱" },
+        { rule: "tel", example: "Shows phone keypad on mobile", icon: "smartphone" },
         {
           rule: "password",
           example: "Masks input with dots/asterisks",
-          icon: "🔐",
+          icon: "lock",
         },
         {
           rule: "date",
           example: "Native date picker (no library needed!)",
-          icon: "📅",
+          icon: "calendar",
         },
       ],
     },
@@ -161,7 +161,7 @@ const [role, setRole] = useState('attacker');
         "Native UI controls (date pickers, color pickers)",
         "All still work as controlled components!",
       ],
-      emoji: "📱",
+      icon: "smartphone",
     },
   },
   {
@@ -169,7 +169,7 @@ const [role, setRole] = useState('attacker');
     content: {
       title: "Form Submission",
       subtitle: "Handling the submit event",
-      emoji: "📤",
+      icon: "upload",
     },
   },
   {
@@ -183,7 +183,7 @@ const [role, setRole] = useState('attacker');
         "e.preventDefault() stops the refresh",
         "Then we handle submission ourselves",
       ],
-      emoji: "⚠️",
+      icon: "alert-triangle",
     },
   },
   {
@@ -224,7 +224,7 @@ const [role, setRole] = useState('attacker');
     content: {
       title: "Form Validation",
       subtitle: "Checking input before submission",
-      emoji: "✅",
+      icon: "check-circle",
     },
   },
   {
@@ -238,7 +238,7 @@ const [role, setRole] = useState('attacker');
         "Track errors in state",
         "Display helpful error messages",
       ],
-      emoji: "🔍",
+      icon: "search",
     },
   },
   {
@@ -286,15 +286,15 @@ const [role, setRole] = useState('attacker');
         {
           rule: "Required",
           example: 'if (!value) setError("Required")',
-          icon: "❗",
+          icon: "alert-circle",
         },
-        { rule: "Email", example: 'if (!value.includes("@")) ...', icon: "📧" },
+        { rule: "Email", example: 'if (!value.includes("@")) ...', icon: "mail" },
         {
           rule: "Min Length",
           example: "if (value.length < 8) ...",
-          icon: "📏",
+          icon: "ruler",
         },
-        { rule: "Match", example: "if (password !== confirm) ...", icon: "🔐" },
+        { rule: "Match", example: "if (password !== confirm) ...", icon: "lock" },
       ],
     },
   },
@@ -303,7 +303,7 @@ const [role, setRole] = useState('attacker');
     content: {
       title: "Multiple Inputs",
       subtitle: "Managing form state efficiently",
-      emoji: "📋",
+      icon: "clipboard",
     },
   },
   {
@@ -372,7 +372,7 @@ const [role, setRole] = useState('attacker');
     content: {
       title: "Accessibility",
       subtitle: "Forms for everyone",
-      emoji: "♿",
+      icon: "accessibility",
     },
   },
   {
@@ -386,7 +386,7 @@ const [role, setRole] = useState('attacker');
         "Good accessibility = good UX for everyone",
         "It's also the law in many places!",
       ],
-      emoji: "🌍",
+      icon: "globe",
     },
   },
   {
@@ -428,22 +428,22 @@ const [role, setRole] = useState('attacker');
         {
           rule: "Labels",
           example: '<label htmlFor="id">...</label>',
-          icon: "🏷️",
+          icon: "tag",
         },
         {
           rule: "Error Alerts",
           example: 'role="alert" on error messages',
-          icon: "🚨",
+          icon: "siren",
         },
         {
           rule: "Required Fields",
           example: 'aria-required="true"',
-          icon: "❗",
+          icon: "alert-circle",
         },
         {
           rule: "Focus Visible",
           example: "Never hide focus outlines",
-          icon: "🎯",
+          icon: "target",
         },
       ],
     },
@@ -459,7 +459,7 @@ const [role, setRole] = useState('attacker');
         "Manage multiple inputs efficiently",
         "Make forms accessible to everyone",
       ],
-      emoji: "🎯",
+      icon: "target",
     },
   },
   {
@@ -467,7 +467,7 @@ const [role, setRole] = useState('attacker');
     content: {
       title: "Let's Build Forms!",
       subtitle: "Time to capture user input",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

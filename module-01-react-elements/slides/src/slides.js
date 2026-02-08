@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "React Fundamentals",
       subtitle: "Building Modern User Interfaces",
-      emoji: "⚛️",
+      icon: "atom",
     },
   },
   {
@@ -12,10 +12,10 @@ export const slides = [
     content: {
       title: "Welcome to the Academy!",
       points: [
-        "👋 Welcome to React training",
-        "🎯 By the end, you'll build real React applications",
-        "🧙‍♂️ We'll learn through the Wizard Academy story",
-        "💪 Hands-on quests at every step",
+        "Welcome to React training",
+        "By the end, you'll build real React applications",
+        "We'll learn through the Wizard Academy story",
+        "Hands-on quests at every step",
       ],
     },
   },
@@ -27,10 +27,10 @@ export const slides = [
         "A JavaScript library for building user interfaces",
         "Created by Facebook (Meta) in 2013",
         "Component-based architecture",
-        "Declarative — describe WHAT you want, not HOW",
-        "Used by: Facebook, Instagram, Netflix, Airbnb, and more",
+        "Declarative: describe WHAT you want, not HOW",
+        "Used by: Facebook, Instagram, Netflix, Airbnb",
       ],
-      emoji: "🤔",
+      icon: "atom",
     },
   },
   {
@@ -38,14 +38,14 @@ export const slides = [
     content: {
       title: "Why Learn React?",
       points: [
-        "📈 Most popular frontend framework (by far)",
-        "💼 High demand in job market",
-        "🔄 Reusable components save time",
-        "⚡ Virtual DOM = fast updates",
-        "🌐 Huge ecosystem and community",
-        "📱 React Native for mobile apps",
+        "Most popular frontend framework",
+        "High demand in the job market",
+        "Reusable components save time",
+        "Virtual DOM enables fast updates",
+        "Huge ecosystem and community",
+        "React Native for mobile apps",
       ],
-      emoji: "🚀",
+      icon: "trending-up",
     },
   },
   {
@@ -84,13 +84,13 @@ function Counter() {
     content: {
       title: "Course Structure",
       points: [
-        "📚 13 Modules covering React fundamentals to advanced",
-        "🎯 Each module has demos and quests",
-        "✨ Demos: Watch and learn",
-        "⚔️ Quests: Hands-on practice",
-        "🏆 Side Quests: Optional projects to build",
+        "13 Modules covering React fundamentals to advanced",
+        "Each module has demos and quests",
+        "Demos: Watch and learn",
+        "Quests: Hands-on practice",
+        "Side Quests: Optional projects to build",
       ],
-      emoji: "🗺️",
+      icon: "map",
     },
   },
   {
@@ -98,56 +98,178 @@ function Counter() {
     content: {
       title: "What We'll Cover",
       modules: [
-        { num: "1-2", name: "React Elements & JSX", icon: "🧱" },
-        { num: "3-4", name: "State & Forms", icon: "⚡" },
-        { num: "5-6", name: "Effects & Styling", icon: "🎨" },
-        { num: "7-8", name: "Children & Hooks", icon: "🪝" },
-        { num: "9-10", name: "Custom Hooks & Context", icon: "🧭" },
-        { num: "11-13", name: "Router, State Mgmt & SSR", icon: "🚀" },
+        { num: "1-2", name: "React Elements & JSX", icon: "layers" },
+        { num: "3-4", name: "State & Forms", icon: "zap" },
+        { num: "5-6", name: "Effects & Styling", icon: "palette" },
+        { num: "7-8", name: "Children & Hooks", icon: "anchor" },
+        { num: "9-10", name: "Custom Hooks & Context", icon: "compass" },
+        { num: "11-13", name: "Router, State Mgmt & SSR", icon: "rocket" },
+      ],
+    },
+  },
+  {
+    type: "title",
+    content: {
+      title: "Module 1",
+      subtitle: "React Elements with createElement()",
+      icon: "layers",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "What You'll Learn",
+      points: [
+        "How React creates elements using JavaScript",
+        "What the Virtual DOM is and why it matters",
+        "How to render elements to the page",
+        "How React efficiently updates the DOM",
+        "Rendering lists of elements",
+      ],
+      icon: "target",
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "React.createElement()",
+      code: `// The fundamental building block of React
+React.createElement(
+  type,      // 'div', 'span', 'h1', or a component
+  props,     // { className: 'card', id: 'main' }
+  children   // Text, elements, or arrays
+);
+
+// Example: Create a heading
+const heading = React.createElement(
+  'h1',
+  { className: 'title' },
+  'Hello, Academy!'
+);`,
+      highlights: [
+        "First argument: HTML tag name or component",
+        "Second argument: props object (or null)",
+        "Third+ arguments: children (content)",
+      ],
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "What createElement Returns",
+      code: `// createElement returns a plain JavaScript object
+const element = React.createElement(
+  'h1',
+  { className: 'title' },
+  'Hello'
+);
+
+// The element is just an object:
+{
+  type: 'h1',
+  props: {
+    className: 'title',
+    children: 'Hello'
+  }
+}`,
+      highlights: [
+        "React elements are plain JavaScript objects",
+        "They describe what should appear on screen",
+        "They are cheap to create",
+        "React uses these to build the Virtual DOM",
+      ],
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Nesting Elements",
+      code: `// Elements can contain other elements
+const card = React.createElement(
+  'div',
+  { className: 'card' },
+  React.createElement('h2', null, 'Harry Potter'),
+  React.createElement('p', null, 'House: Gryffindor'),
+  React.createElement('p', null, 'Level: 42')
+);
+
+// This creates a tree structure:
+// <div class="card">
+//   <h2>Harry Potter</h2>
+//   <p>House: Gryffindor</p>
+//   <p>Level: 42</p>
+// </div>`,
+      highlights: [
+        "Pass multiple children as additional arguments",
+        "Creates a tree of elements",
+        "This tree becomes the Virtual DOM",
       ],
     },
   },
   {
     type: "standard",
     content: {
-      title: "Resources",
+      title: "The Virtual DOM",
       points: [
-        "📖 Course README — Start here!",
-        "📁 Each module has its own folder",
-        "💡 INSTRUCTOR_NOTES.md — Teaching guides",
-        "🧪 demo/ folders — Live code examples",
-        "⚔️ quest-XX/ folders — Your challenges",
-        "📚 extras/ — Tailwind CSS & TypeScript guides",
+        "A lightweight copy of the real DOM in memory",
+        "React elements form a tree (the Virtual DOM)",
+        "When state changes, React builds a new tree",
+        "React compares old and new trees (diffing)",
+        "Only the differences get applied to the real DOM",
       ],
-      emoji: "📚",
+      icon: "tree",
     },
   },
   {
     type: "standard",
     content: {
-      title: "How to Succeed",
+      title: "Why Virtual DOM?",
       points: [
-        "👀 Watch the demos carefully",
-        "⌨️ Type the code yourself (don't copy-paste)",
-        "🐛 Embrace errors — they teach you!",
-        "❓ Ask questions anytime",
-        "🔄 Practice, practice, practice",
+        "Real DOM operations are slow and expensive",
+        "Virtual DOM operations are fast (plain objects)",
+        "Batching: multiple updates combined into one",
+        "Minimal DOM changes = better performance",
+        "You describe the result, React handles updates",
       ],
-      emoji: "🎯",
+      icon: "zap",
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Rendering to the DOM",
+      code: `// Get the container element
+const container = document.getElementById('root');
+
+// Create a root (React 18+)
+const root = ReactDOM.createRoot(container);
+
+// Render your element tree
+root.render(element);
+
+// When you call render again, React:
+// 1. Builds a new Virtual DOM
+// 2. Compares with the previous one
+// 3. Updates only what changed`,
+      highlights: [
+        "createRoot() creates a React root",
+        "render() mounts elements to the DOM",
+        "Subsequent renders trigger the diff algorithm",
+      ],
     },
   },
   {
     type: "standard",
     content: {
-      title: "Module 1: React Elements",
+      title: "Render Batching",
       points: [
-        "Understanding React.createElement()",
-        "How React builds the UI tree",
-        "Why this matters (even though we'll use JSX later)",
-        "Rendering to the DOM with ReactDOM",
-        "Building without a build step!",
+        "React batches multiple state updates together",
+        "Instead of re-rendering after each change...",
+        "...React waits and combines them into one render",
+        "This prevents unnecessary DOM operations",
+        "Automatic in React 18 for all updates",
       ],
-      emoji: "🧱",
+      icon: "package",
     },
   },
   {
@@ -155,38 +277,52 @@ function Counter() {
     content: {
       title: "Rendering Lists with .map()",
       code: `const students = [
-  { name: "Harry", house: "Gryffin" },
-  { name: "Luna", house: "Ravenclaw" },
-  { name: "Draco", house: "Slytherin" }
+  { name: 'Harry', house: 'Gryffindor' },
+  { name: 'Luna', house: 'Ravenclaw' },
+  { name: 'Draco', house: 'Slytherin' }
 ];
 
 // Transform data into React elements
-const studentElements = students.map(student =>
+const elements = students.map(student =>
   React.createElement(
-    "div",
-    { className: "student" },
-    student.name + " - " + student.house
+    'div',
+    { className: 'student' },
+    student.name + ' - ' + student.house
   )
 );
 
-// Render the array of elements
+// Render the array
 root.render(
-  React.createElement("div", null, studentElements)
+  React.createElement('div', null, elements)
 );`,
       highlights: [
-        ".map() transforms each item into a React element",
+        ".map() transforms each item into an element",
         "Returns a new array of elements",
-        "React can render arrays of elements directly",
-        "This pattern is fundamental to React",
+        "React can render arrays directly",
       ],
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Key Takeaways",
+      points: [
+        "React.createElement() creates element objects",
+        "Elements describe what should appear on screen",
+        "The Virtual DOM enables efficient updates",
+        "ReactDOM.createRoot() and render() mount to the page",
+        "React batches updates for performance",
+        "This is the foundation for JSX (Module 2)",
+      ],
+      icon: "clipboard",
     },
   },
   {
     type: "title",
     content: {
-      title: "Let's Begin!",
-      subtitle: "Time for Demo 1: React.createElement()",
-      emoji: "🚀",
+      title: "Demo Time",
+      subtitle: "Let's see createElement in action",
+      icon: "code",
     },
   },
 ];

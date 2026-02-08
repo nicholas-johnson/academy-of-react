@@ -54,7 +54,7 @@ const spells = [
 function App() {
   return (
     <div>
-      <h1>📚 Spell Library</h1>
+      <h1>Spell Library</h1>
 
       <div
         style={{

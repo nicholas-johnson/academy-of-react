@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "Modern Server Rendering",
       subtitle: "Module 13: Next.js, Remix, and Astro",
-      emoji: "🌐",
+      icon: "globe",
     },
   },
   {
@@ -12,13 +12,13 @@ export const slides = [
     content: {
       title: "The Problem with Client-Side React",
       points: [
-        "📄 Empty HTML sent to browser — bad for SEO",
-        "⏳ User sees blank screen until JS loads",
-        "📱 Slow on mobile/low-powered devices",
-        "🔄 Data fetching starts after component mounts",
-        "🌍 Poor performance on slow networks",
+        "Empty HTML sent to browser — bad for SEO",
+        "User sees blank screen until JS loads",
+        "Slow on mobile/low-powered devices",
+        "Data fetching starts after component mounts",
+        "Poor performance on slow networks",
       ],
-      emoji: "😰",
+      icon: "frown",
     },
   },
   {
@@ -64,13 +64,13 @@ export const slides = [
     content: {
       title: "Server Rendering Benefits",
       points: [
-        "⚡ Faster First Contentful Paint (FCP)",
-        "🔍 Better SEO — crawlers see real content",
-        "📱 Works without JavaScript (progressive enhancement)",
-        "🚀 Data fetched on server — closer to database",
-        "🔐 Sensitive logic stays on server",
+        "Faster First Contentful Paint (FCP)",
+        "Better SEO — crawlers see real content",
+        "Works without JavaScript (progressive enhancement)",
+        "Data fetched on server — closer to database",
+        "Sensitive logic stays on server",
       ],
-      emoji: "✨",
+      icon: "sparkles",
     },
   },
   {
@@ -78,19 +78,19 @@ export const slides = [
     content: {
       title: "Three Modern Approaches",
       points: [
-        "▲ Next.js — Hybrid rendering, Server Components, Vercel",
-        "💿 Remix — Web standards, progressive enhancement, loaders",
-        "🚀 Astro — Content-first, islands architecture, multi-framework",
+        "Next.js — Hybrid rendering, Server Components, Vercel",
+        "Remix — Web standards, progressive enhancement, loaders",
+        "Astro — Content-first, islands architecture, multi-framework",
       ],
-      emoji: "🛠️",
+      icon: "wrench",
     },
   },
   {
     type: "title",
     content: {
-      title: "▲ Next.js",
+      title: "Next.js",
       subtitle: "The React Framework for Production",
-      emoji: "▲",
+      icon: "triangle",
     },
   },
   {
@@ -98,13 +98,13 @@ export const slides = [
     content: {
       title: "Next.js Key Features",
       points: [
-        "📁 File-based routing — pages are files",
-        "⚛️ Server Components — render on server by default",
-        "🔄 Hybrid rendering — static, SSR, or client per page",
-        "⚡ Streaming — progressive page loading",
-        "🎯 Server Actions — mutations without API routes",
+        "File-based routing — pages are files",
+        "Server Components — render on server by default",
+        "Hybrid rendering — static, SSR, or client per page",
+        "Streaming — progressive page loading",
+        "Server Actions — mutations without API routes",
       ],
-      emoji: "▲",
+      icon: "triangle",
     },
   },
   {
@@ -170,7 +170,7 @@ export default SpellsPage`,
     content: {
       title: "Client Components",
       code: `// app/components/SpellFilter.js
-"use client"  // 👈 This makes it a Client Component
+"use client"  // This makes it a Client Component
 
 import { useState } from 'react'
 
@@ -207,7 +207,7 @@ export function SpellFilter({ onFilter }) {
       title: "Server Actions",
       code: `// app/spells/new/page.js
 async function addSpell(formData) {
-  "use server"  // 👈 This runs on the server!
+  "use server"  // This runs on the server!
   
   const name = formData.get('name')
   const power = formData.get('power')
@@ -236,9 +236,9 @@ export default function NewSpellPage() {
   {
     type: "title",
     content: {
-      title: "💿 Remix",
+      title: "Remix",
       subtitle: "Full Stack Web Framework",
-      emoji: "💿",
+      icon: "disc",
     },
   },
   {
@@ -246,13 +246,13 @@ export default function NewSpellPage() {
     content: {
       title: "Remix Philosophy",
       points: [
-        "🌐 Web standards first — uses native fetch, FormData, Response",
-        "📝 Forms are the API — no separate endpoint needed",
-        "🔄 Loaders load data — actions mutate data",
-        "⚡ Progressive enhancement — works without JS",
-        "🎯 Nested routes — parallel data loading",
+        "Web standards first — uses native fetch, FormData, Response",
+        "Forms are the API — no separate endpoint needed",
+        "Loaders load data — actions mutate data",
+        "Progressive enhancement — works without JS",
+        "Nested routes — parallel data loading",
       ],
-      emoji: "💿",
+      icon: "disc",
     },
   },
   {
@@ -327,9 +327,9 @@ export default function NewSpell() {
   {
     type: "title",
     content: {
-      title: "🚀 Astro",
+      title: "Astro",
       subtitle: "The Web Framework for Content",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
   {
@@ -337,13 +337,13 @@ export default function NewSpell() {
     content: {
       title: "Astro Philosophy",
       points: [
-        "📄 Content-focused — ships zero JS by default",
-        "🏝️ Islands architecture — hydrate only what needs it",
-        "🔀 Multi-framework — use React, Vue, Svelte together",
-        "⚡ Static-first — pre-renders everything possible",
-        "🎯 Partial hydration — client:load, client:visible, etc.",
+        "Content-focused — ships zero JS by default",
+        "Islands architecture — hydrate only what needs it",
+        "Multi-framework — use React, Vue, Svelte together",
+        "Static-first — pre-renders everything possible",
+        "Partial hydration — client:load, client:visible, etc.",
       ],
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
   {
@@ -420,22 +420,22 @@ import StaticHeader from '../components/Header.astro'
         {
           rule: "Next.js",
           example: "Full apps, dashboards, e-commerce, hybrid static/dynamic",
-          icon: "▲",
+          icon: "triangle",
         },
         {
           rule: "Remix",
           example: "Forms-heavy apps, progressive enhancement, web standards",
-          icon: "💿",
+          icon: "disc",
         },
         {
           rule: "Astro",
           example: "Blogs, docs, marketing sites, content-heavy",
-          icon: "🚀",
+          icon: "rocket",
         },
         {
           rule: "Plain React",
           example: "SPAs, internal tools, no SEO needs",
-          icon: "⚛️",
+          icon: "atom",
         },
       ],
     },
@@ -486,13 +486,13 @@ Astro:
     content: {
       title: "Key Concepts Summary",
       points: [
-        "🖥️ SSR — Render HTML on server, send complete page",
-        "📄 SSG — Generate HTML at build time",
-        "⚛️ Server Components — React components that run on server",
-        "🏝️ Islands — Hydrate only interactive parts",
-        "🔄 Hydration — Making static HTML interactive",
+        "SSR — Render HTML on server, send complete page",
+        "SSG — Generate HTML at build time",
+        "Server Components — React components that run on server",
+        "Islands — Hydrate only interactive parts",
+        "Hydration — Making static HTML interactive",
       ],
-      emoji: "📚",
+      icon: "book-open",
     },
   },
   {
@@ -500,11 +500,11 @@ Astro:
     content: {
       title: "Module 13 Paths",
       points: [
-        "▲ Next.js Path — App Router, Server Components, Server Actions",
-        "💿 Remix Path — Loaders, Actions, Nested Routes",
-        "🚀 Astro Path — Static Generation, Islands Architecture",
+        "Next.js Path — App Router, Server Components, Server Actions",
+        "Remix Path — Loaders, Actions, Nested Routes",
+        "Astro Path — Static Generation, Islands Architecture",
       ],
-      emoji: "🛤️",
+      icon: "git-branch",
     },
   },
   {
@@ -512,7 +512,7 @@ Astro:
     content: {
       title: "Go Full Stack!",
       subtitle: "Choose your path and build for the web",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

@@ -1,3 +1,5 @@
+import { SlideIcon } from "./SlideIcon";
+
 export function RulesSlide({ content }) {
   return (
     <div className="flex-1 flex flex-col justify-center items-center animate-fade-in p-8 w-full">
@@ -11,7 +13,9 @@ export function RulesSlide({ content }) {
               key={i}
               className="bg-slate-800 rounded-2xl p-6 border-2 border-slate-700 flex flex-col gap-2"
             >
-              <span className="text-4xl">{item.icon}</span>
+              <span className="text-primary">
+                <SlideIcon name={item.icon} size={40} />
+              </span>
               <span className="text-xl font-semibold text-gray-200">
                 {item.rule}
               </span>

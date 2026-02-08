@@ -57,21 +57,12 @@ const spells = [
   },
 ];
 
-const elementEmojis = {
-  fire: "🔥",
-  ice: "❄️",
-  lightning: "⚡",
-  holy: "✨",
-  dark: "🌑",
-  earth: "🪨",
-};
-
 // Layout component
 function Layout() {
   return (
     <div className="app">
       <header className="header">
-        <h1>📜 Spell Directory</h1>
+        <h1>Spell Directory</h1>
         <nav className="nav">
           <NavLink
             to="/"
@@ -136,7 +127,6 @@ function SpellList() {
         {spells.map((spell) => (
           // TODO: Replace this div with a Link component
           <div key={spell.id} className="spell-card">
-            <span className="spell-emoji">{elementEmojis[spell.element]}</span>
             <h3>{spell.name}</h3>
             <div className="spell-meta">
               <span>Power: {spell.power}</span>

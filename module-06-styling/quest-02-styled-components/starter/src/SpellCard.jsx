@@ -10,14 +10,6 @@ const elementColors = {
   arcane: "#8b5cf6",
 };
 
-const elementEmojis = {
-  fire: "🔥",
-  water: "💧",
-  earth: "🌿",
-  air: "💨",
-  arcane: "✨",
-};
-
 // TODO: Create styled components
 //
 // Example:
@@ -37,7 +29,7 @@ function SpellCard({ spell }) {
   // TODO: Replace this basic markup with styled components
   // Requirements:
   // 1. Card with element-colored border/accent
-  // 2. Spell name with element emoji
+  // 2. Spell name
   // 3. Power bar that fills based on power level (0-100)
   // 4. Mana cost display
   // 5. Description text
@@ -51,9 +43,7 @@ function SpellCard({ spell }) {
         borderRadius: "0.5rem",
       }}
     >
-      <h3>
-        {elementEmojis[element]} {name}
-      </h3>
+      <h3>{name}</h3>
       <p>Element: {element}</p>
       <p>Power: {power}</p>
       <p>Mana: {manaCost}</p>

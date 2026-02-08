@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "JSX & Components",
       subtitle: "Module 2: The Modern Way",
-      emoji: "✨",
+      icon: "sparkles",
     },
   },
   {
@@ -18,15 +18,15 @@ export const slides = [
         "Hard to write",
         "There must be a better way...",
       ],
-      emoji: "😩",
+      icon: "frown",
     },
   },
   {
     type: "title",
     content: {
       title: "Enter JSX!",
-      subtitle: "JavaScript + XML = ❤️",
-      emoji: "🎉",
+      subtitle: "JavaScript + XML",
+      icon: "party-popper",
     },
   },
   {
@@ -62,7 +62,7 @@ export const slides = [
         "Makes React code readable and writable",
         "NOT a template language — it's just JS",
       ],
-      emoji: "🤔",
+      icon: "help-circle",
     },
   },
   {
@@ -73,19 +73,19 @@ export const slides = [
         {
           rule: "className not class",
           example: '<div className="card">',
-          icon: "1️⃣",
+          icon: "circle-dot",
         },
         {
           rule: "Curly braces for JS",
           example: "<p>{user.name}</p>",
-          icon: "2️⃣",
+          icon: "circle-dot",
         },
         {
           rule: "One parent element",
           example: "<div>...</div> or <>...</>",
-          icon: "3️⃣",
+          icon: "circle-dot",
         },
-        { rule: "Close all tags", example: "<img /> <br />", icon: "4️⃣" },
+        { rule: "Close all tags", example: "<img /> <br />", icon: "circle-dot" },
       ],
     },
   },
@@ -100,7 +100,7 @@ export const slides = [
         '{isLoggedIn ? "Hi!" : "Login"} — Conditionals',
         "{items.map(i => <li>{i}</li>)} — Loops",
       ],
-      emoji: "{ }",
+      icon: "braces",
     },
   },
   {
@@ -108,13 +108,13 @@ export const slides = [
     content: {
       title: "Welcome to Vite!",
       points: [
-        "⚡ Lightning-fast dev server",
-        "🔄 Hot Module Replacement (instant updates)",
-        "📦 Proper npm package management",
-        "🛠️ No more CDN scripts!",
-        "✨ How professionals build React apps",
+        "Lightning-fast dev server",
+        "Hot Module Replacement (instant updates)",
+        "Proper npm package management",
+        "No more CDN scripts!",
+        "How professionals build React apps",
       ],
-      emoji: "⚡",
+      icon: "zap",
     },
   },
   {
@@ -128,7 +128,7 @@ export const slides = [
         "Edit code → See instant updates!",
         "Ctrl+C — Stop the server",
       ],
-      emoji: "💻",
+      icon: "code",
     },
   },
   {
@@ -142,7 +142,7 @@ export const slides = [
         "Render lists with .map()",
         "Build reusable UI pieces",
       ],
-      emoji: "🎯",
+      icon: "target",
     },
   },
   {
@@ -150,7 +150,7 @@ export const slides = [
     content: {
       title: "Let's Code!",
       subtitle: "Time to see JSX in action",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

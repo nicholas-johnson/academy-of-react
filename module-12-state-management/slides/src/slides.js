@@ -6,7 +6,7 @@ export const slides = [
     content: {
       title: "State Management Libraries",
       subtitle: "Module 12: Zustand, Redux, MobX",
-      emoji: "📦",
+      icon: "package",
     },
   },
   {
@@ -20,7 +20,7 @@ export const slides = [
         "Performance issues with frequent updates",
         "Team needs conventions and structure",
       ],
-      emoji: "🤔",
+      icon: "help-circle",
     },
   },
   {
@@ -28,11 +28,11 @@ export const slides = [
     content: {
       title: "Three Popular Solutions",
       points: [
-        "🐻 Zustand — Simple, hooks-based, minimal (~1KB)",
-        "🔮 Redux Toolkit — Industry standard, great DevTools (~11KB)",
-        "👁️ MobX — Observable/reactive, automatic tracking (~16KB)",
+        "Zustand — Simple, hooks-based, minimal (~1KB)",
+        "Redux Toolkit — Industry standard, great DevTools (~11KB)",
+        "MobX — Observable/reactive, automatic tracking (~16KB)",
       ],
-      emoji: "📦",
+      icon: "package",
     },
   },
   {
@@ -42,7 +42,7 @@ export const slides = [
   {
     type: "code",
     content: {
-      title: "🐻 Zustand — Simple Stores",
+      title: "Zustand — Simple Stores",
       code: `import { create } from 'zustand'
 
 // Create a store - that's it!
@@ -77,7 +77,7 @@ function SpellList() {
   {
     type: "code",
     content: {
-      title: "🔮 Redux Toolkit — Slices",
+      title: "Redux Toolkit — Slices",
       code: `import { createSlice, configureStore } from '@reduxjs/toolkit'
 
 const spellSlice = createSlice({
@@ -109,7 +109,7 @@ export const { addSpell, removeSpell } = spellSlice.actions`,
   {
     type: "code",
     content: {
-      title: "🔮 Redux Toolkit — Usage",
+      title: "Redux Toolkit — Usage",
       code: `import { Provider, useSelector, useDispatch } from 'react-redux'
 import { addSpell } from './spellSlice'
 
@@ -144,7 +144,7 @@ function SpellList() {
   {
     type: "code",
     content: {
-      title: "👁️ MobX — Observable Stores",
+      title: "MobX — Observable Stores",
       code: `import { makeAutoObservable } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
@@ -245,22 +245,22 @@ store.addSpell({ name: 'Fire' })`,
         {
           rule: "Zustand",
           example: "Small-medium apps, want simplicity",
-          icon: "🐻",
+          icon: "package",
         },
         {
           rule: "Redux Toolkit",
           example: "Large apps, teams, need DevTools",
-          icon: "🔮",
+          icon: "disc",
         },
         {
           rule: "MobX",
           example: "Complex computed state, prefer OOP",
-          icon: "👁️",
+          icon: "eye",
         },
         {
           rule: "Context API",
           example: "Simple state, no extra deps",
-          icon: "⚛️",
+          icon: "atom",
         },
       ],
     },
@@ -270,13 +270,13 @@ store.addSpell({ name: 'Fire' })`,
     content: {
       title: "Zustand Superpowers",
       points: [
-        "✨ No provider — just import and use",
-        "🔌 Middleware — persist, devtools, immer",
-        "📦 Tiny — ~1KB gzipped",
-        "🎯 Selectors — prevent unnecessary re-renders",
-        "🌐 Works outside React too",
+        "No provider — just import and use",
+        "Middleware — persist, devtools, immer",
+        "Tiny — ~1KB gzipped",
+        "Selectors — prevent unnecessary re-renders",
+        "Works outside React too",
       ],
-      emoji: "🐻",
+      icon: "package",
     },
   },
   {
@@ -314,13 +314,13 @@ const useStore = create(
     content: {
       title: "Redux DevTools",
       points: [
-        "🕐 Time-travel debugging — step through actions",
-        "📊 State diff — see what changed",
-        "📝 Action log — every dispatch recorded",
-        "💾 Export/import — share state for debugging",
-        "⏸️ Pause/resume — control updates",
+        "Time-travel debugging — step through actions",
+        "State diff — see what changed",
+        "Action log — every dispatch recorded",
+        "Export/import — share state for debugging",
+        "Pause/resume — control updates",
       ],
-      emoji: "🔮",
+      icon: "disc",
     },
   },
   {
@@ -328,13 +328,13 @@ const useStore = create(
     content: {
       title: "MobX Computed Values",
       points: [
-        "🧮 Automatically derived from state",
-        "💾 Cached until dependencies change",
-        "🔄 Update automatically when state changes",
-        "⚡ More efficient than computing in render",
-        "🎯 Perfect for complex derived data",
+        "Automatically derived from state",
+        "Cached until dependencies change",
+        "Update automatically when state changes",
+        "More efficient than computing in render",
+        "Perfect for complex derived data",
       ],
-      emoji: "👁️",
+      icon: "eye",
     },
   },
   {
@@ -377,13 +377,13 @@ const useStore = create(
     content: {
       title: "Library Comparison",
       points: [
-        "📦 Bundle: Zustand (~1KB) < Redux (~11KB) < MobX (~16KB)",
-        "📝 Boilerplate: Zustand < MobX < Redux",
-        "🛠️ DevTools: Redux > MobX > Zustand",
-        "🎓 Learning: Zustand < Redux ≈ MobX",
-        "🏢 Enterprise: Redux > MobX > Zustand",
+        "Bundle: Zustand (~1KB) < Redux (~11KB) < MobX (~16KB)",
+        "Boilerplate: Zustand < MobX < Redux",
+        "DevTools: Redux > MobX > Zustand",
+        "Learning: Zustand < Redux ≈ MobX",
+        "Enterprise: Redux > MobX > Zustand",
       ],
-      emoji: "⚖️",
+      icon: "scale",
     },
   },
   {
@@ -391,11 +391,11 @@ const useStore = create(
     content: {
       title: "Module 12 Quests",
       points: [
-        "🐻 Quest 1: Zustand Spell Inventory — Simple stores with persistence",
-        "🔮 Quest 2: Redux Battle Tracker — Slices, actions, selectors",
-        "👁️ Quest 3: MobX Academy Dashboard — Observables & computed",
+        "Quest 1: Zustand Spell Inventory — Simple stores with persistence",
+        "Quest 2: Redux Battle Tracker — Slices, actions, selectors",
+        "Quest 3: MobX Academy Dashboard — Observables & computed",
       ],
-      emoji: "📋",
+      icon: "clipboard",
     },
   },
   {
@@ -403,7 +403,7 @@ const useStore = create(
     content: {
       title: "Choose Your Weapon!",
       subtitle: "Each library solves the same problem differently",
-      emoji: "⚔️",
+      icon: "target",
     },
   },
 ];

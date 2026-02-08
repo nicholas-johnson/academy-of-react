@@ -64,21 +64,12 @@ const spells = [
   },
 ];
 
-const elementEmojis = {
-  fire: "🔥",
-  ice: "❄️",
-  lightning: "⚡",
-  holy: "✨",
-  dark: "🌑",
-  earth: "🪨",
-};
-
 // Layout component
 function Layout() {
   return (
     <div className="app">
       <header className="header">
-        <h1>📜 Spell Directory</h1>
+        <h1>Spell Directory</h1>
         <nav className="nav">
           <NavLink
             to="/"
@@ -150,7 +141,6 @@ function SpellList() {
             to={`/spells/${spell.id}`}
             className="spell-card"
           >
-            <span className="spell-emoji">{elementEmojis[spell.element]}</span>
             <h3>{spell.name}</h3>
             <div className="spell-meta">
               <span>Power: {spell.power}</span>
@@ -189,7 +179,6 @@ function SpellDetail() {
       </button>
 
       <div className="spell-detail">
-        <span className="detail-emoji">{elementEmojis[spell.element]}</span>
         <h2>{spell.name}</h2>
         <span className="element-badge">{spell.element}</span>
         <p className="spell-description">{spell.description}</p>

@@ -11,21 +11,21 @@ import "./App.css";
 function Home() {
   return (
     <div className="page">
-      <h2>🏠 Welcome to the Academy</h2>
+      <h2>Welcome to the Academy</h2>
       <p>Your journey into React Router begins here!</p>
       <div className="features">
         <div className="feature">
-          <span>📚</span>
+          <span>Study</span>
           <h3>Study Spells</h3>
           <p>Learn powerful magic</p>
         </div>
         <div className="feature">
-          <span>👥</span>
+          <span>Students</span>
           <h3>Meet Students</h3>
           <p>Join fellow wizards</p>
         </div>
         <div className="feature">
-          <span>🎓</span>
+          <span>Graduate</span>
           <h3>Graduate</h3>
           <p>Become a master</p>
         </div>
@@ -45,7 +45,7 @@ function Students() {
 
   return (
     <div className="page">
-      <h2>👥 Students</h2>
+      <h2>Students</h2>
       <div className="student-list">
         {students.map((student) => (
           <div key={student.id} className="student-card">
@@ -62,19 +62,18 @@ function Students() {
 // Spells page component
 function Spells() {
   const spells = [
-    { id: 1, name: "Fireball", element: "🔥" },
-    { id: 2, name: "Ice Shield", element: "❄️" },
-    { id: 3, name: "Lightning Bolt", element: "⚡" },
-    { id: 4, name: "Healing Wave", element: "💚" },
+    { id: 1, name: "Fireball" },
+    { id: 2, name: "Ice Shield" },
+    { id: 3, name: "Lightning Bolt" },
+    { id: 4, name: "Healing Wave" },
   ];
 
   return (
     <div className="page">
-      <h2>📜 Spells</h2>
+      <h2>Spells</h2>
       <div className="spell-list">
         {spells.map((spell) => (
           <div key={spell.id} className="spell-card">
-            <span className="spell-icon">{spell.element}</span>
             <h3>{spell.name}</h3>
           </div>
         ))}
@@ -87,7 +86,7 @@ function Spells() {
 function About() {
   return (
     <div className="page">
-      <h2>ℹ️ About</h2>
+      <h2>About</h2>
       <p>
         The Battle Academy was founded to train the next generation of React
         developers.

@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "React Router",
       subtitle: "Module 11: Client-Side Navigation",
-      emoji: "🧭",
+      icon: "compass",
     },
   },
   {
@@ -18,7 +18,7 @@ export const slides = [
         "No way to deep-link into app state",
         "We need navigation without page reloads!",
       ],
-      emoji: "😤",
+      icon: "frown",
     },
   },
   {
@@ -32,7 +32,7 @@ export const slides = [
         "Enables bookmarkable URLs in SPAs",
         "The standard routing solution for React",
       ],
-      emoji: "🧭",
+      icon: "compass",
     },
   },
   {
@@ -332,22 +332,22 @@ function SpellList() {
         {
           rule: "Always use Link, not <a>",
           example: "Prevents page reloads",
-          icon: "🔗",
+          icon: "link",
         },
         {
           rule: "Use NavLink for navigation menus",
           example: "Automatic active styling",
-          icon: "✨",
+          icon: "sparkles",
         },
         {
           rule: "Put catch-all route last",
           example: 'path="*" for 404s',
-          icon: "🛑",
+          icon: "ban",
         },
         {
           rule: "Use Outlet for shared layouts",
           example: "Header/footer persist",
-          icon: "📐",
+          icon: "square",
         },
       ],
     },
@@ -357,13 +357,13 @@ function SpellList() {
     content: {
       title: "Router Hooks Summary",
       points: [
-        "🔗 useParams — Read URL parameters (/spell/:id)",
-        "🧭 useNavigate — Programmatic navigation",
-        "📍 useLocation — Current URL info + state",
-        "🔍 useSearchParams — Query string state (?filter=x)",
-        "🔀 useMatch — Check if path matches",
+        "useParams — Read URL parameters (/spell/:id)",
+        "useNavigate — Programmatic navigation",
+        "useLocation — Current URL info + state",
+        "useSearchParams — Query string state (?filter=x)",
+        "useMatch — Check if path matches",
       ],
-      emoji: "🪝",
+      icon: "anchor",
     },
   },
   {
@@ -396,15 +396,15 @@ const filter = params.get('filter')
     content: {
       title: "When to Use URL State",
       points: [
-        "✅ Filters and search queries",
-        "✅ Pagination (page number)",
-        "✅ Sort order",
-        "✅ Tab selection",
-        "✅ Anything user might want to bookmark/share",
-        "❌ Form inputs (too noisy)",
-        "❌ UI state like open/closed modals",
+        "Filters and search queries",
+        "Pagination (page number)",
+        "Sort order",
+        "Tab selection",
+        "Anything user might want to bookmark/share",
+        "Not form inputs (too noisy)",
+        "Not UI state like open/closed modals",
       ],
-      emoji: "🤔",
+      icon: "help-circle",
     },
   },
   {
@@ -412,11 +412,11 @@ const filter = params.get('filter')
     content: {
       title: "Module 11 Quests",
       points: [
-        "🏰 Quest 1: Academy Navigation — Basic routing with NavLink",
-        "📜 Quest 2: Spell Directory — URL params with useParams",
-        "⚔️ Quest 3: War Room — Protected routes & search params",
+        "Quest 1: Academy Navigation — Basic routing with NavLink",
+        "Quest 2: Spell Directory — URL params with useParams",
+        "Quest 3: War Room — Protected routes & search params",
       ],
-      emoji: "📋",
+      icon: "clipboard",
     },
   },
   {
@@ -424,7 +424,7 @@ const filter = params.get('filter')
     content: {
       title: "Let's Navigate!",
       subtitle: "Time to build multi-page React apps",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

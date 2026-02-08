@@ -1,0 +1,46 @@
+{
+  "name": "react-course",
+  "version": "1.0.0",
+  "description": "React Course - From fundamentals to advanced patterns",
+  "private": true,
+  "scripts": {
+    "install:all": "pnpm install",
+    "dev:slide-deck": "pnpm --filter slide-deck dev",
+    "build:slide-deck": "pnpm --filter slide-deck build",
+    "dev:all-slides": "pnpm -r --parallel --filter \"*slides\" dev",
+    "dev:m1": "pnpm --filter module-01-react-elements-slides dev",
+    "dev:m2": "pnpm --filter module-02-jsx-components-slides dev",
+    "dev:m3": "pnpm --filter module-03-state-usestate-slides dev",
+    "dev:m4": "pnpm --filter module-04-forms-events-slides dev",
+    "dev:m5": "pnpm --filter module-05-effects-useeffect-slides dev",
+    "dev:m6": "pnpm --filter module-06-styling-slides dev",
+    "dev:m7": "pnpm --filter module-07-children-prop-slides dev",
+    "dev:m8": "pnpm --filter module-08-built-in-hooks-slides dev",
+    "dev:m9": "pnpm --filter module-09-custom-hooks-slides dev",
+    "dev:m10": "pnpm --filter module-10-context-api-slides dev",
+    "dev:m11": "pnpm --filter module-11-react-router-slides dev",
+    "dev:m12": "pnpm --filter module-12-state-management-slides dev",
+    "dev:m13": "pnpm --filter module-13-server-rendering-slides dev",
+    "build:all-slides": "pnpm -r --filter \"*slides\" build",
+    "dev:demos": "pnpm -r --parallel --filter \"*demo\" dev",
+    "clean": "pnpm -r exec rm -rf node_modules dist .turbo && rm -rf node_modules",
+    "clean:install": "pnpm clean && pnpm install",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,css}\""
+  },
+  "keywords": [
+    "react",
+    "tutorial",
+    "course",
+    "education"
+  ],
+  "author": "Nicholas Johnson",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

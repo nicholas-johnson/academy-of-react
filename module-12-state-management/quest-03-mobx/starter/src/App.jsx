@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>👁️ MobX Academy Dashboard</h1>
+        <h1>MobX Academy Dashboard</h1>
         <p>Observable state with automatic tracking</p>
       </header>
 

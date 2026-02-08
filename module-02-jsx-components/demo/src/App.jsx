@@ -23,20 +23,19 @@ function StudentCard({ name, house, magicLevel }) {
 // Pass data to components like function arguments
 // ============================================
 
-function SpellCard({ name, icon, power, manaCost }) {
+function SpellCard({ name, power, manaCost }) {
   return (
     <div className="spell-card">
       <div className="spell-header">
-        <span className="spell-icon">{icon}</span>
         <h3>{name}</h3>
       </div>
       <div className="spell-stats">
         <div className="spell-stat">
-          <span>⚔️ Power:</span>
+          <span>Power:</span>
           <span>{power}</span>
         </div>
         <div className="spell-stat">
-          <span>💧 Mana:</span>
+          <span>Mana:</span>
           <span>{manaCost}</span>
         </div>
       </div>
@@ -50,16 +49,16 @@ function SpellCard({ name, icon, power, manaCost }) {
 // ============================================
 
 const spells = [
-  { id: 1, name: "Fireball", icon: "🔥", power: 40, manaCost: 25 },
-  { id: 2, name: "Ice Shard", icon: "❄️", power: 30, manaCost: 15 },
-  { id: 3, name: "Lightning", icon: "⚡", power: 50, manaCost: 35 },
-  { id: 4, name: "Heal", icon: "💚", power: 25, manaCost: 20 },
+  { id: 1, name: "Fireball", power: 40, manaCost: 25 },
+  { id: 2, name: "Ice Shard", power: 30, manaCost: 15 },
+  { id: 3, name: "Lightning", power: 50, manaCost: 35 },
+  { id: 4, name: "Heal", power: 25, manaCost: 20 },
 ];
 
 function App() {
   return (
     <div className="app">
-      <h1>⚡ Module 2 Demo: JSX & Components</h1>
+      <h1>Module 2 Demo: JSX & Components</h1>
 
       {/* Step 1: Basic component */}
       <section className="demo-section">
@@ -70,7 +69,7 @@ function App() {
       {/* Step 2: Component with more props */}
       <section className="demo-section">
         <h2>Step 2: Props</h2>
-        <SpellCard name="Fireball" icon="🔥" power={40} manaCost={25} />
+        <SpellCard name="Fireball" power={40} manaCost={25} />
       </section>
 
       {/* Step 3: Rendering a list with .map() */}
@@ -81,7 +80,6 @@ function App() {
             <SpellCard
               key={spell.id}
               name={spell.name}
-              icon={spell.icon}
               power={spell.power}
               manaCost={spell.manaCost}
             />

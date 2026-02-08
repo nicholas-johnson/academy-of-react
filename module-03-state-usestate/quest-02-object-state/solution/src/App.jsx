@@ -2,12 +2,12 @@ import { useState } from "react";
 import "./App.css";
 
 const steps = [
-  { id: 1, name: "Prepare Cauldron", icon: "🔥" },
-  { id: 2, name: "Add Water", icon: "💧" },
-  { id: 3, name: "Mix Ingredients", icon: "🌿" },
-  { id: 4, name: "Stir Clockwise", icon: "↻" },
-  { id: 5, name: "Simmer", icon: "♨️" },
-  { id: 6, name: "Bottle Potion", icon: "🧪" },
+  { id: 1, name: "Prepare Cauldron" },
+  { id: 2, name: "Add Water" },
+  { id: 3, name: "Mix Ingredients" },
+  { id: 4, name: "Stir Clockwise" },
+  { id: 5, name: "Simmer" },
+  { id: 6, name: "Bottle Potion" },
 ];
 
 function PotionBrewing() {
@@ -66,7 +66,7 @@ function PotionBrewing() {
   return (
     <div className="potion-brewing">
       <div className="brewing-header">
-        <h2>🧙‍♀️ Potion Brewing Station</h2>
+        <h2>Potion Brewing Station</h2>
         <div className="progress-display">
           Step {brewing.currentStep + 1} of {steps.length}
         </div>
@@ -82,10 +82,9 @@ function PotionBrewing() {
 
       {/* Current step */}
       <div className="current-step">
-        <div className="step-icon">{steps[brewing.currentStep].icon}</div>
         <h3 className="step-name">{steps[brewing.currentStep].name}</h3>
         <button className="complete-step-btn" onClick={completeStep}>
-          ✓ Complete Step
+          Complete Step
         </button>
       </div>
 
@@ -103,11 +102,10 @@ function PotionBrewing() {
             }`}
           >
             <div className="step-number">{index + 1}</div>
-            <div className="step-icon-small">{step.icon}</div>
             <div className="step-info">
               <div className="step-name-small">{step.name}</div>
             </div>
-            {index < brewing.currentStep && <div className="check-mark">✓</div>}
+            {index < brewing.currentStep && <div className="check-mark">Done</div>}
           </div>
         ))}
       </div>
@@ -115,7 +113,7 @@ function PotionBrewing() {
       {/* Controls */}
       <div className="controls">
         <button className="action-btn reset-btn" onClick={reset}>
-          🔄 Start Over
+          Start Over
         </button>
       </div>
     </div>
@@ -126,7 +124,7 @@ function App() {
   return (
     <div className="app-container">
       <div className="quest-header">
-        <h1>⚡ Quest 2: Potion Brewing</h1>
+        <h1>Quest 2: Potion Brewing</h1>
         <p className="quest-subtitle">Managing state as an object</p>
       </div>
 

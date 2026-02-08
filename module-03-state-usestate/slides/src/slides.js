@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "State with useState",
       subtitle: "Module 3: Making Components Come Alive",
-      emoji: "⚡",
+      icon: "zap",
     },
   },
   {
@@ -18,7 +18,7 @@ export const slides = [
         "How do we update mana after casting?",
         "We need values that can CHANGE...",
       ],
-      emoji: "🤔",
+      icon: "help-circle",
     },
   },
   {
@@ -26,7 +26,7 @@ export const slides = [
     content: {
       title: "Enter State!",
       subtitle: "Values that change over time",
-      emoji: "✨",
+      icon: "sparkles",
     },
   },
   {
@@ -40,7 +40,7 @@ export const slides = [
         "Each component instance has its own state",
         'The "memory" of your component',
       ],
-      emoji: "🧠",
+      icon: "brain",
     },
   },
   {
@@ -54,7 +54,7 @@ export const slides = [
         "Events trigger functions that update state",
         "camelCase in React (onClick not onclick)",
       ],
-      emoji: "👆",
+      icon: "mouse",
     },
   },
   {
@@ -65,22 +65,22 @@ export const slides = [
         {
           rule: "onClick",
           example: "<button onClick={handleClick}>",
-          icon: "🖱️",
+          icon: "mouse",
         },
         {
           rule: "onChange",
           example: "<input onChange={handleChange}>",
-          icon: "⌨️",
+          icon: "keyboard",
         },
         {
           rule: "onSubmit",
           example: "<form onSubmit={handleSubmit}>",
-          icon: "📤",
+          icon: "upload",
         },
         {
           rule: "Arrow function",
           example: "onClick={() => setCount(count + 1)}",
-          icon: "➡️",
+          icon: "arrow-right",
         },
       ],
     },
@@ -120,7 +120,7 @@ export const slides = [
         "Never: <a onClick={...}> without href",
         "Screen readers announce them differently",
       ],
-      emoji: "♿",
+      icon: "accessibility",
     },
   },
   {
@@ -134,7 +134,7 @@ export const slides = [
         "Missing semantic meaning",
         "Just use <button> — free accessibility!",
       ],
-      emoji: "🚫",
+      icon: "ban",
     },
   },
   {
@@ -142,7 +142,7 @@ export const slides = [
     content: {
       title: "This is Reactivity!",
       subtitle: "That's why it's called React",
-      emoji: "⚛️",
+      icon: "atom",
     },
   },
   {
@@ -156,7 +156,7 @@ export const slides = [
         "4. UI updates to show new state",
         "You describe WHAT to show, React handles WHEN to update",
       ],
-      emoji: "🔄",
+      icon: "refresh",
     },
   },
   {
@@ -218,22 +218,22 @@ function Counter() {
         {
           rule: "Call at top level",
           example: "Not inside loops or conditions",
-          icon: "1️⃣",
+          icon: "circle-dot",
         },
         {
           rule: "Use the setter function",
           example: "setCount(5) not count = 5",
-          icon: "2️⃣",
+          icon: "circle-dot",
         },
         {
           rule: "State updates are async",
           example: "New value on next render",
-          icon: "3️⃣",
+          icon: "circle-dot",
         },
         {
           rule: "Don't mutate directly",
           example: "Create new objects/arrays",
-          icon: "4️⃣",
+          icon: "circle-dot",
         },
       ],
     },
@@ -249,7 +249,7 @@ function Counter() {
         'React is the "source of truth"',
         "Enables validation, formatting, sync",
       ],
-      emoji: "🎮",
+      icon: "gamepad",
     },
   },
   {
@@ -289,7 +289,7 @@ function Counter() {
         "Work with object and array state",
         "Understand state vs props",
       ],
-      emoji: "🎯",
+      icon: "target",
     },
   },
   {
@@ -297,7 +297,7 @@ function Counter() {
     content: {
       title: "Let's Code!",
       subtitle: "Time to make things interactive",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

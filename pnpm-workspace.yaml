@@ -1,0 +1,14 @@
+packages:
+  # Common slide deck package
+  - 'slide-deck'
+  
+  # All module slides
+  - 'module-*/slides'
+  
+  # All module demos (including numbered demos)
+  - 'module-*/demo'
+  - 'module-*/demo-*'
+  
+  # All quest starters and solutions across all modules
+  - 'module-*/quest-*/starter'
+  - 'module-*/quest-*/solution'

@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>📚 Spell Inventory</h1>
+      <h1>Spell Inventory</h1>
       <p className="subtitle">Manage your magical arsenal with useReducer</p>
 
       <div className="stats">
@@ -107,7 +107,6 @@ function App() {
           <li key={spell.id} className={spell.isFavorite ? "favorite" : ""}>
             <div className="spell-info">
               <span className="spell-name">
-                {spell.isFavorite && "⭐ "}
                 {spell.name}
               </span>
               <span className="spell-power">Power: {spell.power}</span>
@@ -117,19 +116,19 @@ function App() {
                 onClick={() => handleToggleFavorite(spell.id)}
                 className="btn-favorite"
               >
-                {spell.isFavorite ? "💔" : "❤️"}
+                {spell.isFavorite ? "Unfavorite" : "Favorite"}
               </button>
               <button
                 onClick={() => handleUpgradeSpell(spell.id)}
                 className="btn-upgrade"
               >
-                ⬆️ +10
+                +10
               </button>
               <button
                 onClick={() => handleRemoveSpell(spell.id)}
                 className="btn-remove"
               >
-                🗑️
+                Remove
               </button>
             </div>
           </li>

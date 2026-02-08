@@ -4,14 +4,14 @@ export const slides = [
     content: {
       title: "Context API",
       subtitle: "Module 10: Global State Without Prop Drilling",
-      emoji: "🌐",
+      icon: "globe",
     },
   },
   {
     type: "standard",
     content: {
       title: "The Prop Drilling Problem",
-      emoji: "😫",
+      icon: "frown",
       points: [
         "Props must pass through every component in the tree",
         "Intermediate components don't need the data",
@@ -40,7 +40,7 @@ function Sidebar({ theme, setTheme }) {
 }
 
 function ThemeToggle({ theme, setTheme }) {
-  // Finally use it here! 😫
+  // Finally use it here!
   return <button onClick={() => setTheme(/*...*/)}>
     {theme}
   </button>
@@ -114,7 +114,7 @@ function ThemeToggle() {
 
   return (
     <button onClick={toggleTheme}>
-      {theme === 'light' ? '🌙' : '☀️'}
+      {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
     </button>
   )
 }
@@ -225,7 +225,7 @@ function Content() {
     type: "standard",
     content: {
       title: "When to Use Context",
-      emoji: "✅",
+      icon: "check-circle",
       points: [
         "Theme (dark/light mode)",
         "User authentication state",
@@ -240,7 +240,7 @@ function Content() {
     type: "standard",
     content: {
       title: "When NOT to Use Context",
-      emoji: "⚠️",
+      icon: "alert-triangle",
       points: [
         "Data that changes very frequently",
         "Complex state with many actions",
@@ -343,7 +343,7 @@ function Header() {
     type: "standard",
     content: {
       title: "Context Best Practices",
-      emoji: "💡",
+      icon: "lightbulb",
       points: [
         "Keep context focused (one concern per context)",
         "Always use custom hooks for consumption",
@@ -385,7 +385,7 @@ function Header() {
     type: "standard",
     content: {
       title: "Module 10 Quests",
-      emoji: "📋",
+      icon: "clipboard",
       points: [
         "Quest 1: Theme Switcher - Light/dark mode with persistence",
         "Quest 2: Language Support - i18n with translation context",

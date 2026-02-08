@@ -30,7 +30,7 @@ function LoginForm({ onLogin }) {
 
   return (
     <div className="login-container">
-      <h2>🎓 Join the Academy</h2>
+      <h2>Join the Academy</h2>
       <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
           <label>Wizard Name</label>
@@ -52,7 +52,7 @@ function LoginForm({ onLogin }) {
           </select>
         </div>
         <button type="submit" className="btn btn-login">
-          Enter Academy ✨
+          Enter Academy
         </button>
       </form>
     </div>
@@ -70,7 +70,7 @@ function Dashboard({ user, onLogout }) {
       <div className="dashboard-header">
         <div>
           <h2>Welcome back, {user.name}!</h2>
-          <p className="house-badge">🏰 House {user.house}</p>
+          <p className="house-badge">House {user.house}</p>
         </div>
         <button onClick={onLogout} className="btn btn-logout">
           Logout
@@ -79,21 +79,21 @@ function Dashboard({ user, onLogout }) {
 
       <div className="stats-grid">
         <div className="stat-card">
-          <div className="stat-icon">⭐</div>
+          <div className="stat-icon">Level</div>
           <div>
             <div className="stat-value">Level {user.level}</div>
             <div className="stat-label">Current Level</div>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">🔥</div>
+          <div className="stat-icon">Spells</div>
           <div>
             <div className="stat-value">42</div>
             <div className="stat-label">Spells Learned</div>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">🏆</div>
+          <div className="stat-icon">Wins</div>
           <div>
             <div className="stat-value">8</div>
             <div className="stat-label">Battles Won</div>
@@ -105,21 +105,21 @@ function Dashboard({ user, onLogout }) {
         <h3>Available Quests</h3>
         <div className="quest-list">
           <div className="quest-card">
-            <span className="quest-icon">⚔️</span>
+            <span className="quest-icon">Battle</span>
             <div>
               <div className="quest-title">Duel a Rival</div>
               <div className="quest-reward">+50 XP</div>
             </div>
           </div>
           <div className="quest-card">
-            <span className="quest-icon">📚</span>
+            <span className="quest-icon">Study</span>
             <div>
               <div className="quest-title">Study Advanced Spells</div>
               <div className="quest-reward">+30 XP</div>
             </div>
           </div>
           <div className="quest-card">
-            <span className="quest-icon">🧪</span>
+            <span className="quest-icon">Potion</span>
             <div>
               <div className="quest-title">Brew a Potion</div>
               <div className="quest-reward">+25 XP</div>
@@ -157,7 +157,7 @@ function App() {
   // Child components should use useAuth() instead of props
   return (
     <div className="app">
-      <h1>🏰 Wizard Academy</h1>
+      <h1>Wizard Academy</h1>
       <p>Authentication with Context API</p>
 
       {isAuthenticated ? (
@@ -167,7 +167,7 @@ function App() {
       )}
 
       <div className="info-box">
-        <h3>🔑 Auth Context Pattern</h3>
+        <h3>Auth Context Pattern</h3>
         <ul>
           <li>User state stored in context</li>
           <li>Login/logout available globally</li>

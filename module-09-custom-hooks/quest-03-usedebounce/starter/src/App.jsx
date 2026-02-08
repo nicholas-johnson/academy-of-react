@@ -112,7 +112,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🔍 useDebounce Hook Demo</h1>
+      <h1>useDebounce Hook Demo</h1>
       <p>Optimize search with debouncing</p>
 
       <div className="search-section">
@@ -157,7 +157,7 @@ function App() {
                   <span className={`type-badge ${spell.type}`}>
                     {spell.type}
                   </span>
-                  <span className="power-badge">⚡ {spell.power}</span>
+                  <span className="power-badge">Power: {spell.power}</span>
                 </div>
               </div>
             ))}
@@ -166,7 +166,7 @@ function App() {
       </div>
 
       <div className="info-box">
-        <h3>🔑 useDebounce Benefits</h3>
+        <h3>useDebounce Benefits</h3>
         <ul>
           <li>
             <strong>Performance</strong>: Reduces API calls dramatically

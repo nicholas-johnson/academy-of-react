@@ -60,22 +60,10 @@ function App() {
     setPower(50);
   };
 
-  const getElementEmoji = (el) => {
-    const emojis = {
-      fire: "🔥",
-      ice: "❄️",
-      lightning: "⚡",
-      holy: "✨",
-      dark: "🌑",
-      earth: "🪨",
-    };
-    return emojis[el] || "🔮";
-  };
-
   return (
     <div className="app">
       <header className="header">
-        <h1>🐻 Zustand Spell Inventory</h1>
+        <h1>Zustand Spell Inventory</h1>
         <p>Simple state management with Zustand</p>
       </header>
 
@@ -97,7 +85,7 @@ function App() {
               >
                 {ELEMENTS.map((el) => (
                   <option key={el} value={el}>
-                    {getElementEmoji(el)} {el}
+                    {el}
                   </option>
                 ))}
               </select>
@@ -131,7 +119,7 @@ function App() {
                 <option value="all">All Elements</option>
                 {ELEMENTS.map((el) => (
                   <option key={el} value={el}>
-                    {getElementEmoji(el)} {el}
+                    {el}
                   </option>
                 ))}
               </select>
@@ -162,9 +150,6 @@ function App() {
             ) : (
               filteredSpells.map((spell) => (
                 <div key={spell.id} className="spell-card">
-                  <span className="spell-element">
-                    {getElementEmoji(spell.element)}
-                  </span>
                   <div className="spell-info">
                     <h3>{spell.name}</h3>
                     <p>Power: {spell.power}</p>
@@ -181,7 +166,7 @@ function App() {
           </div>
 
           <p className="persistence-note">
-            ✨ Your inventory is saved to localStorage automatically!
+            Your inventory is saved to localStorage automatically!
           </p>
         </section>
       </main>

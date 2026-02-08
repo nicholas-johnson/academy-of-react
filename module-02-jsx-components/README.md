@@ -49,7 +49,7 @@ The slides cover:
 - Introduction to Vite
 - Module 2 goals
 
-## Welcome to Vite! ⚡
+## Welcome to Vite!
 
 Starting in Module 2, we're switching from CDN + Babel to **Vite**, a modern build tool that makes React development fast and enjoyable.
 
@@ -59,21 +59,21 @@ In Module 1, you learned React basics using CDN links and directly opening HTML 
 
 **Problems with CDN + Babel Standalone:**
 
-- 🐌 Slow transformation (Babel Standalone isn't optimized)
-- ❌ CORS errors when opening `file://` URLs
-- 🚫 Not how professional React developers work
-- 📦 Can't use npm packages or modern imports
-- 🐛 Harder to debug
+- Slow transformation (Babel Standalone isn't optimized)
+- CORS errors when opening `file://` URLs
+- Not how professional React developers work
+- Can't use npm packages or modern imports
+- Harder to debug
 
 **Benefits of Vite:**
 
-- ⚡ Lightning-fast Hot Module Replacement (HMR) - see changes in milliseconds!
-- 🎯 Modern ES modules - proper imports and exports
-- 📦 Access to the entire npm ecosystem
-- 🔧 Optimized production builds
-- 💪 Better error messages and debugging
-- 🌐 No more CORS issues
-- ✨ This is how React pros work!
+- Lightning-fast Hot Module Replacement (HMR) - see changes in milliseconds!
+- Modern ES modules - proper imports and exports
+- Access to the entire npm ecosystem
+- Optimized production builds
+- Better error messages and debugging
+- No more CORS issues
+- This is how React pros work!
 
 ### What is Vite?
 
@@ -148,7 +148,7 @@ demo/
 1. **You edit** `src/App.jsx` and save
 2. **Vite detects** the change instantly
 3. **HMR updates** only that module in the browser
-4. **You see** the result in milliseconds! ⚡
+4. **You see** the result in milliseconds!
 
 No page refresh, no losing state - just instant updates!
 
@@ -225,11 +225,11 @@ Much easier to read and work with! JSX gets transformed to `createElement()` cal
 1. **Single Parent**: JSX must have one parent element
 
    ```jsx
-   // ❌ Wrong:
+   // Wrong:
    <h1>Title</h1>
    <p>Text</p>
 
-   // ✅ Correct:
+   // Correct:
    <div>
      <h1>Title</h1>
      <p>Text</p>
@@ -259,7 +259,7 @@ Much easier to read and work with! JSX gets transformed to `createElement()` cal
 
 ### Quest 1: JSX Conversion
 
-**Difficulty**: ⭐ Beginner
+**Difficulty**: Beginner (1/5)
 
 Convert your Module 1 createElement() code to JSX syntax.
 
@@ -267,7 +267,7 @@ Convert your Module 1 createElement() code to JSX syntax.
 
 ### Quest 2: Props Basics
 
-**Difficulty**: ⭐⭐ Beginner-Intermediate
+**Difficulty**: Beginner-Intermediate (2/5)
 
 Create a reusable SpellCard component that receives data via props.
 
@@ -275,7 +275,7 @@ Create a reusable SpellCard component that receives data via props.
 
 ### Quest 3: Component Lists
 
-**Difficulty**: ⭐⭐ Intermediate
+**Difficulty**: Intermediate (2/5)
 
 Build a PotionCard component and render a list using `.map()` with keys.
 

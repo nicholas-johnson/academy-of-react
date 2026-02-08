@@ -6,7 +6,6 @@ const potions = [
     id: 1,
     name: "Health Elixir",
     effect: "healing",
-    icon: "🧪",
     potency: 90,
     brewTime: 30,
     ingredients: ["Dragon's Blood", "Moonflower", "Crystal Water"],
@@ -16,7 +15,6 @@ const potions = [
     id: 2,
     name: "Mana Potion",
     effect: "energy",
-    icon: "💙",
     potency: 75,
     brewTime: 20,
     ingredients: ["Stardust", "Sage", "Pure Spring Water"],
@@ -26,7 +24,6 @@ const potions = [
     id: 3,
     name: "Strength Tonic",
     effect: "power",
-    icon: "💪",
     potency: 85,
     brewTime: 45,
     ingredients: ["Giant's Tooth", "Iron Root", "Bear Claw"],
@@ -36,7 +33,6 @@ const potions = [
     id: 4,
     name: "Invisibility Draught",
     effect: "stealth",
-    icon: "👻",
     potency: 70,
     brewTime: 60,
     ingredients: ["Shadow Essence", "Ghost Orchid", "Void Crystal"],
@@ -45,7 +41,7 @@ const potions = [
 ];
 
 // TODO: Create a PotionCard component that displays potion info
-// function PotionCard({ name, icon, potency, ingredients, price }) { ... }
+// function PotionCard({ name, potency, ingredients, price }) { ... }
 
 // TODO: Create an Ingredient component for the ingredients list
 // function Ingredient({ name }) { ... }

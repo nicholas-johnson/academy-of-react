@@ -47,9 +47,9 @@ function App() {
   return (
     <div className={`app ${darkMode ? "dark" : ""}`}>
       <div className="header">
-        <h1>🪄 Wizard Profile</h1>
+        <h1>Wizard Profile</h1>
         <button onClick={() => setDarkMode(!darkMode)} className="theme-btn">
-          {darkMode ? "☀️" : "🌙"}
+          {darkMode ? "Light" : "Dark"}
         </button>
       </div>
 
@@ -85,7 +85,7 @@ function App() {
             <span className="level-value">{profile.level}</span>
           </div>
           <button onClick={levelUp} className="btn btn-primary">
-            Level Up! ⬆️
+            Level Up!
           </button>
         </div>
       </div>
@@ -95,7 +95,7 @@ function App() {
       </button>
 
       <div className="info-box">
-        <h3>🔑 useLocalStorage Hook</h3>
+        <h3>useLocalStorage Hook</h3>
         <ul>
           <li>Automatically syncs with localStorage</li>
           <li>JSON serialization/deserialization</li>

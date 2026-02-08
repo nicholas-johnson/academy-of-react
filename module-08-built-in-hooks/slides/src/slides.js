@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "Built-in React Hooks",
       subtitle: "Module 8: The Complete Hook Reference",
-      emoji: "🪝",
+      icon: "anchor",
     },
   },
   {
@@ -18,7 +18,7 @@ export const slides = [
         "Must be called at the top level (not in loops/conditions)",
         "React has ~15 built-in hooks",
       ],
-      emoji: "🎣",
+      icon: "anchor",
     },
   },
   {
@@ -26,14 +26,14 @@ export const slides = [
     content: {
       title: "Hook Categories",
       points: [
-        "📦 State Hooks — useState, useReducer",
-        "🔗 Context Hooks — useContext",
-        "🎯 Ref Hooks — useRef, useImperativeHandle",
-        "⚡ Effect Hooks — useEffect, useLayoutEffect",
-        "🚀 Performance Hooks — useMemo, useCallback, useTransition",
-        "🔧 Other Hooks — useId, useSyncExternalStore",
+        "State Hooks — useState, useReducer",
+        "Context Hooks — useContext",
+        "Ref Hooks — useRef, useImperativeHandle",
+        "Effect Hooks — useEffect, useLayoutEffect",
+        "Performance Hooks — useMemo, useCallback, useTransition",
+        "Other Hooks — useId, useSyncExternalStore",
       ],
-      emoji: "📚",
+      icon: "book-open",
     },
   },
 
@@ -43,7 +43,7 @@ export const slides = [
     content: {
       title: "How Hooks Work",
       subtitle: "Under the Hood",
-      emoji: "🔬",
+      icon: "search",
     },
   },
   {
@@ -85,7 +85,7 @@ Fiber {
     type: "code",
     content: {
       title: "Why Call Order Matters",
-      code: `// ❌ BAD: Conditional hook call
+      code: `// BAD: Conditional hook call
 function Profile({ user }) {
   if (user) {
     const [name, setName] = useState(user.name)  // Sometimes Hook 1
@@ -99,7 +99,7 @@ function Profile({ user }) {
 
 // Second render (user is null):
 //   Hook 1 → age state  ← WRONG! React expects name here
-//   💥 State is now corrupted!`,
+//   State is now corrupted!`,
       highlights: [
         "React matches hooks by call ORDER",
         "No names or keys — just position in the list",
@@ -116,22 +116,22 @@ function Profile({ user }) {
         {
           rule: "Only call at top level",
           example: "Not in loops, conditions, or nested functions",
-          icon: "1️⃣",
+          icon: "circle-dot",
         },
         {
           rule: "Only call from React functions",
           example: "Components or custom hooks, not regular JS",
-          icon: "2️⃣",
+          icon: "circle-dot",
         },
         {
           rule: "Same order every render",
           example: "React relies on consistent call sequence",
-          icon: "3️⃣",
+          icon: "circle-dot",
         },
         {
           rule: 'Start with "use"',
           example: "Convention that enables lint rules",
-          icon: "4️⃣",
+          icon: "circle-dot",
         },
       ],
     },
@@ -140,7 +140,7 @@ function Profile({ user }) {
     type: "code",
     content: {
       title: "Correct Patterns",
-      code: `// ✅ GOOD: Unconditional hooks, conditional logic inside
+      code: `// GOOD: Unconditional hooks, conditional logic inside
 function Profile({ user }) {
   const [name, setName] = useState('')  // Always called
   const [age, setAge] = useState(0)     // Always called
@@ -154,7 +154,7 @@ function Profile({ user }) {
   return user ? <div>{name}</div> : <div>Loading...</div>
 }
 
-// ✅ GOOD: Early return AFTER all hooks
+// GOOD: Early return AFTER all hooks
 function Profile({ user }) {
   const [data, setData] = useState(null)
   
@@ -174,7 +174,7 @@ function Profile({ user }) {
     content: {
       title: "The Math Behind Hooks",
       subtitle: "Algebraic Effects",
-      emoji: "📐",
+      icon: "square",
     },
   },
   {
@@ -188,7 +188,7 @@ function Profile({ user }) {
         "The key insight: separate WHAT you want from HOW it happens",
         "Your component describes effects; React handles execution",
       ],
-      emoji: "🧮",
+      icon: "calculator",
     },
   },
   {
@@ -233,7 +233,7 @@ function UserProfile() {
         "Makes time-travel debugging possible",
         "Components remain pure and predictable",
       ],
-      emoji: "💡",
+      icon: "lightbulb",
     },
   },
   {
@@ -267,7 +267,7 @@ function UserProfile() {
     content: {
       title: "State Hooks",
       subtitle: "useState & useReducer",
-      emoji: "📦",
+      icon: "package",
     },
   },
   {
@@ -356,7 +356,7 @@ dispatch({ type: 'reset' })`,
     content: {
       title: "Context Hooks",
       subtitle: "useContext",
-      emoji: "🔗",
+      icon: "link",
     },
   },
   {
@@ -391,7 +391,7 @@ function Button() {
     content: {
       title: "Ref Hooks",
       subtitle: "useRef & useImperativeHandle",
-      emoji: "🎯",
+      icon: "target",
     },
   },
   {
@@ -462,7 +462,7 @@ ref.current.clear()`,
     content: {
       title: "Effect Hooks",
       subtitle: "useEffect & useLayoutEffect",
-      emoji: "⚡",
+      icon: "zap",
     },
   },
   {
@@ -521,7 +521,7 @@ useLayoutEffect(() => {
         "Blocks browser paint until complete",
         "Use for DOM measurements",
         "Prevents visual flicker",
-        "⚠️ Can hurt performance — prefer useEffect",
+        "Can hurt performance — prefer useEffect",
       ],
     },
   },
@@ -535,7 +535,7 @@ useLayoutEffect(() => {
           "Runs after paint",
           "Non-blocking",
           "Use for: data fetching, subscriptions",
-          "✅ Default choice",
+          "Default choice",
         ],
       },
       right: {
@@ -544,7 +544,7 @@ useLayoutEffect(() => {
           "Runs before paint",
           "Blocks rendering",
           "Use for: DOM measurements, tooltips",
-          "⚠️ Only when needed",
+          "Only when needed",
         ],
       },
     },
@@ -556,7 +556,7 @@ useLayoutEffect(() => {
     content: {
       title: "Performance Hooks",
       subtitle: "useMemo, useCallback, useTransition",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
   {
@@ -576,7 +576,7 @@ const config = useMemo(() => ({
 }), [])  // Never recreated
 
 // Don't overuse! Only for expensive operations
-const simple = count * 2  // ❌ Don't memoize simple math`,
+const simple = count * 2  // Don't memoize simple math`,
       highlights: [
         "Caches result between renders",
         "Recalculates only when dependencies change",
@@ -680,7 +680,7 @@ return (
     content: {
       title: "Other Hooks",
       subtitle: "useId & More",
-      emoji: "🔧",
+      icon: "wrench",
     },
   },
   {
@@ -785,17 +785,17 @@ useDebugValue(date, date => date.toISOString())`,
         {
           rule: "Need component state?",
           example: "useState or useReducer",
-          icon: "📦",
+          icon: "package",
         },
-        { rule: "Need shared state?", example: "useContext", icon: "🔗" },
-        { rule: "Need DOM access?", example: "useRef", icon: "🎯" },
-        { rule: "Need side effects?", example: "useEffect", icon: "⚡" },
+        { rule: "Need shared state?", example: "useContext", icon: "link" },
+        { rule: "Need DOM access?", example: "useRef", icon: "target" },
+        { rule: "Need side effects?", example: "useEffect", icon: "zap" },
         {
           rule: "Need performance?",
           example: "useMemo, useCallback",
-          icon: "🚀",
+          icon: "rocket",
         },
-        { rule: "Need unique IDs?", example: "useId", icon: "🔧" },
+        { rule: "Need unique IDs?", example: "useId", icon: "wrench" },
       ],
     },
   },
@@ -804,14 +804,14 @@ useDebugValue(date, date => date.toISOString())`,
     content: {
       title: "The Essential 6",
       points: [
-        "📦 useState — local state",
-        "⚡ useEffect — side effects",
-        "🎯 useRef — DOM access, mutable values",
-        "🔗 useContext — shared state",
-        "🚀 useMemo — memoize values",
-        "🚀 useCallback — memoize functions",
+        "useState — local state",
+        "useEffect — side effects",
+        "useRef — DOM access, mutable values",
+        "useContext — shared state",
+        "useMemo — memoize values",
+        "useCallback — memoize functions",
       ],
-      emoji: "⭐",
+      icon: "star",
     },
   },
   {
@@ -824,7 +824,7 @@ useDebugValue(date, date => date.toISOString())`,
         "Quest 3: Media Controls — Build a video player",
         "Quest 4: useReducer — Manage complex spell inventory",
       ],
-      emoji: "📋",
+      icon: "clipboard",
     },
   },
   {
@@ -832,7 +832,7 @@ useDebugValue(date, date => date.toISOString())`,
     content: {
       title: "Let's Practice!",
       subtitle: "Time to master React's built-in hooks",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

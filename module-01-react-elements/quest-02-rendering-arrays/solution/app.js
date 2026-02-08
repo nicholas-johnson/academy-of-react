@@ -70,12 +70,12 @@ const students = [
   },
 ];
 
-// House colors and emblems
+// House colors
 const houseConfig = {
-  Valor: { color: "#dc2626", emblem: "🦁" },
-  Wisdom: { color: "#2563eb", emblem: "🦅" },
-  Nature: { color: "#16a34a", emblem: "🐺" },
-  Mystery: { color: "#9333ea", emblem: "🐍" },
+  Valor: { color: "#dc2626" },
+  Wisdom: { color: "#2563eb" },
+  Nature: { color: "#16a34a" },
+  Mystery: { color: "#9333ea" },
 };
 
 // Student card component
@@ -108,14 +108,6 @@ const StudentCard = (student) => {
           `Lv ${student.level}`,
         ),
       ),
-      h(
-        "span",
-        {
-          className: "house-emblem",
-          style: { color: config.color },
-        },
-        config.emblem,
-      ),
     ),
 
     // Card body
@@ -125,7 +117,7 @@ const StudentCard = (student) => {
       h(
         "div",
         { className: "info-row" },
-        h("span", { className: "info-label" }, "🏠 House:"),
+        h("span", { className: "info-label" }, "House:"),
         h(
           "span",
           {
@@ -138,13 +130,13 @@ const StudentCard = (student) => {
       h(
         "div",
         { className: "info-row" },
-        h("span", { className: "info-label" }, "✨ Specialty:"),
+        h("span", { className: "info-label" }, "Specialty:"),
         h("span", { className: "info-value" }, student.specialty),
       ),
       h(
         "div",
         { className: "info-row" },
-        h("span", { className: "info-label" }, "📊 Status:"),
+        h("span", { className: "info-label" }, "Status:"),
         h(
           "span",
           {
@@ -165,7 +157,7 @@ const App = () => {
     h(
       "div",
       { className: "quest-header" },
-      h("h1", null, "⚡ Quest 2: Student Registry"),
+      h("h1", null, "Quest 2: Student Registry"),
       h(
         "p",
         { className: "quest-subtitle" },

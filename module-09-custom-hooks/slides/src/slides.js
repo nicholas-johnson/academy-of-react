@@ -4,7 +4,7 @@ export const slides = [
     content: {
       title: "Custom Hooks",
       subtitle: "Module 9: Reusable Stateful Logic",
-      emoji: "🪝",
+      icon: "anchor",
     },
   },
   {
@@ -18,7 +18,7 @@ export const slides = [
         "Hard to test and maintain",
         "We need a way to share stateful logic!",
       ],
-      emoji: "🤔",
+      icon: "help-circle",
     },
   },
   {
@@ -32,7 +32,7 @@ export const slides = [
         "Can use any built-in hooks inside",
         "Returns whatever you want (value, array, object)",
       ],
-      emoji: "🪝",
+      icon: "anchor",
     },
   },
   {
@@ -77,22 +77,22 @@ function App() {
         {
           rule: 'Name starts with "use"',
           example: "useLocalStorage, useFetch",
-          icon: "📛",
+          icon: "tag",
         },
         {
           rule: "Call hooks at the top level",
           example: "Not in loops or conditions",
-          icon: "⬆️",
+          icon: "circle-up",
         },
         {
           rule: "Only call from React functions",
           example: "Components or other hooks",
-          icon: "⚛️",
+          icon: "atom",
         },
         {
           rule: "Can use any hooks inside",
           example: "useState, useEffect, useRef...",
-          icon: "🪝",
+          icon: "anchor",
         },
       ],
     },
@@ -205,13 +205,13 @@ useEffect(() => {
     content: {
       title: "Why Custom Hooks?",
       points: [
-        "♻️ Reusability — Use same logic in many components",
-        "🧪 Testability — Test logic separately from UI",
-        "📦 Encapsulation — Hide complex implementation",
-        "🧹 Clean Code — Components stay focused on rendering",
-        "🤝 Sharing — Publish hooks as npm packages",
+        "Reusability — Use same logic in many components",
+        "Testability — Test logic separately from UI",
+        "Encapsulation — Hide complex implementation",
+        "Clean Code — Components stay focused on rendering",
+        "Sharing — Publish hooks as npm packages",
       ],
-      emoji: "✨",
+      icon: "sparkles",
     },
   },
   {
@@ -346,14 +346,14 @@ const { count, increment, decrement, reset } = useCounter(10)
     content: {
       title: "Common Custom Hooks",
       points: [
-        "💾 useLocalStorage — Persist state in browser",
-        "📡 useFetch — Data fetching with loading/error",
-        "⏱️ useDebounce — Delay value updates",
-        "📏 useWindowSize — Track window dimensions",
-        "🔄 usePrevious — Access previous value",
-        "⌨️ useKeyPress — Detect key presses",
+        "useLocalStorage — Persist state in browser",
+        "useFetch — Data fetching with loading/error",
+        "useDebounce — Delay value updates",
+        "useWindowSize — Track window dimensions",
+        "usePrevious — Access previous value",
+        "useKeyPress — Detect key presses",
       ],
-      emoji: "🧰",
+      icon: "wrench",
     },
   },
   {
@@ -364,22 +364,22 @@ const { count, increment, decrement, reset } = useCounter(10)
         {
           rule: "Logic is used in 2+ components",
           example: "Extract and share it",
-          icon: "♻️",
+          icon: "recycle",
         },
         {
           rule: "Component is getting complex",
           example: "Separate concerns",
-          icon: "🧹",
+          icon: "eraser",
         },
         {
           rule: "You want to test logic",
           example: "Test hook independently",
-          icon: "🧪",
+          icon: "flask",
         },
         {
           rule: "You see useState + useEffect together",
           example: "Often a hook waiting to happen",
-          icon: "🪝",
+          icon: "anchor",
         },
       ],
     },
@@ -396,7 +396,7 @@ const { count, increment, decrement, reset } = useCounter(10)
         "Build useDebounce for performance",
         "Compose hooks together",
       ],
-      emoji: "🎯",
+      icon: "target",
     },
   },
   {
@@ -404,7 +404,7 @@ const { count, increment, decrement, reset } = useCounter(10)
     content: {
       title: "Let's Build Hooks!",
       subtitle: "Time to extract reusable logic",
-      emoji: "🚀",
+      icon: "rocket",
     },
   },
 ];

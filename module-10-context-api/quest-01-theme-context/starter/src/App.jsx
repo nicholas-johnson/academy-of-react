@@ -20,9 +20,9 @@ function Header() {
 
   return (
     <header className="header">
-      <h1>⚡ Battle Academy</h1>
+      <h1>Battle Academy</h1>
       <button onClick={toggleTheme} className="theme-toggle">
-        {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+        {theme === "light" ? "Dark" : "Light"}
       </button>
     </header>
   );
@@ -42,21 +42,21 @@ function Content() {
 
       <div className="stats">
         <div className="stat-card">
-          <span className="stat-icon">🔥</span>
+          <span className="stat-icon">Spells</span>
           <div>
             <div className="stat-value">250</div>
             <div className="stat-label">Spells Cast</div>
           </div>
         </div>
         <div className="stat-card">
-          <span className="stat-icon">⭐</span>
+          <span className="stat-icon">XP</span>
           <div>
             <div className="stat-value">1,420</div>
             <div className="stat-label">Experience</div>
           </div>
         </div>
         <div className="stat-card">
-          <span className="stat-icon">🏆</span>
+          <span className="stat-icon">Wins</span>
           <div>
             <div className="stat-value">15</div>
             <div className="stat-label">Victories</div>
