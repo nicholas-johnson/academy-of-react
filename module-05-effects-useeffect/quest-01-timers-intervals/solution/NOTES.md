@@ -48,7 +48,7 @@ const progress = ((totalSeconds - secondsRemaining) / totalSeconds) * 100;
 
 ## Common Pitfalls
 
-❌ **Forgetting cleanup**
+BAD: **Forgetting cleanup**
 
 ```javascript
 useEffect(() => {
@@ -57,7 +57,7 @@ useEffect(() => {
 }, [])
 ```
 
-✅ **Always cleanup**
+- **Always cleanup**
 
 ```javascript
 useEffect(() => {

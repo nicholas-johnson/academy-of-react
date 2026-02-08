@@ -137,16 +137,16 @@ app/
 
 ## Acceptance Criteria
 
-✅ Home page uses Static Generation (SSG)  
-✅ Students page uses ISR (revalidates periodically)  
-✅ Battles page uses Dynamic rendering  
-✅ API routes handle CRUD operations  
-✅ Admin routes protected with middleware  
-✅ Deployed to Vercel with custom domain (optional)  
-✅ Environment variables configured  
-✅ Production build optimized  
-✅ TypeScript throughout  
-✅ Error boundaries in place
+- Home page uses Static Generation (SSG)  
+- Students page uses ISR (revalidates periodically)  
+- Battles page uses Dynamic rendering  
+- API routes handle CRUD operations  
+- Admin routes protected with middleware  
+- Deployed to Vercel with custom domain (optional)  
+- Environment variables configured  
+- Production build optimized  
+- TypeScript throughout  
+- Error boundaries in place
 
 ## Environment Variables
 

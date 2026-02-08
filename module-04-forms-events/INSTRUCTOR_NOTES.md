@@ -141,7 +141,7 @@ The fundamental pattern:
 **The Problem:**
 
 ```jsx
-// ❌ WITHOUT e.preventDefault() — page refreshes, state lost!
+// BAD: WITHOUT e.preventDefault() — page refreshes, state lost!
 <form onSubmit={handleSubmit}>
 ```
 

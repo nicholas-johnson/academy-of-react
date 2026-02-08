@@ -137,7 +137,7 @@ const avgLevel = Math.round(
 
 ## Common Pitfalls
 
-### ❌ Wrong: Missing key prop
+### BAD: Missing key prop
 
 ```javascript
 students.map((student) => h(StudentCard, { ...student }));
@@ -145,13 +145,13 @@ students.map((student) => h(StudentCard, { ...student }));
 
 React warning: "Each child should have a unique 'key' prop"
 
-### ✅ Right: Always provide key
+### - Right: Always provide key
 
 ```javascript
 students.map((student) => h(StudentCard, { key: student.id, ...student }));
 ```
 
-### ❌ Wrong: Modifying props object
+### BAD: Modifying props object
 
 ```javascript
 function StudentCard(props) {
@@ -160,7 +160,7 @@ function StudentCard(props) {
 }
 ```
 
-### ✅ Right: Props are read-only
+### - Right: Props are read-only
 
 ```javascript
 function StudentCard(props) {
@@ -169,7 +169,7 @@ function StudentCard(props) {
 }
 ```
 
-### ❌ Wrong: Using array index as key
+### BAD: Using array index as key
 
 ```javascript
 students.map((student, index) => h(StudentCard, { key: index, ...student }));
@@ -177,7 +177,7 @@ students.map((student, index) => h(StudentCard, { key: index, ...student }));
 
 Causes bugs when list order changes!
 
-### ✅ Right: Use stable, unique ID
+### - Right: Use stable, unique ID
 
 ```javascript
 students.map((student) => h(StudentCard, { key: student.id, ...student }));

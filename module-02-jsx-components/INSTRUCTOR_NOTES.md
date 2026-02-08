@@ -71,13 +71,13 @@ These cause the most errors. Emphasize them repeatedly:
 ### 1. Single Parent Element
 
 ```jsx
-// ❌ Won't work:
+// BAD: Won't work:
 return (
   <h1>Title</h1>
   <p>Text</p>
 )
 
-// ✅ Wrap in a parent:
+// - Wrap in a parent:
 return (
   <div>
     <h1>Title</h1>
@@ -85,7 +85,7 @@ return (
   </div>
 )
 
-// ✅ Or use a Fragment:
+// - Or use a Fragment:
 return (
   <>
     <h1>Title</h1>
@@ -104,22 +104,22 @@ return (
 <p>Power: {level * 2}</p>
 
 // NOT for strings (just use quotes):
-<p className="card">  // ✅ Not className={"card"}
+<p className="card">  // - Not className={"card"}
 ```
 
 ### 3. className, not class
 
 ```jsx
-<div className="card">  // ✅ React
-<div class="card">      // ❌ HTML (won't work)
+<div className="card">  // - React
+<div class="card">      // BAD: HTML (won't work)
 ```
 
 ### 4. Self-Closing Tags
 
 ```jsx
-<img src="photo.jpg" />  // ✅ Must self-close
-<br />                    // ✅ Must self-close
-<input type="text" />    // ✅ Must self-close
+<img src="photo.jpg" />  // - Must self-close
+<br />                    // - Must self-close
+<input type="text" />    // - Must self-close
 ```
 
 ---

@@ -63,26 +63,26 @@ Input value controlled by state!
 
 ## Array Update Patterns
 
-**❌ Wrong: Mutating directly**
+**BAD: Mutating directly**
 
 ```jsx
 students.push(newStudent); // Don't mutate!
 setStudents(students);
 ```
 
-**✅ Right: Create new array**
+**- Right: Create new array**
 
 ```jsx
 setStudents([...students, newStudent]);
 ```
 
-**❌ Wrong: Modifying element**
+**BAD: Modifying element**
 
 ```jsx
 students[0].name = "New Name"; // Don't mutate!
 ```
 
-**✅ Right: Map with new object**
+**- Right: Map with new object**
 
 ```jsx
 setStudents(students.map((s, i) => (i === 0 ? { ...s, name: "New Name" } : s)));
@@ -113,21 +113,21 @@ Validate before updating state.
 
 ## Best Practices
 
-✅ **Immutable updates**: Always create new arrays/objects
-✅ **Unique keys**: Use stable IDs (not array index)
-✅ **Controlled inputs**: Sync input value with state
-✅ **Compute, don't store**: Derive filtered/sorted data
-✅ **Validation**: Check data before state updates
+- **Immutable updates**: Always create new arrays/objects
+- **Unique keys**: Use stable IDs (not array index)
+- **Controlled inputs**: Sync input value with state
+- **Compute, don't store**: Derive filtered/sorted data
+- **Validation**: Check data before state updates
 
 ## Module 4 Complete!
 
 You now master:
 
-- ✅ useState hook basics
-- ✅ Multiple state variables
-- ✅ Complex state (objects/arrays)
-- ✅ Form handling
-- ✅ CRUD operations
+- - useState hook basics
+- - Multiple state variables
+- - Complex state (objects/arrays)
+- - Form handling
+- - CRUD operations
 
 **Congratulations!** You've completed Phase 1 (Modules 1-4) - JavaScript Basics with React!
 

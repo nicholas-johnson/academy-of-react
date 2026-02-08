@@ -65,13 +65,13 @@ const [optimisticBattles, addOptimisticBattle] = useOptimistic(
 
 ## Acceptance Criteria
 
-✅ Battles page displays all battles (Server Component)  
-✅ Form uses Server Action (no API route needed)  
-✅ Creating battle shows optimistic update  
-✅ `revalidatePath()` called after mutations  
-✅ Delete functionality works with confirmation  
-✅ Form validation and error messages  
-✅ TypeScript types for Battle interface
+- Battles page displays all battles (Server Component)  
+- Form uses Server Action (no API route needed)  
+- Creating battle shows optimistic update  
+- `revalidatePath()` called after mutations  
+- Delete functionality works with confirmation  
+- Form validation and error messages  
+- TypeScript types for Battle interface
 
 ## TypeScript Interface
 

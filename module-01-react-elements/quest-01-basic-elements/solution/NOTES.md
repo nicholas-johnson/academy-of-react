@@ -85,37 +85,37 @@ This quest specifically teaches `createElement()` to:
 
 ## Common Pitfalls to Avoid
 
-### ❌ Wrong: String concatenation for children
+### BAD: String concatenation for children
 
 ```javascript
 h("div", null, "Level: " + wizard.level);
 ```
 
-### ✅ Right: Multiple children as separate arguments
+### - Right: Multiple children as separate arguments
 
 ```javascript
 h("div", null, "Level: ", h("span", null, wizard.level));
 ```
 
-### ❌ Wrong: Forgetting className (not class)
+### BAD: Forgetting className (not class)
 
 ```javascript
 h("div", { class: "wizard-card" }); // Won't work!
 ```
 
-### ✅ Right: Using className
+### - Right: Using className
 
 ```javascript
 h("div", { className: "wizard-card" });
 ```
 
-### ❌ Wrong: Inline styles as strings
+### BAD: Inline styles as strings
 
 ```javascript
 h("div", { style: "color: red; width: 100px;" }); // Won't work!
 ```
 
-### ✅ Right: Inline styles as objects (camelCase properties)
+### - Right: Inline styles as objects (camelCase properties)
 
 ```javascript
 h("div", { style: { color: "red", width: "100px" } });

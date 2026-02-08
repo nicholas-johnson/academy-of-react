@@ -280,14 +280,14 @@ Create a comparison page:
 
 ## Acceptance Criteria
 
-✅ Static battle history with Content Collections  
-✅ Interactive simulator with `client:load`  
-✅ Comments with `client:visible` (below fold)  
-✅ Newsletter with `client:idle`  
-✅ Performance comparison page  
-✅ Build size documented  
-✅ Working battle simulator logic  
-✅ At least 3 battle content files
+- Static battle history with Content Collections  
+- Interactive simulator with `client:load`  
+- Comments with `client:visible` (below fold)  
+- Newsletter with `client:idle`  
+- Performance comparison page  
+- Build size documented  
+- Working battle simulator logic  
+- At least 3 battle content files
 
 ## Strategic Hydration Decision Tree
 

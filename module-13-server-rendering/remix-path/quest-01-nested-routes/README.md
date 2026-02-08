@@ -139,13 +139,13 @@ app/
 
 ## Acceptance Criteria
 
-✅ Students route uses loader function  
-✅ Data fetched with `useLoaderData()` hook  
-✅ Nested layout with `<Outlet />` works  
-✅ Error boundary catches and displays errors  
-✅ Dashboard uses `defer()` for streaming  
-✅ TypeScript types inferred from loader  
-✅ Progressive enhancement (works without JS!)
+- Students route uses loader function  
+- Data fetched with `useLoaderData()` hook  
+- Nested layout with `<Outlet />` works  
+- Error boundary catches and displays errors  
+- Dashboard uses `defer()` for streaming  
+- TypeScript types inferred from loader  
+- Progressive enhancement (works without JS!)
 
 ## Hints
 

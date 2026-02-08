@@ -286,16 +286,18 @@ npm run build
 
 ## Acceptance Criteria
 
-✅ Complete portal with all pages  
-✅ View Transitions for smooth navigation  
-✅ Images optimized with Astro Image  
-✅ SEO meta tags on all pages  
-✅ Deployed to production hosting  
-✅ Custom 404 page  
-✅ Lighthouse score 95+  
-✅ Working navigation  
-✅ Islands hydrate correctly  
-✅ Fast load times (< 2s)
+**Deployment Checklist:**
+
+- Complete portal with all pages  
+- View Transitions for smooth navigation  
+- Images optimized with Astro Image  
+- SEO meta tags on all pages  
+- Deployed to production hosting  
+- Custom 404 page  
+- Lighthouse score 95+  
+- Working navigation  
+- Islands hydrate correctly  
+- Fast load times (< 2s)
 
 ## Lighthouse Targets
 

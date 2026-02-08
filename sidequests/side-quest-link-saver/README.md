@@ -115,7 +115,7 @@ Fetching metadata from URLs requires handling CORS, since you can't directly fet
 // This WON'T work — CORS blocked
 const response = await fetch("https://example.com/article");
 const html = await response.text();
-// Parse Open Graph tags... ❌
+// Parse Open Graph tags... BAD:
 ```
 
 ### Solution 1: Use a Metadata API

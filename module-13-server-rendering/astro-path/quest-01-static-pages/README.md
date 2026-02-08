@@ -240,14 +240,14 @@ src/
 
 ## Acceptance Criteria
 
-✅ Static spells page with zero JavaScript  
-✅ SearchBar island with `client:load`  
-✅ SpellFilter island with `client:visible`  
-✅ Content Collections configured with types  
-✅ At least 5 spell content files  
-✅ Detail pages for individual spells  
-✅ TypeScript types from Content Collections  
-✅ Build succeeds (`npm run build`)
+- Static spells page with zero JavaScript  
+- SearchBar island with `client:load`  
+- SpellFilter island with `client:visible`  
+- Content Collections configured with types  
+- At least 5 spell content files  
+- Detail pages for individual spells  
+- TypeScript types from Content Collections  
+- Build succeeds (`npm run build`)
 
 ## Hints
 

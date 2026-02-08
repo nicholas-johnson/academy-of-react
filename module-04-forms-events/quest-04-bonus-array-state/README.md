@@ -225,10 +225,12 @@ Take your roster manager to the next level:
 
 You've mastered:
 
-- ✅ Forms and controlled inputs
-- ✅ Form submission and validation
-- ✅ Array state (add, remove, update)
-- ✅ Derived calculations from state
-- ✅ Dynamic list rendering with keys
+**Key Learning Points:**
+
+- Forms and controlled inputs
+- Form submission and validation
+- Array state (add, remove, update)
+- Derived calculations from state
+- Dynamic list rendering with keys
 
 **Next Module**: [Module 5: Side Effects with useEffect](../../module-05-effects-useeffect/) — Learn to fetch data from APIs and handle side effects!

@@ -93,7 +93,7 @@ return <Data />;
 
 ## Common Pitfalls
 
-❌ **Making useEffect async**
+BAD: **Making useEffect async**
 
 ```javascript
 useEffect(async () => {  // WRONG!
@@ -101,7 +101,7 @@ useEffect(async () => {  // WRONG!
 }, [])
 ```
 
-✅ **Async function inside**
+- **Async function inside**
 
 ```javascript
 useEffect(() => {
@@ -112,14 +112,14 @@ useEffect(() => {
 }, [])
 ```
 
-❌ **Forgetting to check response.ok**
+BAD: **Forgetting to check response.ok**
 
 ```javascript
 const response = await fetch(url);
 const data = await response.json(); // Might fail silently!
 ```
 
-✅ **Always check the response**
+- **Always check the response**
 
 ```javascript
 const response = await fetch(url);

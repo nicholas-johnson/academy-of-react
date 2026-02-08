@@ -55,12 +55,12 @@ Create `app/students/error.tsx`:
 
 ## Acceptance Criteria
 
-✅ Students page fetches data with async Server Component  
-✅ Search component is marked `'use client'`  
-✅ Search filters students without page reload  
-✅ Suspense shows loading state for slow data  
-✅ Error boundary catches and displays errors  
-✅ TypeScript types for Student interface
+- Students page fetches data with async Server Component  
+- Search component is marked `'use client'`  
+- Search filters students without page reload  
+- Suspense shows loading state for slow data  
+- Error boundary catches and displays errors  
+- TypeScript types for Student interface
 
 ## Hints
 

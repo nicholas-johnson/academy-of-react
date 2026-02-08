@@ -298,7 +298,7 @@ A: State updates are asynchronous. The new value is available on the NEXT render
 ```jsx
 const newCount = count + 1;
 setCount(newCount);
-console.log(newCount); // ✅ Use the calculated value
+console.log(newCount); // GOOD: Use the calculated value
 ```
 
 **Q: Can I have multiple useState calls?**
@@ -346,11 +346,11 @@ A:
 - Probably mutating instead of creating new:
 
 ```jsx
-// ❌ Mutation (won't trigger re-render)
+// BAD: Mutation (won't trigger re-render)
 students.push(newStudent);
 setStudents(students);
 
-// ✅ New array (triggers re-render)
+// GOOD: New array (triggers re-render)
 setStudents([...students, newStudent]);
 ```
 

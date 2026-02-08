@@ -250,16 +250,16 @@ NODE_ENV="production"
 
 ## Acceptance Criteria
 
-✅ Complete app with multiple routes  
-✅ Session-based authentication works  
-✅ Protected routes redirect to login  
-✅ Login/logout functionality  
-✅ Resource routes for API access  
-✅ Deployed to production (Fly.io or Vercel)  
-✅ Environment variables configured  
-✅ HTTPS enabled  
-✅ TypeScript throughout  
-✅ Error boundaries on all routes
+- Complete app with multiple routes  
+- Session-based authentication works  
+- Protected routes redirect to login  
+- Login/logout functionality  
+- Resource routes for API access  
+- Deployed to production (Fly.io or Vercel)  
+- Environment variables configured  
+- HTTPS enabled  
+- TypeScript throughout  
+- Error boundaries on all routes
 
 ## Deployment Checklist
 

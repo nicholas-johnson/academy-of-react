@@ -165,14 +165,14 @@ The magic of Remix: **Forms work without JavaScript!**
 
 ## Acceptance Criteria
 
-✅ Battles displayed using loader  
-✅ New battle form uses action  
-✅ Form validation with error messages  
-✅ Pending states shown during submission  
-✅ Delete functionality with useFetcher  
-✅ Works without JavaScript enabled!  
-✅ TypeScript types for Battle interface  
-✅ Redirects after successful mutations
+- Battles displayed using loader  
+- New battle form uses action  
+- Form validation with error messages  
+- Pending states shown during submission  
+- Delete functionality with useFetcher  
+- Works without JavaScript enabled!  
+- TypeScript types for Battle interface  
+- Redirects after successful mutations
 
 ## TypeScript Interface
 

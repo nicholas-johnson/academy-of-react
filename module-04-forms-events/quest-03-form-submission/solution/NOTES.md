@@ -194,21 +194,21 @@ Static arrays for houses, familiars, wands. Could be moved to JSON file or API i
 
 ## Common Pitfalls to Avoid
 
-### ❌ Wrong: Storing step as string always
+### BAD: Storing step as string always
 
 ```javascript
 const [currentStep, setCurrentStep] = useState("1"); // String!
 setCurrentStep(currentStep + 1); // '11' not 2!
 ```
 
-### ✅ Right: Use numbers for numeric steps
+### GOOD: Use numbers for numeric steps
 
 ```javascript
 const [currentStep, setCurrentStep] = useState(1); // Number
 setCurrentStep(currentStep + 1); // 2
 ```
 
-### ❌ Wrong: Separate state for each field
+### BAD: Separate state for each field
 
 ```javascript
 const [name, setName] = useState("");
@@ -218,7 +218,7 @@ const [wand, setWand] = useState("");
 // Too many states to manage!
 ```
 
-### ✅ Right: One object for all fields
+### GOOD: One object for all fields
 
 ```javascript
 const [formData, setFormData] = useState({
@@ -229,14 +229,14 @@ const [formData, setFormData] = useState({
 });
 ```
 
-### ❌ Wrong: No validation, allow progression anytime
+### BAD: No validation, allow progression anytime
 
 ```javascript
 <button onClick={handleNext}>Next</button>
 // User can proceed with empty fields
 ```
 
-### ✅ Right: Disable when invalid
+### GOOD: Disable when invalid
 
 ```javascript
 <button onClick={handleNext} disabled={!isStepValid()}>
@@ -244,7 +244,7 @@ const [formData, setFormData] = useState({
 </button>
 ```
 
-### ❌ Wrong: Rendering all steps always
+### BAD: Rendering all steps always
 
 ```javascript
 <Step1 />
@@ -253,7 +253,7 @@ const [formData, setFormData] = useState({
 // All visible at once!
 ```
 
-### ✅ Right: Conditional rendering
+### GOOD: Conditional rendering
 
 ```javascript
 {
@@ -264,7 +264,7 @@ const [formData, setFormData] = useState({
 }
 ```
 
-### ❌ Wrong: Direct property access without optional chaining
+### BAD: Direct property access without optional chaining
 
 ```javascript
 {
@@ -273,7 +273,7 @@ const [formData, setFormData] = useState({
 // Crashes if not found!
 ```
 
-### ✅ Right: Use optional chaining
+### GOOD: Use optional chaining
 
 ```javascript
 {

@@ -53,7 +53,7 @@ useEffect(() => {
 
 ## Common Pitfalls
 
-❌ **Saving on every keystroke**
+BAD: **Saving on every keystroke**
 
 ```javascript
 useEffect(() => {
@@ -61,7 +61,7 @@ useEffect(() => {
 }, [text]);
 ```
 
-✅ **Debounced save**
+- **Debounced save**
 
 ```javascript
 useEffect(() => {
