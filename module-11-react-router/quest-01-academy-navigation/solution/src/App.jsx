@@ -103,10 +103,10 @@ function Students() {
 // Spells page component
 function Spells() {
   const spells = [
-    { id: 1, name: "Fireball", element: "🔥" },
-    { id: 2, name: "Ice Shield", element: "❄️" },
-    { id: 3, name: "Lightning Bolt", element: "" },
-    { id: 4, name: "Healing Wave", element: "💚" },
+    { id: 1, name: "Fireball", Icon: Flame },
+    { id: 2, name: "Ice Shield", Icon: Snowflake },
+    { id: 3, name: "Lightning Bolt", Icon: Zap },
+    { id: 4, name: "Healing Wave", Icon: Heart },
   ];
 
   return (
@@ -115,7 +115,7 @@ function Spells() {
       <div className="spell-list">
         {spells.map((spell) => (
           <div key={spell.id} className="spell-card">
-            <span className="spell-icon">{spell.element}</span>
+            <spell.Icon className="spell-icon" size={24} />
             <h3>{spell.name}</h3>
           </div>
         ))}
