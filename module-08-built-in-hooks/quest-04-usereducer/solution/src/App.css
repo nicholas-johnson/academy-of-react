@@ -7,7 +7,7 @@
 h1 {
   font-size: 2rem;
   text-align: center;
-  background: #667eea;
+  background: #222740;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -38,7 +38,7 @@ h1 {
   display: block;
   font-size: 2rem;
   font-weight: bold;
-  color: #667eea;
+  color: #222740;
 }
 
 .stat-label {
@@ -64,7 +64,7 @@ h1 {
 
 .add-spell input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #222740;
 }
 
 .add-spell input::placeholder {
@@ -73,7 +73,7 @@ h1 {
 
 .add-spell button {
   padding: 0.75rem 1.5rem;
-  background: #667eea;
+  background: #222740;
   border: none;
   border-radius: 0.5rem;
   color: white;
@@ -114,7 +114,7 @@ h1 {
 }
 
 .spell-list li.favorite {
-  border-color: #667eea;
+  border-color: #222740;
   background: rgba(102, 126, 234, 0.1);
 }
 

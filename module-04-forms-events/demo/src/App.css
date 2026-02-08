@@ -6,7 +6,7 @@
 }
 
 h1 {
-  color: #667eea;
+  color: #222740;
   margin-top: 0;
 }
 
@@ -48,7 +48,7 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #222740;
 }
 
 input.error,
@@ -63,7 +63,7 @@ textarea.error {
 }
 
 .submit-btn {
-  background: #667eea;
+  background: #222740;
   color: white;
   border: none;
   padding: 12px 24px;

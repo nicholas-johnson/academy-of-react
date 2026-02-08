@@ -3,7 +3,7 @@ import "./App.css";
 
 function RosterManager() {
   const [students, setStudents] = useState([
-    { id: 1, name: "Elara Moonwhisper", house: "Wisdom", level: 42 },
+    { id: 1, name: "Dixie Spiderwhomp", house: "Wisdom", level: 42 },
     { id: 2, name: "Theron Stormforge", house: "Valor", level: 38 },
   ]);
 

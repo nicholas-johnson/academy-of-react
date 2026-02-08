@@ -3,17 +3,17 @@ import { observer } from "mobx-react-lite";
 import { academyStore } from "./store";
 import "./App.css";
 
-const HOUSES = ["Gryffin", "Slytherin", "Ravenclaw", "Hufflepuff"];
+const HOUSES = ["Liondudes", "Snakeyguys", "Scarybird", "Huftybadger"];
 const HOUSE_COLORS = {
-  Gryffin: "#ae0001",
-  Slytherin: "#1a472a",
-  Ravenclaw: "#0e1a40",
-  Hufflepuff: "#ecb939",
+  Liondudes: "#ae0001",
+  Snakeyguys: "#1a472a",
+  Scarybird: "#0e1a40",
+  Huftybadger: "#ecb939",
 };
 
 const App = observer(() => {
   const [name, setName] = useState("");
-  const [house, setHouse] = useState("Gryffin");
+  const [house, setHouse] = useState("Liondudes");
   const [power, setPower] = useState(50);
 
   const handleSubmit = (e) => {

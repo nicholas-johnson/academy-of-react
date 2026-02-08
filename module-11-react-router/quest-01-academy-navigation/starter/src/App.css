@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 .header h1 {
@@ -156,7 +156,7 @@
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
-  background: #667eea;
+  background: #222740;
   color: white;
   text-decoration: none;
   border-radius: 8px;

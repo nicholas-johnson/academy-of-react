@@ -2,7 +2,6 @@
   background: white;
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .header {
@@ -22,7 +21,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0.75rem 1.5rem;
-  background: #667eea;
+  background: #222740;
   border-radius: 12px;
   color: white;
 }
@@ -63,7 +62,7 @@
 
 .progress-fill {
   height: 100%;
-  background: #667eea;
+  background: #222740;
   transition: width 0.5s ease;
 }
 

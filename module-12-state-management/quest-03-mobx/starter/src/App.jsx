@@ -3,26 +3,26 @@ import { useState } from "react";
 // TODO: Import academyStore from './store'
 import "./App.css";
 
-const HOUSES = ["Gryffin", "Slytherin", "Ravenclaw", "Hufflepuff"];
+const HOUSES = ["Liondudes", "Snakeyguys", "Scarybird", "Huftybadger"];
 const HOUSE_COLORS = {
-  Gryffin: "#ae0001",
-  Slytherin: "#1a472a",
-  Ravenclaw: "#0e1a40",
-  Hufflepuff: "#ecb939",
+  Liondudes: "#ae0001",
+  Snakeyguys: "#1a472a",
+  Scarybird: "#0e1a40",
+  Huftybadger: "#ecb939",
 };
 
 // TODO: Wrap this component with observer()
 function App() {
   const [name, setName] = useState("");
-  const [house, setHouse] = useState("Gryffin");
+  const [house, setHouse] = useState("Liondudes");
   const [power, setPower] = useState(50);
 
   // TODO: Use academyStore instead of placeholder data
   // Placeholder data - replace with MobX store
   const students = [
-    { id: 1, name: "Harry", house: "Gryffin", power: 85 },
-    { id: 2, name: "Hermione", house: "Ravenclaw", power: 95 },
-    { id: 3, name: "Draco", house: "Slytherin", power: 70 },
+    { id: 1, name: "Harry", house: "Liondudes", power: 85 },
+    { id: 2, name: "Hermione", house: "Scarybird", power: 95 },
+    { id: 3, name: "Draco", house: "Snakeyguys", power: 70 },
   ];
   const houseFilter = "all";
   const sortBy = "name";

@@ -142,20 +142,20 @@ This improves UX - errors disappear as user fixes them.
 
 ## Common Pitfalls to Avoid
 
-### ❌ Wrong: Uncontrolled inputs
+### Wrong: Uncontrolled inputs
 
 ```javascript
 <input type="text" name="name" />
 // No value or onChange - React doesn't control it
 ```
 
-### ✅ Right: Controlled inputs
+### Right: Controlled inputs
 
 ```javascript
 <input type="text" name="name" value={formData.name} onChange={handleChange} />
 ```
 
-### ❌ Wrong: Forgetting preventDefault
+### Wrong: Forgetting preventDefault
 
 ```javascript
 const handleSubmit = (e) => {
@@ -164,7 +164,7 @@ const handleSubmit = (e) => {
 };
 ```
 
-### ✅ Right: Always preventDefault on forms
+### Right: Always preventDefault on forms
 
 ```javascript
 const handleSubmit = (e) => {
@@ -173,14 +173,14 @@ const handleSubmit = (e) => {
 };
 ```
 
-### ❌ Wrong: Radio buttons with value prop only
+### Wrong: Radio buttons with value prop only
 
 ```javascript
 <input type="radio" value="attacker" onChange={handleChange} />
 // Not controlled!
 ```
 
-### ✅ Right: Radio buttons need checked prop
+### Right: Radio buttons need checked prop
 
 ```javascript
 <input
@@ -191,7 +191,7 @@ const handleSubmit = (e) => {
 />
 ```
 
-### ❌ Wrong: Direct state mutation
+### Wrong: Direct state mutation
 
 ```javascript
 const handleChange = (e) => {
@@ -199,7 +199,7 @@ const handleChange = (e) => {
 };
 ```
 
-### ✅ Right: Immutable state updates
+### Right: Immutable state updates
 
 ```javascript
 const handleChange = (e) => {
@@ -207,14 +207,14 @@ const handleChange = (e) => {
 };
 ```
 
-### ❌ Wrong: Inline validation logic in JSX
+### Wrong: Inline validation logic in JSX
 
 ```javascript
 <input className={formData.name === "" ? "error" : ""} />
 // Logic belongs in validation function
 ```
 
-### ✅ Right: Use errors object
+### Right: Use errors object
 
 ```javascript
 <input className={errors.name ? "error" : ""} />

@@ -1,10 +1,10 @@
 h1,
 h2 {
-  color: #667eea;
+  color: #222740;
 }
 
 button {
-  background: #667eea;
+  background: #222740;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -33,13 +33,13 @@ button:active {
 .count {
   font-size: 48px;
   font-weight: bold;
-  color: #667eea;
+  color: #222740;
   margin: 20px 0;
 }
 
 input {
   padding: 10px;
-  border: 2px solid #667eea;
+  border: 2px solid #222740;
   border-radius: 6px;
   font-size: 16px;
   width: 100%;

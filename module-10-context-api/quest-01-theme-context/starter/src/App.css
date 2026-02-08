@@ -13,7 +13,7 @@ body.dark .app {
   justify-content: space-between;
   align-items: center;
   padding: 32px 40px;
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 body.dark .header {
@@ -39,7 +39,7 @@ body.dark .header {
   padding: 40px;
 }
 .content h2 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 16px;
   font-size: 1.8rem;
 }
@@ -73,7 +73,7 @@ body.dark .stat-card {
 .stat-value {
   font-size: 2rem;
   font-weight: 700;
-  color: #667eea;
+  color: #222740;
 }
 body.dark .stat-value {
   color: #818cf8;

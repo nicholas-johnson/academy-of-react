@@ -555,7 +555,7 @@ Install the **Tailwind CSS IntelliSense** extension for:
 Create a styled wizard profile card with:
 
 - Name, house, and power level
-- House-colored accent (Gryffin = red, Serpent = green, etc.)
+- House-colored accent (Liondudes = red, Serpent = green, etc.)
 - Hover effect
 - Responsive (stack on mobile, row on desktop)
 

@@ -109,7 +109,7 @@ function Card({ children }) {
 
 <Card variant="elevated">
   <img src="wizard.png" />
-  <h3>Elara Moonwhisper</h3>
+  <h3>Dixie Spiderwhomp</h3>
 </Card>`,
       highlights: [
         "Card provides structure and styling",

@@ -6,7 +6,7 @@
 }
 
 h1 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 10px;
   font-size: 2rem;
   text-align: center;
@@ -60,7 +60,7 @@ h1 {
 }
 
 .step-circle.active {
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 
@@ -102,7 +102,7 @@ h1 {
 
 .form-group input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #222740;
 }
 
 .options-grid {
@@ -123,12 +123,12 @@ h1 {
 }
 
 .option-card:hover {
-  border-color: #667eea;
+  border-color: #222740;
   transform: translateY(-2px);
 }
 
 .option-card.selected {
-  border-color: #667eea;
+  border-color: #222740;
   background: #f0f4ff;
 }
 
@@ -169,7 +169,7 @@ h1 {
 }
 
 .btn-next {
-  background: #667eea;
+  background: #222740;
   color: white;
   flex: 1;
 }
@@ -193,7 +193,7 @@ h1 {
 }
 
 .summary h2 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 20px;
 }
 
@@ -212,7 +212,7 @@ h1 {
 }
 
 .summary-value {
-  color: #667eea;
+  color: #222740;
   font-weight: 600;
 }
 

@@ -16,7 +16,7 @@ import "./App.css";
 
 function LoginForm({ onLogin }) {
   const [name, setName] = useState("");
-  const [house, setHouse] = useState("gryffin");
+  const [house, setHouse] = useState("Liondudes");
 
   // TODO: Replace onLogin prop with useAuth() hook
   // Get login function from context instead
@@ -45,10 +45,10 @@ function LoginForm({ onLogin }) {
         <div className="form-group">
           <label>Choose House</label>
           <select value={house} onChange={(e) => setHouse(e.target.value)}>
-            <option value="gryffin">Gryffin</option>
-            <option value="ravenclaw">Ravenclaw</option>
-            <option value="hufflepuff">Hufflepuff</option>
-            <option value="slytherin">Slytherin</option>
+            <option value="Liondudes">Liondudes</option>
+            <option value="Scarybird">Scarybird</option>
+            <option value="Huftybadger">Huftybadger</option>
+            <option value="Snakeyguys">Snakeyguys</option>
           </select>
         </div>
         <button type="submit" className="btn btn-login">

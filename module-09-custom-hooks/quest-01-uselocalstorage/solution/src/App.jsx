@@ -30,7 +30,7 @@ function useLocalStorage(key, initialValue) {
 function App() {
   const [profile, setProfile] = useLocalStorage("wizardProfile", {
     name: "Anonymous Wizard",
-    house: "gryffin",
+    house: "Liondudes",
     level: 1,
   });
 
@@ -49,7 +49,7 @@ function App() {
   };
 
   const reset = () => {
-    setProfile({ name: "Anonymous Wizard", house: "gryffin", level: 1 });
+    setProfile({ name: "Anonymous Wizard", house: "Liondudes", level: 1 });
     setDarkMode(false);
   };
 
@@ -81,10 +81,10 @@ function App() {
             value={profile.house}
             onChange={(e) => handleHouseChange(e.target.value)}
           >
-            <option value="gryffin">Gryffin</option>
-            <option value="ravenclaw">Ravenclaw</option>
-            <option value="hufflepuff">Hufflepuff</option>
-            <option value="slytherin">Slytherin</option>
+            <option value="Liondudes">Liondudes</option>
+            <option value="Scarybird">Scarybird</option>
+            <option value="Huftybadger">Huftybadger</option>
+            <option value="Snakeyguys">Snakeyguys</option>
           </select>
         </div>
 

@@ -121,7 +121,7 @@ interface Wizard {
 const merlin: Wizard = {
   name: "Merlin",
   power: 100,
-  house: "Gryffin",
+  house: "Liondudes",
 };
 
 // Optional properties
@@ -149,11 +149,11 @@ interface Config {
 ```ts
 // Type alias for primitives or unions
 type ID = string | number;
-type House = "Gryffin" | "Serpent" | "Raven" | "Badger";
+type House = "Liondudes" | "Serpent" | "Raven" | "Badger";
 
 const odricId: ID = "wiz-001";
-const house: House = "Gryffin";
-const invalidHouse: House = "Hufflepuff"; // Error: not assignable
+const house: House = "Liondudes";
+const invalidHouse: House = "Huftybadger"; // Error: not assignable
 
 // Type alias for objects (similar to interface)
 type Potion = {
@@ -336,7 +336,7 @@ type RequiredWizard = Required<Wizard>;
 
 // Pick - select specific properties
 type WizardPreview = Pick<Wizard, "name" | "house">;
-const preview: WizardPreview = { name: "Merlin", house: "Gryffin" };
+const preview: WizardPreview = { name: "Merlin", house: "Liondudes" };
 
 // Omit - exclude specific properties
 type WizardWithoutSpells = Omit<Wizard, "spells">;
@@ -344,7 +344,7 @@ type WizardWithoutSpells = Omit<Wizard, "spells">;
 // Record - object with specific key/value types
 type HousePowers = Record<string, number>;
 const powers: HousePowers = {
-  Gryffin: 100,
+  Liondudes: 100,
   Serpent: 95,
 };
 
@@ -376,8 +376,8 @@ function WizardCard({ name, power, house, onSelect }: WizardCardProps) {
 }
 
 // Usage
-<WizardCard name="Merlin" power={100} house="Gryffin" />
-<WizardCard name="Merlin" power={100} house="Gryffin" onSelect={() => console.log('selected')} />
+<WizardCard name="Merlin" power={100} house="Liondudes" />
+<WizardCard name="Merlin" power={100} house="Liondudes" onSelect={() => console.log('selected')} />
 ```
 
 ### Props with Children
@@ -833,15 +833,15 @@ const { data: wizards, meta } = await fetchWizards();
 
 ```tsx
 // Without as const
-const houses = ["Gryffin", "Serpent", "Raven", "Badger"];
+const houses = ["Liondudes", "Serpent", "Raven", "Badger"];
 // Type: string[]
 
 // With as const
-const houses = ["Gryffin", "Serpent", "Raven", "Badger"] as const;
-// Type: readonly ['Gryffin', 'Serpent', 'Raven', 'Badger']
+const houses = ["Liondudes", "Serpent", "Raven", "Badger"] as const;
+// Type: readonly ['Liondudes', 'Serpent', 'Raven', 'Badger']
 
 type House = (typeof houses)[number];
-// Type: 'Gryffin' | 'Serpent' | 'Raven' | 'Badger'
+// Type: 'Liondudes' | 'Serpent' | 'Raven' | 'Badger'
 
 // Great for config objects
 const config = {

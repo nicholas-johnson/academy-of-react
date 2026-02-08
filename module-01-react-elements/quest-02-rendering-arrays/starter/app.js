@@ -2,7 +2,7 @@
 const students = [
   {
     id: 1,
-    name: "Elara Moonwhisper",
+    name: "Dixie Spiderwhomp",
     house: "Wisdom",
     level: 42,
     specialty: "Elemental Magic",

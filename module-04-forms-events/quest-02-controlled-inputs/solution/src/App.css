@@ -6,7 +6,7 @@
 }
 
 h1 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 10px;
   font-size: 2.2rem;
 }
@@ -53,7 +53,7 @@ h1 {
 .filter-group input:focus,
 .filter-group select:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #222740;
 }
 
 .results-info {
@@ -103,7 +103,7 @@ h1 {
 .spell-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-color: #667eea;
+  border-color: #222740;
 }
 
 .spell-name {
@@ -167,7 +167,7 @@ h1 {
 .stat-value {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #667eea;
+  color: #222740;
 }
 
 .no-results {

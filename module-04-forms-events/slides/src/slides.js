@@ -136,7 +136,11 @@ const [role, setRole] = useState('attacker');
           example: "Shows @ keyboard on mobile, validates format",
           icon: "mail",
         },
-        { rule: "tel", example: "Shows phone keypad on mobile", icon: "smartphone" },
+        {
+          rule: "tel",
+          example: "Shows phone keypad on mobile",
+          icon: "smartphone",
+        },
         {
           rule: "password",
           example: "Masks input with dots/asterisks",
@@ -288,13 +292,21 @@ const [role, setRole] = useState('attacker');
           example: 'if (!value) setError("Required")',
           icon: "alert-circle",
         },
-        { rule: "Email", example: 'if (!value.includes("@")) ...', icon: "mail" },
+        {
+          rule: "Email",
+          example: 'if (!value.includes("@")) ...',
+          icon: "mail",
+        },
         {
           rule: "Min Length",
           example: "if (value.length < 8) ...",
           icon: "ruler",
         },
-        { rule: "Match", example: "if (password !== confirm) ...", icon: "lock" },
+        {
+          rule: "Match",
+          example: "if (password !== confirm) ...",
+          icon: "lock",
+        },
       ],
     },
   },
@@ -314,7 +326,7 @@ const [role, setRole] = useState('attacker');
   const [form, setForm] = useState({
     name: '',
     email: '',
-    house: 'Gryffin'
+    house: 'Liondudes'
   });
   
   const handleChange = (e) => {

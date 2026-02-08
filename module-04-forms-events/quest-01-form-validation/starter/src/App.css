@@ -6,7 +6,7 @@
 }
 
 h1 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 10px;
   font-size: 2rem;
 }
@@ -55,7 +55,7 @@ select {
 input[type="text"]:focus,
 select:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #222740;
 }
 
 input.error,
@@ -89,7 +89,7 @@ input[type="radio"] {
 
 .submit-btn {
   padding: 14px 24px;
-  background: #667eea;
+  background: #222740;
   color: white;
   border: none;
   border-radius: 8px;

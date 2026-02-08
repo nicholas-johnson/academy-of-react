@@ -31,11 +31,16 @@ Create an HTML file that:
 
 ```javascript
 const students = [
-  { name: "Aria Spellweaver", house: "Ravenclaw", magicLevel: 45, health: 100 },
-  { name: "Thor Ironforge", house: "Gryffin", magicLevel: 62, health: 100 },
-  { name: "Luna Starlight", house: "Hufflepuff", magicLevel: 38, health: 100 },
-  { name: "Draco Shadowmere", house: "Slytherin", magicLevel: 55, health: 100 },
-  { name: "Finn Earthshaker", house: "Gryffin", magicLevel: 41, health: 100 },
+  { name: "Aria Spellweaver", house: "Scarybird", magicLevel: 45, health: 100 },
+  { name: "Thor Ironforge", house: "Liondudes", magicLevel: 62, health: 100 },
+  { name: "Luna Starlight", house: "Huftybadger", magicLevel: 38, health: 100 },
+  {
+    name: "Draco Shadowmere",
+    house: "Snakeyguys",
+    magicLevel: 55,
+    health: 100,
+  },
+  { name: "Finn Earthshaker", house: "Liondudes", magicLevel: 41, health: 100 },
 ];
 ```
 
@@ -111,10 +116,10 @@ Bonus tip: For house colors, you could use:
 
 ```javascript
 const houseColors = {
-  Gryffin: "#FFD700",
-  Ravenclaw: "#00B4D8",
-  Hufflepuff: "#FFB703",
-  Slytherin: "#06A77D",
+  Liondudes: "#FFD700",
+  Scarybird: "#00B4D8",
+  Huftybadger: "#FFB703",
+  Snakeyguys: "#06A77D",
 };
 ```
 

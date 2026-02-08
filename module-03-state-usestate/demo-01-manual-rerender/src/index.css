@@ -7,7 +7,7 @@
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #667eea;
+  background: #222740;
   min-height: 100vh;
   padding: 2rem;
   display: flex;
@@ -45,7 +45,7 @@ h1 {
 .count {
   font-size: 4rem;
   font-weight: bold;
-  color: #667eea;
+  color: #222740;
   margin-bottom: 1rem;
 }
 
@@ -61,7 +61,7 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background: #667eea;
+  background: #222740;
   color: white;
   transition: transform 0.1s;
 }

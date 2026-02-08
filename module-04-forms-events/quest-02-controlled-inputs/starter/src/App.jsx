@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>📖 Spell Grimoire</h1>
+      <h1>Spell Grimoire</h1>
       <p>Search and filter the Academy's spell collection</p>
 
       <div className="filters">

@@ -49,30 +49,30 @@ npm run dev      # Start dev server with hot reload
 **Use `className` not `class`**:
 
 ```jsx
-<div className="wizard-card" />  // ✅ Correct
-<div class="wizard-card" />      // ❌ Wrong
+<div className="wizard-card" />  // Correct
+<div class="wizard-card" />      // Wrong
 ```
 
 **Self-closing tags need `/`**:
 
 ```jsx
-<img src="..." />   // ✅ Correct
-<img src="...">     // ❌ Wrong in JSX
+<img src="..." />   // Correct
+<img src="...">     // Wrong in JSX
 ```
 
 **Expressions in `{}`**:
 
 ```jsx
-<h2>{wizard.name}</h2>              // ✅ Variable
-<p>{calculateLevel()}</p>           // ✅ Function call
-<div>{isActive && <span>✓</span>}</div>  // ✅ Conditional
+<h2>{wizard.name}</h2>              // Variable
+<p>{calculateLevel()}</p>           // Function call
+<div>{isActive && <span>✓</span>}</div>  // Conditional
 ```
 
 **All tags must close**:
 
 ```jsx
-<br />   // ✅ Correct
-<br>     // ❌ Wrong in JSX
+<br />   // Correct
+<br>     // Wrong in JSX
 ```
 
 ### 4. Component Props Destructuring
@@ -194,7 +194,7 @@ Components are used like HTML tags:
 
 ## Common Pitfalls
 
-### ❌ Wrong: Using `class` instead of `className`
+### Wrong: Using `class` instead of `className`
 
 ```jsx
 <div class="wizard-card">  // Will not work!
@@ -202,13 +202,13 @@ Components are used like HTML tags:
 
 React will show a warning in console.
 
-### ✅ Right: Always use `className`
+### Right: Always use `className`
 
 ```jsx
 <div className="wizard-card">
 ```
 
-### ❌ Wrong: Returning multiple root elements
+### Wrong: Returning multiple root elements
 
 ```jsx
 function Component() {
@@ -219,7 +219,7 @@ function Component() {
 }
 ```
 
-### ✅ Right: Wrap in a parent or use Fragment
+### Right: Wrap in a parent or use Fragment
 
 ```jsx
 function Component() {
@@ -242,27 +242,27 @@ function Component() {
 }
 ```
 
-### ❌ Wrong: Unclosed self-closing tags
+### Wrong: Unclosed self-closing tags
 
 ```jsx
 <img src="image.jpg">  // Error in JSX
 <input type="text">    // Error in JSX
 ```
 
-### ✅ Right: Always close self-closing tags
+### Right: Always close self-closing tags
 
 ```jsx
 <img src="image.jpg" />
 <input type="text" />
 ```
 
-### ❌ Wrong: JavaScript reserved words as props
+### Wrong: JavaScript reserved words as props
 
 ```jsx
 <label for="name">  // 'for' is reserved!
 ```
 
-### ✅ Right: Use React equivalents
+### Right: Use React equivalents
 
 ```jsx
 <label htmlFor="name">
@@ -345,16 +345,16 @@ npm run build    # Build for production
 **You cannot use** (statements):
 
 ```jsx
-<div>{if (x) { return y }}</div>     // ❌ Error
-<div>{for (let i=0; i<10; i++)}</div>  // ❌ Error
-<div>{const x = 5}</div>              // ❌ Error
+<div>{if (x) { return y }}</div>     // Error
+<div>{for (let i=0; i<10; i++)}</div>  // Error
+<div>{const x = 5}</div>              // Error
 ```
 
 Use expressions instead:
 
 ```jsx
-<div>{x && y}</div>                   // ✅ Conditional
-<div>{array.map(...)}</div>           // ✅ Loop
+<div>{x && y}</div>                   // Conditional
+<div>{array.map(...)}</div>           // Loop
 ```
 
 ## Styling in JSX

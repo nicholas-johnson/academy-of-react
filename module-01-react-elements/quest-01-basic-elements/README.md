@@ -24,7 +24,7 @@ Create an HTML file that:
 1. Loads React and ReactDOM from CDN
 2. Creates a student object with these properties:
    - `name` (string) - Your wizard's name
-   - `house` (string) - Choose: Gryffin, Ravenclaw, Hufflepuff, or Slytherin
+   - `house` (string) - Choose: Liondudes, Scarybird, Huftybadger, or Snakeyguys
    - `magicLevel` (number) - Starting power level (1-100)
    - `health` (number) - Hit points (usually 100)
 3. Uses `React.createElement()` to create elements displaying:
@@ -37,7 +37,7 @@ Create an HTML file that:
 ```javascript
 const myWizard = {
   name: "Luna Moonwhisper",
-  house: "Ravenclaw",
+  house: "Scarybird",
   magicLevel: 35,
   health: 100,
 };

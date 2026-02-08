@@ -42,9 +42,9 @@ Create a Vite React project with:
 
 ```javascript
 const [students, setStudents] = useState([
-  { id: 1, name: "Aria", house: "Ravenclaw", magicLevel: 45 },
-  { id: 2, name: "Thor", house: "Gryffin", magicLevel: 62 },
-  { id: 3, name: "Luna", house: "Hufflepuff", magicLevel: 38 },
+  { id: 1, name: "Aria", house: "Scarybird", magicLevel: 45 },
+  { id: 2, name: "Thor", house: "Liondudes", magicLevel: 62 },
+  { id: 3, name: "Luna", house: "Huftybadger", magicLevel: 38 },
 ]);
 ```
 
@@ -70,12 +70,12 @@ const [students, setStudents] = useState([
 
 ```jsx
 const [students, setStudents] = useState([
-  { id: 1, name: "Aria", house: "Ravenclaw", magicLevel: 45 },
-  { id: 2, name: "Thor", house: "Gryffin", magicLevel: 62 },
+  { id: 1, name: "Aria", house: "Scarybird", magicLevel: 45 },
+  { id: 2, name: "Thor", house: "Liondudes", magicLevel: 62 },
 ]);
 
 const [name, setName] = useState("");
-const [house, setHouse] = useState("Gryffin");
+const [house, setHouse] = useState("Liondudes");
 const [magicLevel, setMagicLevel] = useState(50);
 ```
 
@@ -96,7 +96,7 @@ const handleSubmit = (e) => {
 
   // Clear form
   setName("");
-  setHouse("Gryffin");
+  setHouse("Liondudes");
   setMagicLevel(50);
 };
 ```
@@ -114,10 +114,10 @@ const handleSubmit = (e) => {
   />
 
   <select value={house} onChange={(e) => setHouse(e.target.value)}>
-    <option value="Gryffin">Gryffin</option>
-    <option value="Ravenclaw">Ravenclaw</option>
-    <option value="Hufflepuff">Hufflepuff</option>
-    <option value="Slytherin">Slytherin</option>
+    <option value="Liondudes">Liondudes</option>
+    <option value="Scarybird">Scarybird</option>
+    <option value="Huftybadger">Huftybadger</option>
+    <option value="Snakeyguys">Snakeyguys</option>
   </select>
 
   <input
@@ -194,8 +194,8 @@ Take your roster manager to the next level:
    - Invalid magic levels
 
 6. **House Statistics**: Show per-house breakdown:
-   - Gryffin: 5 students, avg 65
-   - Ravenclaw: 3 students, avg 52
+   - Liondudes: 5 students, avg 65
+   - Scarybird: 3 students, avg 52
    - etc.
 
 7. **Local Storage**: Save students to localStorage so they persist on page refresh:

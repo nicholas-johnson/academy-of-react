@@ -31,9 +31,9 @@ The starter includes this wizard array:
 
 ```javascript
 const wizards = [
-  { id: 1, name: "Elara Moonwhisper", house: "Wisdom", level: 42 },
-  { id: 2, name: "Thorin Flameheart", house: "Valor", level: 38 },
-  { id: 3, name: "Luna Shadowmere", house: "Mystery", level: 45 },
+  { id: 1, name: "Dixie Spiderwhomp", house: "Wisdom", level: 42 },
+  { id: 2, name: "Spinstar Galbraticus", house: "Valor", level: 38 },
+  { id: 3, name: "Ranger Marvel De-la-mode", house: "Mystery", level: 45 },
 ];
 ```
 

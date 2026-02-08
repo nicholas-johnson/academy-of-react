@@ -2,7 +2,7 @@ import "./App.css";
 
 // Wizard data - same as Module 1
 const wizard = {
-  name: "Elara Moonwhisper",
+  name: "Dixie Spiderwhomp",
   house: "Wisdom",
   level: 42,
   specialty: "Elemental Magic",

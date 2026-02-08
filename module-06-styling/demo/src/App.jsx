@@ -40,13 +40,13 @@ const StyledButton = styled.button`
       case "danger":
         return "#f43f5e";
       default:
-        return "#667eea";
+        return "#222740";
     }
   }};
 
-  color: ${(props) => (props.$variant === "secondary" ? "#667eea" : "white")};
+  color: ${(props) => (props.$variant === "secondary" ? "#222740" : "white")};
   border: ${(props) =>
-    props.$variant === "secondary" ? "2px solid #667eea" : "none"};
+    props.$variant === "secondary" ? "2px solid #222740" : "none"};
 
   &:hover {
     transform: translateY(-2px);
@@ -70,8 +70,7 @@ function TailwindButton({ variant = "primary", children }) {
       "bg-indigo-500 text-white hover:shadow-lg hover:shadow-indigo-500/40",
     secondary:
       "bg-transparent text-indigo-400 border-2 border-indigo-400 hover:bg-indigo-400/10",
-    danger:
-      "bg-rose-500 text-white hover:shadow-lg hover:shadow-rose-500/40",
+    danger: "bg-rose-500 text-white hover:shadow-lg hover:shadow-rose-500/40",
   };
 
   return (

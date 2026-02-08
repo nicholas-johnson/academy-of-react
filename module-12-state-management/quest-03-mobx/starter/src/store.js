@@ -6,7 +6,7 @@
 // - sortBy: current sort ('name' or 'power')
 //
 // Each student: { id, name, house, power }
-// Houses: 'Gryffin', 'Slytherin', 'Ravenclaw', 'Hufflepuff'
+// Houses: 'Liondudes', 'Snakeyguys', 'Scarybird', 'Huftybadger'
 
 // TODO: Add actions:
 // - addStudent(student)

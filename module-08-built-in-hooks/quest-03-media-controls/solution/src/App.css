@@ -5,7 +5,7 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 h1 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 10px;
   font-size: 2.2rem;
 }
@@ -18,7 +18,7 @@ h1 {
 .time-counter {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #667eea;
+  color: #222740;
   text-align: center;
   margin-bottom: 16px;
 }
@@ -30,7 +30,7 @@ h1 {
 }
 .progress-fill {
   height: 100%;
-  background: #667eea;
+  background: #222740;
   transition: width 0.3s ease;
 }
 .controls {
@@ -90,7 +90,7 @@ h1 {
   padding: 12px;
   margin: 8px 0;
   background: white;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #222740;
   border-radius: 4px;
   display: flex;
   gap: 12px;
@@ -112,7 +112,7 @@ h1 {
 }
 .event-time {
   font-weight: 700;
-  color: #667eea;
+  color: #222740;
   min-width: 40px;
 }
 .event-description {
@@ -120,13 +120,13 @@ h1 {
 }
 .info-box {
   background: #f0f4ff;
-  border: 2px solid #667eea;
+  border: 2px solid #222740;
   padding: 24px;
   border-radius: 12px;
   margin-top: 30px;
 }
 .info-box h3 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 12px;
 }
 .info-box ul {

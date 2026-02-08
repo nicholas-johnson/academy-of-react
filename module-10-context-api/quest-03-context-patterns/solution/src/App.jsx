@@ -41,7 +41,7 @@ function useAuth() {
 
 function LoginForm() {
   const [name, setName] = useState("");
-  const [house, setHouse] = useState("gryffin");
+  const [house, setHouse] = useState("Liondudes");
   const { login } = useAuth();
 
   const handleSubmit = (e) => {
@@ -53,7 +53,7 @@ function LoginForm() {
 
   return (
     <div className="login-container">
-      <h2>🎓 Join the Academy</h2>
+      <h2>Join the Academy</h2>
       <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
           <label>Wizard Name</label>
@@ -68,10 +68,10 @@ function LoginForm() {
         <div className="form-group">
           <label>Choose House</label>
           <select value={house} onChange={(e) => setHouse(e.target.value)}>
-            <option value="gryffin">Gryffin</option>
-            <option value="ravenclaw">Ravenclaw</option>
-            <option value="hufflepuff">Hufflepuff</option>
-            <option value="slytherin">Slytherin</option>
+            <option value="Liondudes">Liondudes</option>
+            <option value="Scarybird">Scarybird</option>
+            <option value="Huftybadger">Huftybadger</option>
+            <option value="Snakeyguys">Snakeyguys</option>
           </select>
         </div>
         <button type="submit" className="btn btn-login">

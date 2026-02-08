@@ -136,7 +136,7 @@ function BattleResult() {
     navigate(-1);
 
     // With state
-    navigate("/results", { state: { winner: "Gryffin" } });
+    navigate("/results", { state: { winner: "Liondudes" } });
   };
 
   return <button onClick={handleVictory}>Claim Victory</button>;

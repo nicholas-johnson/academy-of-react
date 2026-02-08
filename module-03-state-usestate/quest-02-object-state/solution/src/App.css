@@ -228,6 +228,7 @@ body {
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
+  background: #15803d;
 }
 
 .action-btn:hover {

@@ -24,10 +24,10 @@ Each piece of state is independent!
 
 ```jsx
 function train() {
-  // ❌ Wrong: Don't mutate directly
+  // Wrong: Don't mutate directly
   strength = strength + 5;
 
-  // ✅ Right: Use setter function
+  //  Right: Use setter function
   setStrength(strength + 5);
 }
 ```
@@ -55,9 +55,9 @@ Recalculated every render based on current state!
 
 ## Best Practices
 
-✅ One state variable per piece of data
-✅ Use descriptive names (`strength` not `s`)
-✅ Keep state at appropriate level
-✅ Don't duplicate state (compute instead)
+One state variable per piece of data
+Use descriptive names (`strength` not `s`)
+Keep state at appropriate level
+Don't duplicate state (compute instead)
 
 **Next**: Module 3 Quest 2 handles complex state!

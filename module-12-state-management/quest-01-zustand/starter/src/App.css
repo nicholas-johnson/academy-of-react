@@ -5,7 +5,7 @@
 .header {
   text-align: center;
   padding: 40px 20px;
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 .header h1 {
@@ -71,7 +71,7 @@
   transition: all 0.2s;
 }
 .btn.primary {
-  background: #667eea;
+  background: #222740;
   color: white;
   width: 100%;
 }
@@ -129,7 +129,7 @@
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: #667eea;
+  color: #222740;
 }
 .stat-label {
   color: #666;

@@ -3,7 +3,7 @@
 // Step 1: Create a student object with wizard stats
 const student = {
   name: "Aria Spellweaver",
-  house: "Ravenclaw",
+  house: "Scarybird",
   magicLevel: 45,
   health: 100,
   mana: 80,

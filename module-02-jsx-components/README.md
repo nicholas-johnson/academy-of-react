@@ -137,11 +137,11 @@ demo/
 
 **Key differences from CDN setup:**
 
-- ✅ `index.html` is in the project root (not inside `src/`)
-- ✅ No CDN script tags - React comes from npm
-- ✅ `<script type="module">` tag points to `src/main.jsx`
-- ✅ Use `import/export` statements instead of global variables
-- ✅ Styles are imported in JavaScript files
+- `index.html` is in the project root (not inside `src/`)
+- No CDN script tags - React comes from npm
+- `<script type="module">` tag points to `src/main.jsx`
+- Use `import/export` statements instead of global variables
+- Styles are imported in JavaScript files
 
 ### How Vite Works
 

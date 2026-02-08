@@ -1,13 +1,12 @@
 import { useState } from "react";
 import "./App.css";
 
-function StatTrainer({ label, icon, value, onTrain, color }) {
+function StatTrainer({ label, value, onTrain, color }) {
   const isMaxed = value >= 100;
 
   return (
     <div className="stat-trainer">
       <div className="stat-header">
-        <span className="stat-icon">{icon}</span>
         <span className="stat-label">{label}</span>
       </div>
 
@@ -34,7 +33,7 @@ function StatTrainer({ label, icon, value, onTrain, color }) {
           borderColor: color,
         }}
       >
-        {isMaxed ? "✓ Maxed" : "▲ Train (+5)"}
+        {isMaxed ? "Maxed" : "Train (+5)"}
       </button>
     </div>
   );
@@ -80,7 +79,7 @@ function TrainingSystem() {
   return (
     <div className="training-system">
       <div className="header">
-        <h2>🏋️ Training System</h2>
+        <h2>Training System</h2>
         <div className="level-display">
           <span className="level-label">Level</span>
           <span className="level-value">{level}</span>
@@ -104,28 +103,24 @@ function TrainingSystem() {
       <div className="stats-grid">
         <StatTrainer
           label="Strength"
-          icon="💪"
           value={strength}
           onTrain={() => train(setStrength, strength)}
           color="#dc2626"
         />
         <StatTrainer
           label="Intelligence"
-          icon="🧠"
           value={intelligence}
           onTrain={() => train(setIntelligence, intelligence)}
           color="#2563eb"
         />
         <StatTrainer
           label="Dexterity"
-          icon="⚡"
           value={dexterity}
           onTrain={() => train(setDexterity, dexterity)}
           color="#eab308"
         />
         <StatTrainer
           label="Stamina"
-          icon="❤️"
           value={stamina}
           onTrain={() => train(setStamina, stamina)}
           color="#16a34a"
@@ -139,7 +134,7 @@ function TrainingSystem() {
           <span className="summary-value">{totalPower}</span>
         </div>
         <button className="reset-btn" onClick={reset}>
-          🔄 Reset Training
+          Reset Training
         </button>
       </div>
     </div>
@@ -150,7 +145,7 @@ function App() {
   return (
     <div className="app-container">
       <div className="quest-header">
-        <h1>⚡ Quest 1: Training System</h1>
+        <h1>Quest 1: Training System</h1>
         <p className="quest-subtitle">useState for interactive UI</p>
       </div>
 

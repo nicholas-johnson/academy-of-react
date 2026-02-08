@@ -10,7 +10,7 @@ Build a 3-step form wizard with navigation and progress tracking.
 
 ## Requirements
 
-- Step 1: Enter name, choose house (Gryffin/Ravenclaw/Hufflepuff/Slytherin)
+- Step 1: Enter name, choose house (Liondudes/Scarybird/Huftybadger/Snakeyguys)
 - Step 2: Select familiar (owl/cat/toad)
 - Step 3: Pick wand type (oak/phoenix/dragon)
 - Next/Back buttons for navigation

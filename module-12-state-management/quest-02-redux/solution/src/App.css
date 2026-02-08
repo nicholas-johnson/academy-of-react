@@ -5,7 +5,7 @@
 .header {
   text-align: center;
   padding: 40px 20px;
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 .header h1 {
@@ -99,7 +99,7 @@
   transition: all 0.2s;
 }
 .btn.primary {
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 .btn.primary:hover {
@@ -145,7 +145,7 @@
   color: white;
 }
 .tab.active {
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 
@@ -237,8 +237,8 @@
   font-size: 1rem;
 }
 .add-combatant-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #222740;
+  color: #222740;
 }
 
 .add-combatant-form {
@@ -265,5 +265,5 @@
   cursor: pointer;
 }
 .add-combatant-form button:first-of-type {
-  background: #667eea;
+  background: #222740;
 }

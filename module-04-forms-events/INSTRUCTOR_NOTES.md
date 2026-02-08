@@ -121,8 +121,8 @@ The fundamental pattern:
 
 // Select dropdown
 <select value={house} onChange={e => setHouse(e.target.value)}>
-  <option value="Gryffin">Gryffin</option>
-  <option value="Ravenclaw">Ravenclaw</option>
+  <option value="Liondudes">Liondudes</option>
+  <option value="Scarybird">Scarybird</option>
 </select>
 
 // Radio buttons

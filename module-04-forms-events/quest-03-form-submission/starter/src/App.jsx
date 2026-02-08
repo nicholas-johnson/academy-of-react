@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🎓 Sorting Ceremony</h1>
+      <h1>Sorting Ceremony</h1>
       <p>Complete your enrollment at the Arcane Academy</p>
 
       {/* TODO: Add progress indicator showing current step */}

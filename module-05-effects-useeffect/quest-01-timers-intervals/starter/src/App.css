@@ -6,14 +6,14 @@
   text-align: center;
 }
 h1 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 10px;
   font-size: 2rem;
 }
 .timer-display {
   font-size: 4rem;
   font-weight: 700;
-  color: #667eea;
+  color: #222740;
   margin: 30px 0;
   font-variant-numeric: tabular-nums;
 }
@@ -27,7 +27,7 @@ h1 {
 }
 .progress-fill {
   height: 100%;
-  background: #667eea;
+  background: #222740;
   transition: width 0.3s;
 }
 .controls {
@@ -45,7 +45,7 @@ button {
   transition: transform 0.2s;
 }
 .btn-primary {
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 .btn-secondary {

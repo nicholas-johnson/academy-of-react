@@ -2,10 +2,10 @@ import { useState } from "react";
 import "./App.css";
 
 const HOUSES = [
-  { id: "gryffin", name: "Gryffin", icon: "🦁" },
-  { id: "ravenclaw", name: "Ravenclaw", icon: "🦅" },
-  { id: "hufflepuff", name: "Hufflepuff", icon: "🦡" },
-  { id: "slytherin", name: "Slytherin", icon: "🐍" },
+  { id: "Liondudes", name: "Liondudes", icon: "🦁" },
+  { id: "Scarybird", name: "Scarybird", icon: "🦅" },
+  { id: "Huftybadger", name: "Huftybadger", icon: "🦡" },
+  { id: "Snakeyguys", name: "Snakeyguys", icon: "🐍" },
 ];
 
 const FAMILIARS = [
@@ -77,7 +77,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🎓 Sorting Ceremony</h1>
+      <h1>Sorting Ceremony</h1>
       <p>Complete your enrollment at the Arcane Academy</p>
 
       {/* Progress Indicator */}

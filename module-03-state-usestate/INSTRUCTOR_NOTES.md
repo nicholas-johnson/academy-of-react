@@ -160,10 +160,10 @@ This is a crucial pattern for forms:
 **Common mistake:**
 
 ```jsx
-// ❌ This creates an uncontrolled input (can't set initial value properly)
+// This creates an uncontrolled input (can't set initial value properly)
 <input onChange={(e) => setName(e.target.value)} />
 
-// ✅ Always include value={state}
+// Always include value={state}
 <input value={name} onChange={(e) => setName(e.target.value)} />
 ```
 

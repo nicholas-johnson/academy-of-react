@@ -81,7 +81,7 @@ By Module 13, you'll deploy production server-rendered applications:
 - Real hosting on Vercel, Netlify, or Fly.io
 - SEO-optimized and production-ready
 
-## 🎓 Prerequisites
+## Prerequisites
 
 To enroll in the Arcane Academy, you should have:
 

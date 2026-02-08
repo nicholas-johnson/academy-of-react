@@ -5,7 +5,7 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 h1 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 10px;
   font-size: 2.2rem;
 }
@@ -23,7 +23,7 @@ h3 {
 .counter-display {
   font-size: 4rem;
   font-weight: 700;
-  color: #667eea;
+  color: #222740;
   margin: 20px 0;
 }
 .button-group {
@@ -33,7 +33,7 @@ h3 {
 }
 .btn {
   padding: 16px 32px;
-  background: #667eea;
+  background: #222740;
   color: white;
   border: none;
   border-radius: 8px;
@@ -47,13 +47,13 @@ h3 {
 }
 .info-box {
   background: #f0f4ff;
-  border: 2px solid #667eea;
+  border: 2px solid #222740;
   padding: 24px;
   border-radius: 12px;
   margin: 20px 0;
 }
 .info-box h3 {
-  color: #667eea;
+  color: #222740;
   margin-bottom: 12px;
 }
 .info-box ol,
@@ -69,5 +69,5 @@ h3 {
   padding: 2px 6px;
   border-radius: 4px;
   font-family: monospace;
-  color: #667eea;
+  color: #222740;
 }

@@ -164,7 +164,7 @@ const handleClearFilters = () => {
 
 ## Common Pitfalls to Avoid
 
-### ❌ Wrong: Storing filtered results in state
+### Wrong: Storing filtered results in state
 
 ```javascript
 const [filteredSpells, setFilteredSpells] = useState([])
@@ -176,60 +176,60 @@ const handleSearch = (e) => {
 }
 ```
 
-### ✅ Right: Compute filtered results
+### Right: Compute filtered results
 
 ```javascript
 const filteredSpells = SPELLS.filter(...)
 // Automatically updates when state changes
 ```
 
-### ❌ Wrong: Case-sensitive search
+### Wrong: Case-sensitive search
 
 ```javascript
 spell.name.includes(searchTerm); // Won't match "fire" with "Fire"
 ```
 
-### ✅ Right: Case-insensitive
+### Right: Case-insensitive
 
 ```javascript
 spell.name.toLowerCase().includes(searchTerm.toLowerCase());
 ```
 
-### ❌ Wrong: Using OR for multiple filters
+### Wrong: Using OR for multiple filters
 
 ```javascript
 return matchesSearch || matchesType || matchesLevel;
 // Shows items that match ANY filter (too permissive)
 ```
 
-### ✅ Right: Using AND
+### Right: Using AND
 
 ```javascript
 return matchesSearch && matchesType && matchesLevel;
 // Shows items that match ALL filters
 ```
 
-### ❌ Wrong: Forgetting key prop
+### Wrong: Forgetting key prop
 
 ```javascript
 filteredSpells.map((spell) => <div>{spell.name}</div>);
 // React warning!
 ```
 
-### ✅ Right: Always use key
+### Right: Always use key
 
 ```javascript
 filteredSpells.map((spell) => <div key={spell.id}>{spell.name}</div>);
 ```
 
-### ❌ Wrong: Mutating original array
+### Wrong: Mutating original array
 
 ```javascript
 const filtered = SPELLS;
 filtered.sort(); // Mutates SPELLS!
 ```
 
-### ✅ Right: Create new array
+### Right: Create new array
 
 ```javascript
 const filtered = SPELLS.filter(...)

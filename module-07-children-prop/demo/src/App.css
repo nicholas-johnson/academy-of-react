@@ -22,7 +22,7 @@ body {
 }
 
 .layout-header {
-  background: #667eea;
+  background: #222740;
   padding: 1rem 2rem;
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 .card-primary {
-  background: #667eea;
+  background: #222740;
   border: none;
 }
 
@@ -200,7 +200,7 @@ body {
 }
 
 .modal-header {
-  background: #667eea;
+  background: #222740;
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;

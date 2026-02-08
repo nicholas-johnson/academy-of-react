@@ -42,10 +42,10 @@ potions.map((potion) => (
 
 You now understand:
 
-- ✅ JSX syntax vs createElement
-- ✅ Reusable components
-- ✅ Component composition
-- ✅ Props and destructuring
-- ✅ Mapping over arrays
+- JSX syntax vs createElement
+- Reusable components
+- Component composition
+- Props and destructuring
+- Mapping over arrays
 
 **Next**: Module 3 introduces state with useState!

@@ -440,4 +440,4 @@ npm run build && ls -lh dist/
 
 **Want to compare?** Review the [Next.js Path](../../nextjs-path/) and [Remix Path](../../remix-path/) to see different approaches.
 
-**Course Complete!** 🎓 Return to the [main README](../../../README.md) - you're now a Full-Stack React Wizard ready to build modern web applications!
+**Course Complete!** Return to the [main README](../../../README.md) - you're now a Full-Stack React Wizard ready to build modern web applications!

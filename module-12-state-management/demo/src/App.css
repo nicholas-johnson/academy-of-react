@@ -5,7 +5,7 @@
 .header {
   text-align: center;
   padding: 40px 20px 20px;
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 .header h1 {
@@ -39,7 +39,7 @@
   background: #e5e7eb;
 }
 .tab.active {
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 
@@ -100,7 +100,7 @@
 }
 .stats span {
   font-weight: 600;
-  color: #667eea;
+  color: #222740;
 }
 
 .spell-list {
@@ -125,7 +125,7 @@
   color: #333;
 }
 .spell-power {
-  color: #667eea;
+  color: #222740;
   font-weight: 600;
 }
 .remove-btn {
@@ -155,8 +155,8 @@
   transition: all 0.2s;
 }
 .add-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #222740;
+  color: #222740;
   background: #f0f0ff;
 }
 

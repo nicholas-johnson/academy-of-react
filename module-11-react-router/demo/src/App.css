@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: #667eea;
+  background: #222740;
   color: white;
 }
 .header h1 {
@@ -94,7 +94,7 @@
   background: #e0e7ff;
   padding: 2px 6px;
   border-radius: 4px;
-  color: #667eea;
+  color: #222740;
   font-size: 0.85rem;
 }
 
@@ -102,7 +102,7 @@
 .btn {
   display: inline-block;
   padding: 14px 28px;
-  background: #667eea;
+  background: #222740;
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -149,7 +149,7 @@
   border: 2px solid transparent;
 }
 .spell-card:hover {
-  border-color: #667eea;
+  border-color: #222740;
   transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }
@@ -223,7 +223,7 @@
 }
 .power-fill {
   height: 100%;
-  background: #667eea;
+  background: #222740;
   border-radius: 4px;
   transition: width 0.5s ease;
 }
@@ -250,7 +250,7 @@
   background: #e0e7ff;
   padding: 2px 6px;
   border-radius: 4px;
-  color: #667eea;
+  color: #222740;
   font-size: 0.9rem;
 }
 

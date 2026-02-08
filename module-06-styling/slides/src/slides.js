@@ -177,7 +177,7 @@ const Button = styled.button\`
 import { Link } from 'react-router-dom'
 
 const StyledLink = styled(Link)\`
-  color: #667eea;
+  color: #222740;
   text-decoration: none;
   font-weight: 600;
   
@@ -192,7 +192,7 @@ function Card({ className, children }) {
 }
 
 const FancyCard = styled(Card)\`
-  background: #667eea;
+  background: #222740;
   padding: 2rem;
   border-radius: 1rem;
 \``,
@@ -215,7 +215,7 @@ const FancyCard = styled(Card)\`
   
   h2 { color: white; }
   p { color: #94a3b8; }
-  .highlight { color: #667eea; }
+  .highlight { color: #222740; }
   > button { margin-top: 1rem; }
 \`
 
@@ -312,8 +312,16 @@ function Button({ primary, children }) {
     content: {
       title: "Common Tailwind Utilities",
       rules: [
-        { rule: "Spacing", example: "p-4, m-2, px-6, py-3, gap-4", icon: "ruler" },
-        { rule: "Colors", example: "bg-blue-500, text-gray-100", icon: "palette" },
+        {
+          rule: "Spacing",
+          example: "p-4, m-2, px-6, py-3, gap-4",
+          icon: "ruler",
+        },
+        {
+          rule: "Colors",
+          example: "bg-blue-500, text-gray-100",
+          icon: "palette",
+        },
         { rule: "Layout", example: "flex, grid, items-center", icon: "square" },
         {
           rule: "Effects",

@@ -134,7 +134,7 @@ Combine all three quests into one application:
 - Save all data to a shared state
 - Summary page showing all registrations
 
-## React 19: Actions - The Modern Way 🆕
+## React 19: Actions - The Modern Way
 
 React 19 introduces **Actions** - a revolutionary pattern for handling form submissions and async operations with automatic pending states!
 
@@ -142,10 +142,10 @@ React 19 introduces **Actions** - a revolutionary pattern for handling form subm
 
 Actions are async functions that React tracks automatically. When passed to a `<form action={}>`, React handles:
 
-- ✅ Pending states automatically
-- ✅ Error boundaries integration
-- ✅ Optimistic updates support
-- ✅ No manual `preventDefault()` needed
+- Pending states automatically
+- Error boundaries integration
+- Optimistic updates support
+- No manual `preventDefault()` needed
 
 ### Traditional vs React 19 Approach
 
@@ -254,14 +254,14 @@ function BattleForm() {
 
 ### When to Use Actions
 
-✅ **Use Actions for**:
+**Use Actions for**:
 
 - Form submissions
 - Data mutations
 - Async operations with UI feedback
 - Server-side operations (with Server Components)
 
-❌ **Stick with traditional handlers for**:
+**Stick with traditional handlers for**:
 
 - Simple onClick handlers
 - Immediate synchronous operations

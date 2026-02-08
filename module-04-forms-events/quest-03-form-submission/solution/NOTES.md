@@ -103,7 +103,7 @@ const updateField = (field, value) => {
 }
 
 // Usage:
-onClick={() => updateField('house', 'gryffin')}
+onClick={() => updateField('house', 'Liondudes')}
 ```
 
 ### 7. Progress Indicator
@@ -126,8 +126,8 @@ Clickable cards for option selection:
 
 ```javascript
 <div
-  className={`option-card ${formData.house === "gryffin" ? "selected" : ""}`}
-  onClick={() => updateField("house", "gryffin")}
+  className={`option-card ${formData.house === "Liondudes" ? "selected" : ""}`}
+  onClick={() => updateField("house", "Liondudes")}
 >
   {/* content */}
 </div>

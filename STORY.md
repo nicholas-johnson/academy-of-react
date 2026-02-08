@@ -12,25 +12,25 @@ The Academy is divided into four great houses, each with its own traditions:
 
 ### The Four Houses
 
-**House Gryffin** 🦁
+**House Liondudes** 🦁
 
 - Colors: Crimson and Gold
 - Traits: Bravery, bold component design, rapid prototyping
 - Specialty: Action-heavy interfaces, battle systems
 
-**House Ravenclaw** 🦅
+**House Scarybird** 🦅
 
 - Colors: Azure and Silver
 - Traits: Wisdom, elegant architecture, optimization
 - Specialty: Performance tuning, complex state management
 
-**House Hufflepuff** 🦡
+**House Huftybadger** 🦡
 
 - Colors: Gold and Black
 - Traits: Loyalty, accessibility, user-focused design
 - Specialty: Forms, user experience, inclusive interfaces
 
-**House Slytherin** 🐍
+**House Snakeyguys** 🐍
 
 - Colors: Emerald and Silver
 - Traits: Ambition, advanced techniques, cutting-edge features

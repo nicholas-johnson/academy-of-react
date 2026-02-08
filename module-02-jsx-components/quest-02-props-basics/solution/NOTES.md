@@ -70,22 +70,22 @@ App
 ### Forgetting curly braces for numbers
 
 ```jsx
-// ❌ Wrong - level becomes the string "42"
+//  Wrong - level becomes the string "42"
 <WizardCard level="42" />
 
-// ✅ Correct - level is the number 42
+//  Correct - level is the number 42
 <WizardCard level={42} />
 ```
 
 ### Missing key prop
 
 ```jsx
-// ❌ Warning in console
+//  Warning in console
 {
   wizards.map((w) => <WizardCard name={w.name} />);
 }
 
-// ✅ No warning
+//  No warning
 {
   wizards.map((w) => <WizardCard key={w.id} name={w.name} />);
 }

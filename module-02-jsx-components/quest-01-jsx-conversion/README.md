@@ -128,13 +128,13 @@ const student = { name: "Aria", magicLevel: 45 };
 **Hint 4**: JSX must have a single parent element:
 
 ```jsx
-// ❌ This won't work:
+// This won't work:
 return (
   <h1>Title</h1>
   <p>Text</p>
 );
 
-// ✅ This works:
+// This works:
 return (
   <div>
     <h1>Title</h1>
