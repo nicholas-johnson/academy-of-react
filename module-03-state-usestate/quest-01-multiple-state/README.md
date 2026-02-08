@@ -59,7 +59,7 @@ const [mana, setMana] = useState(80);
 ## Hints
 
 <details>
-<summary>Click for hints</summary>
+<summary>Click to reveal hints</summary>
 
 **Hint 1**: Declare multiple state variables:
 

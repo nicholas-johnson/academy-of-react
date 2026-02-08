@@ -71,7 +71,7 @@ Create a Vite React project with:
 ## Hints
 
 <details>
-<summary>Click for hints</summary>
+<summary>Click to reveal hints</summary>
 
 **Hint 1**: Card component structure:
 

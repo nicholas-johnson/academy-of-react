@@ -54,7 +54,7 @@ const myWizard = {
 ## Hints
 
 <details>
-<summary>Click for hints</summary>
+<summary>Click to reveal hints</summary>
 
 **Hint 1**: Start with the HTML structure from the demo. You need script tags for React and ReactDOM.
 

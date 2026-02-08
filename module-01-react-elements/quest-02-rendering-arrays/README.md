@@ -51,7 +51,7 @@ const students = [
 ## Hints
 
 <details>
-<summary>Click for hints</summary>
+<summary>Click to reveal hints</summary>
 
 **Hint 1**: You can create an array of React elements using a for loop:
 

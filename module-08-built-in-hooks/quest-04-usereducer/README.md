@@ -54,7 +54,7 @@ Create a spell inventory with these features:
 ## Hints
 
 <details>
-<summary>Click for hints</summary>
+<summary>Click to reveal hints</summary>
 
 **Hint 1**: Define your initial state:
 

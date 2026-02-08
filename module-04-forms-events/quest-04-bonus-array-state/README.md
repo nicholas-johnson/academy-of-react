@@ -64,7 +64,7 @@ const [students, setStudents] = useState([
 ## Hints
 
 <details>
-<summary>Click for hints</summary>
+<summary>Click to reveal hints</summary>
 
 **Hint 1**: Set up state for students and form:
 

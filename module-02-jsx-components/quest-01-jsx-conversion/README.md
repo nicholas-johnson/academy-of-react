@@ -80,7 +80,7 @@ React.createElement('p', null, student.name)
 ## Hints
 
 <details>
-<summary>Click for hints</summary>
+<summary>Click to reveal hints</summary>
 
 **Hint 1**: Create a Vite project structure:
 

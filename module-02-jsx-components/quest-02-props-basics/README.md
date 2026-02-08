@@ -48,7 +48,7 @@ const wizards = [
 ## Hints
 
 <details>
-<summary>Click for hints</summary>
+<summary>Click to reveal hints</summary>
 
 **Hint 1**: Destructure props in the function parameter:
 
