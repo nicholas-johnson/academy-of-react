@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div>
-      <h1>⚡ State Crystal Training</h1>
+      <h1> State Crystal Training</h1>
 
       {/* Demo 1: Counter */}
       <div className="counter">

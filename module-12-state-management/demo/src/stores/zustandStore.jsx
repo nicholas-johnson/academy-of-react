@@ -74,7 +74,7 @@ const spells = useStore(state => state.spells)`}</pre>
           {spells.map((spell) => (
             <div key={spell.id} className="spell-item">
               <span className="spell-name">{spell.name}</span>
-              <span className="spell-power">⚡ {spell.power}</span>
+              <span className="spell-power"> {spell.power}</span>
               <button
                 onClick={() => removeSpell(spell.id)}
                 className="remove-btn"

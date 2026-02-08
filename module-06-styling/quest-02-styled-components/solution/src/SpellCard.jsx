@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 // Element colors
 const elementColors = {
@@ -116,10 +116,10 @@ const PowerBarFill = styled.div`
   /* Animated glow for high power spells */
   ${(props) =>
     props.$power >= 80 &&
-    `
-    animation: ${pulse} 2s ease-in-out infinite;
-    box-shadow: 0 0 10px ${elementColors[props.$element]};
-  `}
+    css`
+      animation: ${pulse} 2s ease-in-out infinite;
+      box-shadow: 0 0 10px ${elementColors[props.$element]};
+    `}
 `;
 
 const PowerLabel = styled.div`

@@ -89,7 +89,7 @@ const MyComponent = observer(() => { ... })`}</pre>
           {spellStore.spells.map((spell) => (
             <div key={spell.id} className="spell-item">
               <span className="spell-name">{spell.name}</span>
-              <span className="spell-power">⚡ {spell.power}</span>
+              <span className="spell-power"> {spell.power}</span>
               <button
                 onClick={() => spellStore.removeSpell(spell.id)}
                 className="remove-btn"

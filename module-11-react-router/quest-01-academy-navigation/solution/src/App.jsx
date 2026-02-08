@@ -105,7 +105,7 @@ function Spells() {
   const spells = [
     { id: 1, name: "Fireball", element: "🔥" },
     { id: 2, name: "Ice Shield", element: "❄️" },
-    { id: 3, name: "Lightning Bolt", element: "⚡" },
+    { id: 3, name: "Lightning Bolt", element: "" },
     { id: 4, name: "Healing Wave", element: "💚" },
   ];
 

@@ -76,7 +76,7 @@ function RosterManager() {
   return (
     <div className="roster-manager">
       <div className="header">
-        <h2>📋 Roster Manager</h2>
+        <h2> Roster Manager</h2>
         <div className="count">{students.length} Students</div>
       </div>
 
@@ -202,7 +202,7 @@ function App() {
   return (
     <div className="app-container">
       <div className="quest-header">
-        <h1>⚡ Quest 3: Roster Manager</h1>
+        <h1> Quest 3: Roster Manager</h1>
         <p className="quest-subtitle">
           Array state management (CRUD operations)
         </p>

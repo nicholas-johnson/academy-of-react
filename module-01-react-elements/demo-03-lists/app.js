@@ -19,7 +19,7 @@ const simpleList = h(
 const spells = [
   { id: 1, name: "Fireball", damage: 50, element: "🔥" },
   { id: 2, name: "Ice Shard", damage: 35, element: "❄️" },
-  { id: 3, name: "Lightning Bolt", damage: 65, element: "⚡" },
+  { id: 3, name: "Lightning Bolt", damage: 65, element: "" },
   { id: 4, name: "Healing Light", damage: 0, element: "✨" },
 ];
 
