@@ -93,7 +93,7 @@ function App() {
       </div>
 
       <div className="info-box">
-        <h3>🔑 Custom Hook Benefits</h3>
+        <h3>Custom Hook Benefits</h3>
         <ul>
           <li>
             <strong>Reusability</strong>: Share logic across components

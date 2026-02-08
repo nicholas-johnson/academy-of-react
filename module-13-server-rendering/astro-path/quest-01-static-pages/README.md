@@ -2,7 +2,7 @@
 
 ## Story Context
 
-📚 The Academy needs a lightning-fast knowledge base for spell documentation! Unlike traditional React apps that ship JavaScript for everything, we'll use Astro to ship pure HTML by default, with React "islands" of interactivity only where needed.
+The Academy needs a lightning-fast knowledge base for spell documentation! Unlike traditional React apps that ship JavaScript for everything, we'll use Astro to ship pure HTML by default, with React "islands" of interactivity only where needed.
 
 ## Objective
 
@@ -240,13 +240,13 @@ src/
 
 ## Acceptance Criteria
 
-- Static spells page with zero JavaScript  
-- SearchBar island with `client:load`  
-- SpellFilter island with `client:visible`  
-- Content Collections configured with types  
-- At least 5 spell content files  
-- Detail pages for individual spells  
-- TypeScript types from Content Collections  
+- Static spells page with zero JavaScript
+- SearchBar island with `client:load`
+- SpellFilter island with `client:visible`
+- Content Collections configured with types
+- At least 5 spell content files
+- Detail pages for individual spells
+- TypeScript types from Content Collections
 - Build succeeds (`npm run build`)
 
 ## Hints

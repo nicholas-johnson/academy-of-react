@@ -15,8 +15,8 @@ import "./App.css";
 //   // Hint: Add a refetchTrigger state to enable manual refetch
 // }
 
-// Simulated API endpoint
-const API_URL = "https://api.jsonserve.com/Uw5CrZ";
+// Local API endpoint (served from public folder)
+const API_URL = "/api/spells.json";
 
 function App() {
   // TODO: Replace this with useFetch hook

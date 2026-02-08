@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { Flame, Snowflake, Heart, Shield } from "lucide-react";
 import "./App.css";
 
 // Translation data for each language
@@ -103,19 +104,19 @@ function SpellList() {
   const { t } = useLanguage();
 
   const spells = [
-    { key: "fireball", icon: "🔥", power: 45, mana: 30 },
-    { key: "iceBlast", icon: "❄️", power: 35, mana: 25 },
-    { key: "heal", icon: "💚", power: 40, mana: 35 },
-    { key: "shield", icon: "🛡️", power: 0, mana: 20 },
+    { key: "fireball", Icon: Flame, power: 45, mana: 30 },
+    { key: "iceBlast", Icon: Snowflake, power: 35, mana: 25 },
+    { key: "heal", Icon: Heart, power: 40, mana: 35 },
+    { key: "shield", Icon: Shield, power: 0, mana: 20 },
   ];
 
   return (
     <div className="section">
-      <h2>📜 {t("spells")}</h2>
+      <h2>{t("spells")}</h2>
       <div className="spell-grid">
         {spells.map((spell) => (
           <div key={spell.key} className="spell-card">
-            <span className="spell-icon">{spell.icon}</span>
+            <spell.Icon className="spell-icon" size={32} />
             <div className="spell-info">
               <div className="spell-name">{t(spell.key)}</div>
               <div className="spell-stats">
@@ -140,10 +141,10 @@ function Navigation() {
 
   return (
     <nav className="navigation">
-      <button className="nav-btn active">📜 {t("spells")}</button>
-      <button className="nav-btn">🎒 {t("inventory")}</button>
-      <button className="nav-btn">⚔️ {t("quests")}</button>
-      <button className="nav-btn">⚙️ {t("settings")}</button>
+      <button className="nav-btn active">{t("spells")}</button>
+      <button className="nav-btn">{t("inventory")}</button>
+      <button className="nav-btn">{t("quests")}</button>
+      <button className="nav-btn">{t("settings")}</button>
     </nav>
   );
 }

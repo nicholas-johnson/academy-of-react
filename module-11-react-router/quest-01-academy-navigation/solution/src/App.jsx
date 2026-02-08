@@ -6,7 +6,7 @@ function Layout() {
   return (
     <div className="app">
       <header className="header">
-        <h1>🏰 Battle Academy</h1>
+        <h1> Battle Academy</h1>
         <nav className="nav">
           <NavLink
             to="/"
@@ -55,7 +55,7 @@ function Layout() {
 function Home() {
   return (
     <div className="page">
-      <h2>🏠 Welcome to the Academy</h2>
+      <h2> Welcome to the Academy</h2>
       <p>Your journey into React Router begins here!</p>
       <div className="features">
         <div className="feature">
@@ -86,7 +86,7 @@ function Students() {
 
   return (
     <div className="page">
-      <h2>👥 Students</h2>
+      <h2> Students</h2>
       <div className="student-list">
         {students.map((student) => (
           <div key={student.id} className="student-card">
@@ -111,7 +111,7 @@ function Spells() {
 
   return (
     <div className="page">
-      <h2>📜 Spells</h2>
+      <h2>Spells</h2>
       <div className="spell-list">
         {spells.map((spell) => (
           <div key={spell.id} className="spell-card">
@@ -128,7 +128,7 @@ function Spells() {
 function About() {
   return (
     <div className="page">
-      <h2>ℹ️ About</h2>
+      <h2> About</h2>
       <p>
         The Battle Academy was founded to train the next generation of React
         developers.

@@ -71,7 +71,7 @@ const keyWarning = h(
 const app = h(
   "div",
   null,
-  h("h1", null, "📜 Demo 3: Rendering Lists"),
+  h("h1", null, "Demo 3: Rendering Lists"),
 
   h("h2", null, "1. Simple String Array"),
   h("p", null, "Transform an array of strings into list items:"),

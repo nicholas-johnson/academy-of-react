@@ -8,7 +8,7 @@ Dark times approach... Every decade, the greatest magical academies across the r
 
 You've been chosen as a new student at the Arcane Academy. Through three phases of rigorous training, you'll build your skills from basic incantations to advanced battle systems. By the end, you'll command a fully functional battle dashboard where wizarding teams clash in real-time combat!
 
-## 📚 Course Structure
+## Course Structure
 
 This course contains **13 modules** divided into **four progressive phases**:
 

@@ -61,7 +61,7 @@ function App() {
         </div>
 
         <div className="info-box">
-          <h3>🔑 Context API Pattern</h3>
+          <h3>Context API Pattern</h3>
           <ol>
             <li>
               <strong>Create</strong>: createContext() to make a context

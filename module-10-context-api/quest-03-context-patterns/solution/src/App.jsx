@@ -92,7 +92,7 @@ function Dashboard() {
       <div className="dashboard-header">
         <div>
           <h2>Welcome back, {user.name}!</h2>
-          <p className="house-badge">🏰 House {user.house}</p>
+          <p className="house-badge"> House {user.house}</p>
         </div>
         <button onClick={logout} className="btn btn-logout">
           Logout
@@ -127,21 +127,18 @@ function Dashboard() {
         <h3>Available Quests</h3>
         <div className="quest-list">
           <div className="quest-card">
-            <span className="quest-icon">⚔️</span>
             <div>
               <div className="quest-title">Duel a Rival</div>
               <div className="quest-reward">+50 XP</div>
             </div>
           </div>
           <div className="quest-card">
-            <span className="quest-icon">📚</span>
             <div>
               <div className="quest-title">Study Advanced Spells</div>
               <div className="quest-reward">+30 XP</div>
             </div>
           </div>
           <div className="quest-card">
-            <span className="quest-icon">🧪</span>
             <div>
               <div className="quest-title">Brew a Potion</div>
               <div className="quest-reward">+25 XP</div>
@@ -158,13 +155,13 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🏰 Wizard Academy</h1>
+      <h1> Wizard Academy</h1>
       <p>Authentication with Context API</p>
 
       {isAuthenticated ? <Dashboard /> : <LoginForm />}
 
       <div className="info-box">
-        <h3>🔑 Auth Context Pattern</h3>
+        <h3>Auth Context Pattern</h3>
         <ul>
           <li>User state stored in context</li>
           <li>Login/logout available globally</li>
