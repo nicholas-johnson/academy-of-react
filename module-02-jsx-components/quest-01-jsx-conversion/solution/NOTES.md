@@ -39,8 +39,8 @@ npm run dev      # Start dev server with hot reload
 
 **Benefits:**
 
-- ⚡ Instant Hot Module Replacement (HMR)
-- 🚀 Fast builds with esbuild
+-  Instant Hot Module Replacement (HMR)
+-  Fast builds with esbuild
 - 📦 Proper npm package management
 - ✨ Production-ready setup
 

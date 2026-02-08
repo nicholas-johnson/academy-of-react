@@ -2,7 +2,7 @@
 
 ## Story Context
 
-🚀 The Academy's Remix portal is ready for the world! Deploy a complete, production-ready application with authentication, session management, and professional hosting. Show the world what Remix can do!
+ The Academy's Remix portal is ready for the world! Deploy a complete, production-ready application with authentication, session management, and professional hosting. Show the world what Remix can do!
 
 ## Objective
 

@@ -2,7 +2,7 @@
 
 ## Story Context
 
-🚀 The Academy's knowledge base is ready for the world! Deploy a complete, production-optimized Astro site with View Transitions, image optimization, and professional hosting. Show the world how fast websites can be!
+ The Academy's knowledge base is ready for the world! Deploy a complete, production-optimized Astro site with View Transitions, image optimization, and professional hosting. Show the world how fast websites can be!
 
 ## Objective
 

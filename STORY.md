@@ -12,25 +12,25 @@ The Academy is divided into four great houses, each with its own traditions:
 
 ### The Four Houses
 
-**House Liondudes** 🦁
+**House Liondudes**
 
 - Colors: Crimson and Gold
 - Traits: Bravery, bold component design, rapid prototyping
 - Specialty: Action-heavy interfaces, battle systems
 
-**House Scarybird** 🦅
+**House Scarybird**
 
 - Colors: Azure and Silver
 - Traits: Wisdom, elegant architecture, optimization
 - Specialty: Performance tuning, complex state management
 
-**House Huftybadger** 🦡
+**House Huftybadger**
 
 - Colors: Gold and Black
 - Traits: Loyalty, accessibility, user-focused design
 - Specialty: Forms, user experience, inclusive interfaces
 
-**House Snakeyguys** 🐍
+**House Snakeyguys**
 
 - Colors: Emerald and Silver
 - Traits: Ambition, advanced techniques, cutting-edge features
@@ -60,7 +60,7 @@ The academy with the best-performing battle system wins eternal glory and braggi
 
 ## Key Characters
 
-### Headmaster Renderius the Wise
+### Headmaster Rundoolius the Wise
 
 Ancient wizard who founded the Academy centuries ago. Inventor of the State Crystal and champion of component-based magic. Serves as narrator throughout the course.
 
@@ -68,7 +68,7 @@ Ancient wizard who founded the Academy centuries ago. Inventor of the State Crys
 
 Master of Custom Spells (Hooks). Teaches advanced magic in Phase 3. Eccentric but brilliant, known for creating the most elegant reusable enchantments.
 
-### Archmage Optima
+### Archmage Optimius
 
 Specialist in Performance Magic. Arrived from the Eastern Academies. In Module 12, she reveals the secrets of memoization and lazy loading.
 
@@ -113,7 +113,7 @@ You're settling in, making friends, tracking your growing power...
 
 ### The Announcement (Module 4)
 
-At the start of Phase 2, Headmaster Renderius makes a shocking announcement during the Morning Assembly: "The Wizarding War approaches. In six months, rival academies will arrive. We must prepare."
+At the start of Phase 2, Headmaster Rundoolius makes a shocking announcement during the Morning Assembly: "The Wizarding War approaches. In six months, rival academies will arrive. We must prepare."
 
 The Academy shifts into preparation mode. You must build official systems:
 
@@ -132,7 +132,7 @@ Rumors spread about the rival academies. "Shadowmere has a new secret weapon." "
 
 They're here. Three great airships descend upon the Academy grounds. The rival schools have arrived for the Wizarding War.
 
-Headmaster Renderius reveals Phase 3 training: TypeScript magic. "You must build a battle system so robust, so type-safe, that nothing can fail during combat."
+Headmaster Rundoolius reveals Phase 3 training: TypeScript magic. "You must build a battle system so robust, so type-safe, that nothing can fail during combat."
 
 You learn:
 
@@ -200,7 +200,7 @@ Mana is crucial:
 The Wizarding War is won by the academy whose battle system:
 
 1. **Functions flawlessly** (no bugs, no crashes)
-2. **Performs optimally** (smooth, fast, responsive)
+2. **Performs Optimiuslly** (smooth, fast, responsive)
 3. **Handles edge cases** (what if mana runs out? What if both wizards die simultaneously?)
 4. **Demonstrates mastery** (uses all learned concepts appropriately)
 
@@ -220,7 +220,7 @@ But all carry with them the lessons learned at the Academy: clean code, thoughtf
 
 ---
 
-_"May your components be pure, your state immutable, and your bugs few."_  
+_"May your components be pure, your state immutable, and your bugs deep and interesting."_  
 — Academy Motto
 
 **Now, brave apprentice, your story begins...**

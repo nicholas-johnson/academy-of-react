@@ -72,7 +72,7 @@ By Module 13, you'll have built:
   - Health and mana tracking
   - Spell animations and damage calculations
   - Victory determination
-  - Lazy-loaded sections for optimal performance
+  - Lazy-loaded sections for Optimiusl performance
 
 By Module 13, you'll deploy production server-rendered applications:
 

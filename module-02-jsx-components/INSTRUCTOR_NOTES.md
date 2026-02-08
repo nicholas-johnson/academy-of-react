@@ -236,7 +236,7 @@ Students render a list of components using `.map()` and handle arrays as props.
 
 3. **Demo: JSX Basics** (15 min)
    - Walk through App.jsx
-   - Show createElement ↔ JSX equivalence
+   - Show createElement - JSX equivalence
    - Emphasize the four JSX rules
    - Live code a small addition
 
@@ -400,7 +400,7 @@ Ctrl+C               # Stop the dev server
 - [ ] Test `npm install` and `npm run dev` in all folders
 - [ ] Have Node.js download link ready for students who need it
 - [ ] Review quest solutions
-- [ ] Prepare to show createElement ↔ JSX comparison
+- [ ] Prepare to show createElement - JSX comparison
 - [ ] Know the four JSX rules cold
 - [ ] Have a browser console open to show errors/warnings
 - [ ] Test HMR works (edit → save → see change)

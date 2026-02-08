@@ -16,7 +16,7 @@ Covers: Controlled components, form submission, e.preventDefault(), validation p
 
 ## Story Context
 
-**ANNOUNCEMENT**: The Wizarding War approaches! Headmaster Renderius makes the shocking proclamation during Morning Assembly. Rival academies will arrive in six months. The Academy must prepare.
+**ANNOUNCEMENT**: The Wizarding War approaches! Headmaster Rundoolius makes the shocking proclamation during Morning Assembly. Rival academies will arrive in six months. The Academy must prepare.
 
 The first task: build official registration systems. Students must sign up for battles, register their spell preferences, and complete the Sorting Ceremony. This requires mastering complex forms, validation, and multi-step processes.
 
