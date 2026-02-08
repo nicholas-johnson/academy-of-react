@@ -17,10 +17,10 @@ const simpleList = h(
 // Example 2: Array of objects
 // ============================================
 const spells = [
-  { id: 1, name: "Fireball", damage: 50, element: "🔥" },
-  { id: 2, name: "Ice Shard", damage: 35, element: "❄️" },
-  { id: 3, name: "Lightning Bolt", damage: 65, element: "" },
-  { id: 4, name: "Healing Light", damage: 0, element: "✨" },
+  { id: 1, name: "Fireball", damage: 50 },
+  { id: 2, name: "Ice Shard", damage: 35 },
+  { id: 3, name: "Lightning Bolt", damage: 65 },
+  { id: 4, name: "Healing Light", damage: 0 },
 ];
 
 // Use the object's id as the key (better than index!)
@@ -31,7 +31,7 @@ const spellList = h(
     h(
       "div",
       { key: spell.id, className: "spell-card" },
-      h("h3", null, `${spell.element} ${spell.name}`),
+      h("h3", null, ` ${spell.name}`),
       h(
         "p",
         null,
@@ -60,7 +60,7 @@ const numberedList = h(
 const keyWarning = h(
   "div",
   { className: "key-warning" },
-  h("strong", null, "⚠️ Always use keys! "),
+  h("strong", null, "Always use keys! "),
   "React uses keys to track which items changed. Use unique IDs when available, ",
   "or index as a last resort. Keys help React update the DOM efficiently.",
 );
