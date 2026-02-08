@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>📜 Spell Practice</h1>
+      <h1>Spell Practice</h1>
       <p>Practice your incantations - auto-saves as you type</p>
 
       <div className="practice-area">
@@ -63,10 +63,10 @@ function App() {
         <div className="status-bar">
           <div className="save-status">
             {saveStatus === "saving" && (
-              <span className="status saving">💾 Saving...</span>
+              <span className="status saving">Saving...</span>
             )}
             {saveStatus === "saved" && (
-              <span className="status saved">✓ Saved!</span>
+              <span className="status saved">Saved!</span>
             )}
           </div>
 
@@ -83,7 +83,7 @@ function App() {
       </div>
 
       <div className="info-box">
-        <h3>💡 Auto-Save Feature</h3>
+        <h3>Auto-Save Feature</h3>
         <ul>
           <li>Automatically saves 1 second after you stop typing</li>
           <li>Saved to localStorage (persists on refresh)</li>

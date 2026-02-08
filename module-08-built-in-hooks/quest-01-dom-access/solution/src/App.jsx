@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>⚔️ Battle Command Prompt</h1>
+      <h1>Battle Command Prompt</h1>
       <p>Quick spell casting interface</p>
 
       <form onSubmit={handleSubmit} className="command-form">

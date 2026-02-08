@@ -2,22 +2,22 @@ import { useState } from "react";
 import "./App.css";
 
 const HOUSES = [
-  { id: "Liondudes", name: "Liondudes", icon: "🦁" },
-  { id: "Scarybird", name: "Scarybird", icon: "🦅" },
-  { id: "Huftybadger", name: "Huftybadger", icon: "🦡" },
-  { id: "Snakeyguys", name: "Snakeyguys", icon: "🐍" },
+  { id: "Liondudes", name: "Liondudes" },
+  { id: "Scarybird", name: "Scarybird" },
+  { id: "Huftybadger", name: "Huftybadger" },
+  { id: "Snakeyguys", name: "Snakeyguys" },
 ];
 
 const FAMILIARS = [
-  { id: "owl", name: "Owl", icon: "🦉" },
-  { id: "cat", name: "Cat", icon: "🐱" },
-  { id: "toad", name: "Toad", icon: "🐸" },
+  { id: "owl", name: "Owl" },
+  { id: "cat", name: "Cat" },
+  { id: "toad", name: "Toad" },
 ];
 
 const WANDS = [
-  { id: "oak", name: "Oak & Phoenix Feather", icon: "🪵" },
-  { id: "holly", name: "Holly & Dragon Heartstring", icon: "🌿" },
-  { id: "elder", name: "Elder & Unicorn Hair", icon: "✨" },
+  { id: "oak", name: "Oak & Phoenix Feather" },
+  { id: "holly", name: "Holly & Dragon Heartstring" },
+  { id: "elder", name: "Elder & Unicorn Hair" },
 ];
 
 function App() {
@@ -134,7 +134,6 @@ function App() {
                     className={`option-card ${formData.house === house.id ? "selected" : ""}`}
                     onClick={() => updateField("house", house.id)}
                   >
-                    <div className="option-icon">{house.icon}</div>
                     <div className="option-name">{house.name}</div>
                   </div>
                 ))}
@@ -158,7 +157,6 @@ function App() {
                   className={`option-card ${formData.familiar === familiar.id ? "selected" : ""}`}
                   onClick={() => updateField("familiar", familiar.id)}
                 >
-                  <div className="option-icon">{familiar.icon}</div>
                   <div className="option-name">{familiar.name}</div>
                 </div>
               ))}
@@ -181,7 +179,6 @@ function App() {
                   className={`option-card ${formData.wand === wand.id ? "selected" : ""}`}
                   onClick={() => updateField("wand", wand.id)}
                 >
-                  <div className="option-icon">{wand.icon}</div>
                   <div className="option-name">{wand.name}</div>
                 </div>
               ))}
@@ -192,7 +189,6 @@ function App() {
         {/* Complete/Summary */}
         {currentStep === "complete" && (
           <div className="summary">
-            <div className="success-icon">🎉</div>
             <h2>Enrollment Complete!</h2>
             <p style={{ color: "#666", marginBottom: "30px" }}>
               Welcome to the Arcane Academy, {formData.name}!

@@ -2,10 +2,10 @@ import { useRef } from "react";
 import "./App.css";
 
 const SPELLS = [
-  { id: 1, name: "Fireball", animation: "shake", icon: "🔥" },
-  { id: 2, name: "Ice Blast", animation: "spin", icon: "❄️" },
-  { id: 3, name: "Lightning Strike", animation: "flash", icon: "⚡" },
-  { id: 4, name: "Healing Wave", animation: "pulse", icon: "💚" },
+  { id: 1, name: "Fireball", animation: "shake" },
+  { id: 2, name: "Ice Blast", animation: "spin" },
+  { id: 3, name: "Lightning Strike", animation: "flash" },
+  { id: 4, name: "Healing Wave", animation: "pulse" },
 ];
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>✨ Spell Animations</h1>
+      <h1>Spell Animations</h1>
       <p>Click spells to trigger visual effects</p>
 
       <div className="spell-grid">
@@ -37,7 +37,6 @@ function App() {
             onClick={() => triggerAnimation(index, spell.animation)}
             className="spell-card"
           >
-            <div className="spell-icon">{spell.icon}</div>
             <h3>{spell.name}</h3>
             <p className="animation-name">{spell.animation}</p>
           </div>
@@ -45,7 +44,7 @@ function App() {
       </div>
 
       <div className="info-box">
-        <h3>🎯 How It Works</h3>
+        <h3>How It Works</h3>
         <ul>
           <li>Each spell card has a ref stored in an array</li>
           <li>

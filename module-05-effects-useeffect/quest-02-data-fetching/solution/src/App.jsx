@@ -53,7 +53,7 @@ function App() {
   if (loading) {
     return (
       <div className="app">
-        <h1>🔍 War Intelligence</h1>
+        <h1>War Intelligence</h1>
         <div className="loading">
           <div className="spinner"></div>
           <p>Gathering intelligence...</p>
@@ -65,9 +65,9 @@ function App() {
   if (error) {
     return (
       <div className="app">
-        <h1>🔍 War Intelligence</h1>
+        <h1>War Intelligence</h1>
         <div className="error">
-          <p>❌ Error: {error}</p>
+          <p>Error: {error}</p>
           <button onClick={handleRefresh} className="btn-primary">
             Retry
           </button>
@@ -78,11 +78,11 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🔍 War Intelligence</h1>
+      <h1>War Intelligence</h1>
       <p>Latest reports on rival academies</p>
 
       <button onClick={handleRefresh} className="refresh-btn">
-        🔄 Refresh Intelligence
+        Refresh Intelligence
       </button>
 
       <div className="intel-grid">

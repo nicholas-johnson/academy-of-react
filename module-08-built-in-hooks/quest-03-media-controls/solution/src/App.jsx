@@ -2,12 +2,12 @@ import { useState, useRef } from "react";
 import "./App.css";
 
 const BATTLE_EVENTS = [
-  { time: 5, description: "Battle begins!", icon: "⚔️" },
-  { time: 12, description: "Fireball cast", icon: "🔥" },
-  { time: 23, description: "Shield activated", icon: "🛡️" },
-  { time: 35, description: "Lightning strike", icon: "⚡" },
-  { time: 48, description: "Healing potion used", icon: "💚" },
-  { time: 58, description: "Victory!", icon: "🏆" },
+  { time: 5, description: "Battle begins!" },
+  { time: 12, description: "Fireball cast" },
+  { time: 23, description: "Shield activated" },
+  { time: 35, description: "Lightning strike" },
+  { time: 48, description: "Healing potion used" },
+  { time: 58, description: "Victory!" },
 ];
 
 const MAX_TIME = 60;
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🎬 Battle Replay</h1>
+      <h1>Battle Replay</h1>
       <p>Relive the epic battle with timeline controls</p>
 
       <div className="timeline-display">
@@ -70,13 +70,13 @@ function App() {
           disabled={isPlaying || currentTime >= MAX_TIME}
           className="btn btn-play"
         >
-          ▶️ Play
+          Play
         </button>
         <button onClick={pause} disabled={!isPlaying} className="btn btn-pause">
-          ⏸️ Pause
+          Pause
         </button>
         <button onClick={restart} className="btn btn-restart">
-          🔄 Restart
+          Restart
         </button>
       </div>
 
@@ -88,7 +88,6 @@ function App() {
           <ul className="events-list">
             {activeEvents.map((event, index) => (
               <li key={index} className="event-item">
-                <span className="event-icon">{event.icon}</span>
                 <span className="event-time">{event.time}s</span>
                 <span className="event-description">{event.description}</span>
               </li>
@@ -98,7 +97,7 @@ function App() {
       </div>
 
       <div className="info-box">
-        <h3>🔑 Ref vs State</h3>
+        <h3>Ref vs State</h3>
         <ul>
           <li>
             <strong>intervalRef</strong> (ref): Stores interval ID, doesn't

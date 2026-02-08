@@ -78,12 +78,12 @@ function App() {
 
   return (
     <div className="app">
-      <h1>⚔️ Battle Registration</h1>
+      <h1>Battle Registration</h1>
       <p>Sign up for the Wizarding War competition</p>
 
       {submitted && (
         <div className="success">
-          ✓ Registration successful! You're ready for battle!
+          Registration successful! You're ready for battle!
         </div>
       )}
 

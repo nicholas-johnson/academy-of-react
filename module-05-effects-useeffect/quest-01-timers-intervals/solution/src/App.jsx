@@ -35,7 +35,7 @@ function App() {
       setSecondsRemaining((prev) => {
         if (prev <= 1) {
           setIsRunning(false);
-          alert("🧘 Meditation complete! Your focus is restored.");
+          alert("Meditation complete! Your focus is restored.");
           return 0;
         }
         return prev - 1;
@@ -61,7 +61,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🧘 Meditation Timer</h1>
+      <h1>Meditation Timer</h1>
       <p>Focus your magical energy</p>
 
       {!isRunning && secondsRemaining === 0 && (
