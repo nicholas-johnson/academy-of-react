@@ -231,29 +231,29 @@ function ProtectedRoute({ children }) {
 
 ## Quests
 
-### Quest 1: Academy Navigation
+### Quest 1: Basic Routing
 
 **Difficulty**: Intermediate
 
 Create a multi-page Academy portal with navigation between Home, Students, Spells, and About pages.
 
-[Start Quest →](./quest-01-academy-navigation/)
+[Start Quest →](./quest-01-basic-routing/)
 
-### Quest 2: Spell Directory
+### Quest 2: Dynamic Routes
 
-**Difficulty**: ⭐⭐ Intermediate
+**Difficulty**: Intermediate
 
 Build a spell directory with dynamic routes. View spell lists and individual spell details using URL parameters.
 
-[Start Quest →](./quest-02-spell-directory/)
+[Start Quest →](./quest-02-dynamic-routes/)
 
-### Quest 3: War Room
+### Quest 3: Protected Routes
 
 **Difficulty**: Advanced
 
 Create a protected War Room that only authenticated users can access. Includes login flow, protected routes, and search parameters for filtering battle data.
 
-[Start Quest →](./quest-03-war-room/)
+[Start Quest →](./quest-03-protected-routes/)
 
 ## Bonus Mastery Challenge
 
