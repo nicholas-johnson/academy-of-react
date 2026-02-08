@@ -7,10 +7,8 @@
 h1 {
   font-size: 2rem;
   text-align: center;
-  background: #222740;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
@@ -38,7 +36,7 @@ h1 {
   display: block;
   font-size: 2rem;
   font-weight: bold;
-  color: #222740;
+  color: #60a5fa;
 }
 
 .stat-label {
@@ -155,8 +153,9 @@ h1 {
 }
 
 .btn-favorite {
-  background: #1e293b;
-  border: 1px solid #334155 !important;
+  background: #334155;
+  color: #e2e8f0;
+  border: 1px solid #475569 !important;
 }
 
 .btn-upgrade {
