@@ -151,6 +151,37 @@ function Counter() {
     },
   },
   {
+    type: "code",
+    content: {
+      title: "Rendering Lists with .map()",
+      code: `const students = [
+  { name: "Harry", house: "Gryffin" },
+  { name: "Luna", house: "Ravenclaw" },
+  { name: "Draco", house: "Slytherin" }
+];
+
+// Transform data into React elements
+const studentElements = students.map(student =>
+  React.createElement(
+    "div",
+    { className: "student" },
+    student.name + " - " + student.house
+  )
+);
+
+// Render the array of elements
+root.render(
+  React.createElement("div", null, studentElements)
+);`,
+      highlights: [
+        ".map() transforms each item into a React element",
+        "Returns a new array of elements",
+        "React can render arrays of elements directly",
+        "This pattern is fundamental to React",
+      ],
+    },
+  },
+  {
     type: "title",
     content: {
       title: "Let's Begin!",
