@@ -31,7 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   content: {
     title: 'Main Title',
     subtitle: 'Subtitle text',
-    emoji: '🚀'
+    icon: 'IconName' // Lucide icon name
   }
 }
 ```
@@ -44,7 +44,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   content: {
     title: 'Slide Title',
     points: ['Point 1', 'Point 2', 'Point 3'],
-    emoji: '📝'
+    emoji: 'IconName'
   }
 }
 ```
@@ -108,7 +108,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   content: {
     title: 'Key Rules',
     rules: [
-      { rule: 'Rule Name', example: 'Example text', icon: '📌' }
+      { rule: 'Rule Name', example: 'Example text', icon: 'IconName' }
     ]
   }
 }
@@ -121,7 +121,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   type: 'welcome',
   content: {
     title: 'Welcome Title',
-    points: ['👋 Point 1', '🎯 Point 2', '💪 Point 3']
+    points: ['Point 1', 'Point 2', 'Point 3']
   }
 }
 ```
@@ -134,7 +134,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   content: {
     title: 'Course Overview',
     modules: [
-      { num: '1-2', name: 'Module Name', icon: '🧱' }
+      { num: '1-2', name: 'Module Name', icon: 'IconName' }
     ]
   }
 }

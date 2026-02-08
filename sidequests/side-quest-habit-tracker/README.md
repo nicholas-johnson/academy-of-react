@@ -218,7 +218,7 @@ function calculateStreak(completions: string[], frequency: Frequency): number {
 
 ## Fun Features to Add
 
-- 🎉 Confetti on 7-day, 30-day, 100-day streaks
+- Confetti on 7-day, 30-day, 100-day streaks
 - 🔥 Streak freeze (skip a day without losing streak)
 - 🏆 Achievement badges
 - 📊 Heatmap calendar (like GitHub contributions)

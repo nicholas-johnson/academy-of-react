@@ -288,15 +288,15 @@ npm run build
 
 **Deployment Checklist:**
 
-- Complete portal with all pages  
-- View Transitions for smooth navigation  
-- Images optimized with Astro Image  
-- SEO meta tags on all pages  
-- Deployed to production hosting  
-- Custom 404 page  
-- Lighthouse score 95+  
-- Working navigation  
-- Islands hydrate correctly  
+- Complete portal with all pages
+- View Transitions for smooth navigation
+- Images optimized with Astro Image
+- SEO meta tags on all pages
+- Deployed to production hosting
+- Custom 404 page
+- Lighthouse score 95+
+- Working navigation
+- Islands hydrate correctly
 - Fast load times (< 2s)
 
 ## Lighthouse Targets
@@ -431,7 +431,7 @@ npm run build && ls -lh dist/
 
 ---
 
-**Congratulations!** 🎉 You've completed the Astro path and deployed a lightning-fast website using Islands Architecture!
+**Congratulations!** You've completed the Astro path and deployed a lightning-fast website using Islands Architecture!
 
 ## Reflection Questions
 

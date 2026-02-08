@@ -2,7 +2,7 @@
 
 ## Story Context
 
-🎉 The war is over, and the Academy wants to share its knowledge with the world! Your first task: Build a public-facing portal where anyone can browse our student directory and spell catalog. Use Next.js Server Components to fetch data directly on the server.
+The war is over, and the Academy wants to share its knowledge with the world! Your first task: Build a public-facing portal where anyone can browse our student directory and spell catalog. Use Next.js Server Components to fetch data directly on the server.
 
 ## Objective
 
@@ -55,11 +55,11 @@ Create `app/students/error.tsx`:
 
 ## Acceptance Criteria
 
-- Students page fetches data with async Server Component  
-- Search component is marked `'use client'`  
-- Search filters students without page reload  
-- Suspense shows loading state for slow data  
-- Error boundary catches and displays errors  
+- Students page fetches data with async Server Component
+- Search component is marked `'use client'`
+- Search filters students without page reload
+- Suspense shows loading state for slow data
+- Error boundary catches and displays errors
 - TypeScript types for Student interface
 
 ## Hints

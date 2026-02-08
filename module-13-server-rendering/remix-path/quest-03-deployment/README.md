@@ -250,15 +250,15 @@ NODE_ENV="production"
 
 ## Acceptance Criteria
 
-- Complete app with multiple routes  
-- Session-based authentication works  
-- Protected routes redirect to login  
-- Login/logout functionality  
-- Resource routes for API access  
-- Deployed to production (Fly.io or Vercel)  
-- Environment variables configured  
-- HTTPS enabled  
-- TypeScript throughout  
+- Complete app with multiple routes
+- Session-based authentication works
+- Protected routes redirect to login
+- Login/logout functionality
+- Resource routes for API access
+- Deployed to production (Fly.io or Vercel)
+- Environment variables configured
+- HTTPS enabled
+- TypeScript throughout
 - Error boundaries on all routes
 
 ## Deployment Checklist
@@ -359,7 +359,7 @@ export function ErrorBoundary() {
 
 ---
 
-**Congratulations!** 🎉 You've completed the Remix path and deployed a production full-stack application!
+**Congratulations!** You've completed the Remix path and deployed a production full-stack application!
 
 **Want to compare?** Try the [Next.js Path](../../nextjs-path/) to see React Server Components, or explore [Astro Path](../../astro-path/) for Islands Architecture.
 

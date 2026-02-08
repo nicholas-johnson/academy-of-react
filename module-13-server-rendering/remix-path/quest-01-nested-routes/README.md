@@ -2,7 +2,7 @@
 
 ## Story Context
 
-🎉 Victory! The Academy wants to share knowledge with the world using Remix. Build a portal where wizards everywhere can browse students and spells. Learn the Remix way: loaders for data, progressive enhancement, and web fundamentals first!
+Victory! The Academy wants to share knowledge with the world using Remix. Build a portal where wizards everywhere can browse students and spells. Learn the Remix way: loaders for data, progressive enhancement, and web fundamentals first!
 
 ## Objective
 
@@ -139,12 +139,12 @@ app/
 
 ## Acceptance Criteria
 
-- Students route uses loader function  
-- Data fetched with `useLoaderData()` hook  
-- Nested layout with `<Outlet />` works  
-- Error boundary catches and displays errors  
-- Dashboard uses `defer()` for streaming  
-- TypeScript types inferred from loader  
+- Students route uses loader function
+- Data fetched with `useLoaderData()` hook
+- Nested layout with `<Outlet />` works
+- Error boundary catches and displays errors
+- Dashboard uses `defer()` for streaming
+- TypeScript types inferred from loader
 - Progressive enhancement (works without JS!)
 
 ## Hints

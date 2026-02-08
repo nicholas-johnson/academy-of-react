@@ -137,15 +137,15 @@ app/
 
 ## Acceptance Criteria
 
-- Home page uses Static Generation (SSG)  
-- Students page uses ISR (revalidates periodically)  
-- Battles page uses Dynamic rendering  
-- API routes handle CRUD operations  
-- Admin routes protected with middleware  
-- Deployed to Vercel with custom domain (optional)  
-- Environment variables configured  
-- Production build optimized  
-- TypeScript throughout  
+- Home page uses Static Generation (SSG)
+- Students page uses ISR (revalidates periodically)
+- Battles page uses Dynamic rendering
+- API routes handle CRUD operations
+- Admin routes protected with middleware
+- Deployed to Vercel with custom domain (optional)
+- Environment variables configured
+- Production build optimized
+- TypeScript throughout
 - Error boundaries in place
 
 ## Environment Variables
@@ -246,7 +246,7 @@ export function middleware(request: NextRequest) {
 
 ---
 
-**Congratulations!** 🎉 You've completed the Next.js path and deployed a production React Server Components application!
+**Congratulations!** You've completed the Next.js path and deployed a production React Server Components application!
 
 **Want more?** Try the [Remix Path](../../remix-path/) or [Astro Path](../../astro-path/) to see different approaches to server rendering.
 

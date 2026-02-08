@@ -409,4 +409,4 @@ Use expressions instead:
 >
 > They do the exact same thing, but JSX is dramatically more readable!
 
-From this point forward, we'll use JSX for everything. You now understand what it's doing under the hood! 🎉
+From this point forward, we'll use JSX for everything. You now understand what it's doing under the hood!

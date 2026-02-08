@@ -119,7 +119,7 @@ const totalBrewTime = ingredients
 {
   isBrewing && (
     <div className="brewing-message">
-      🧪 Brewing potion with {selectedIngredients.length} ingredients...
+      Brewing potion with {selectedIngredients.length} ingredients...
       <p>Time remaining: {totalBrewTime} hours</p>
     </div>
   );

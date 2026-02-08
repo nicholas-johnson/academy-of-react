@@ -182,4 +182,4 @@ h('div', { className: 'wizard-card' },
 </div>
 ```
 
-Much better! 🎉
+Much better!
