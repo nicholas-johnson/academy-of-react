@@ -43,12 +43,12 @@ function App() {
 
   return (
     <div className="app">
-      <h1>📡 useFetch Hook Demo</h1>
+      <h1>useFetch Hook Demo</h1>
       <p>Reusable data fetching with loading and error states</p>
 
       <div className="controls">
         <button onClick={refetch} disabled={loading} className="btn">
-          {loading ? "⏳ Loading..." : "🔄 Refetch Data"}
+          {loading ? "Loading..." : "Refetch Data"}
         </button>
       </div>
 
@@ -61,7 +61,7 @@ function App() {
 
       {error && (
         <div className="error-section">
-          <h3>❌ Error Occurred</h3>
+          <h3>Error Occurred</h3>
           <p>{error.message}</p>
           <p className="hint">Using fallback mock data below</p>
         </div>
@@ -69,13 +69,13 @@ function App() {
 
       {!loading && !error && data && (
         <div className="spells-section">
-          <h3>✨ Available Spells ({data.length})</h3>
+          <h3>Available Spells ({data.length})</h3>
           <div className="spell-grid">
             {data.map((spell) => (
               <div key={spell.id} className="spell-card">
                 <h4>{spell.name}</h4>
                 <span className={`type-badge ${spell.type}`}>{spell.type}</span>
-                <div className="power-display">⚡ {spell.power}</div>
+                <div className="power-display">Power: {spell.power}</div>
               </div>
             ))}
           </div>
@@ -85,7 +85,7 @@ function App() {
       {/* Fallback for API error - show mock data */}
       {error && (
         <div className="spells-section">
-          <h3>✨ Mock Spells (Fallback)</h3>
+          <h3>Mock Spells (Fallback)</h3>
           <div className="spell-grid">
             {[
               { id: 1, name: "Fireball", type: "fire", power: 85 },
@@ -95,7 +95,7 @@ function App() {
               <div key={spell.id} className="spell-card">
                 <h4>{spell.name}</h4>
                 <span className={`type-badge ${spell.type}`}>{spell.type}</span>
-                <div className="power-display">⚡ {spell.power}</div>
+                <div className="power-display">Power: {spell.power}</div>
               </div>
             ))}
           </div>
@@ -103,7 +103,7 @@ function App() {
       )}
 
       <div className="info-box">
-        <h3>🔑 useFetch Hook Features</h3>
+        <h3>useFetch Hook Features</h3>
         <ul>
           <li>Loading, error, and data states</li>
           <li>Automatic refetch on URL change</li>

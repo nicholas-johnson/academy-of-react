@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>📚 Spell Inventory</h1>
+      <h1>Spell Inventory</h1>
       <p className="subtitle">Manage your magical arsenal with useReducer</p>
 
       <div className="stats">
@@ -107,7 +107,7 @@ function App() {
           <li key={spell.id} className={spell.isFavorite ? "favorite" : ""}>
             <div className="spell-info">
               <span className="spell-name">
-                {spell.isFavorite && "⭐ "}
+                {spell.isFavorite && "★ "}
                 {spell.name}
               </span>
               <span className="spell-power">Power: {spell.power}</span>
@@ -119,7 +119,7 @@ function App() {
                 }
                 className="btn-favorite"
               >
-                {spell.isFavorite ? "💔" : "❤️"}
+                {spell.isFavorite ? "Unfavorite" : "Favorite"}
               </button>
               <button
                 onClick={() =>
@@ -127,13 +127,13 @@ function App() {
                 }
                 className="btn-upgrade"
               >
-                ⬆️ +10
+                Upgrade +10
               </button>
               <button
                 onClick={() => dispatch({ type: "REMOVE_SPELL", id: spell.id })}
                 className="btn-remove"
               >
-                🗑️
+                Remove
               </button>
             </div>
           </li>

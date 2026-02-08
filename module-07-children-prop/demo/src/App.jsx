@@ -56,7 +56,7 @@ function App() {
     <Layout
       header={
         <div className="nav">
-          <span className="logo">⚡ Wizard Academy</span>
+          <span className="logo">Wizard Academy</span>
           <button onClick={() => setModalOpen(true)}>Cast Spell</button>
         </div>
       }
@@ -78,19 +78,19 @@ function App() {
         <div className="card-grid">
           {/* Same Card component, different content */}
           <Card variant="primary">
-            <h3>🔮 Magic Level</h3>
+            <h3>Magic Level</h3>
             <p className="stat-value">45</p>
             <p>Intermediate Caster</p>
           </Card>
 
           <Card variant="secondary">
-            <h3>❤️ Health</h3>
+            <h3>Health</h3>
             <p className="stat-value">100</p>
             <p>Fully Restored</p>
           </Card>
 
           <Card>
-            <h3>💙 Mana</h3>
+            <h3>Mana</h3>
             <p className="stat-value">80</p>
             <div className="mana-bar">
               <div className="mana-fill" style={{ width: "80%" }}></div>
@@ -102,9 +102,9 @@ function App() {
       <Section title="Recent Activity">
         <Card>
           <ul className="activity-list">
-            <li>✨ Learned Fireball spell</li>
-            <li>🧪 Brewed healing potion</li>
-            <li>📚 Completed Chapter 5</li>
+            <li>Learned Fireball spell</li>
+            <li>Brewed healing potion</li>
+            <li>Completed Chapter 5</li>
           </ul>
         </Card>
       </Section>
@@ -117,9 +117,9 @@ function App() {
       >
         <p>Choose your spell wisely!</p>
         <div className="spell-options">
-          <button className="spell-btn">🔥 Fireball</button>
-          <button className="spell-btn">❄️ Ice Shard</button>
-          <button className="spell-btn">⚡ Lightning</button>
+          <button className="spell-btn">Fireball</button>
+          <button className="spell-btn">Ice Shard</button>
+          <button className="spell-btn">Lightning</button>
         </div>
         <p className="spell-hint">Each spell costs 10 mana</p>
       </Modal>

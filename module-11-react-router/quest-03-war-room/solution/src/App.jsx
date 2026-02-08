@@ -112,7 +112,7 @@ function Layout() {
   return (
     <div className="app">
       <header className="header">
-        <h1>⚔️ Battle Command</h1>
+        <h1>Battle Command</h1>
         <nav className="nav">
           <NavLink
             to="/"
@@ -204,7 +204,7 @@ function Login() {
   return (
     <div className="page">
       <div className="login-box">
-        <h2>🔐 Commander Login</h2>
+        <h2>Commander Login</h2>
         {from !== "/" && (
           <p className="login-notice">You must log in to access that page.</p>
         )}
@@ -252,7 +252,7 @@ function WarRoom() {
 
   return (
     <div className="page">
-      <h2>🗺️ War Room</h2>
+      <h2>War Room</h2>
       <p>Classified battle information. Commanders only.</p>
 
       <div className="stats-row">
@@ -324,8 +324,8 @@ function WarRoom() {
               </span>
             </div>
             <div className="battle-info">
-              <span>📅 {battle.date}</span>
-              <span>💀 {battle.casualties} casualties</span>
+              <span>Date: {battle.date}</span>
+              <span>Casualties: {battle.casualties}</span>
             </div>
           </div>
         ))}

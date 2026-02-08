@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>⚡ useEffect Demo</h1>
+      <h1>useEffect Demo</h1>
       <p>Understanding side effects in React</p>
 
       <div className="demo-section">
@@ -57,7 +57,7 @@ function App() {
       </div>
 
       <div className="info-box">
-        <h3>🔑 useEffect Patterns</h3>
+        <h3>useEffect Patterns</h3>
         <ul>
           <li>
             <code>useEffect(() =&gt; {"{}"})</code> - Runs after every render

@@ -55,7 +55,7 @@ function App() {
     <Layout
       header={
         <div className="nav">
-          <span className="logo">⚡ Wizard Academy</span>
+          <span className="logo">Wizard Academy</span>
           <button onClick={() => setShowModal(true)}>Cast Spell</button>
         </div>
       }
@@ -74,17 +74,17 @@ function App() {
       <Section title="Your Stats">
         <div className="card-grid">
           <Card variant="primary">
-            <h3>🔮 Magic Level</h3>
+            <h3>Magic Level</h3>
             <p className="stat-value">45</p>
           </Card>
 
           <Card variant="secondary">
-            <h3>❤️ Health</h3>
+            <h3>Health</h3>
             <p className="stat-value">100</p>
           </Card>
 
           <Card>
-            <h3>💙 Mana</h3>
+            <h3>Mana</h3>
             <p className="stat-value">80</p>
           </Card>
         </div>
@@ -106,8 +106,8 @@ function App() {
       >
         <p>Choose your spell:</p>
         <div className="spell-options">
-          <button className="spell-btn">🔥 Fireball</button>
-          <button className="spell-btn">❄️ Ice Shard</button>
+          <button className="spell-btn">Fireball</button>
+          <button className="spell-btn">Ice Shard</button>
         </div>
       </Modal>
     </Layout>

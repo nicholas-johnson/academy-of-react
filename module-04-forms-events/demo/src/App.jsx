@@ -46,11 +46,11 @@ function App() {
 
   return (
     <div className="app">
-      <h1>⚡ Message Owl Service</h1>
+      <h1>Message Owl Service</h1>
       <p>Send magical messages across the Academy</p>
 
       {submitted && (
-        <div className="success">✓ Your message has been sent via owl!</div>
+        <div className="success">Your message has been sent via owl!</div>
       )}
 
       <form onSubmit={handleSubmit} className="form">
@@ -98,7 +98,7 @@ function App() {
         </div>
 
         <button type="submit" className="submit-btn">
-          Send Message 📨
+          Send Message
         </button>
       </form>
     </div>

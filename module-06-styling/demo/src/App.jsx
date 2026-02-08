@@ -95,7 +95,7 @@ function App() {
 
   return (
     <div>
-      <h1>⚡ Three Ways to Style React</h1>
+      <h1>Three Ways to Style React</h1>
 
       <div className="demo-grid">
         {/* CSS Modules Section */}
@@ -277,23 +277,23 @@ function App() {
           <tbody>
             <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
               <td style={{ padding: "0.75rem" }}>Scoped Styles</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>✅</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>✅</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>✅</td>
+              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
+              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
+              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
             </tr>
             <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
               <td style={{ padding: "0.75rem" }}>Dynamic Props</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>❌</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>✅</td>
+              <td style={{ padding: "0.75rem", textAlign: "center" }}>No</td>
+              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
               <td style={{ padding: "0.75rem", textAlign: "center" }}>
-                ⚠️ (via classnames)
+                Partial (via classnames)
               </td>
             </tr>
             <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
               <td style={{ padding: "0.75rem" }}>Zero Runtime</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>✅</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>❌</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>✅</td>
+              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
+              <td style={{ padding: "0.75rem", textAlign: "center" }}>No</td>
+              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
             </tr>
             <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
               <td style={{ padding: "0.75rem" }}>Separate Files</td>

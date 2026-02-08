@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <h1>🏰 Choose Your House</h1>
+      <h1>Choose Your House</h1>
 
       <div className="badge-grid">
         {houses.map((house) => (
@@ -29,7 +29,7 @@ function App() {
             fontSize: "1.25rem",
           }}
         >
-          You chose: <strong>{selectedHouse}</strong> 🎉
+          You chose: <strong>{selectedHouse}</strong>
         </p>
       )}
     </div>
