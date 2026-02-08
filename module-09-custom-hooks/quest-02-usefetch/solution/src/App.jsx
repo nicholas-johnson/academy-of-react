@@ -35,8 +35,8 @@ function useFetch(url) {
   return { data, loading, error, refetch };
 }
 
-// Simulated API endpoint
-const API_URL = "https://api.jsonserve.com/Uw5CrZ";
+// Local API endpoint (served from public folder)
+const API_URL = "/api/spells.json";
 
 function App() {
   const { data, loading, error, refetch } = useFetch(API_URL);

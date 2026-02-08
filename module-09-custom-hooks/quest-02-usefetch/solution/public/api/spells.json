@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Fireball",
+    "type": "fire",
+    "power": 85
+  },
+  {
+    "id": 2,
+    "name": "Ice Blast",
+    "type": "ice",
+    "power": 70
+  },
+  {
+    "id": 3,
+    "name": "Lightning Strike",
+    "type": "lightning",
+    "power": 90
+  },
+  {
+    "id": 4,
+    "name": "Healing Wave",
+    "type": "healing",
+    "power": 60
+  },
+  {
+    "id": 5,
+    "name": "Shadow Bolt",
+    "type": "dark",
+    "power": 75
+  }
+]
