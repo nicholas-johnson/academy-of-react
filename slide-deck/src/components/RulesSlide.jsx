@@ -9,7 +9,7 @@ export function RulesSlide({ content }) {
           {content.rules.map((item, i) => (
             <div
               key={i}
-              className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border-2 border-slate-700 flex flex-col gap-2"
+              className="bg-slate-800 rounded-2xl p-6 border-2 border-slate-700 flex flex-col gap-2"
             >
               <span className="text-4xl">{item.icon}</span>
               <span className="text-xl font-semibold text-gray-200">

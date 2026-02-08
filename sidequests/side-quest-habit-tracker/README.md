@@ -60,16 +60,17 @@ For notifications, you can optionally use the browser's Notification API.
 - Pass habit data via props
 - Compose daily view with header and list
 
-### After Module 9: React Router
-
-- Route-based views for calendar and statistics
-- URL parameters for specific dates
-
-### After Module 9: Refs
+### After Module 8: Built-in Hooks (Refs)
 
 - Confetti animation on milestone streaks
 - Haptic-style feedback animations
 - Scroll to current day in calendar
+
+### After Module 9: Custom Hooks
+
+- `useHabits()` — CRUD operations for habits
+- `useStreak(habitId)` — calculate current and best streak
+- `useCompletionRate(habitId, range)` — completion percentage
 
 ### After Module 10: Context
 
@@ -77,16 +78,15 @@ For notifications, you can optionally use the browser's Notification API.
 - First day of week preference (Sun/Mon)
 - Notification settings
 
-### After Module 11: Custom Hooks
+### After Module 11: React Router
 
-- `useHabits()` — CRUD operations for habits
-- `useStreak(habitId)` — calculate current and best streak
-- `useCompletionRate(habitId, range)` — completion percentage
+- Route-based views for calendar and statistics
+- URL parameters for specific dates
 
-### After Module 12: Performance
+### After Module 12: State Management
 
+- Global habit state with Zustand
 - Memoize streak calculations
-- Lazy load statistics/calendar views
 - Optimize re-renders on check-in
 
 ### After Module 13: Server Rendering

@@ -9,7 +9,7 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: #1a1a2e;
   color: #e2e8f0;
   min-height: 100vh;
 }

@@ -87,12 +87,12 @@ function TeamCard({ team }) {
       <div className="mb-6">
         <ProgressBar
           value={team.health}
-          color="bg-gradient-to-r from-green-500 to-emerald-400"
+          color="bg-green-500"
           label="Health"
         />
         <ProgressBar
           value={team.mana}
-          color="bg-gradient-to-r from-blue-500 to-cyan-400"
+          color="bg-blue-500"
           label="Mana"
         />
       </div>

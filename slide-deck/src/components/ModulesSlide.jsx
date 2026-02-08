@@ -9,7 +9,7 @@ export function ModulesSlide({ content }) {
           {content.modules.map((mod, i) => (
             <div
               key={i}
-              className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border-2 border-slate-700 flex flex-col items-center gap-2 text-center"
+              className="bg-slate-800 rounded-2xl p-6 border-2 border-slate-700 flex flex-col items-center gap-2 text-center"
             >
               <span className="text-4xl">{mod.icon}</span>
               <span className="text-sm text-gray-400">Modules {mod.num}</span>

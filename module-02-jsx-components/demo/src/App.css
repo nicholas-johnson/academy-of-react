@@ -32,7 +32,7 @@ h1 {
   border: 2px solid #10b981;
   border-radius: 8px;
   padding: 1.25rem;
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  background: #f0fdf4;
 }
 
 .student-card h2 {
@@ -74,7 +74,7 @@ h1 {
   border: 2px solid #6366f1;
   border-radius: 8px;
   padding: 1rem;
-  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  background: #eef2ff;
 }
 
 .spell-header {

@@ -11,7 +11,7 @@
 }
 
 .primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   color: white;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .danger {
-  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  background: #f43f5e;
   color: white;
 }
 

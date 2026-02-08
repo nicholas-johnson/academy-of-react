@@ -11,11 +11,11 @@ body {
     color 0.3s;
 }
 body.light {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   color: #1f2937;
 }
 body.dark {
-  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  background: #1f2937;
   color: #f3f4f6;
 }
 #root {

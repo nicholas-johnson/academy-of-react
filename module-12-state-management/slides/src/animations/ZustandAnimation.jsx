@@ -14,7 +14,7 @@ export function ZustandAnimation() {
 
   return (
     <div className="flex-1 flex flex-col items-center justify-center p-8">
-      <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+      <h2 className="text-4xl font-bold mb-8 text-primary">
         🐻 The Zustand Pattern
       </h2>
 
@@ -102,11 +102,11 @@ export function ZustandAnimation() {
             }`}
           >
             <div className="flex items-center gap-2">
-              <div className="w-16 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+              <div className="w-16 h-0.5 bg-purple-400"></div>
               <span className="text-sm text-purple-300 whitespace-nowrap">
                 same state
               </span>
-              <div className="w-16 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400"></div>
+              <div className="w-16 h-0.5 bg-purple-400"></div>
             </div>
           </div>
 

@@ -65,16 +65,17 @@ For an optional backend later, consider:
 - Pass transaction data via props
 - Compose a summary card showing totals
 
-### After Module 9: React Router
-
-- Route-based views for transactions, budgets, reports
-- URL parameters for specific months/years
-
-### After Module 9: Refs
+### After Module 8: Built-in Hooks (Refs)
 
 - Focus amount input on form open
 - Scroll to new transaction
 - Chart animation triggers
+
+### After Module 9: Custom Hooks
+
+- `useTransactions()` — CRUD operations
+- `useBudget(category)` — budget tracking with alerts
+- `useMonthlyReport(month)` — aggregated statistics
 
 ### After Module 10: Context
 
@@ -82,17 +83,16 @@ For an optional backend later, consider:
 - Date format preferences
 - Theme (dark/light mode)
 
-### After Module 11: Custom Hooks
+### After Module 11: React Router
 
-- `useTransactions()` — CRUD operations
-- `useBudget(category)` — budget tracking with alerts
-- `useMonthlyReport(month)` — aggregated statistics
+- Route-based views for transactions, budgets, reports
+- URL parameters for specific months/years
 
-### After Module 12: Performance
+### After Module 12: State Management
 
+- Global transaction state with Zustand
+- Complex state logic with Redux for budgets
 - Memoize expensive calculations (totals, averages)
-- Virtualized transaction list for large datasets
-- Lazy load report/chart components
 
 ### After Module 13: Server Rendering
 

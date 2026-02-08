@@ -17,7 +17,7 @@ export function MobXAnimation() {
 
   return (
     <div className="flex-1 flex flex-col items-center justify-center p-8">
-      <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+      <h2 className="text-4xl font-bold mb-6 text-primary">
         👁️ The MobX Pattern
       </h2>
 

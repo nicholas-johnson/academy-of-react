@@ -7,7 +7,7 @@ const elementColors = {
   water: "#3b82f6",
   earth: "#84cc16",
   air: "#a78bfa",
-  arcane: "#ec4899",
+  arcane: "#8b5cf6",
 };
 
 const elementEmojis = {

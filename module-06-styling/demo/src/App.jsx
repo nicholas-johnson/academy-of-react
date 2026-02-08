@@ -38,9 +38,9 @@ const StyledButton = styled.button`
       case "secondary":
         return "transparent";
       case "danger":
-        return "linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)";
+        return "#f43f5e";
       default:
-        return "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
+        return "#667eea";
     }
   }};
 
@@ -67,11 +67,11 @@ function TailwindButton({ variant = "primary", children }) {
   // Define variant classes
   const variants = {
     primary:
-      "bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:shadow-lg hover:shadow-indigo-500/40",
+      "bg-indigo-500 text-white hover:shadow-lg hover:shadow-indigo-500/40",
     secondary:
       "bg-transparent text-indigo-400 border-2 border-indigo-400 hover:bg-indigo-400/10",
     danger:
-      "bg-gradient-to-r from-rose-500 to-rose-600 text-white hover:shadow-lg hover:shadow-rose-500/40",
+      "bg-rose-500 text-white hover:shadow-lg hover:shadow-rose-500/40",
   };
 
   return (
@@ -218,10 +218,9 @@ function App() {
             }}
           >
             {`<button className="
-  bg-gradient-to-r 
-  from-indigo-500 
-  to-purple-600
+  bg-indigo-500
   px-6 py-3 rounded-lg
+  text-white
 ">
   Click me
 </button>`}

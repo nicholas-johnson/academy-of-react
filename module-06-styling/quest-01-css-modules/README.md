@@ -23,7 +23,7 @@ Build a `HouseBadge` component using CSS Modules that displays different styles 
 ### House Colors
 
 - **Phoenix**: Orange/Red gradient (#f97316 → #dc2626)
-- **Dragon**: Purple/Pink gradient (#a855f7 → #ec4899)
+- **Dragon**: Purple (#a855f7)
 - **Griffin**: Yellow/Amber gradient (#eab308 → #f59e0b)
 - **Serpent**: Green/Emerald gradient (#22c55e → #059669)
 

@@ -33,7 +33,7 @@ const battleData = {
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 p-4 md:p-8">
+    <div className="min-h-screen bg-slate-900 p-4 md:p-8">
       <h1 className="text-3xl font-bold text-white text-center mb-8">
         ⚔️ Battle Command Center
       </h1>

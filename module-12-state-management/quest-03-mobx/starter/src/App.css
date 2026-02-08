@@ -5,7 +5,7 @@
 .header {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   color: white;
 }
 .header h1 {
@@ -93,7 +93,7 @@
   transition: all 0.2s;
 }
 .btn.primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   color: white;
   width: 100%;
 }

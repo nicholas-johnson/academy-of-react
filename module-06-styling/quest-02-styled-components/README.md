@@ -25,7 +25,7 @@ Build a `SpellCard` component using Styled Components that changes its appearanc
 - **water**: #3b82f6 (blue)
 - **earth**: #84cc16 (lime)
 - **air**: #a78bfa (violet)
-- **arcane**: #ec4899 (pink)
+- **arcane**: #8b5cf6 (violet)
 
 ## Getting Started
 

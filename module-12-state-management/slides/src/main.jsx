@@ -75,14 +75,14 @@ function SlideViewer({ slides }) {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <div className="w-screen h-screen flex flex-col bg-slate-900 text-white overflow-hidden">
       {renderSlide()}
 
       <div className="flex justify-center items-center gap-8 p-4 bg-slate-950 border-t border-slate-800">
         <button
           onClick={() => navigate(`/${currentSlide}`)}
           disabled={currentSlide === 0}
-          className="px-6 py-2 font-semibold rounded-lg bg-gradient-to-r from-primary to-secondary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
+          className="px-6 py-2 font-semibold rounded-lg bg-primary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
         >
           ← Prev
         </button>
@@ -92,7 +92,7 @@ function SlideViewer({ slides }) {
         <button
           onClick={() => navigate(`/${currentSlide + 2}`)}
           disabled={currentSlide === slides.length - 1}
-          className="px-6 py-2 font-semibold rounded-lg bg-gradient-to-r from-primary to-secondary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
+          className="px-6 py-2 font-semibold rounded-lg bg-primary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
         >
           Next →
         </button>

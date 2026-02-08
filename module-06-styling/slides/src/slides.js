@@ -192,7 +192,7 @@ function Card({ className, children }) {
 }
 
 const FancyCard = styled(Card)\`
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: #667eea;
   padding: 2rem;
   border-radius: 1rem;
 \``,

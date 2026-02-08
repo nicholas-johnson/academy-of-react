@@ -17,7 +17,7 @@ h1 {
 }
 .spell-card {
   padding: 30px;
-  background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+  background: #f9fafb;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
   text-align: center;
@@ -69,11 +69,11 @@ h1 {
   0%,
   100% {
     opacity: 1;
-    background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+    background: #f9fafb;
   }
   50% {
     opacity: 0.5;
-    background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+    background: #fef3c7;
   }
 }
 

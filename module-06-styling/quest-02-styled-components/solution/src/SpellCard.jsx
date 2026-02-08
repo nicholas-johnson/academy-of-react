@@ -6,7 +6,7 @@ const elementColors = {
   water: "#3b82f6",
   earth: "#84cc16",
   air: "#a78bfa",
-  arcane: "#ec4899",
+  arcane: "#8b5cf6",
 };
 
 const elementEmojis = {
@@ -119,11 +119,7 @@ const PowerBarFill = styled.div`
 
   /* Dynamic width and color based on props */
   width: ${(props) => props.$power}%;
-  background: linear-gradient(
-    90deg,
-    ${(props) => elementColors[props.$element]},
-    ${(props) => elementColors[props.$element]}cc
-  );
+  background: ${(props) => elementColors[props.$element]};
 
   /* Animated glow for high power spells */
   ${(props) =>

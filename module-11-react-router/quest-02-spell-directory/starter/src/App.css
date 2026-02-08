@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   color: white;
 }
 .header h1 {
@@ -216,7 +216,7 @@
 }
 .power-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: #667eea;
   border-radius: 6px;
   transition: width 0.5s ease;
 }
@@ -233,7 +233,7 @@
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   color: white;
   text-decoration: none;
   border-radius: 8px;

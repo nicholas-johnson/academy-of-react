@@ -30,7 +30,7 @@ h1 {
 }
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   transition: width 0.3s ease;
 }
 .controls {
@@ -58,15 +58,15 @@ h1 {
   transform: scale(0.98);
 }
 .btn-play {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: #10b981;
   color: white;
 }
 .btn-pause {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  background: #f59e0b;
   color: white;
 }
 .btn-restart {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  background: #ef4444;
   color: white;
 }
 .events-section {

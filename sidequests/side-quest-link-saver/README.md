@@ -68,16 +68,17 @@ For metadata fetching, options include:
 - Compose card with image preview, title, tags
 - Collection management
 
-### After Module 9: React Router
-
-- Route-based views for different sections
-- URL parameters for tag/collection views
-
-### After Module 9: Refs
+### After Module 8: Built-in Hooks (Refs)
 
 - Auto-focus URL input
 - Copy link to clipboard button
 - Scroll to newly added link
+
+### After Module 9: Custom Hooks
+
+- `useLinks()` — CRUD operations
+- `useLinkMetadata(url)` — fetch Open Graph data
+- `useTags()` — tag management with suggestions
 
 ### After Module 10: Context
 
@@ -85,16 +86,15 @@ For metadata fetching, options include:
 - Default view preferences
 - Reading list settings
 
-### After Module 11: Custom Hooks
+### After Module 11: React Router
 
-- `useLinks()` — CRUD operations
-- `useLinkMetadata(url)` — fetch Open Graph data
-- `useTags()` — tag management with suggestions
+- Route-based views for different sections
+- URL parameters for tag/collection views
 
-### After Module 12: Performance
+### After Module 12: State Management
 
+- Global link state with Zustand
 - Lazy load link previews/images
-- Virtualized list for large collections
 - Memoize filtered results
 
 ### After Module 13: Server Rendering

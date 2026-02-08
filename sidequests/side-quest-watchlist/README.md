@@ -60,33 +60,33 @@ This project uses [The Movie Database (TMDB) API](https://www.themoviedb.org/doc
 - Pass movie data via props
 - Use composition for card layouts
 
-### After Module 9: React Router
-
-- Route-based views for search and watchlist
-- URL parameters for movie details
-
-### After Module 9: Refs
+### After Module 8: Built-in Hooks (Refs)
 
 - Auto-focus search input
 - Scroll to newly added movie
 - Video trailer modal (YouTube embed)
+
+### After Module 9: Custom Hooks
+
+- `useMovieSearch(query)` — search with loading/error states
+- `useWatchlist()` — CRUD operations for watchlist
+- `useDebounce(value, delay)` — debounce search input
 
 ### After Module 10: Context
 
 - Theme context (dark/light mode)
 - User preferences (default sort, view mode)
 
-### After Module 11: Custom Hooks
+### After Module 11: React Router
 
-- `useMovieSearch(query)` — search with loading/error states
-- `useWatchlist()` — CRUD operations for watchlist
-- `useDebounce(value, delay)` — debounce search input
+- Route-based views for search and watchlist
+- URL parameters for movie details
 
-### After Module 12: Performance
+### After Module 12: State Management
 
+- Global watchlist state with Zustand
 - Memoize filtered/sorted lists
 - Lazy load movie detail pages
-- Virtualized list for large watchlists
 
 ### After Module 13: Server Rendering
 

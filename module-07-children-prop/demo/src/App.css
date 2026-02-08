@@ -22,7 +22,7 @@ body {
 }
 
 .layout-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   padding: 1rem 2rem;
 }
 
@@ -112,12 +112,12 @@ body {
 }
 
 .card-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   border: none;
 }
 
 .card-secondary {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: #64748b;
   border: none;
 }
 
@@ -149,7 +149,7 @@ body {
 
 .mana-fill {
   height: 100%;
-  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  background: #3b82f6;
   border-radius: 4px;
   transition: width 0.3s;
 }
@@ -200,7 +200,7 @@ body {
 }
 
 .modal-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;

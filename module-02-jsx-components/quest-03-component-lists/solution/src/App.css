@@ -53,7 +53,7 @@
 
 .card-header {
   padding: 1.5rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: #f8fafc;
   border-top: 5px solid #6b7280;
   display: flex;
   align-items: center;

@@ -7,7 +7,7 @@
 h1 {
   font-size: 2rem;
   text-align: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: #667eea;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -73,7 +73,7 @@ h1 {
 
 .add-spell button {
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: #667eea;
   border: none;
   border-radius: 0.5rem;
   color: white;
@@ -115,11 +115,7 @@ h1 {
 
 .spell-list li.favorite {
   border-color: #667eea;
-  background: linear-gradient(
-    135deg,
-    rgba(102, 126, 234, 0.1),
-    rgba(118, 75, 162, 0.1)
-  );
+  background: rgba(102, 126, 234, 0.1);
 }
 
 .spell-info {
@@ -164,12 +160,12 @@ h1 {
 }
 
 .btn-upgrade {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: #10b981;
   color: white;
 }
 
 .btn-remove {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
+  background: #ef4444;
   color: white;
 }
 
