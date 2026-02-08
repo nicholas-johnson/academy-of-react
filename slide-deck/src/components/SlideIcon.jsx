@@ -71,6 +71,7 @@ import {
   SlidersHorizontal,
   Settings,
   Award,
+  User,
 } from "lucide-react";
 
 // Map icon names to Lucide components
@@ -197,6 +198,7 @@ const iconMap = {
   "circle-dot": CircleDot,
   "circle-up": CircleArrowUp,
   "trending-up": TrendingUp,
+  user: User,
 };
 
 export function SlideIcon({ name, size = 48, className = "" }) {

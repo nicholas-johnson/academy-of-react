@@ -4,6 +4,8 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
   const [time, setTime] = useState(new Date().toLocaleTimeString());
+  const [spells, setSpells] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // Effect 1: Runs after every render (no dependency array)
   // Use sparingly - usually you want dependencies!
@@ -38,6 +40,20 @@ function App() {
     };
   }, []); // Empty array = setup once, cleanup on unmount
 
+  // Effect 5: Data fetching
+  useEffect(() => {
+    fetch("/spells.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setSpells(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching spells:", error);
+        setLoading(false);
+      });
+  }, []); // Empty array = fetch once on mount
+
   return (
     <div className="app">
       <h1>useEffect Demo</h1>
@@ -54,6 +70,22 @@ function App() {
         <h2>Timer Example</h2>
         <p className="time-display">{time}</p>
         <p className="hint">Updates every second with cleanup on unmount</p>
+      </div>
+
+      <div className="demo-section">
+        <h2>Data Fetching Example</h2>
+        {loading ? (
+          <p>Loading spells...</p>
+        ) : (
+          <ul className="spell-list">
+            {spells.map((spell) => (
+              <li key={spell.id}>
+                {spell.name} - Power: {spell.power}
+              </li>
+            ))}
+          </ul>
+        )}
+        <p className="hint">Fetched from /spells.json on mount</p>
       </div>
 
       <div className="info-box">

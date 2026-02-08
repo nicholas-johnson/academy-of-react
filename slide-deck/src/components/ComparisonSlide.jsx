@@ -27,7 +27,7 @@ export function ComparisonSlide({ content }) {
   return (
     <div className="flex-1 flex flex-col justify-center items-center animate-fade-in p-8 w-full">
       <div className="max-w-4xl w-full mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
           {content.title}
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

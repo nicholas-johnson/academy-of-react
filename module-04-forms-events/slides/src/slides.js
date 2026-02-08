@@ -475,6 +475,20 @@ const [role, setRole] = useState('attacker');
     },
   },
   {
+    type: "standard",
+    content: {
+      title: "Form Libraries",
+      points: [
+        "React Hook Form — Minimal re-renders, great performance",
+        "Formik — Popular, feature-rich, lots of docs",
+        "Zod / Yup — Schema validation libraries",
+        "These handle validation, errors, submission for you",
+        "Start with basics first, use libraries for complex forms",
+      ],
+      icon: "package",
+    },
+  },
+  {
     type: "title",
     content: {
       title: "Let's Build Forms!",

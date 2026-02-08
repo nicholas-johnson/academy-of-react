@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Fireball", "power": 85, "element": "fire" },
+  { "id": 2, "name": "Ice Blast", "power": 70, "element": "ice" },
+  { "id": 3, "name": "Lightning Strike", "power": 90, "element": "lightning" },
+  { "id": 4, "name": "Healing Wave", "power": 60, "element": "healing" }
+]

@@ -33,7 +33,7 @@ function App() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        {name && <div className="message">Welcome, {name}! 🧙‍♂️</div>}
+        {name && <div className="message">Welcome, {name}!</div>}
       </div>
 
       {/* Demo 3: Conditional Rendering */}
@@ -44,7 +44,7 @@ function App() {
         </button>
         {isVisible && (
           <div className="message">
-            🚪 The secret passage to the library is behind the portrait!
+            The secret passage to the library is behind the portrait!
           </div>
         )}
       </div>

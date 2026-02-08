@@ -2,7 +2,7 @@ export function WelcomeSlide({ content }) {
   return (
     <div className="flex-1 flex flex-col justify-center items-center animate-fade-in p-8 w-full">
       <div className="max-w-3xl w-full mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
           {content.title}
         </h1>
         <ul className="space-y-4">

@@ -13,11 +13,9 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 h1 {
-  color: #222740;
   margin-top: 0;
 }
 h2 {
-  color: #764ba2;
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
 }

@@ -85,7 +85,11 @@ export const slides = [
           example: "<div>...</div> or <>...</>",
           icon: "circle-dot",
         },
-        { rule: "Close all tags", example: "<img /> <br />", icon: "circle-dot" },
+        {
+          rule: "Close all tags",
+          example: "<img /> <br />",
+          icon: "circle-dot",
+        },
       ],
     },
   },
@@ -120,6 +124,34 @@ export const slides = [
   {
     type: "standard",
     content: {
+      title: "Creating a Vite Project",
+      points: [
+        "npm create vite@latest my-app",
+        "Choose React from the framework list",
+        "Choose JavaScript (or TypeScript)",
+        "cd my-app",
+        "npm install",
+      ],
+      icon: "folder-plus",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "TypeScript Available!",
+      points: [
+        "TypeScript adds type checking to JavaScript",
+        "Catches errors before runtime",
+        "Better IDE autocomplete and hints",
+        "This course uses JavaScript for simplicity",
+        "TypeScript is excellent",
+      ],
+      icon: "file-code",
+    },
+  },
+  {
+    type: "standard",
+    content: {
       title: "Vite Commands",
       points: [
         "npm install — Install dependencies",
@@ -129,6 +161,20 @@ export const slides = [
         "Ctrl+C — Stop the server",
       ],
       icon: "code",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Organizing Components",
+      points: [
+        "One component per file (usually)",
+        "File name matches component name",
+        "SpellCard.jsx exports SpellCard component",
+        "Import where needed: import { SpellCard } from './SpellCard'",
+        "Keeps code organized and maintainable",
+      ],
+      icon: "folder-tree",
     },
   },
   {

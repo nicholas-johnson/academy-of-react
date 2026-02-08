@@ -8,15 +8,31 @@ export const slides = [
     },
   },
   {
-    type: "welcome",
+    type: "standard",
     content: {
-      title: "Welcome to the Academy!",
+      title: "Your Instructor",
       points: [
-        "Welcome to React training",
-        "By the end, you'll build real React applications",
-        "We'll learn through the Wizard Academy story",
-        "Hands-on quests at every step",
+        "Nicholas Johnson",
+        "Principal Frontend Engineer",
+        "25 years of professional experience",
+        "Multiple startups",
+        "Picked up CSS when it was new",
       ],
+      icon: "user",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "How This Course Works",
+      points: [
+        "GitHub repository with all materials",
+        "13 modules covering React fundamentals to advanced topics",
+        "Story mode: Learn through the Wizard Academy narrative",
+        "More exercises than you'll be able to cover",
+        "Side quests for extra practice and exploration",
+      ],
+      icon: "map",
     },
   },
   {
@@ -51,7 +67,7 @@ export const slides = [
   {
     type: "comparison",
     content: {
-      title: "Traditional vs React",
+      title: "Imperative vs Declarative",
       left: {
         label: "Traditional (Imperative)",
         code: `// Find the element
@@ -65,7 +81,7 @@ btn.addEventListener('click', () => {
 });`,
       },
       right: {
-        label: "React (Declarative)",
+        label: "React (Declarative / Reactive)",
         code: `// Describe the UI
 function Counter() {
   const [count, setCount] = useState(0);
@@ -79,20 +95,7 @@ function Counter() {
       },
     },
   },
-  {
-    type: "standard",
-    content: {
-      title: "Course Structure",
-      points: [
-        "13 Modules covering React fundamentals to advanced",
-        "Each module has demos and quests",
-        "Demos: Watch and learn",
-        "Quests: Hands-on practice",
-        "Side Quests: Optional projects to build",
-      ],
-      icon: "map",
-    },
-  },
+
   {
     type: "modules",
     content: {

@@ -5,10 +5,10 @@ export function StandardSlide({ content }) {
     <div className="flex-1 flex flex-col justify-center items-center animate-fade-in p-8 w-full">
       <div className="max-w-3xl w-full mx-auto">
         <div className="flex items-center justify-center gap-4 mb-8">
-          <span className="text-primary">
+          <span className="text-white">
             <SlideIcon name={content.icon} size={48} />
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-primary">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
             {content.title}
           </h1>
         </div>
