@@ -67,7 +67,7 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>🔮 Redux Battle Tracker</h1>
+        <h1>Redux Battle Tracker</h1>
         <p>Predictable state with Redux Toolkit</p>
       </header>
 
