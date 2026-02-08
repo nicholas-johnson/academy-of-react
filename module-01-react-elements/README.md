@@ -75,7 +75,7 @@ Key points to notice:
 
 ### Quest 1: Basic Elements
 
-**Difficulty**: ⭐ Beginner
+**Difficulty**: Beginner
 
 Create a student object with your wizard's stats and render it using `createElement()`.
 
@@ -83,7 +83,7 @@ Create a student object with your wizard's stats and render it using `createElem
 
 ### Quest 2: Rendering Arrays
 
-**Difficulty**: ⭐⭐ Beginner-Intermediate
+**Difficulty**: Beginner-Intermediate
 
 Build an array of multiple students and render them as a list using `.map()`.
 

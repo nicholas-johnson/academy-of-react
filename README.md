@@ -1,8 +1,8 @@
-# ⚡ Arcane Academy of React
+# Arcane Academy of React
 
 Welcome, apprentice wizard, to the **Arcane Academy of React** — where you'll learn the mystical arts of component-based magic!
 
-## 🌟 The Wizarding War
+## The Wizarding War
 
 Dark times approach... Every decade, the greatest magical academies across the realm gather for the legendary **Wizarding War** — a grand competition where students prove their mastery of React magic through increasingly complex challenges.
 
@@ -55,7 +55,7 @@ Victory achieved! Now share the Academy's knowledge with the world. Learn modern
   - Part A: React Server Components (Next.js + Remix paths)
   - Part B: Islands Architecture (Astro path - bonus)
 
-## 🎯 What You'll Build
+## What You'll Build
 
 Each module contains:
 
@@ -93,7 +93,7 @@ To enroll in the Arcane Academy, you should have:
 
 **No prior React or TypeScript experience required!**
 
-## 🚀 How to Use This Course
+## How to Use This Course
 
 ### For Modules 1-4 (CDN-based):
 
@@ -112,13 +112,13 @@ To enroll in the Arcane Academy, you should have:
 5. Complete the three quests in separate folders
 6. Test each quest with `npm run dev`
 
-## 📖 Additional Resources
+## Additional Resources
 
 - **[STORY.md](STORY.md)** — The complete Wizarding War narrative, world-building, and character details
 - **[assets/](assets/)** — Shared resources including styles, data files, and images
 - **[extras/](extras/)** — Supplementary modules (Tailwind CSS, etc.) outside the main flow
 
-## 📊 Progress Tracker
+## Progress Tracker
 
 Track your journey through the Academy:
 
@@ -176,7 +176,7 @@ Track your journey through the Academy:
 - [ ] Module 12: Performance and Code Splitting
   - [ ] Quest 1: Damage Calculator
   - [ ] Quest 2: Army Roster
-  - [ ] Quest 3: Battle Arena ⚔️
+  - [ ] Quest 3: Battle Arena
 
 ### Phase 4: Modern Server Rendering (Capstone)
 
@@ -195,7 +195,7 @@ Track your journey through the Academy:
     - [ ] Quest 2: Interactive Simulator
     - [ ] Quest 3: Production Portal
 
-## 🎉 Completing the Course
+## Completing the Course
 
 Once you've mastered all 13 modules and completed your chosen server rendering path, you'll have:
 
@@ -214,8 +214,8 @@ The Wizarding War awaits, brave apprentice. May your code be bug-free and your c
 
 ---
 
-⚡ **Ready to begin?** Start with [Module 1: React Elements](./module-01-react-elements/)
+**Ready to begin?** Start with [Module 1: React Elements](./module-01-react-elements/)
 
-🧙‍♂️ **Questions or stuck?** Review the hints in each quest README, or study the demo code for guidance.
+**Questions or stuck?** Review the hints in each quest README, or study the demo code for guidance.
 
-🌐 **Completed Modules 1-12?** Continue to [Module 13: Modern Server Rendering](./module-13-server-rendering/) for the capstone!
+**Completed Modules 1-12?** Continue to [Module 13: Modern Server Rendering](./module-13-server-rendering/) for the capstone!

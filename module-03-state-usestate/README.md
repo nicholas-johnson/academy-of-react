@@ -119,7 +119,7 @@ function Counter() {
 
 ### Quest 1: Multiple State
 
-**Difficulty**: ⭐⭐ Intermediate
+**Difficulty**: Intermediate
 
 Create an interface with multiple useState hooks that interact.
 
@@ -127,7 +127,7 @@ Create an interface with multiple useState hooks that interact.
 
 ### Quest 2: Object State
 
-**Difficulty**: ⭐⭐ Intermediate
+**Difficulty**: Intermediate
 
 Build an interface that manages state as objects with nested properties.
 

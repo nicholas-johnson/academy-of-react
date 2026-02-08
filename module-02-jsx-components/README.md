@@ -113,12 +113,12 @@ Vite (French for "fast") is a modern build tool created by Evan You (creator of 
    - Click it or copy/paste into your browser
    - You should see the demo running!
 
-5. **Make changes:**
+4. **Make changes:**
    - Edit files in the `src/` folder
    - Save your changes
-   - Watch the browser update instantly! ✨
+   - Watch the browser update instantly!
 
-6. **Stop the server:**
+5. **Stop the server:**
    - Press `Ctrl+C` in the terminal when you're done
 
 ### Vite Project Structure
