@@ -72,6 +72,8 @@ import {
   Settings,
   Award,
   User,
+  FolderPlus,
+  FileCode,
 } from "lucide-react";
 
 // Map icon names to Lucide components
@@ -157,6 +159,9 @@ const iconMap = {
   file: FileText,
   "book-open": BookOpen,
   book: BookOpen,
+  "file-code": FileCode,
+  "folder-plus": FolderPlus,
+  "folder-tree": FolderPlus,
 
   // Tools
   wrench: Wrench,
