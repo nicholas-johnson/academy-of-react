@@ -31,7 +31,12 @@ Create an HTML file that:
 
 ```javascript
 const students = [
-  { name: "Aria Spellweaver", house: "Scarybird", magicLevel: 45, health: 100 },
+  {
+    name: "Toasty McPigeonfingers",
+    house: "Scarybird",
+    magicLevel: 45,
+    health: 100,
+  },
   { name: "Thor Ironforge", house: "Liondudes", magicLevel: 62, health: 100 },
   { name: "Luna Starlight", house: "Huftybadger", magicLevel: 38, health: 100 },
   {

@@ -191,15 +191,15 @@ const element = React.createElement(
 const card = React.createElement(
   'div',
   { className: 'card' },
-  React.createElement('h2', null, 'Harry Potter'),
-  React.createElement('p', null, 'House: Liondudesdor'),
+  React.createElement('h2', null, 'Toasty McPigeonfingers'),
+  React.createElement('p', null, 'House: Liondudes'),
   React.createElement('p', null, 'Level: 42')
 );
 
 // This creates a tree structure:
 // <div class="card">
-//   <h2>Harry Potter</h2>
-//   <p>House: Liondudesdor</p>
+//   <h2>Toasty McPigeonfingers</h2>
+//   <p>House: Liondudes</p>
 //   <p>Level: 42</p>
 // </div>`,
       highlights: [
@@ -280,7 +280,7 @@ root.render(element);
     content: {
       title: "Rendering Lists with .map()",
       code: `const students = [
-  { name: 'Harry', house: 'Liondudesdor' },
+  { name: 'Harry', house: 'Liondudes' },
   { name: 'Luna', house: 'Scarybird' },
   { name: 'Draco', house: 'Snakeyguys' }
 ];

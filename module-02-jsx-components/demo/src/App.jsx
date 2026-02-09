@@ -63,7 +63,11 @@ function App() {
       {/* Step 1: Basic component */}
       <section className="demo-section">
         <h2>Step 1: Function Component</h2>
-        <StudentCard name="Aria Spellweaver" house="Wisdom" magicLevel={45} />
+        <StudentCard
+          name="Toasty McPigeonfingers"
+          house="Wisdom"
+          magicLevel={45}
+        />
       </section>
 
       {/* Step 2: Component with more props */}
