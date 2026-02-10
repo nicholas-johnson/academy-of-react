@@ -1,5 +1,26 @@
 # Quest 2: Redux Toolkit - Solution Notes
 
+## Overview
+
+Battle tracker with Redux Toolkit. Demonstrates slices, actions, reducers, selectors, and the Provider pattern.
+
+## File Structure
+
+```
+src/
+├── battleSlice.js             # Redux slice (state + actions + selectors)
+├── store.js                   # Store configuration
+├── data/
+│   └── statuses.js            # Status constants and colors
+├── components/
+│   ├── StatsBar.jsx           # Battle statistics
+│   ├── AddBattleForm.jsx      # Form to add battles
+│   ├── FilterTabs.jsx         # Filter tabs
+│   └── BattleList.jsx         # Battle list with editing
+├── main.jsx                   # Provider setup
+└── App.jsx                    # Composition
+```
+
 ## Key Concepts
 
 ### 1. Store Configuration
@@ -52,16 +73,40 @@ import store from "./store";
 
 ### 4. Using in Components
 
+Components are organized by responsibility:
+
 ```jsx
-import { useSelector, useDispatch } from "react-redux";
-import { addBattle, selectAllBattles } from "./battleSlice";
+// StatsBar.jsx - Displays computed statistics
+import { useSelector } from "react-redux";
+import { selectBattleStats } from "../battleSlice";
 
-function Component() {
-  const battles = useSelector(selectAllBattles);
+export function StatsBar() {
+  const stats = useSelector(selectBattleStats);
+  return <div>{stats.total} battles</div>;
+}
+
+// AddBattleForm.jsx - Dispatches actions
+import { useDispatch } from "react-redux";
+import { addBattle } from "../battleSlice";
+
+export function AddBattleForm() {
   const dispatch = useDispatch();
-
+  
   const handleAdd = () => {
     dispatch(addBattle({ name: "New Battle" }));
+  };
+}
+
+// BattleList.jsx - Uses both selectors and dispatch
+import { useSelector, useDispatch } from "react-redux";
+import { selectFilteredBattles, updateStatus } from "../battleSlice";
+
+export function BattleList() {
+  const battles = useSelector(selectFilteredBattles);
+  const dispatch = useDispatch();
+  
+  const handleStatusChange = (id, status) => {
+    dispatch(updateStatus({ id, status }));
   };
 }
 ```
@@ -127,6 +172,32 @@ addBattle: (state, action) => {
 - Complex state with many interactions
 - When you need powerful DevTools
 - Async logic (createAsyncThunk)
+
+## Component Organization
+
+```jsx
+// App.jsx - Pure composition
+import { StatsBar } from "./components/StatsBar";
+import { AddBattleForm } from "./components/AddBattleForm";
+import { FilterTabs } from "./components/FilterTabs";
+import { BattleList } from "./components/BattleList";
+
+function App() {
+  return (
+    <div>
+      <StatsBar />
+      <AddBattleForm />
+      <FilterTabs />
+      <BattleList />
+    </div>
+  );
+}
+```
+
+Each component:
+- Imports only the selectors/actions it needs
+- Is independently testable
+- Has a single responsibility
 
 ## DevTools
 

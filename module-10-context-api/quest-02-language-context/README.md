@@ -1,6 +1,6 @@
-# Quest 2: Language Support
+# Quest 2: Language Context
 
-Create a LanguageContext for Common, Elvish, and Draconic languages. Add a toggle button in the header. Multiple components show translated text (spell names, UI labels).
+Create a LanguageContext for Common, Elvish, and Draconic languages. Add a language selector in the header. Multiple components show translated text (spell names, UI labels).
 
 ## Requirements
 

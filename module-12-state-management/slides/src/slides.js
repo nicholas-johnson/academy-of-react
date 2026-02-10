@@ -1,6 +1,7 @@
 import { ZustandAnimation, ReduxAnimation, MobXAnimation } from "./animations";
 
 export const slides = [
+  // 1. INTRODUCTION
   {
     type: "title",
     content: {
@@ -35,6 +36,8 @@ export const slides = [
       icon: "package",
     },
   },
+
+  // 2. ZUSTAND SECTION
   {
     type: "custom",
     component: ZustandAnimation,
@@ -70,6 +73,52 @@ function SpellList() {
       ],
     },
   },
+  {
+    type: "standard",
+    content: {
+      title: "Zustand Superpowers",
+      points: [
+        "No provider — just import and use",
+        "Middleware — persist, devtools, immer",
+        "Tiny — ~1KB gzipped",
+        "Selectors — prevent unnecessary re-renders",
+        "Works outside React too",
+      ],
+      icon: "package",
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "Zustand Persistence",
+      code: `import { create } from 'zustand'
+import { persist } from 'zustand/middleware'
+
+const useStore = create(
+  persist(
+    (set) => ({
+      spells: [],
+      addSpell: (spell) => set((state) => ({
+        spells: [...state.spells, spell]
+      }))
+    }),
+    {
+      name: 'spell-storage', // localStorage key
+    }
+  )
+)
+
+// Data automatically saved and restored!`,
+      highlights: [
+        "persist() middleware",
+        "Saves to localStorage",
+        "Restores on page load",
+        "Configurable storage",
+      ],
+    },
+  },
+
+  // 3. REDUX SECTION
   {
     type: "custom",
     component: ReduxAnimation,
@@ -138,6 +187,22 @@ function SpellList() {
     },
   },
   {
+    type: "standard",
+    content: {
+      title: "Redux DevTools",
+      points: [
+        "Time-travel debugging — step through actions",
+        "State diff — see what changed",
+        "Action log — every dispatch recorded",
+        "Export/import — share state for debugging",
+        "Pause/resume — control updates",
+      ],
+      icon: "disc",
+    },
+  },
+
+  // 4. MOBX SECTION
+  {
     type: "custom",
     component: MobXAnimation,
   },
@@ -175,152 +240,6 @@ const SpellList = observer(() => {
         "Getters = computed values",
         "observer() makes components reactive",
       ],
-    },
-  },
-  {
-    type: "comparison",
-    content: {
-      title: "Zustand vs Redux",
-      left: {
-        label: "Zustand",
-        code: `// Create store
-const useStore = create((set) => ({
-  count: 0,
-  inc: () => set(s => ({ count: s.count + 1 }))
-}))
-
-// Use it
-const count = useStore(s => s.count)
-
-// No provider needed!`,
-      },
-      right: {
-        label: "Redux Toolkit",
-        code: `// Create slice + store
-const slice = createSlice({...})
-const store = configureStore({...})
-
-// Wrap with Provider
-<Provider store={store}>
-
-// Use hooks
-const count = useSelector(s => s.count)
-dispatch(increment())`,
-      },
-    },
-  },
-  {
-    type: "comparison",
-    content: {
-      title: "Redux vs MobX",
-      left: {
-        label: "Redux (Immutable)",
-        code: `// State updates must be immutable
-addSpell: (state, action) => {
-  state.list.push(action.payload)
-  // Immer handles immutability
-}
-
-// Explicit actions
-dispatch(addSpell({ name: 'Fire' }))`,
-      },
-      right: {
-        label: "MobX (Observable)",
-        code: `// Direct mutations tracked
-addSpell(spell) {
-  this.spells.push(spell)
-  // MobX tracks the change
-}
-
-// Call methods directly
-store.addSpell({ name: 'Fire' })`,
-      },
-    },
-  },
-  {
-    type: "rules",
-    content: {
-      title: "When to Use Each",
-      rules: [
-        {
-          rule: "Zustand",
-          example: "Small-medium apps, want simplicity",
-          icon: "package",
-        },
-        {
-          rule: "Redux Toolkit",
-          example: "Large apps, teams, need DevTools",
-          icon: "disc",
-        },
-        {
-          rule: "MobX",
-          example: "Complex computed state, prefer OOP",
-          icon: "eye",
-        },
-        {
-          rule: "Context API",
-          example: "Simple state, no extra deps",
-          icon: "atom",
-        },
-      ],
-    },
-  },
-  {
-    type: "standard",
-    content: {
-      title: "Zustand Superpowers",
-      points: [
-        "No provider — just import and use",
-        "Middleware — persist, devtools, immer",
-        "Tiny — ~1KB gzipped",
-        "Selectors — prevent unnecessary re-renders",
-        "Works outside React too",
-      ],
-      icon: "package",
-    },
-  },
-  {
-    type: "code",
-    content: {
-      title: "Zustand Persistence",
-      code: `import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
-
-const useStore = create(
-  persist(
-    (set) => ({
-      spells: [],
-      addSpell: (spell) => set((state) => ({
-        spells: [...state.spells, spell]
-      }))
-    }),
-    {
-      name: 'spell-storage', // localStorage key
-    }
-  )
-)
-
-// Data automatically saved and restored!`,
-      highlights: [
-        "persist() middleware",
-        "Saves to localStorage",
-        "Restores on page load",
-        "Configurable storage",
-      ],
-    },
-  },
-  {
-    type: "standard",
-    content: {
-      title: "Redux DevTools",
-      points: [
-        "Time-travel debugging — step through actions",
-        "State diff — see what changed",
-        "Action log — every dispatch recorded",
-        "Export/import — share state for debugging",
-        "Pause/resume — control updates",
-      ],
-      icon: "disc",
     },
   },
   {
@@ -372,6 +291,90 @@ const useStore = create(
       ],
     },
   },
+
+  // 5. COMPARISON & GUIDANCE
+  {
+    type: "three-way",
+    content: {
+      title: "Library Comparison",
+      left: {
+        label: "Zustand",
+        code: `// Create store
+const useStore = create((set) => ({
+  count: 0,
+  inc: () => set(s => ({ 
+    count: s.count + 1 
+  }))
+}))
+
+// Use it
+const count = useStore(s => s.count)
+
+// No provider needed!`,
+      },
+      middle: {
+        label: "Redux Toolkit",
+        code: `// Create slice + store
+const slice = createSlice({
+  name: 'counter',
+  initialState: { count: 0 },
+  reducers: {
+    increment: (s) => { s.count++ }
+  }
+})
+
+// Use hooks
+const count = useSelector(s => s.count)
+dispatch(increment())`,
+      },
+      right: {
+        label: "MobX",
+        code: `// Create observable store
+class Store {
+  count = 0
+  
+  constructor() {
+    makeAutoObservable(this)
+  }
+  
+  inc() {
+    this.count++
+  }
+}
+
+// Use with observer()
+store.inc()`,
+      },
+    },
+  },
+  {
+    type: "rules",
+    content: {
+      title: "When to Use Each",
+      rules: [
+        {
+          rule: "Zustand",
+          example: "Small-medium apps, want simplicity",
+          icon: "package",
+        },
+        {
+          rule: "Redux Toolkit",
+          example: "Large apps, teams, need DevTools",
+          icon: "disc",
+        },
+        {
+          rule: "MobX",
+          example: "Complex computed state, prefer OOP",
+          icon: "eye",
+        },
+        {
+          rule: "Context API",
+          example: "Simple state, no extra deps",
+          icon: "atom",
+        },
+      ],
+    },
+  },
   {
     type: "standard",
     content: {
@@ -386,6 +389,8 @@ const useStore = create(
       icon: "scale",
     },
   },
+
+  // 6. WRAP-UP
   {
     type: "standard",
     content: {

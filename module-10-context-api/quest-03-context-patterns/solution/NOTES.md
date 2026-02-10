@@ -1,8 +1,20 @@
-# Quest 3: User Session - Solution Notes
+# Quest 3: Context Patterns - Solution Notes
 
 ## Overview
 
 Authentication system using Context API. Login form, protected dashboard, logout functionality. Demonstrates conditional rendering based on auth state.
+
+## File Structure
+
+```
+src/
+├── context/
+│   └── AuthContext.jsx        # Context, Provider, and useAuth hook
+├── components/
+│   ├── LoginForm.jsx          # Login form with house selection
+│   └── Dashboard.jsx          # Protected user dashboard
+└── App.jsx                    # Conditional rendering based on auth
+```
 
 ## Key Concepts
 
@@ -23,8 +35,16 @@ Provides user data and auth actions globally.
 ### Conditional Rendering
 
 ```javascript
-{
-  isAuthenticated ? <Dashboard /> : <LoginForm />;
+import { useAuth } from "./context/AuthContext";
+
+function App() {
+  const { isAuthenticated } = useAuth();
+  
+  return (
+    <div>
+      {isAuthenticated ? <Dashboard /> : <LoginForm />}
+    </div>
+  );
 }
 ```
 
@@ -45,10 +65,35 @@ Create user object, update context, persist to localStorage.
 ### Derived State
 
 ```javascript
-isAuthenticated: !!user;
+// In AuthProvider
+return (
+  <AuthContext.Provider
+    value={{ user, login, logout, isAuthenticated: !!user }}
+  >
+    {children}
+  </AuthContext.Provider>
+);
 ```
 
-Compute boolean from user object. Double negation converts truthy/falsy to true/false.
+Compute `isAuthenticated` boolean from user object. Double negation converts truthy/falsy to true/false.
+
+### Component Usage
+
+```javascript
+// Login component
+import { useAuth } from "../context/AuthContext";
+
+function LoginForm() {
+  const { login } = useAuth();
+  // ... form logic
+}
+
+// Dashboard component
+function Dashboard() {
+  const { user, logout } = useAuth();
+  // ... display user info
+}
+```
 
 ## Real-World Patterns
 

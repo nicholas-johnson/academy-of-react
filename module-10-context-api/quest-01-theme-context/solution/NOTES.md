@@ -1,8 +1,21 @@
-# Quest 1: Theme Switcher - Solution Notes
+# Quest 1: Theme Context - Solution Notes
 
 ## Overview
 
 Theme context that manages light/dark mode across the entire app. Demonstrates the core Context API pattern with localStorage persistence.
+
+## File Structure
+
+```
+src/
+├── context/
+│   └── ThemeContext.jsx       # Context, Provider, and useTheme hook
+├── components/
+│   ├── Header.jsx             # Theme toggle button
+│   ├── Content.jsx            # Main content with stats
+│   └── Footer.jsx             # Footer with theme info
+└── App.jsx                    # Wraps app in ThemeProvider
+```
 
 ## Key Concepts
 
@@ -12,8 +25,8 @@ Theme context that manages light/dark mode across the entire app. Demonstrates t
 // 1. Create context
 const ThemeContext = createContext(undefined);
 
-// 2. Create provider
-function ThemeProvider({ children }) {
+// 2. Create provider component
+export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
   // ... state logic
   return (
@@ -23,8 +36,8 @@ function ThemeProvider({ children }) {
   );
 }
 
-// 3. Create custom hook
-function useTheme() {
+// 3. Create custom hook for consuming context
+export function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) throw new Error("useTheme must be used within ThemeProvider");
   return context;
@@ -53,6 +66,25 @@ useEffect(() => {
 2. **Cleaner API** - `useTheme()` vs `useContext(ThemeContext)`
 3. **Encapsulation** - Hide context implementation details
 4. **Type safety** - In TypeScript, guarantees non-null return
+
+### Component Usage
+
+```javascript
+// Import the custom hook
+import { useTheme } from "../context/ThemeContext";
+
+function Header() {
+  const { theme, toggleTheme } = useTheme();
+  
+  return (
+    <button onClick={toggleTheme}>
+      {theme === "light" ? "Dark Mode" : "Light Mode"}
+    </button>
+  );
+}
+```
+
+Any component can access theme without prop drilling.
 
 ## Testing
 

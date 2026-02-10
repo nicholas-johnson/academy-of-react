@@ -15,6 +15,7 @@ import {
   CodeSlide,
   RulesSlide,
 } from "slide-deck";
+import { ThreeWayComparison } from "./components/ThreeWayComparison.jsx";
 import { slides } from "./slides.js";
 import "./index.css";
 
@@ -65,6 +66,8 @@ function SlideViewer({ slides }) {
         return <TitleSlide content={slide.content} />;
       case "comparison":
         return <ComparisonSlide content={slide.content} />;
+      case "three-way":
+        return <ThreeWayComparison content={slide.content} />;
       case "code":
         return <CodeSlide content={slide.content} />;
       case "rules":

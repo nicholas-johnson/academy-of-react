@@ -47,12 +47,25 @@ Prevents memory leaks and stale updates.
 const [searchTerm, setSearchTerm] = useState("");
 const debouncedSearch = useDebounce(searchTerm, 500);
 
-useEffect(() => {
-  // Perform API call with debouncedSearch
+// Optimize filtering with useMemo
+const filteredSpells = useMemo(() => {
+  return SPELLS.filter(
+    (spell) =>
+      spell.name.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
+      spell.type.toLowerCase().includes(debouncedSearch.toLowerCase())
+  );
 }, [debouncedSearch]);
 ```
 
-API only called after user stops typing for 500ms.
+API only called after user stops typing for 500ms. Filtering only runs when debouncedSearch changes.
+
+## Performance Optimization
+
+Combining `useDebounce` with `useMemo`:
+- `useDebounce` reduces when filtering happens
+- `useMemo` ensures filtering only runs when necessary
+- Component can re-render without re-filtering
+- Check console to see when "Filtering spells" logs
 
 ## Real-World Use Cases
 
@@ -71,4 +84,4 @@ API only called after user stops typing for 500ms.
 
 ## What's Next
 
-Module 12 covers performance optimization with React.memo, useMemo, useCallback.
+Module 8 covers useMemo in detail. This quest demonstrates combining custom hooks with built-in performance hooks for optimal results.

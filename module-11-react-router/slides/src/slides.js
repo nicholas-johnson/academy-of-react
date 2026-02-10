@@ -24,12 +24,26 @@ export const slides = [
   {
     type: "standard",
     content: {
+      title: "Single Page Application (SPA)",
+      points: [
+        "React apps are SPAs - load once, then JavaScript handles navigation",
+        "URL changes update components without reloading the page",
+        "React Router enables routing in SPAs",
+        "Keeps browser history working (back/forward)",
+        "Makes SPAs feel like traditional multi-page websites",
+      ],
+      icon: "globe",
+    },
+  },
+  {
+    type: "standard",
+    content: {
       title: "What is React Router?",
       points: [
-        "Library for client-side routing in React",
-        "URL changes update components, not reload page",
-        "Keeps browser history working (back/forward)",
-        "Enables bookmarkable URLs in SPAs",
+        "Library for client-side routing in React SPAs",
+        "Maps URLs to components",
+        "Handles browser history and navigation",
+        "Enables bookmarkable URLs",
         "The standard routing solution for React",
       ],
       icon: "compass",

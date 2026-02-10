@@ -1,41 +1,7 @@
-import { useState, useEffect } from "react";
+import { useFetch } from "./hooks/useFetch";
+import { SpellGrid } from "./components/SpellGrid";
 import "./App.css";
 
-// Custom Hook: useFetch
-function useFetch(url) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [refetchTrigger, setRefetchTrigger] = useState(0);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      setError(null);
-
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const json = await response.json();
-        setData(json);
-      } catch (e) {
-        setError(e);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [url, refetchTrigger]);
-
-  const refetch = () => setRefetchTrigger((prev) => prev + 1);
-
-  return { data, loading, error, refetch };
-}
-
-// Local API endpoint (served from public folder)
 const API_URL = "/api/spells.json";
 
 function App() {
@@ -63,43 +29,11 @@ function App() {
         <div className="error-section">
           <h3>Error Occurred</h3>
           <p>{error.message}</p>
-          <p className="hint">Using fallback mock data below</p>
         </div>
       )}
 
       {!loading && !error && data && (
-        <div className="spells-section">
-          <h3>Available Spells ({data.length})</h3>
-          <div className="spell-grid">
-            {data.map((spell) => (
-              <div key={spell.id} className="spell-card">
-                <h4>{spell.name}</h4>
-                <span className={`type-badge ${spell.type}`}>{spell.type}</span>
-                <div className="power-display">Power: {spell.power}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Fallback for API error - show mock data */}
-      {error && (
-        <div className="spells-section">
-          <h3>Mock Spells (Fallback)</h3>
-          <div className="spell-grid">
-            {[
-              { id: 1, name: "Fireball", type: "fire", power: 85 },
-              { id: 2, name: "Ice Blast", type: "ice", power: 70 },
-              { id: 3, name: "Lightning", type: "lightning", power: 90 },
-            ].map((spell) => (
-              <div key={spell.id} className="spell-card">
-                <h4>{spell.name}</h4>
-                <span className={`type-badge ${spell.type}`}>{spell.type}</span>
-                <div className="power-display">Power: {spell.power}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <SpellGrid spells={data} title={`Available Spells (${data.length})`} />
       )}
 
       <div className="info-box">

@@ -357,6 +357,89 @@ const { count, increment, decrement, reset } = useCounter(10)
     },
   },
   {
+    type: "title",
+    content: {
+      title: "Common Hook Libraries",
+      subtitle: "Don't reinvent the wheel",
+      icon: "package",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Hook Libraries",
+      points: [
+        "react-use — 100+ essential hooks",
+        "ahooks — Enterprise-grade React hooks library",
+        "usehooks-ts — TypeScript-first collection",
+        "Don't reinvent the wheel!",
+        "Great for learning hook patterns",
+        "Production-tested and optimized",
+      ],
+      icon: "package",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "TanStack React Query",
+      points: [
+        "Powerful data fetching and caching library",
+        "Built on custom hooks (useQuery, useMutation)",
+        "Automatic background refetching",
+        "Built-in caching and stale data management",
+        "Loading, error, and success states",
+        "Industry standard for server state",
+      ],
+      icon: "database",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "React Hook Form",
+      points: [
+        "Performant form library using hooks",
+        "Built with useForm hook at its core",
+        "Minimal re-renders during input changes",
+        "Easy validation with built-in/custom rules",
+        "Works with UI libraries and native inputs",
+        "Industry standard for complex forms",
+      ],
+      icon: "file-text",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Framer Motion",
+      points: [
+        "Animation library powered by hooks",
+        "useAnimation, useMotionValue, useScroll",
+        "Declarative animations with motion components",
+        "Gesture detection (drag, tap, hover)",
+        "Layout animations and transitions",
+        "Production-ready animation system",
+      ],
+      icon: "zap",
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "React Aria",
+      points: [
+        "Accessibility-focused hook library by Adobe",
+        "Hooks for building accessible UI primitives",
+        "useButton, useTextField, useDialog, etc.",
+        "Keyboard navigation and screen reader support",
+        "ARIA patterns and focus management",
+        "Foundation for design systems",
+      ],
+      icon: "accessibility",
+    },
+  },
+  {
     type: "rules",
     content: {
       title: "When to Create a Custom Hook",
