@@ -1,0 +1,127 @@
+:root {
+  --primary: #6366f1;
+  --fire: #ef4444;
+  --ice: #3b82f6;
+  --lightning: #eab308;
+  --background: #1e293b;
+  --surface: #334155;
+  --text: #f1f5f9;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.spell-type-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.spell-type-buttons button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.spell-type-buttons button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.spell-display {
+  background: var(--surface);
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.spell-fire {
+  color: var(--fire);
+}
+
+.spell-ice {
+  color: var(--ice);
+}
+
+.spell-lightning {
+  color: var(--lightning);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 2rem;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+}
+
+.btn-secondary:hover {
+  background: #475569;
+}
+
+.info-box {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+}
+
+.info-box h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.info-box ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.info-box li {
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}

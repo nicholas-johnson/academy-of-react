@@ -1,0 +1,150 @@
+:root {
+  --primary: #6366f1;
+  --fire: #ef4444;
+  --ice: #3b82f6;
+  --lightning: #eab308;
+  --background: #1e293b;
+  --surface: #334155;
+  --text: #f1f5f9;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.filter-buttons button {
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-buttons button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.spell-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.spell-card {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid rgba(99, 102, 241, 0.2);
+}
+
+.spell-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.spell-card p {
+  margin: 0.25rem 0;
+  color: #cbd5e1;
+}
+
+.element {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.element.fire {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--fire);
+}
+
+.element.ice {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--ice);
+}
+
+.element.lightning {
+  background: rgba(234, 179, 8, 0.2);
+  color: var(--lightning);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+}
+
+.info-box {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+  margin-top: 2rem;
+}
+
+.info-box h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.info-box ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.info-box li {
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
