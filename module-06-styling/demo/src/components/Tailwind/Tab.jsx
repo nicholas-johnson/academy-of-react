@@ -1,6 +1,6 @@
 export function Tab({ value, activeTab, onTabChange, children }) {
   const active = value === activeTab;
-  
+
   return (
     <button
       className={`
