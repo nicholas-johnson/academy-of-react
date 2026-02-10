@@ -1,318 +1,124 @@
-import { useState } from "react";
-import styled from "styled-components";
+// CSS Modules imports
+import { Button as CSSButton } from "./components/CSSModules/Button/Button";
+import { TabBar as CSSTabBar } from "./components/CSSModules/TabBar/TabBar";
+import { Tab as CSSTab } from "./components/CSSModules/Tab/Tab";
 
-// ============================================
-// 1. CSS MODULES
-// ============================================
-// Import creates an object with scoped class names
-// e.g., styles.button might become "Button_button_x7k2j"
-import styles from "./Button.module.css";
+// Plain CSS imports
+import { Button as PlainButton } from "./components/PlainCSS/Button/Button";
+import { TabBar as PlainTabBar } from "./components/PlainCSS/TabBar/TabBar";
+import { Tab as PlainTab } from "./components/PlainCSS/Tab/Tab";
 
-function CSSModulesButton({ variant = "primary", children }) {
-  // Combine base class with variant class
-  return (
-    <button className={`${styles.button} ${styles[variant]}`}>
-      {children}
-    </button>
-  );
-}
+// Styled Components imports
+import { Button as SCButton } from "./components/StyledComponents/Button/Button";
+import { TabBar as SCTabBar } from "./components/StyledComponents/TabBar/TabBar";
+import { Tab as SCTab } from "./components/StyledComponents/Tab/Tab";
 
-// ============================================
-// 2. STYLED COMPONENTS
-// ============================================
-// CSS-in-JS: styles are defined with the component
-// Props can dynamically change styles
-
-const StyledButton = styled.button`
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  /* Dynamic styles based on props */
-  background: ${(props) => {
-    switch (props.$variant) {
-      case "secondary":
-        return "transparent";
-      case "danger":
-        return "#f43f5e";
-      default:
-        return "#222740";
-    }
-  }};
-
-  color: ${(props) => (props.$variant === "secondary" ? "#222740" : "white")};
-  border: ${(props) =>
-    props.$variant === "secondary" ? "2px solid #222740" : "none"};
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: ${(props) =>
-      props.$variant === "danger"
-        ? "0 4px 12px rgba(244, 63, 94, 0.4)"
-        : "0 4px 12px rgba(102, 126, 234, 0.4)"};
-  }
-`;
-
-// ============================================
-// 3. TAILWIND CSS
-// ============================================
-// Utility classes applied directly in JSX
-// No separate CSS file needed
-
-function TailwindButton({ variant = "primary", children }) {
-  // Define variant classes
-  const variants = {
-    primary:
-      "bg-indigo-500 text-white hover:shadow-lg hover:shadow-indigo-500/40",
-    secondary:
-      "bg-transparent text-indigo-400 border-2 border-indigo-400 hover:bg-indigo-400/10",
-    danger: "bg-rose-500 text-white hover:shadow-lg hover:shadow-rose-500/40",
-  };
-
-  return (
-    <button
-      className={`
-      px-6 py-3 rounded-lg font-semibold
-      transition-all duration-200 hover:-translate-y-0.5
-      ${variants[variant]}
-    `}
-    >
-      {children}
-    </button>
-  );
-}
-
-// ============================================
-// DEMO APP
-// ============================================
+// Tailwind imports
+import { Button as TWButton } from "./components/Tailwind/Button";
+import { TabBar as TWTabBar } from "./components/Tailwind/TabBar";
+import { Tab as TWTab } from "./components/Tailwind/Tab";
 
 function App() {
-  const [clicks, setClicks] = useState({ css: 0, styled: 0, tailwind: 0 });
-
   return (
-    <div>
-      <h1>Three Ways to Style React</h1>
+    <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+      {/* Plain CSS Demo */}
+      <div style={{ marginBottom: "3rem" }}>
+        <h1>Plain CSS</h1>
 
-      <div className="demo-grid">
-        {/* CSS Modules Section */}
-        <div className="demo-section">
-          <h2>1. CSS Modules</h2>
-          <p
-            style={{
-              marginBottom: "1rem",
-              color: "#94a3b8",
-              fontSize: "0.875rem",
-            }}
-          >
-            Scoped CSS with automatic unique class names
-          </p>
-          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-            <CSSModulesButton
-              variant="primary"
-              onClick={() => setClicks((c) => ({ ...c, css: c.css + 1 }))}
-            >
-              Primary ({clicks.css})
-            </CSSModulesButton>
-            <CSSModulesButton variant="secondary">Secondary</CSSModulesButton>
-            <CSSModulesButton variant="danger">Danger</CSSModulesButton>
-          </div>
-          <pre
-            style={{
-              marginTop: "1rem",
-              fontSize: "0.75rem",
-              color: "#64748b",
-              background: "rgba(0,0,0,0.3)",
-              padding: "0.5rem",
-              borderRadius: "0.25rem",
-              overflow: "auto",
-            }}
-          >
-            {`import styles from './Button.module.css'
-
-<button className={styles.primary}>
-  Click me
-</button>`}
-          </pre>
+        <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+          <PlainButton variant="primary">Primary</PlainButton>
+          <PlainButton variant="secondary">Secondary</PlainButton>
         </div>
 
-        {/* Styled Components Section */}
-        <div className="demo-section">
-          <h2>2. Styled Components</h2>
-          <p
-            style={{
-              marginBottom: "1rem",
-              color: "#94a3b8",
-              fontSize: "0.875rem",
-            }}
-          >
-            CSS-in-JS with dynamic props
-          </p>
-          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-            <StyledButton
-              $variant="primary"
-              onClick={() => setClicks((c) => ({ ...c, styled: c.styled + 1 }))}
-            >
-              Primary ({clicks.styled})
-            </StyledButton>
-            <StyledButton $variant="secondary">Secondary</StyledButton>
-            <StyledButton $variant="danger">Danger</StyledButton>
-          </div>
-          <pre
-            style={{
-              marginTop: "1rem",
-              fontSize: "0.75rem",
-              color: "#64748b",
-              background: "rgba(0,0,0,0.3)",
-              padding: "0.5rem",
-              borderRadius: "0.25rem",
-              overflow: "auto",
-            }}
-          >
-            {`const Button = styled.button\`
-  background: \${props => 
-    props.$variant === 'danger' 
-      ? 'red' : 'blue'
-  };
-\``}
-          </pre>
-        </div>
-
-        {/* Tailwind Section */}
-        <div className="demo-section">
-          <h2>3. Tailwind CSS</h2>
-          <p
-            style={{
-              marginBottom: "1rem",
-              color: "#94a3b8",
-              fontSize: "0.875rem",
-            }}
-          >
-            Utility-first classes in JSX
-          </p>
-          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-            <TailwindButton
-              variant="primary"
-              onClick={() =>
-                setClicks((c) => ({ ...c, tailwind: c.tailwind + 1 }))
-              }
-            >
-              Primary ({clicks.tailwind})
-            </TailwindButton>
-            <TailwindButton variant="secondary">Secondary</TailwindButton>
-            <TailwindButton variant="danger">Danger</TailwindButton>
-          </div>
-          <pre
-            style={{
-              marginTop: "1rem",
-              fontSize: "0.75rem",
-              color: "#64748b",
-              background: "rgba(0,0,0,0.3)",
-              padding: "0.5rem",
-              borderRadius: "0.25rem",
-              overflow: "auto",
-            }}
-          >
-            {`<button className="
-  bg-indigo-500
-  px-6 py-3 rounded-lg
-  text-white
-">
-  Click me
-</button>`}
-          </pre>
-        </div>
+        <PlainTabBar>
+          <PlainTab value="Profile" activeTab="Profile" onTabChange={() => {}}>
+            Profile
+          </PlainTab>
+          <PlainTab value="Settings" activeTab="Profile" onTabChange={() => {}}>
+            Settings
+          </PlainTab>
+          <PlainTab value="Messages" activeTab="Profile" onTabChange={() => {}}>
+            Messages
+          </PlainTab>
+          <PlainTab value="History" activeTab="Profile" onTabChange={() => {}}>
+            History
+          </PlainTab>
+        </PlainTabBar>
       </div>
 
-      {/* Comparison Table */}
-      <div
-        style={{ maxWidth: "1200px", margin: "2rem auto", padding: "0 2rem" }}
-      >
-        <table
-          style={{
-            width: "100%",
-            borderCollapse: "collapse",
-            fontSize: "0.875rem",
-          }}
-        >
-          <thead>
-            <tr style={{ borderBottom: "2px solid rgba(255,255,255,0.1)" }}>
-              <th
-                style={{ padding: "1rem", textAlign: "left", color: "#a5b4fc" }}
-              >
-                Feature
-              </th>
-              <th
-                style={{
-                  padding: "1rem",
-                  textAlign: "center",
-                  color: "#a5b4fc",
-                }}
-              >
-                CSS Modules
-              </th>
-              <th
-                style={{
-                  padding: "1rem",
-                  textAlign: "center",
-                  color: "#a5b4fc",
-                }}
-              >
-                Styled Components
-              </th>
-              <th
-                style={{
-                  padding: "1rem",
-                  textAlign: "center",
-                  color: "#a5b4fc",
-                }}
-              >
-                Tailwind
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-              <td style={{ padding: "0.75rem" }}>Scoped Styles</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
-            </tr>
-            <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-              <td style={{ padding: "0.75rem" }}>Dynamic Props</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>No</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>
-                Partial (via classnames)
-              </td>
-            </tr>
-            <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-              <td style={{ padding: "0.75rem" }}>Zero Runtime</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>No</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
-            </tr>
-            <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-              <td style={{ padding: "0.75rem" }}>Separate Files</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>Yes</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>No</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>No</td>
-            </tr>
-            <tr>
-              <td style={{ padding: "0.75rem" }}>Learning Curve</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>Low</td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>
-                Medium
-              </td>
-              <td style={{ padding: "0.75rem", textAlign: "center" }}>
-                Medium
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      {/* CSS Modules Demo */}
+      <div style={{ marginBottom: "3rem" }}>
+        <h1>CSS Modules</h1>
+
+        <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+          <CSSButton variant="primary">Primary</CSSButton>
+          <CSSButton variant="secondary">Secondary</CSSButton>
+        </div>
+
+        <CSSTabBar>
+          <CSSTab value="Profile" activeTab="Profile" onTabChange={() => {}}>
+            Profile
+          </CSSTab>
+          <CSSTab value="Settings" activeTab="Profile" onTabChange={() => {}}>
+            Settings
+          </CSSTab>
+          <CSSTab value="Messages" activeTab="Profile" onTabChange={() => {}}>
+            Messages
+          </CSSTab>
+          <CSSTab value="History" activeTab="Profile" onTabChange={() => {}}>
+            History
+          </CSSTab>
+        </CSSTabBar>
+      </div>
+
+      {/* Styled Components Demo */}
+      <div style={{ marginBottom: "3rem" }}>
+        <h1>Styled Components</h1>
+
+        <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+          <SCButton variant="primary">Primary</SCButton>
+          <SCButton variant="secondary">Secondary</SCButton>
+        </div>
+
+        <SCTabBar>
+          <SCTab value="Profile" activeTab="Profile" onTabChange={() => {}}>
+            Profile
+          </SCTab>
+          <SCTab value="Settings" activeTab="Profile" onTabChange={() => {}}>
+            Settings
+          </SCTab>
+          <SCTab value="Messages" activeTab="Profile" onTabChange={() => {}}>
+            Messages
+          </SCTab>
+          <SCTab value="History" activeTab="Profile" onTabChange={() => {}}>
+            History
+          </SCTab>
+        </SCTabBar>
+      </div>
+
+      {/* Tailwind Demo */}
+      <div style={{ marginBottom: "3rem" }}>
+        <h1>Tailwind CSS</h1>
+
+        <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+          <TWButton variant="primary">Primary</TWButton>
+          <TWButton variant="secondary">Secondary</TWButton>
+        </div>
+
+        <TWTabBar>
+          <TWTab value="Profile" activeTab="Profile" onTabChange={() => {}}>
+            Profile
+          </TWTab>
+          <TWTab value="Settings" activeTab="Profile" onTabChange={() => {}}>
+            Settings
+          </TWTab>
+          <TWTab value="Messages" activeTab="Profile" onTabChange={() => {}}>
+            Messages
+          </TWTab>
+          <TWTab value="History" activeTab="Profile" onTabChange={() => {}}>
+            History
+          </TWTab>
+        </TWTabBar>
       </div>
     </div>
   );

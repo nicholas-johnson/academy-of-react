@@ -17,5 +17,3 @@ Fetch data from JSONPlaceholder or local JSON file with war updates, rival acade
 - [ ] Error state handles failures
 - [ ] Data displays correctly
 - [ ] Refresh works
-
-[Next →](../quest-03-effect-cleanup/)

@@ -21,24 +21,3 @@ h1 {
   padding: 2rem;
   font-size: 2rem;
 }
-
-.demo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.demo-section {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 1rem;
-  padding: 1.5rem;
-}
-
-.demo-section h2 {
-  margin-bottom: 1rem;
-  color: #a5b4fc;
-  font-size: 1.25rem;
-}

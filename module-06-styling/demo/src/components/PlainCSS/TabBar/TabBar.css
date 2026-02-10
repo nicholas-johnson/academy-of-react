@@ -1,0 +1,16 @@
+.tabbar-container {
+  border-radius: 0.75rem;
+  background: rgba(30, 41, 59, 0.5);
+  padding: 0.5rem;
+}
+
+.tabbar-wrapper {
+  border-radius: 0.5rem;
+  background: #1e293b;
+  padding: 0.25rem;
+}
+
+.tabbar {
+  display: flex;
+  gap: 0.25rem;
+}
