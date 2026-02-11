@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Home } from "lucide-react";
 import {
   BrowserRouter,
   Routes,
@@ -15,6 +16,7 @@ import {
   RulesSlide,
   WelcomeSlide,
   ModulesSlide,
+  ThreeWayComparison,
 } from "./components";
 
 function SlideViewer({ slides }) {
@@ -53,11 +55,18 @@ function SlideViewer({ slides }) {
   const slide = slides[currentSlide];
 
   const renderSlide = () => {
+    if (slide.type === "custom" && slide.component) {
+      const Component = slide.component;
+      return <Component />;
+    }
+
     switch (slide.type) {
       case "title":
         return <TitleSlide content={slide.content} />;
       case "comparison":
         return <ComparisonSlide content={slide.content} />;
+      case "three-way":
+        return <ThreeWayComparison content={slide.content} />;
       case "code":
         return <CodeSlide content={slide.content} />;
       case "rules":
@@ -75,28 +84,34 @@ function SlideViewer({ slides }) {
     <div className="w-screen h-screen flex flex-col bg-slate-900 text-white overflow-hidden">
       {renderSlide()}
 
-      <div className="flex justify-center items-center gap-8 p-4 bg-slate-950 border-t border-slate-800">
+      <div className="flex justify-between items-center gap-8 p-4 bg-slate-950 border-t border-slate-800">
         <button
-          onClick={() => navigate(`/${currentSlide}`)}
-          disabled={currentSlide === 0}
-          className="px-6 py-2 font-semibold rounded-lg bg-primary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
+          onClick={() => navigate("/1")}
+          className="p-2 text-slate-400 hover:text-slate-200 transition-colors rounded-lg"
+          aria-label="Go to first slide"
         >
-          ← Prev
+          <Home className="w-5 h-5" />
         </button>
-        <span className="text-lg text-gray-400 font-semibold min-w-[80px] text-center">
-          {currentSlide + 1} / {slides.length}
-        </span>
-        <button
-          onClick={() => navigate(`/${currentSlide + 2}`)}
-          disabled={currentSlide === slides.length - 1}
-          className="px-6 py-2 font-semibold rounded-lg bg-primary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
-        >
-          Next →
-        </button>
-      </div>
-
-      <div className="text-center py-2 text-sm text-slate-600 bg-slate-950">
-        Use ← → arrow keys or click buttons to navigate
+        <div className="flex items-center gap-8">
+          <button
+            onClick={() => navigate(`/${currentSlide}`)}
+            disabled={currentSlide === 0}
+            className="px-6 py-2 font-semibold rounded-lg bg-primary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
+          >
+            ← Prev
+          </button>
+          <span className="text-lg text-gray-400 font-semibold min-w-[80px] text-center">
+            {currentSlide + 1} / {slides.length}
+          </span>
+          <button
+            onClick={() => navigate(`/${currentSlide + 2}`)}
+            disabled={currentSlide === slides.length - 1}
+            className="px-6 py-2 font-semibold rounded-lg bg-primary text-white transition-all hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
+          >
+            Next →
+          </button>
+        </div>
+        <div className="w-10" aria-hidden="true" />
       </div>
     </div>
   );

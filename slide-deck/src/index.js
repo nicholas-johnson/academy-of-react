@@ -7,4 +7,5 @@ export {
   RulesSlide,
   WelcomeSlide,
   ModulesSlide,
+  ThreeWayComparison,
 } from "./components";

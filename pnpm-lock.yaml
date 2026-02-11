@@ -550,7 +550,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-05-effects-useeffect/quest-01-timers-intervals/solution:
+  module-05-effects-useeffect/quest-01-data-fetching/solution:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -566,7 +566,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-05-effects-useeffect/quest-01-timers-intervals/starter:
+  module-05-effects-useeffect/quest-01-data-fetching/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -582,7 +582,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-05-effects-useeffect/quest-02-data-fetching/solution:
+  module-05-effects-useeffect/quest-02-timers-intervals/solution:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -598,23 +598,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-05-effects-useeffect/quest-02-data-fetching/starter:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@vitejs/plugin-react':
-        specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
-      vite:
-        specifier: ^5.0.8
-        version: 5.4.21
-
-  module-05-effects-useeffect/quest-03-effect-cleanup/solution:
+  module-05-effects-useeffect/quest-02-timers-intervals/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -935,7 +919,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-08-built-in-hooks/quest-01-dom-access/solution:
+  module-08-built-in-hooks/quest-01-usestate/solution:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -951,7 +935,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-08-built-in-hooks/quest-02-persisting-values/solution:
+  module-08-built-in-hooks/quest-01-usestate/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -967,7 +951,55 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-08-built-in-hooks/quest-03-media-controls/solution:
+  module-08-built-in-hooks/quest-02-useeffect/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-02-useeffect/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-03-usecontext/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-03-usecontext/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -1000,6 +1032,438 @@ importers:
         version: 5.4.21
 
   module-08-built-in-hooks/quest-04-usereducer/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-05-usecallback/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-05-usecallback/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-06-usememo/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-06-usememo/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-07-useref/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-07-useref/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-08-useimperativehandle/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-08-useimperativehandle/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-09-uselayouteffect/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-09-uselayouteffect/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-10-usedebugvalue/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-10-usedebugvalue/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-11-useid/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-11-useid/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-12-usetransition/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-12-usetransition/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-13-usedeferredvalue/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-13-usedeferredvalue/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-14-usesyncexternalstore/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-14-usesyncexternalstore/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-15-useinsertioneffect/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-15-useinsertioneffect/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-16-useref-dom-access/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-17-useref-persistence/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-18-useref-media/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-19-usereducer-advanced/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/quest-19-usereducer-advanced/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -1237,7 +1701,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-10-context-api/quest-02-multi-provider/solution:
+  module-10-context-api/quest-02-language-context/solution:
     dependencies:
       lucide-react:
         specifier: ^0.469.0
@@ -1256,7 +1720,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-10-context-api/quest-02-multi-provider/starter:
+  module-10-context-api/quest-02-language-context/starter:
     dependencies:
       lucide-react:
         specifier: ^0.469.0
@@ -1667,6 +2131,9 @@ importers:
 
   module-12-state-management/slides:
     dependencies:
+      lucide-react:
+        specifier: ^0.469.0
+        version: 0.469.0(react@18.3.1)
       react:
         specifier: ^18.2.0
         version: 18.3.1
