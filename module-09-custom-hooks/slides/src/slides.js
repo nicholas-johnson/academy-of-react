@@ -36,6 +36,20 @@ export const slides = [
     },
   },
   {
+    type: "standard",
+    content: {
+      title: "Why Custom Hooks?",
+      points: [
+        "Reusability — Use same logic in many components",
+        "Testability — Test logic separately from UI",
+        "Encapsulation — Hide complex implementation",
+        "Clean Code — Components stay focused on rendering",
+        "Sharing — Publish hooks as npm packages",
+      ],
+      icon: "sparkles",
+    },
+  },
+  {
     type: "code",
     content: {
       title: "Your First Custom Hook",
@@ -94,6 +108,72 @@ function App() {
           example: "useState, useEffect, useRef...",
           icon: "anchor",
         },
+      ],
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "useCounter",
+      code: `function useCounter(initialValue = 0) {
+  const [count, setCount] = useState(initialValue)
+  
+  const increment = () => setCount(c => c + 1)
+  const decrement = () => setCount(c => c - 1)
+  const reset = () => setCount(initialValue)
+  const set = (value) => setCount(value)
+  
+  return { count, increment, decrement, reset, set }
+}
+
+// Usage
+const { count, increment, decrement, reset } = useCounter(10)
+
+<button onClick={decrement}>-</button>
+<span>{count}</span>
+<button onClick={increment}>+</button>
+<button onClick={reset}>Reset</button>`,
+      highlights: [
+        "Encapsulates counter logic",
+        "Returns value + multiple actions",
+        "Can be used for any counting need",
+        "Shows object return pattern",
+      ],
+    },
+  },
+  {
+    type: "code",
+    content: {
+      title: "useWindowSize",
+      code: `function useWindowSize() {
+  const [size, setSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  })
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  return size
+}
+
+// Usage
+const { width, height } = useWindowSize()
+const isMobile = width < 768`,
+      highlights: [
+        "Tracks browser window dimensions",
+        "Cleanup removes event listener",
+        "Returns current size object",
+        "Useful for responsive logic",
       ],
     },
   },
@@ -201,17 +281,33 @@ useEffect(() => {
     },
   },
   {
-    type: "standard",
+    type: "code",
     content: {
-      title: "Why Custom Hooks?",
-      points: [
-        "Reusability — Use same logic in many components",
-        "Testability — Test logic separately from UI",
-        "Encapsulation — Hide complex implementation",
-        "Clean Code — Components stay focused on rendering",
-        "Sharing — Publish hooks as npm packages",
+      title: "Hook Composition",
+      code: `// Custom hooks can use other custom hooks!
+function useSearchWithDebounce(initialQuery = '') {
+  const [query, setQuery] = useState(initialQuery)
+  const debouncedQuery = useDebounce(query, 300)
+  const { data, loading } = useFetch(
+    debouncedQuery ? \`/api/search?q=\${debouncedQuery}\` : null
+  )
+  
+  return {
+    query,
+    setQuery,
+    results: data,
+    isSearching: loading
+  }
+}
+
+// Usage - complex logic, simple interface
+const { query, setQuery, results, isSearching } = useSearchWithDebounce()`,
+      highlights: [
+        "Combine useDebounce + useFetch",
+        "Each hook does one thing well",
+        "Compose into powerful abstractions",
+        "Single clean API for consumers",
       ],
-      icon: "sparkles",
     },
   },
   {
@@ -246,98 +342,30 @@ return <DataList data={data} />`,
     },
   },
   {
-    type: "code",
+    type: "rules",
     content: {
-      title: "Hook Composition",
-      code: `// Custom hooks can use other custom hooks!
-function useSearchWithDebounce(initialQuery = '') {
-  const [query, setQuery] = useState(initialQuery)
-  const debouncedQuery = useDebounce(query, 300)
-  const { data, loading } = useFetch(
-    debouncedQuery ? \`/api/search?q=\${debouncedQuery}\` : null
-  )
-  
-  return {
-    query,
-    setQuery,
-    results: data,
-    isSearching: loading
-  }
-}
-
-// Usage - complex logic, simple interface
-const { query, setQuery, results, isSearching } = useSearchWithDebounce()`,
-      highlights: [
-        "Combine useDebounce + useFetch",
-        "Each hook does one thing well",
-        "Compose into powerful abstractions",
-        "Single clean API for consumers",
-      ],
-    },
-  },
-  {
-    type: "code",
-    content: {
-      title: "useWindowSize",
-      code: `function useWindowSize() {
-  const [size, setSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight
-  })
-
-  useEffect(() => {
-    const handleResize = () => {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      })
-    }
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  return size
-}
-
-// Usage
-const { width, height } = useWindowSize()
-const isMobile = width < 768`,
-      highlights: [
-        "Tracks browser window dimensions",
-        "Cleanup removes event listener",
-        "Returns current size object",
-        "Useful for responsive logic",
-      ],
-    },
-  },
-  {
-    type: "code",
-    content: {
-      title: "useCounter",
-      code: `function useCounter(initialValue = 0) {
-  const [count, setCount] = useState(initialValue)
-  
-  const increment = () => setCount(c => c + 1)
-  const decrement = () => setCount(c => c - 1)
-  const reset = () => setCount(initialValue)
-  const set = (value) => setCount(value)
-  
-  return { count, increment, decrement, reset, set }
-}
-
-// Usage
-const { count, increment, decrement, reset } = useCounter(10)
-
-<button onClick={decrement}>-</button>
-<span>{count}</span>
-<button onClick={increment}>+</button>
-<button onClick={reset}>Reset</button>`,
-      highlights: [
-        "Encapsulates counter logic",
-        "Returns value + multiple actions",
-        "Can be used for any counting need",
-        "Shows object return pattern",
+      title: "When to Create a Custom Hook",
+      rules: [
+        {
+          rule: "Logic is used in 2+ components",
+          example: "Extract and share it",
+          icon: "recycle",
+        },
+        {
+          rule: "Component is getting complex",
+          example: "Separate concerns",
+          icon: "eraser",
+        },
+        {
+          rule: "You want to test logic",
+          example: "Test hook independently",
+          icon: "flask",
+        },
+        {
+          rule: "You see useState + useEffect together",
+          example: "Often a hook waiting to happen",
+          icon: "anchor",
+        },
       ],
     },
   },
@@ -437,34 +465,6 @@ const { count, increment, decrement, reset } = useCounter(10)
         "Foundation for design systems",
       ],
       icon: "accessibility",
-    },
-  },
-  {
-    type: "rules",
-    content: {
-      title: "When to Create a Custom Hook",
-      rules: [
-        {
-          rule: "Logic is used in 2+ components",
-          example: "Extract and share it",
-          icon: "recycle",
-        },
-        {
-          rule: "Component is getting complex",
-          example: "Separate concerns",
-          icon: "eraser",
-        },
-        {
-          rule: "You want to test logic",
-          example: "Test hook independently",
-          icon: "flask",
-        },
-        {
-          rule: "You see useState + useEffect together",
-          example: "Often a hook waiting to happen",
-          icon: "anchor",
-        },
-      ],
     },
   },
   {
