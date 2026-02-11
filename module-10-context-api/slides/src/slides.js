@@ -242,11 +242,22 @@ function Content() {
       title: "When NOT to Use Context",
       icon: "alert-triangle",
       points: [
-        "Data that changes very frequently",
-        "Complex state with many actions",
+        "Data that changes very frequently, eg mouse position",
+        "Complex state with many actions, eg a shopping cart",
         "State needed by only 1-2 components",
-        "Server-fetched data (use React Query)",
-        "Large applications (use Redux/Zustand)",
+      ],
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Context Downsides",
+      icon: "alert-circle",
+      points: [
+        "Re-renders — All consumers re-render when value changes",
+        "Performance — Not ideal for very high-frequency updates",
+        "Testing — Components need Provider wrappers in tests",
+        "Nesting — Multiple contexts create deep provider trees",
       ],
     },
   },
