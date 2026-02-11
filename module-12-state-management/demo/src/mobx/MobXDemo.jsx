@@ -15,17 +15,17 @@ export const MobXDemo = observer(function MobXDemo() {
 
       <div className="code-preview">
         <pre>{`class SpellStore {
-  spells = []
+  @observable spells = []
   
   constructor() {
-    makeAutoObservable(this)
+    makeObservable(this)
   }
   
-  addSpell(spell) {
+  @action addSpell(spell) {
     this.spells.push(spell)  // Direct mutation!
   }
   
-  get totalPower() {  // Computed
+  @computed get totalPower() {
     return this.spells.reduce((sum, s) => sum + s.power, 0)
   }
 }

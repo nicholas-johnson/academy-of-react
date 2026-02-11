@@ -1,24 +1,26 @@
-export function TabNav({ activeTab, onTabChange }) {
+import { NavLink } from "react-router-dom";
+
+export function TabNav() {
   return (
     <nav className="tabs">
-      <button
-        className={activeTab === "zustand" ? "tab active" : "tab"}
-        onClick={() => onTabChange("zustand")}
+      <NavLink
+        to="/zustand"
+        className={({ isActive }) => (isActive ? "tab active" : "tab")}
       >
         Zustand
-      </button>
-      <button
-        className={activeTab === "redux" ? "tab active" : "tab"}
-        onClick={() => onTabChange("redux")}
+      </NavLink>
+      <NavLink
+        to="/redux"
+        className={({ isActive }) => (isActive ? "tab active" : "tab")}
       >
         Redux Toolkit
-      </button>
-      <button
-        className={activeTab === "mobx" ? "tab active" : "tab"}
-        onClick={() => onTabChange("mobx")}
+      </NavLink>
+      <NavLink
+        to="/mobx"
+        className={({ isActive }) => (isActive ? "tab active" : "tab")}
       >
         MobX
-      </button>
+      </NavLink>
     </nav>
   );
 }

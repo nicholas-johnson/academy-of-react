@@ -4,7 +4,7 @@ import { addSpell, removeSpell, selectSpells, selectTotalPower } from "./spellSl
 import { getRandomSpell } from "../data/spellData";
 import { SpellList } from "../components/SpellList";
 
-function ReduxDemoInner() {
+function ReduxDemoContent() {
   const spells = useSelector(selectSpells);
   const totalPower = useSelector(selectTotalPower);
   const dispatch = useDispatch();
@@ -52,7 +52,7 @@ dispatch(addSpell({ name: 'Fireball' }))`}</pre>
 export function ReduxDemo() {
   return (
     <Provider store={store}>
-      <ReduxDemoInner />
+      <ReduxDemoContent />
     </Provider>
   );
 }

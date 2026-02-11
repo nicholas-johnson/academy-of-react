@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { TabNav } from "./components/TabNav";
 import { ZustandDemo } from "./zustand/ZustandDemo";
 import { ReduxDemo } from "./redux/ReduxDemo";
@@ -7,8 +7,6 @@ import { LibraryComparison } from "./components/LibraryComparison";
 import "./App.css";
 
 function App() {
-  const [activeTab, setActiveTab] = useState("zustand");
-
   return (
     <div className="app">
       <header className="header">
@@ -16,12 +14,15 @@ function App() {
         <p>Compare Zustand, Redux Toolkit, and MobX</p>
       </header>
 
-      <TabNav activeTab={activeTab} onTabChange={setActiveTab} />
+      <TabNav />
 
       <main className="main">
-        {activeTab === "zustand" && <ZustandDemo />}
-        {activeTab === "redux" && <ReduxDemo />}
-        {activeTab === "mobx" && <MobXDemo />}
+        <Routes>
+          <Route path="/" element={<Navigate to="/zustand" replace />} />
+          <Route path="/zustand" element={<ZustandDemo />} />
+          <Route path="/redux" element={<ReduxDemo />} />
+          <Route path="/mobx" element={<MobXDemo />} />
+        </Routes>
       </main>
 
       <footer className="footer">
