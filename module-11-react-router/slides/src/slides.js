@@ -339,6 +339,48 @@ function SpellList() {
     },
   },
   {
+    type: "three-way",
+    content: {
+      title: "Alternative Routers",
+      left: {
+        label: "TanStack Router",
+        code: `// Type-safe, file-based routing
+import { createRouter } from '@tanstack/react-router'
+
+const router = createRouter({
+  routeTree: routeTree,
+})
+
+// Strong typing for params & search
+// Built-in data loading
+// Code splitting by route`,
+      },
+      middle: {
+        label: "Wouter",
+        code: `// Minimal (~2KB), hooks-first
+import { Route, Switch } from 'wouter'
+
+<Route path="/" component={Home} />
+<Route path="/about" component={About} />
+
+// useLocation(), useRoute()
+// No context nesting
+// Drop-in replacement`,
+      },
+      right: {
+        label: "Universal Router",
+        code: `// Framework-agnostic
+import UniversalRouter from 'universal-router'
+
+const router = new UniversalRouter(routes)
+
+// Works with React, Vue, etc.
+// Custom resolution logic
+// Lazy route loading`,
+      },
+    },
+  },
+  {
     type: "rules",
     content: {
       title: "React Router Best Practices",
