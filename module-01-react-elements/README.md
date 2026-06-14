@@ -1,117 +1,208 @@
 # Module 1: React Elements with createElement()
 
-## Story Context
+Before JSX, before components, before hooks — there's `createElement`. This is how React actually works under the hood: you describe your UI as a tree of plain JavaScript objects, and React takes care of putting them on screen efficiently.
 
-Welcome to the Arcane Academy! You've just arrived at the grand Enrollment Hall, clutching your acceptance letter. Before you can begin your magical training, you must register yourself in the Academy's ancient systems using the `React.createElement()` incantation — the original spell for creating React elements.
+You won't write `createElement` by hand in real projects (Module 2 introduces JSX, which is far more pleasant). But starting here gives you a solid mental model of what React is actually doing. When something confusing happens later — a render you don't expect, a key warning, a performance issue — understanding this layer will help you reason about it.
 
-## Learning Objectives
+This module uses React from a CDN with plain HTML files. No build tools, no terminal commands. Just a script tag and a text editor.
 
-By the end of this module, you will:
+## What Is React, Really?
 
-- Understand how React creates elements using JavaScript
-- Work with JavaScript objects and arrays to represent data
-- Render elements to the DOM using ReactDOM
-- Create nested element structures
-- Write functions that calculate values
+At its core, React is a library for building user interfaces out of components. It was created at Facebook (now Meta) in 2013, and it introduced an idea that's now everywhere in frontend development: **declarative UI**.
 
-## React Concepts Covered
+In traditional JavaScript, you tell the browser *how* to update things step by step — find this element, change its text, add this class. That's **imperative** programming. React flips it: you describe *what* the UI should look like for a given state, and React figures out how to make the DOM match. That's **declarative** programming.
 
-- `React.createElement()`
-- `ReactDOM.render()` / `ReactDOM.createRoot()`
-- Element properties and children
-- Rendering lists of elements
-- Basic component structure
+This difference matters more as applications grow. Imperative DOM manipulation gets tangled and fragile. Declarative descriptions stay readable.
 
-## JavaScript Concepts
+## React.createElement()
 
-- Objects and object properties
-- Arrays and array iteration
-- Functions and return values
-- Template strings (for concatenation)
-- DOM manipulation basics
+Everything in React starts with `createElement`. It takes three arguments:
 
-## Slides
+```javascript
+React.createElement(type, props, ...children)
+```
 
-Start with the introduction slides before the demos:
+- **type** — the kind of element: an HTML tag name like `'h1'`, `'div'`, `'p'`
+- **props** — an object of attributes: `{ className: 'title', id: 'main' }` (or `null` if none)
+- **children** — what goes inside: text, numbers, other elements, or arrays of elements
 
-1. Navigate to the `slides/` folder
-2. Run `npm install` then `npm run dev`
-3. Open http://localhost:5173
-4. Use arrow keys or buttons to navigate
+Here's the simplest possible example:
 
-The slides cover:
+```javascript
+const heading = React.createElement('h1', null, 'Hello, Academy!')
+```
 
-- What is React?
-- Why learn React?
-- Course structure and resources
-- What to expect in Module 1
+This creates a React element — a plain JavaScript object that *describes* an `<h1>` tag containing the text "Hello, Academy!" It doesn't actually create a DOM node yet. It's just a description.
 
-## Setup Instructions
+## Elements Are Just Objects
 
-This module uses React from a CDN, so no build tools are required!
+When you call `createElement`, you get back a plain object:
 
-1. Navigate to the `demo/` folder
-2. Open `index.html` in your web browser
-3. Open the browser's developer console to see any output
-4. Study the code in both `index.html` and `app.js`
+```javascript
+const element = React.createElement('h1', { className: 'title' }, 'Hello')
 
-## Demo Walkthrough
+// element is roughly:
+// {
+//   type: 'h1',
+//   props: {
+//     className: 'title',
+//     children: 'Hello'
+//   }
+// }
+```
 
-The demo (`demo/app.js`) shows:
+These objects are cheap to create. React can build thousands of them without touching the DOM. This is the foundation of the **Virtual DOM** — a lightweight tree of these objects that React keeps in memory.
 
-1. **Creating a student object** with properties like name, house, and magicLevel
-2. **Using React.createElement()** to create React elements representing the student
-3. **Rendering to the DOM** using ReactDOM
+## Nesting Elements
 
-Key points to notice:
+Real UIs are trees — elements inside elements. You pass child elements as additional arguments:
 
-- `React.createElement(type, props, ...children)` creates a React element
-- The first argument is the HTML tag (string) or component
-- The second argument is an object of properties/attributes
-- Remaining arguments are the children (text or more elements)
-- We use `ReactDOM.createRoot()` and `root.render()` in React 18
+```javascript
+const card = React.createElement(
+  'div',
+  { className: 'student-card' },
+  React.createElement('h2', null, 'Toasty McPigeonfingers'),
+  React.createElement('p', null, 'House: Scarybird'),
+  React.createElement('p', null, 'Level: 45')
+)
+```
 
-## Quests
+This describes:
 
-### Quest 1: Basic Elements
+```html
+<div class="student-card">
+  <h2>Toasty McPigeonfingers</h2>
+  <p>House: Scarybird</p>
+  <p>Level: 45</p>
+</div>
+```
 
-**Difficulty**: Beginner
+It's verbose — and that's fine for now. You'll appreciate JSX much more after writing `createElement` by hand for a module.
 
-Create a student object with your wizard's stats and render it using `createElement()`.
+## Using JavaScript Data
 
-[Start Quest →](./quest-01-basic-elements/)
+Since elements are built with JavaScript, you can use variables, template strings, and expressions freely:
 
-### Quest 2: Rendering Arrays
+```javascript
+const student = {
+  name: 'Luna Moonwhisper',
+  house: 'Huftybadger',
+  magicLevel: 38,
+  health: 100
+}
 
-**Difficulty**: Beginner-Intermediate
+const profile = React.createElement(
+  'div',
+  { className: 'student-card' },
+  React.createElement('h2', null, student.name),
+  React.createElement('p', null, `House: ${student.house}`),
+  React.createElement('p', null, `Magic Level: ${student.magicLevel}`),
+  React.createElement('p', null, `Health: ${student.health}`)
+)
+```
 
-Build an array of multiple students and render them as a list using `.map()`.
+This is a key insight: React elements are *generated by* JavaScript. Your data drives the UI.
 
-[Start Quest →](./quest-02-rendering-arrays/)
+## Rendering to the Page
 
-## Bonus Mastery Challenge
+Creating elements is only half the story. To actually show them in the browser, you need `ReactDOM`:
 
-Once you've completed both quests, try this:
+```javascript
+const container = document.getElementById('root')
+const root = ReactDOM.createRoot(container)
+root.render(profile)
+```
 
-**The Student Comparison Tool**
+`createRoot` tells React which DOM element to manage. `render` takes your element tree and builds the actual DOM nodes inside that container.
 
-Create a small application that:
+Your HTML file just needs a `<div id="root"></div>` and script tags for React and ReactDOM:
 
-- Has TWO student objects with different stats
-- Calculates and displays which student is more powerful
-- Shows a comparison of their stats side-by-side
-- Has a button that "swaps" which student is on the left vs right
+```html
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+```
 
-This combines object manipulation, createElement, event handling, and DOM updates!
+## The Virtual DOM
 
-## Key Takeaways
+When you call `render`, React doesn't just dump HTML into the page naively. It does something clever:
 
-- React elements are created with `React.createElement()`
-- Elements are just JavaScript objects describing what should appear on screen
-- We can use regular JavaScript (objects, arrays, functions) to generate React elements
-- `createElement` can be nested to create complex structures
-- This is the foundation upon which JSX is built (coming in Module 2!)
+1. It builds a tree of element objects (the Virtual DOM)
+2. It compares that tree to what's currently on screen
+3. It calculates the minimal set of DOM operations needed
+4. It applies only those changes
+
+This **diffing** process means React can update the UI efficiently even when your data changes frequently. You describe the full desired state, and React figures out the cheapest way to get there.
+
+For now, with static data, this doesn't matter much. But once you add state and interactivity (Modules 3+), the Virtual DOM becomes essential for performance.
+
+## Rendering Lists
+
+Applications rarely display a single item. To render a collection, use `.map()` to transform an array of data into an array of elements:
+
+```javascript
+const students = [
+  { name: 'Toasty McPigeonfingers', house: 'Scarybird', magicLevel: 45 },
+  { name: 'Thor Ironforge', house: 'Liondudes', magicLevel: 62 },
+  { name: 'Luna Starlight', house: 'Huftybadger', magicLevel: 38 }
+]
+
+const studentElements = students.map(student =>
+  React.createElement(
+    'div',
+    { className: 'student-card' },
+    React.createElement('h3', null, student.name),
+    React.createElement('p', null, `House: ${student.house}`),
+    React.createElement('p', null, `Level: ${student.magicLevel}`)
+  )
+)
+
+root.render(
+  React.createElement('div', null, ...studentElements)
+)
+```
+
+Each item in the array becomes an element. React renders the array as siblings inside the parent `div`. This pattern — data array transformed into element array — is one of the most fundamental patterns in React.
+
+## Common Mistakes
+
+**Forgetting to call render.** Creating elements does nothing by itself. You must pass them to `root.render()` to see anything on screen.
+
+**Passing props wrong.** The second argument must be an object or `null` — not a string. `createElement('h1', 'Hello')` won't work. It should be `createElement('h1', null, 'Hello')`.
+
+**Using `class` instead of `className`.** React uses `className` for CSS classes because `class` is a reserved word in JavaScript.
+
+**Mutating objects.** React elements are meant to be immutable. Don't try to change an element's props after creating it — create a new one instead.
+
+## Exercises
+
+Two quests to practise these fundamentals:
+
+**Quest 1: Wizard Identity** — Create a student object with your wizard's stats (name, house, magic level, health) and render it to the page using `createElement`.
+
+[Start Quest 1 →](./quest-01-basic-elements/)
+
+**Quest 2: Student Registry** — Build an array of five students and render them all as a list using `.map()` and `createElement`.
+
+[Start Quest 2 →](./quest-02-rendering-arrays/)
+
+## Running the Code
+
+No build tools needed for this module. Open the HTML files directly in your browser:
+
+```
+demo/index.html    — the working example
+```
+
+Open your browser's developer console to see any output or errors.
+
+The slides introduce React, explain the Virtual DOM, and show `createElement` with diagrams:
+
+```bash
+cd slides
+npm install
+npm run dev
+```
 
 ---
 
-**Next Module**: [Module 2: JSX and Components](../module-02-jsx-components/) — Learn the modern JSX syntax that makes React much easier to read and write!
+[Module 2: JSX and Components →](../module-02-jsx-components/)

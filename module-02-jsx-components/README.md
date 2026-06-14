@@ -1,377 +1,265 @@
 # Module 2: JSX and Components
 
-## Story Context
+In Module 1, you built React elements with `createElement()` — and it worked, but it was verbose. Nesting elements meant nesting function calls, and even a simple card required a wall of code that was hard to read at a glance.
 
-You've survived the arduous `createElement()` training, but Professor Hooksweasel has good news: "There's a better way!" The Academy has adopted JSX — a modern runic language that looks like HTML but is actually JavaScript. It's much easier to read and write, and it's what professional React wizards use in the real world.
+JSX fixes this. It's a syntax extension that lets you write elements in a format that looks like HTML but compiles down to the same `createElement` calls. Under the hood, nothing has changed. On the surface, everything becomes dramatically more readable.
 
-## Learning Objectives
+This module also introduces **Vite** (the build tool that makes JSX work), **function components** (the way you organise your UI into reusable pieces), and **props** (how you pass data into components).
 
-By the end of this module, you will:
+## From createElement to JSX
 
-- Know what **Node.js**, **npm**, and **pnpm** are and why they sit before Vite in the toolchain
-- Set up and use Vite for React development
-- Understand what JSX is and how it differs from createElement()
-- Write JSX syntax to create React elements
-- Create function components
-- Pass and use props in components
-- Transform createElement() code to JSX
-- Work with a professional React development environment
+Here's the transformation:
 
-## React Concepts Covered
-
-- JSX syntax
-- Function components
-- Props (properties)
-- Component composition
-- Node.js runtime and package managers (npm, pnpm)
-- Modern build tools (Vite)
-- ES modules and imports
-
-## JavaScript Concepts
-
-- Template literals
-- Destructuring assignment
-- Arrow functions
-- Function parameters
-
-## Slides
-
-Start with the introduction slides before the demos:
-
-1. Navigate to the `slides/` folder
-2. Run `npm install` then `npm run dev` (or `pnpm install` / `pnpm dev` if you use pnpm)
-3. Open http://localhost:5173
-4. Use arrow keys to navigate
-
-The slides cover:
-
-- Why JSX (the pain of createElement)
-- What JSX is and how it works
-- The 4 JSX rules
-- **Node.js** — JavaScript on your computer; dev tools and npm
-- **npm** — installing dependencies and running scripts (`package.json`)
-- **pnpm** — an alternative package manager (same commands, often faster)
-- Introduction to Vite
-- Creating a new project (`npm create vite@latest`) — full optional steps under **Setup Instructions** below
-- Module 2 goals
-
-## Node.js, npm, and pnpm
-
-Before Vite (or any React dev server), you need a **JavaScript runtime** and a way to **install packages** on your machine.
-
-### Node.js
-
-**Node.js** runs JavaScript outside the browser. Your OS doesn't understand `.jsx` files or `import` from `node_modules` by itself — tools like Vite run *on* Node. When you run `npm run dev`, Node executes the Vite CLI.
-
-- Install the **LTS** version from [nodejs.org](https://nodejs.org)
-- After installing, your terminal should recognize `node` and `npm`
-
-### npm
-
-**npm** (Node Package Manager) ships with Node. It reads each project's **`package.json`** (dependency list and script names), downloads packages into **`node_modules/`**, and runs commands like `npm install` and `npm run dev`.
-
-- This README and many demos use **npm** in examples
-- Same ideas everywhere: install dependencies once per project, then use `npm run …` for dev, build, and preview
-
-### pnpm
-
-**pnpm** is another package manager — same job as npm, different implementation. It often installs faster and uses less disk space by sharing one global store across projects.
-
-- Some quests in this repo include a **`pnpm-lock.yaml`**; use **`pnpm install`** and **`pnpm dev`** (or `pnpm run dev`) there, or stick to npm if you prefer — just don't mix lockfiles in the same folder
-- Scaffold with **`pnpm create vite`** the same way you'd use `npm create vite@latest`
-
-The slides introduce these three **before** Vite so the commands in the next section make sense.
-
-## Welcome to Vite!
-
-Starting in Module 2, we're switching from CDN + Babel to **Vite**, a modern build tool that makes React development fast and enjoyable. Vite is installed **as an npm (or pnpm) package** in each project and started with a script from `package.json`.
-
-### Why the Switch?
-
-In Module 1, you learned React basics using CDN links and directly opening HTML files. That's perfect for learning `createElement()`, but now that you're ready for JSX and real development, it's time to upgrade!
-
-**Problems with CDN + Babel Standalone:**
-
-- Slow transformation (Babel Standalone isn't optimized)
-- CORS errors when opening `file://` URLs
-- Not how professional React developers work
-- Can't use npm packages or modern imports
-- Harder to debug
-
-**Benefits of Vite:**
-
-- Lightning-fast Hot Module Replacement (HMR) - see changes in milliseconds!
-- Modern ES modules - proper imports and exports
-- Access to the entire npm ecosystem
-- Optimized production builds
-- Better error messages and debugging
-- No more CORS issues
-- This is how React pros work!
-
-### What is Vite?
-
-Vite (French for "fast") is a modern build tool created by Evan You (creator of Vue.js). It's become the go-to choice for React development because:
-
-1. **Dev Server**: Runs a local server (no more `file://` URLs!)
-2. **Instant Updates**: HMR updates your browser as you type
-3. **Fast Builds**: Uses esbuild for lightning-fast bundling
-4. **Simple Config**: Just works out of the box
-
-### Setup Instructions
-
-**First time using Vite? Follow these steps:**
-
-1. **Navigate to the demo folder:**
-
-   ```bash
-   cd module-02-jsx-components/demo
-   ```
-
-2. **Install dependencies:**
-
-   ```bash
-   npm install
-   ```
-
-   This downloads React and Vite (only needed once per project). If the folder has `pnpm-lock.yaml` instead, use `pnpm install`.
-
-3. **Start the dev server:**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser:**
-   - Vite will show a URL (usually `http://localhost:5173`)
-   - Click it or copy/paste into your browser
-   - You should see the demo running!
-
-5. **Make changes:**
-   - Edit files in the `src/` folder
-   - Save your changes
-   - Watch the browser update instantly!
-
-6. **Stop the server:**
-   - Press `Ctrl+C` in the terminal when you're done
-
-### Optional: Create your own Vite + React app
-
-For this module you can stay in the **`demo/`** folder above. If you want a **fresh project** elsewhere on your machine (same tooling as the course):
-
-1. **Scaffold** (pick a folder name instead of `my-app`):
-
-   ```bash
-   npm create vite@latest my-app
-   ```
-
-2. **In the prompts**, choose **React**, then **JavaScript** or **TypeScript**.
-
-3. **Install and run:**
-
-   ```bash
-   cd my-app
-   npm install
-   npm run dev
-   ```
-
-With **pnpm**: `pnpm create vite` (or `pnpm create vite my-app`), then `cd` into the folder, `pnpm install`, and `pnpm dev`.
-
-### Vite Project Structure
-
-```
-demo/
-├── package.json       # Dependencies and npm scripts
-├── vite.config.js     # Vite configuration (React plugin)
-├── index.html         # Entry HTML (notice: in root, not src!)
-└── src/
-    ├── main.jsx       # Entry point - renders your App
-    ├── App.jsx        # Your main component
-    ├── App.css        # Component-specific styles
-    └── index.css      # Global styles
+```javascript
+// Module 1 — createElement
+React.createElement(
+  'div', { className: 'card' },
+  React.createElement('h1', null, 'Hello'),
+  React.createElement('p', null, 'World')
+)
 ```
 
-**Key differences from CDN setup:**
+```jsx
+// Module 2 — JSX
+<div className="card">
+  <h1>Hello</h1>
+  <p>World</p>
+</div>
+```
 
-- `index.html` is in the project root (not inside `src/`)
-- No CDN script tags - React comes from npm
-- `<script type="module">` tag points to `src/main.jsx`
-- Use `import/export` statements instead of global variables
-- Styles are imported in JavaScript files
+Same result, dramatically more readable. JSX isn't a template language — it's syntactic sugar that compiles to JavaScript. Your build tool (Vite) handles the transformation before the browser ever sees it.
 
-### How Vite Works
+## JSX Rules
 
-1. **You edit** `src/App.jsx` and save
-2. **Vite detects** the change instantly
-3. **HMR updates** only that module in the browser
-4. **You see** the result in milliseconds!
+JSX looks like HTML but has a few important differences:
 
-No page refresh, no losing state - just instant updates!
+**Use `className` instead of `class`** — because `class` is a reserved word in JavaScript:
+```jsx
+<div className="card">content</div>
+```
 
-### Common Vite Commands
+**Use curly braces `{}` for JavaScript expressions:**
+```jsx
+<h1>{student.name}</h1>
+<p>Power: {magicLevel * 2}</p>
+<span>{isReady ? 'Ready!' : 'Preparing...'}</span>
+```
+
+**Every element must have one parent** — you can't return adjacent elements without a wrapper. Use a `<div>` or an empty fragment `<>...</>`:
+```jsx
+// Won't work — two adjacent elements
+return (
+  <h1>Title</h1>
+  <p>Text</p>
+)
+
+// Works — wrapped in a fragment
+return (
+  <>
+    <h1>Title</h1>
+    <p>Text</p>
+  </>
+)
+```
+
+**All tags must be closed** — including self-closing ones:
+```jsx
+<img src="wizard.png" alt="A wizard" />
+<br />
+<input type="text" />
+```
+
+## Setting Up with Vite
+
+JSX needs a build step — the browser doesn't understand it natively. **Vite** is a modern build tool that handles this transformation and gives you an excellent development experience with instant hot reloading.
+
+To work with the course demos:
 
 ```bash
-npm install          # Install dependencies (first time only)
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build locally
+cd module-02-jsx-components/demo
+npm install
+npm run dev
 ```
 
-With **pnpm**, the same scripts work: `pnpm install`, `pnpm dev`, `pnpm build`, `pnpm preview`.
+Vite starts a local server (usually at `http://localhost:5173`). Edit any file, save, and see changes in the browser within milliseconds.
 
-### Troubleshooting
+To scaffold a brand new project from scratch:
 
-**Port already in use?**
-
-- Another dev server might be running
-- Check terminals or use `Ctrl+C` to stop other servers
-- Vite will auto-assign a different port if 5173 is busy
-
-**Module not found?**
-
-- Run `npm install` to install dependencies
-- Check your import paths are correct
-
-**Changes not showing?**
-
-- Check the terminal for errors
-- Try stopping (`Ctrl+C`) and restarting (`npm run dev`)
-- Clear browser cache or hard refresh (`Cmd+Shift+R` / `Ctrl+Shift+R`)
-
-**Node.js not installed?**
-
-- Download from [nodejs.org](https://nodejs.org) (includes npm)
-- Restart your terminal after installing
-- Verify with `node --version` and `npm --version`
-
-**Optional: pnpm**
-
-- Install once globally: `npm install -g pnpm` (see [pnpm.io](https://pnpm.io/installation) for other methods)
-- Verify with `pnpm --version`
-
-## Demo Walkthrough
-
-The demo shows:
-
-1. **Vite Project Setup** — Modern React development environment
-2. **JSX Syntax** — Writing elements that look like HTML
-3. **Function Components** — Creating reusable StudentCard component
-4. **Props** — Passing data to components
-5. **ES Module Imports** — Using modern JavaScript imports
-
-Key differences from Module 1:
-
-**React Code:**
-
-```javascript
-// Old way (createElement):
-React.createElement('h1', null, 'Hello')
-
-// New way (JSX):
-<h1>Hello</h1>
+```bash
+npm create vite@latest my-app
+# Choose React, then JavaScript
+cd my-app
+npm install
+npm run dev
 ```
 
-**Project Setup:**
+A Vite project has this structure:
 
-```javascript
-// Module 1 (CDN):
-<script crossorigin src="https://unpkg.com/react@18/..."></script>;
-
-// Module 2 (Vite):
-import React from "react"; // From npm packages!
+```
+my-app/
+├── package.json       # Dependencies and scripts
+├── vite.config.js     # Build configuration
+├── index.html         # Entry HTML (loads src/main.jsx)
+└── src/
+    ├── main.jsx       # Renders your App to the DOM
+    ├── App.jsx        # Your root component
+    └── App.css        # Styles
 ```
 
-Much easier to read and work with! JSX gets transformed to `createElement()` calls by Vite's build process.
+The key differences from Module 1's CDN approach: React comes from npm (not a CDN script tag), files use `import`/`export` statements, and Vite handles JSX transformation automatically.
 
-## Important JSX Rules
+## Function Components
 
-1. **Single Parent**: JSX must have one parent element
+A component is a function that returns JSX. That's it. The function name must start with a capital letter (so React can distinguish it from HTML tags):
 
-   ```jsx
-   // Wrong:
-   <h1>Title</h1>
-   <p>Text</p>
+```jsx
+function StudentCard() {
+  return (
+    <div className="card">
+      <h2>Toasty McPigeonfingers</h2>
+      <p>House: Scarybird</p>
+      <p>Level: 45</p>
+    </div>
+  )
+}
+```
 
-   // Correct:
-   <div>
-     <h1>Title</h1>
-     <p>Text</p>
-   </div>
-   ```
+You use it in JSX like an HTML tag:
 
-2. **JavaScript Expressions**: Use curly braces `{}` for JavaScript
+```jsx
+function App() {
+  return (
+    <div>
+      <h1>Academy Roster</h1>
+      <StudentCard />
+      <StudentCard />
+    </div>
+  )
+}
+```
 
-   ```jsx
-   <h1>{student.name}</h1>
-   <p>Power: {magicLevel * 2}</p>
-   ```
+Two instances of `StudentCard` render independently. Components let you break complex UIs into small, focused pieces that you can build and reason about one at a time.
 
-3. **className not class**: Use `className` for CSS classes
+## Props — Passing Data to Components
 
-   ```jsx
-   <div className="student-card">
-   ```
+A component that always shows the same data isn't very useful. **Props** (short for properties) let you pass data into a component, like arguments to a function:
 
-4. **Self-Closing Tags**: Tags without children must self-close
-   ```jsx
-   <img src="photo.jpg" />
-   <br />
-   ```
+```jsx
+function StudentCard({ name, house, level }) {
+  return (
+    <div className="card">
+      <h2>{name}</h2>
+      <p>House: {house}</p>
+      <p>Level: {level}</p>
+    </div>
+  )
+}
 
-## Quests
+// Usage — different data, same component
+<StudentCard name="Toasty McPigeonfingers" house="Scarybird" level={45} />
+<StudentCard name="Luna Starlight" house="Huftybadger" level={38} />
+```
 
-### Quest 1: JSX Conversion
+Props are passed as attributes in JSX (strings in quotes, everything else in curly braces) and received as an object parameter. Destructuring (`{ name, house, level }`) extracts the values directly.
 
-**Difficulty**: Beginner (1/5)
+Props are **read-only** — a component should never modify its own props. They flow down from parent to child, making data flow predictable and easy to trace.
 
-Convert your Module 1 createElement() code to JSX syntax.
+## Rendering Lists
 
-[Start Quest →](./quest-01-jsx-conversion/)
+When you have an array of data, `.map()` transforms it into an array of elements:
 
-### Quest 2: Props Basics
+```jsx
+const students = [
+  { id: 1, name: 'Toasty', house: 'Scarybird', level: 45 },
+  { id: 2, name: 'Luna', house: 'Huftybadger', level: 38 },
+  { id: 3, name: 'Thor', house: 'Liondudes', level: 62 }
+]
 
-**Difficulty**: Beginner-Intermediate (2/5)
+function StudentRoster() {
+  return (
+    <div>
+      <h1>Academy Roster</h1>
+      {students.map(student => (
+        <StudentCard
+          key={student.id}
+          name={student.name}
+          house={student.house}
+          level={student.level}
+        />
+      ))}
+    </div>
+  )
+}
+```
 
-Create a reusable SpellCard component that receives data via props.
+The `key` prop is required when rendering lists. It tells React which item is which, so it can efficiently update the DOM when the list changes. Use a stable, unique identifier (like an `id` from your data) — not the array index.
 
-[Start Quest →](./quest-02-props-basics/)
+## Composing Components
 
-### Quest 3: Component Lists
+The real power of components emerges when you compose them — small components combine into larger ones, which combine into pages:
 
-**Difficulty**: Intermediate (2/5)
+```jsx
+function App() {
+  return (
+    <div className="app">
+      <Header />
+      <StudentRoster />
+      <Footer />
+    </div>
+  )
+}
 
-Build a PotionCard component and render a list using `.map()` with keys.
+function Header() {
+  return <header><h1>Arcane Academy</h1></header>
+}
 
-[Start Quest →](./quest-03-component-lists/)
+function Footer() {
+  return <footer><p>© Arcane Academy</p></footer>
+}
+```
 
-## Bonus Mastery Challenge
+Each component does one thing. `Header` handles the header. `StudentRoster` handles the list. `StudentCard` handles a single card. You can work on any piece in isolation without worrying about the rest.
 
-**The Spell Comparison Tool**
+## Common Mistakes
 
-Create a component called `SpellComparison` that:
+**Forgetting the capital letter.** `<studentCard />` renders as an HTML element (which doesn't exist). `<StudentCard />` renders your component. Always capitalise component names.
 
-- Takes two spells as props
-- Displays them side-by-side
-- Highlights which spell is more powerful
-- Shows the mana cost difference
-- Has a "Winner" indicator
+**Returning adjacent elements without a wrapper.** JSX expressions must have a single root. Wrap siblings in a `<div>` or a fragment `<>...</>`.
 
-This combines component creation, props, conditional rendering, and calculations!
+**Forgetting keys in lists.** React will warn you, and your list updates may behave incorrectly (losing state, re-ordering wrong). Always provide a unique `key`.
 
-## Key Takeaways
+**Using quotes for non-string props.** `level="45"` passes the string "45". Use `level={45}` for a number, `active={true}` for a boolean, `items={myArray}` for arrays and objects.
 
-- **Vite** is the modern way to develop React apps (fast, professional, no CORS issues!)
-- **JSX** looks like HTML but is actually JavaScript
-- JSX is transformed to `createElement()` calls by the build process
-- **Function components** return JSX
-- **Props** let us pass data to components
-- Use `{}` to embed JavaScript expressions in JSX
-- JSX makes React code much more readable
-- **Components** should start with a capital letter
-- **Node.js** runs the dev toolchain; **npm** (or **pnpm**) installs React, Vite, and other dependencies
-- **HMR** provides instant feedback as you code
+## Exercises
+
+**Quest 1: JSX Conversion** — Convert your Module 1 createElement code into JSX. Experience firsthand how much cleaner it is.
+
+[Start Quest 1 →](./quest-01-jsx-conversion/)
+
+**Quest 2: Props Basics** — Create a reusable SpellCard component that receives data through props and renders differently based on what it's given.
+
+[Start Quest 2 →](./quest-02-props-basics/)
+
+**Quest 3: Component Lists** — Build a PotionCard component and render a list of potions using `.map()` with proper keys.
+
+[Start Quest 3 →](./quest-03-component-lists/)
+
+## Running the Code
+
+```bash
+cd demo
+npm install
+npm run dev
+```
+
+Slides cover JSX rules, Vite setup, Node.js/npm basics, and component structure:
+
+```bash
+cd slides
+npm install
+npm run dev
+```
 
 ---
 
-**Previous Module**: [Module 1: React Elements](../module-01-react-elements/)
-
-**Next Module**: [Module 3: State with useState](../module-03-state-usestate/)
+[← Module 1: React Elements](../module-01-react-elements/) | [Module 3: State with useState →](../module-03-state-usestate/)
