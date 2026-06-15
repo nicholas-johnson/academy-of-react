@@ -1,0 +1,14 @@
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+form {
+  div {
+    margin-bottom: 10px;
+  }
+  label {
+    margin-right: 5px;
+  }
+}
