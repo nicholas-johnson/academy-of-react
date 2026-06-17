@@ -74,6 +74,7 @@ import {
   User,
   FolderPlus,
   FileCode,
+  Database,
 } from "lucide-react";
 
 // Map icon names to Lucide components
@@ -123,7 +124,7 @@ const iconMap = {
   calculator: Calculator,
   hash: Hash,
   sliders: SlidersHorizontal,
-
+  database: Database,
   // Hooks
   anchor: Anchor,
   hook: Anchor,
