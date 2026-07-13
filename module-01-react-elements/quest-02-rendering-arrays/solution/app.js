@@ -70,82 +70,18 @@ const students = [
   },
 ];
 
-// House colors
-const houseConfig = {
-  Valor: { color: "#dc2626" },
-  Wisdom: { color: "#2563eb" },
-  Nature: { color: "#16a34a" },
-  Mystery: { color: "#9333ea" },
-};
-
 // Student card component
-const StudentCard = (student) => {
-  const config = houseConfig[student.house];
-
+const StudentCard = ({ student }) => {
   return h(
     "div",
-    {
-      className: "student-card",
-      "data-house": student.house.toLowerCase(),
-    },
-    // Card header with house accent
-    h(
-      "div",
-      {
-        className: "card-header",
-        style: { borderTopColor: config.color },
-      },
-      h(
-        "div",
-        { className: "header-content" },
-        h("h3", { className: "student-name" }, student.name),
-        h(
-          "span",
-          {
-            className: "level-badge",
-            style: { backgroundColor: config.color },
-          },
-          `Lv ${student.level}`,
-        ),
-      ),
-    ),
-
-    // Card body
-    h(
-      "div",
-      { className: "card-body" },
-      h(
-        "div",
-        { className: "info-row" },
-        h("span", { className: "info-label" }, "House:"),
-        h(
-          "span",
-          {
-            className: "house-name",
-            style: { color: config.color },
-          },
-          student.house,
-        ),
-      ),
-      h(
-        "div",
-        { className: "info-row" },
-        h("span", { className: "info-label" }, "Specialty:"),
-        h("span", { className: "info-value" }, student.specialty),
-      ),
-      h(
-        "div",
-        { className: "info-row" },
-        h("span", { className: "info-label" }, "Status:"),
-        h(
-          "span",
-          {
-            className: `status-badge status-${student.status}`,
-          },
-          student.status,
-        ),
-      ),
-    ),
+    null,
+    student.name,
+    " — ",
+    student.house,
+    ", Lv ",
+    student.level,
+    ", ",
+    student.specialty,
   );
 };
 
@@ -166,10 +102,10 @@ const App = () => {
     ),
 
     h(
-      "div",
-      { className: "student-grid" },
+      "ul",
+      { className: "student-list" },
       students.map((student) =>
-        h(StudentCard, { key: student.id, ...student }),
+        h("li", null, h(StudentCard, { student }))
       ),
     ),
   );

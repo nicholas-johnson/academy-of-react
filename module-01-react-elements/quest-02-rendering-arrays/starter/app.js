@@ -5,7 +5,7 @@ const students = [
     name: "Dixie Spiderwhomp",
     house: "Wisdom",
     level: 42,
-    specialty: "Elemental Magic",
+    speciality: "Elemental Magic",
     status: "active",
   },
   {
@@ -13,7 +13,7 @@ const students = [
     name: "Theron Stormforge",
     house: "Valor",
     level: 38,
-    specialty: "Combat Magic",
+    speciality: "Combat Magic",
     status: "active",
   },
   {
@@ -21,7 +21,7 @@ const students = [
     name: "Luna Willowshade",
     house: "Nature",
     level: 45,
-    specialty: "Healing Arts",
+    speciality: "Healing Arts",
     status: "active",
   },
   {
@@ -29,7 +29,7 @@ const students = [
     name: "Raven Shadowmere",
     house: "Mystery",
     level: 40,
-    specialty: "Illusion Magic",
+    speciality: "Illusion Magic",
     status: "active",
   },
   {
@@ -37,7 +37,7 @@ const students = [
     name: "Atlas Ironheart",
     house: "Valor",
     level: 35,
-    specialty: "Defense Magic",
+    speciality: "Defense Magic",
     status: "training",
   },
   {
@@ -45,7 +45,7 @@ const students = [
     name: "Seraphina Starlight",
     house: "Wisdom",
     level: 48,
-    specialty: "Astral Magic",
+    speciality: "Astral Magic",
     status: "active",
   },
   {
@@ -53,7 +53,7 @@ const students = [
     name: "Finn Oakwalker",
     house: "Nature",
     level: 33,
-    specialty: "Beast Taming",
+    speciality: "Beast Taming",
     status: "active",
   },
   {
@@ -61,7 +61,7 @@ const students = [
     name: "Morgana Nightshade",
     house: "Mystery",
     level: 50,
-    specialty: "Dark Arts",
+    speciality: "Dark Arts",
     status: "active",
   },
 ];
