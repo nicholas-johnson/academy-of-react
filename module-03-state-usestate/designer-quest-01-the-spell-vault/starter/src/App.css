@@ -1,0 +1,82 @@
+/* ═══════════════════════════════════════════════
+   THE SPELL VAULT — App Layout
+   ═══════════════════════════════════════════════ */
+
+.vault {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 2rem;
+}
+
+/* Header */
+.vault-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vault-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a78bfa, #818cf8, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 0.25rem;
+}
+
+.vault-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0 0 1.25rem;
+}
+
+/* Toggle button */
+.toggle-btn {
+  background: #1e293b;
+  color: #94a3b8;
+  border: 1px solid #334155;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.toggle-btn.active {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+}
+
+/* Spell grid */
+.spell-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────────
+   🎨 TASK 3 — Style the empty state
+   ─────────────────────────────────────────────
+   This class is used when there are no spells to show.
+   Right now it's bare. Add your own styles here:
+     - A dashed or dotted border
+     - A muted text colour
+     - Padding, text alignment, border-radius
+     - Maybe a larger font for the emoji
+*/
+.empty-state {
+  max-width: 400px;
+  margin: 2rem auto;
+}

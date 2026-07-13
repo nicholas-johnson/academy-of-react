@@ -1,0 +1,78 @@
+// 📋 SPELL CATALOGUE — you don't need to edit this
+
+const spells = [
+  {
+    id: 1,
+    name: "Fireball",
+    element: "Fire",
+    power: 85,
+    price: 120,
+    description: "Hurls a blazing sphere that explodes on impact.",
+    icon: "🔥",
+  },
+  {
+    id: 2,
+    name: "Frost Nova",
+    element: "Ice",
+    power: 70,
+    price: 95,
+    description: "Sends a wave of freezing cold in all directions.",
+    icon: "❄️",
+  },
+  {
+    id: 3,
+    name: "Lightning Bolt",
+    element: "Storm",
+    power: 90,
+    price: 150,
+    description: "Calls down a devastating bolt from the sky.",
+    icon: "⚡",
+  },
+  {
+    id: 4,
+    name: "Vine Grasp",
+    element: "Nature",
+    power: 55,
+    price: 60,
+    description: "Summons thorny vines that entangle the target.",
+    icon: "🌿",
+  },
+  {
+    id: 5,
+    name: "Shadow Step",
+    element: "Dark",
+    power: 65,
+    price: 110,
+    description: "Teleports through shadows to strike from behind.",
+    icon: "🌑",
+  },
+  {
+    id: 6,
+    name: "Healing Light",
+    element: "Holy",
+    power: 75,
+    price: 130,
+    description: "Bathes an ally in restorative golden radiance.",
+    icon: "✨",
+  },
+  {
+    id: 7,
+    name: "Tidal Wave",
+    element: "Water",
+    power: 80,
+    price: 100,
+    description: "Conjures a massive wave that crashes into foes.",
+    icon: "🌊",
+  },
+  {
+    id: 8,
+    name: "Earthquake",
+    element: "Earth",
+    power: 95,
+    price: 175,
+    description: "Shakes the ground so hard enemies lose their footing.",
+    icon: "🪨",
+  },
+];
+
+export default spells;

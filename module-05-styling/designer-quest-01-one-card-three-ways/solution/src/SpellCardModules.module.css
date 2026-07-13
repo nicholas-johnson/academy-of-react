@@ -1,0 +1,56 @@
+.card {
+  background: #1e293b;
+  color: #e2e8f0;
+  width: 280px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.2);
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  margin-bottom: 0.75rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #ef4444;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.powerBar {
+  background: #334155;
+  border-radius: 9999px;
+  height: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.powerFill {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}

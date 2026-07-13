@@ -29,8 +29,8 @@ Learn fundamental JavaScript and basic React concepts. You'll track student stat
 
 Build complete Academy systems using modern tooling. Master side effects, styling, and component composition as you prepare for the coming war.
 
-- Module 5: Side Effects with useEffect
-- Module 6: Styling in React (CSS Modules, Styled Components, Tailwind)
+- Module 5: Styling in React (CSS Modules, Styled Components, Tailwind)
+- Module 6: Side Effects with useEffect
 - Module 7: The Children Prop
 
 ### Phase 3: Routing + Advanced (Modules 8-12)
@@ -112,6 +112,26 @@ To enroll in the Arcane Academy, you should have:
 5. Complete the three quests in separate folders
 6. Test each quest with `npm run dev`
 
+## Designer Track
+
+If you're a designer learning React, there's a dedicated set of exercises that start from fully working apps — no blank canvas, no writing JavaScript from scratch. Read the **[Designer Guide](DESIGNER_GUIDE.md)** first, then work through one exercise per module:
+
+| Module | Exercise | What you do | JS concept |
+|--------|----------|-------------|------------|
+| 2 — JSX | The Roster Board | Edit variables to change student data and add a student to a list | Variables |
+| 3 — useState | The Spell Vault | Add a spell to a loop-rendered list, toggle a boolean | Loops |
+| 4 — Forms | The Enrolment Scroll | Add a form option, change a function's output string | Functions |
+| 5 — Styling | One Card, Three Ways | Restyle a SpellCard using CSS Modules, styled-components, and Tailwind | — |
+| 6 — useEffect | Design the Waiting | Design loading, error, and empty states on a pre-wired fetch | — |
+| 7 — Children | Build the Great Hall | Compose a page from pre-built layout components (pure JSX) | — |
+| 8 — Hooks | Spell Search Polish | Design pending and no-results states on a live search | — |
+| 9 — Custom Hooks | Day and Night | Design light and dark themes as CSS variable sets | — |
+| 10 — Context | The Third House | Add a theme by duplicating a theme object | — |
+| 11 — Router | The Lost Corridor | Design a 404 page and add one route by copying a pattern | — |
+| 12 — State Management | The Spell Shop | Design empty-cart, badge, and feedback states | — |
+
+Each exercise lives in a `designer-quest-01-*` folder inside the corresponding module.
+
 ## Additional Resources
 
 - **[STORY.md](STORY.md)** — The complete Wizarding War narrative, world-building, and character details
@@ -143,14 +163,14 @@ Track your journey through the Academy:
 
 ### Phase 2: Core React
 
-- [ ] Module 5: Side Effects with useEffect
-  - [ ] Quest 1: Meditation Timer
-  - [ ] Quest 2: War Intelligence
-  - [ ] Quest 3: Auto-Save
-- [ ] Module 6: Styling in React
+- [ ] Module 5: Styling in React
   - [ ] Quest 1: House Badges (CSS Modules)
   - [ ] Quest 2: Spell Cards (Styled Components)
   - [ ] Quest 3: Battle Dashboard (Tailwind)
+- [ ] Module 6: Side Effects with useEffect
+  - [ ] Quest 1: Meditation Timer
+  - [ ] Quest 2: War Intelligence
+  - [ ] Quest 3: Auto-Save
 - [ ] Module 7: The Children Prop
   - [ ] Quest 1: Layout Components
 

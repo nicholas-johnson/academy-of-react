@@ -59,6 +59,38 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
+  module-02-jsx-components/designer-quest-01-the-roster-board/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-02-jsx-components/designer-quest-01-the-roster-board/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
   module-02-jsx-components/quest-01-jsx-conversion/solution:
     dependencies:
       react:
@@ -255,6 +287,38 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
+  module-03-state-usestate/designer-quest-01-the-spell-vault/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-03-state-usestate/designer-quest-01-the-spell-vault/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
   module-03-state-usestate/quest-01-multiple-state/solution:
     dependencies:
       react:
@@ -368,6 +432,38 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-04-forms-events/designer-quest-01-the-enrolment-scroll/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-04-forms-events/designer-quest-01-the-enrolment-scroll/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.7.0(vite@5.4.21)
@@ -534,7 +630,91 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-05-effects-useeffect/demo:
+  module-05-styling/demo:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.8
+        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.24(postcss@8.5.6)
+      postcss:
+        specifier: ^8.4.35
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.19
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-05-styling/designer-quest-01-one-card-three-ways/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.8
+        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.24(postcss@8.5.6)
+      postcss:
+        specifier: ^8.4.33
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.19
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-05-styling/designer-quest-01-one-card-three-ways/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.8
+        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.24(postcss@8.5.6)
+      postcss:
+        specifier: ^8.4.33
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.19
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-05-styling/quest-01-css-modules/solution:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -550,7 +730,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-05-effects-useeffect/quest-01-data-fetching/solution:
+  module-05-styling/quest-01-css-modules/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -566,7 +746,45 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-05-effects-useeffect/quest-01-data-fetching/starter:
+  module-05-styling/quest-02-styled-components/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.8
+        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-05-styling/quest-02-styled-components/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.8
+        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-05-styling/quest-03-tailwind/solution:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -578,11 +796,20 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.7.0(vite@5.4.21)
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.24(postcss@8.5.6)
+      postcss:
+        specifier: ^8.4.35
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.19
       vite:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-05-effects-useeffect/quest-02-timers-intervals/solution:
+  module-05-styling/quest-03-tailwind/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -594,27 +821,20 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.7.0(vite@5.4.21)
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.24(postcss@8.5.6)
+      postcss:
+        specifier: ^8.4.35
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.19
       vite:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-05-effects-useeffect/quest-02-timers-intervals/starter:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@vitejs/plugin-react':
-        specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
-      vite:
-        specifier: ^5.0.8
-        version: 5.4.21
-
-  module-05-effects-useeffect/slides:
+  module-05-styling/slides:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -645,35 +865,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-06-styling/demo:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
-      styled-components:
-        specifier: ^6.1.8
-        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    devDependencies:
-      '@vitejs/plugin-react':
-        specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
-      autoprefixer:
-        specifier: ^10.4.17
-        version: 10.4.24(postcss@8.5.6)
-      postcss:
-        specifier: ^8.4.35
-        version: 8.5.6
-      tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.19
-      vite:
-        specifier: ^5.0.8
-        version: 5.4.21
-
-  module-06-styling/quest-01-css-modules/solution:
+  module-06-effects-useeffect/demo:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -689,7 +881,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-06-styling/quest-01-css-modules/starter:
+  module-06-effects-useeffect/designer-quest-01-design-the-waiting/solution:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -705,45 +897,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-06-styling/quest-02-styled-components/solution:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
-      styled-components:
-        specifier: ^6.1.8
-        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    devDependencies:
-      '@vitejs/plugin-react':
-        specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
-      vite:
-        specifier: ^5.0.8
-        version: 5.4.21
-
-  module-06-styling/quest-02-styled-components/starter:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
-      styled-components:
-        specifier: ^6.1.8
-        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    devDependencies:
-      '@vitejs/plugin-react':
-        specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
-      vite:
-        specifier: ^5.0.8
-        version: 5.4.21
-
-  module-06-styling/quest-03-tailwind/solution:
+  module-06-effects-useeffect/designer-quest-01-design-the-waiting/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -755,20 +909,11 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.7.0(vite@5.4.21)
-      autoprefixer:
-        specifier: ^10.4.17
-        version: 10.4.24(postcss@8.5.6)
-      postcss:
-        specifier: ^8.4.35
-        version: 8.5.6
-      tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.19
       vite:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-06-styling/quest-03-tailwind/starter:
+  module-06-effects-useeffect/quest-01-data-fetching/solution:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -780,20 +925,59 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.7.0(vite@5.4.21)
-      autoprefixer:
-        specifier: ^10.4.17
-        version: 10.4.24(postcss@8.5.6)
-      postcss:
-        specifier: ^8.4.35
-        version: 8.5.6
-      tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.19
       vite:
         specifier: ^5.0.8
         version: 5.4.21
 
-  module-06-styling/slides:
+  module-06-effects-useeffect/quest-01-data-fetching/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-06-effects-useeffect/quest-02-timers-intervals/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-06-effects-useeffect/quest-02-timers-intervals/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-06-effects-useeffect/slides:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -832,6 +1016,38 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-07-children-prop/designer-quest-01-build-the-great-hall/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-07-children-prop/designer-quest-01-build-the-great-hall/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
@@ -904,6 +1120,38 @@ importers:
         version: 5.4.21
 
   module-08-built-in-hooks/demo:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/designer-quest-01-spell-search-polish/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-08-built-in-hooks/designer-quest-01-spell-search-polish/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -1574,6 +1822,38 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21
 
+  module-09-custom-hooks/designer-quest-01-day-and-night/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-09-custom-hooks/designer-quest-01-day-and-night/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
   module-09-custom-hooks/quest-01-uselocalstorage/solution:
     dependencies:
       react:
@@ -1702,6 +1982,38 @@ importers:
         version: 5.4.21
 
   module-10-context-api/demo:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-10-context-api/designer-quest-01-the-third-house/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-10-context-api/designer-quest-01-the-third-house/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -1851,6 +2163,44 @@ importers:
         version: 5.4.21
 
   module-11-react-router/demo:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      react-router-dom:
+        specifier: ^6.22.0
+        version: 6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-11-react-router/designer-quest-01-the-lost-corridor/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      react-router-dom:
+        specifier: ^6.22.0
+        version: 6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-11-react-router/designer-quest-01-the-lost-corridor/starter:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -2056,6 +2406,44 @@ importers:
       '@babel/plugin-transform-class-properties':
         specifier: ^7.28.6
         version: 7.29.7(@babel/core@7.29.0)
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-12-state-management/designer-quest-01-the-spell-shop/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      zustand:
+        specifier: ^4.5.0
+        version: 4.5.7(@types/react@19.2.13)(immer@11.1.3)(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21)
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21
+
+  module-12-state-management/designer-quest-01-the-spell-shop/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      zustand:
+        specifier: ^4.5.0
+        version: 4.5.7(@types/react@19.2.13)(immer@11.1.3)(react@18.3.1)
+    devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.7.0(vite@5.4.21)

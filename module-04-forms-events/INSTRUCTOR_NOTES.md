@@ -453,7 +453,7 @@ const handleDelete = (id) => {
 
 8. **Wrap-up** (5 min)
    - Recap: Controlled components, preventDefault, validation
-   - Preview: Module 5 covers useEffect and data fetching
+   - Preview: Module 5 covers styling in React (CSS Modules, Styled Components, Tailwind)
    - Mention: Bonus quest available for array state practice
 
 ---

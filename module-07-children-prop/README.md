@@ -206,4 +206,4 @@ npm run dev
 
 ---
 
-[← Module 6: Styling in React](../module-06-styling/) | [Module 8: Built-in React Hooks →](../module-08-built-in-hooks/)
+[← Module 6: Side Effects with useEffect](../module-06-effects-useeffect/) | [Module 8: Built-in React Hooks →](../module-08-built-in-hooks/)

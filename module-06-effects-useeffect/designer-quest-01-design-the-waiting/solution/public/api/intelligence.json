@@ -1,0 +1,39 @@
+{
+  "reports": [
+    {
+      "id": "IR-7701",
+      "academy": "Thornwood Academy of Dark Arts",
+      "threatLevel": "critical",
+      "info": "Three senior students observed practicing forbidden summoning rituals in the eastern tower. Wards on floor 13 have been weakened. Recommend immediate surveillance escalation.",
+      "lastUpdated": "2024-03-15T09:42:00Z"
+    },
+    {
+      "id": "IR-7702",
+      "academy": "Silvercliff Institute of Battle Magic",
+      "threatLevel": "high",
+      "info": "Unusual energy signatures detected near the armoury. Staff conducting 'maintenance drills' outside normal schedule. Possible weapons enchantment program expansion.",
+      "lastUpdated": "2024-03-14T16:20:00Z"
+    },
+    {
+      "id": "IR-7703",
+      "academy": "Misthollow School of Illusions",
+      "threatLevel": "moderate",
+      "info": "Campus perimeter glamours changed three times this week. New cloaking patterns don't match any known curriculum. Could be advanced student projects or deliberate obfuscation.",
+      "lastUpdated": "2024-03-14T11:05:00Z"
+    },
+    {
+      "id": "IR-7704",
+      "academy": "Crystalpeak College of Alchemy",
+      "threatLevel": "low",
+      "info": "Quarterly supply order includes twice the usual amount of moonstone reagent. Likely preparation for spring exams, but flagged due to moonstone's dual-use potential.",
+      "lastUpdated": "2024-03-13T08:30:00Z"
+    },
+    {
+      "id": "IR-7705",
+      "academy": "Embervault War Academy",
+      "threatLevel": "high",
+      "info": "New instructor hired with no verifiable background. Teaching 'Advanced Tactical Warding' — a subject not in the approved syllabus. Multiple students transferred from Thornwood this semester.",
+      "lastUpdated": "2024-03-15T14:15:00Z"
+    }
+  ]
+}

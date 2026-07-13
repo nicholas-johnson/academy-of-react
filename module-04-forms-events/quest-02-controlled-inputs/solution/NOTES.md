@@ -288,4 +288,4 @@ Current implementation is fine for small-medium datasets (< 500 items).
 
 **Quest 3: Sorting Ceremony** will teach multi-step forms where users progress through multiple pages, combining form handling with complex state management.
 
-**Module 6: Lists and Keys** will dive deeper into list rendering, teaching you why the `key` prop is critical and how to handle large datasets efficiently.
+**Module 5: Styling in React** will dive into CSS Modules, Styled Components, and Tailwind — giving you powerful tools for styling your React components.

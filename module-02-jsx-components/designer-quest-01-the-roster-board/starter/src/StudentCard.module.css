@@ -1,0 +1,110 @@
+/* =============================================
+   🎨 TASK 4 — CSS CUSTOM PROPERTIES
+   Change these values to restyle ALL cards at once.
+   Try a different background, rounder corners, or a bolder shadow.
+   ============================================= */
+
+:root {
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --card-radius: 1rem;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ⚙️ CARD STYLES — feel free to look, but Task 4 only needs the variables above */
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: 0.01em;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  color: #fff;
+}
+
+.phoenix {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+.dragon {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.griffin {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.serpent {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.levelSection {
+  margin-bottom: 1rem;
+}
+
+.levelLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.levelValue {
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.levelBar {
+  height: 8px;
+  background: #334155;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.levelFill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #a78bfa);
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+}
+
+.motto {
+  font-style: italic;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 0.25rem;
+}

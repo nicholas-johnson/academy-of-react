@@ -40,19 +40,19 @@ For notifications, you can optionally use the browser's Notification API.
 - Name, icon/emoji, color, frequency
 - Edit and delete habits
 
-### After Module 5: Effects (useEffect)
+### After Module 5: Styling
+
+- Style habit cards with dynamic colors (Styled Components)
+- Create streak badge animations
+- Build a polished UI with Tailwind
+
+### After Module 6: Effects (useEffect)
 
 - Persist habits and history to localStorage
 - Calculate streaks on date change
 - Auto-reset daily completions at midnight
 - Optional: Browser notifications for reminders
 - Multiple views: Today / All Habits / Statistics
-
-### After Module 6: Styling
-
-- Style habit cards with dynamic colors (Styled Components)
-- Create streak badge animations
-- Build a polished UI with Tailwind
 
 ### After Module 7: The Children Prop
 

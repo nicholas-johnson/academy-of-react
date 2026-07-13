@@ -1,0 +1,41 @@
+/* 🎨 TASK 1 — edit below */
+/* Restyle this card with a polished dark theme.                 */
+/* Change colours, add padding, border-radius, hover effects,   */
+/* and make the power bar show a gradient fill.                  */
+
+.card {
+  background: white;
+  border: 1px solid black;
+  width: 280px;
+  font-family: "Times New Roman", serif;
+}
+
+.name {
+  font-size: 16px;
+  color: black;
+  margin: 4px;
+}
+
+.badge {
+  font-size: 11px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 4px;
+}
+
+.powerBar {
+  border: 1px solid black;
+  height: 8px;
+  margin: 4px;
+}
+
+.powerFill {
+  background: gray;
+  height: 100%;
+}
+
+.description {
+  font-size: 13px;
+  color: black;
+  margin: 4px;
+}

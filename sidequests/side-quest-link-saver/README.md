@@ -47,19 +47,19 @@ For metadata fetching, options include:
 - Tag input with autocomplete
 - Edit existing links
 
-### After Module 5: Effects (useEffect)
+### After Module 5: Styling
+
+- Style link cards with CSS Modules
+- Create colorful tag badges with Styled Components
+- Build a clean, modern UI with Tailwind
+
+### After Module 6: Effects (useEffect)
 
 - Fetch metadata when URL is added
 - Persist to localStorage
 - Load saved links on mount
 - Debounce search
 - Multiple views: All / Unread / Archive / By Tag
-
-### After Module 6: Styling
-
-- Style link cards with CSS Modules
-- Create colorful tag badges with Styled Components
-- Build a clean, modern UI with Tailwind
 
 ### After Module 7: The Children Prop
 

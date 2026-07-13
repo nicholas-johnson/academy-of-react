@@ -209,7 +209,7 @@ The input updates immediately with `query`, while the expensive filter uses `def
 
 ### useEffect
 
-Runs side effects after render — covered in depth in Module 5. Quick recap:
+Runs side effects after render — covered in depth in Module 6. Quick recap:
 
 ```jsx
 useEffect(() => {

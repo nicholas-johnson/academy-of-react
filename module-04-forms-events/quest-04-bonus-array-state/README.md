@@ -215,7 +215,7 @@ Take your roster manager to the next level:
    }, [students]);
    ```
 
-   Note: useEffect is covered in Module 5!
+   Note: useEffect is covered in Module 6!
 
 8. **Bulk Actions**: Add "Select All" checkbox and "Delete Selected" button
 
@@ -233,4 +233,4 @@ You've mastered:
 - Derived calculations from state
 - Dynamic list rendering with keys
 
-**Next Module**: [Module 5: Side Effects with useEffect](../../module-05-effects-useeffect/) — Learn to fetch data from APIs and handle side effects!
+**Next Module**: [Module 5: Styling in React](../../module-05-styling/) — Learn CSS Modules, Styled Components, and Tailwind!

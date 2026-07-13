@@ -264,4 +264,4 @@ npm run dev
 
 ---
 
-[← Module 3: State with useState](../module-03-state-usestate/) | [Module 5: Side Effects with useEffect →](../module-05-effects-useeffect/)
+[← Module 3: State with useState](../module-03-state-usestate/) | [Module 5: Styling in React →](../module-05-styling/)

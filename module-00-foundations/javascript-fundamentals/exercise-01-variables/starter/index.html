@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercise 1: Wizard Character Sheet</title>
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       body {
         min-height: 100vh;
         background: #222740;
@@ -20,8 +24,14 @@
         border-radius: 12px;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
       }
-      h1 { color: #222740; margin-bottom: 8px; }
-      .subtitle { color: #6b7280; margin-bottom: 24px; }
+      h1 {
+        color: #222740;
+        margin-bottom: 8px;
+      }
+      .subtitle {
+        color: #6b7280;
+        margin-bottom: 24px;
+      }
       .output {
         background: #1e293b;
         color: #e2e8f0;
@@ -33,8 +43,12 @@
         min-height: 120px;
         white-space: pre-wrap;
       }
-      .output .label { color: #94a3b8; }
-      .output .value { color: #67e8f9; }
+      .output .label {
+        color: #94a3b8;
+      }
+      .output .value {
+        color: #67e8f9;
+      }
     </style>
   </head>
   <body>
@@ -54,6 +68,11 @@
       // Use const for values that won't be reassigned
       // Use let for values that will change
       // ============================================
+      const name = "Merlin";
+      const health = 100;
+      const mana = 50;
+      const spells = ["Fireball", "Heal", "Shield", "Barrier"];
+      const inCombat = false;
 
       // TODO: name (string)
       // TODO: health (number, starts at 100)
@@ -66,6 +85,8 @@
       // ============================================
 
       log("=== Starting Stats ===");
+      log(name);
+
       // TODO: Log each stat, e.g. log(`Name: ${name}`)
 
       // ============================================

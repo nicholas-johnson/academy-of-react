@@ -309,4 +309,4 @@ function BattleSignup() {
 
 **Quest 2: Spell Search** will teach you how to use forms for real-time filtering and search functionality, combining controlled inputs with array manipulation methods.
 
-**Module 6: Lists and Keys** will show you how to efficiently render and manipulate large lists of data, which pairs perfectly with search/filter forms.
+**Module 5: Styling in React** will show you three approaches to styling — CSS Modules, Styled Components, and Tailwind — which pairs perfectly with the components you've been building.

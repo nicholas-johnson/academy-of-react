@@ -361,7 +361,7 @@ function Wizard() {
 
 ## What's Next?
 
-**Module 6: Lists, Keys, and Data Manipulation** will teach you how to work with collections of data efficiently, which is perfect for building features like student rosters, spell inventories, and battle rankings.
+**Module 5: Styling in React** will teach you CSS Modules, Styled Components, and Tailwind — three approaches to making your components look great.
 
 This multi-step pattern you've learned is used everywhere:
 

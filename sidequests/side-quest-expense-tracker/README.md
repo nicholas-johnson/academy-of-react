@@ -45,19 +45,19 @@ For an optional backend later, consider:
 - Date picker
 - Edit existing transactions
 
-### After Module 5: Effects (useEffect)
+### After Module 5: Styling
+
+- Style transaction cards with CSS Modules
+- Create themed category badges
+- Build a responsive dashboard layout with Tailwind
+
+### After Module 6: Effects (useEffect)
 
 - Persist to localStorage
 - Load saved transactions on mount
 - Auto-calculate monthly summaries
 - Optional: Sync to mock API
 - Multiple views: Transactions / Budgets / Reports
-
-### After Module 6: Styling
-
-- Style transaction cards with CSS Modules
-- Create themed category badges
-- Build a responsive dashboard layout with Tailwind
 
 ### After Module 7: The Children Prop
 

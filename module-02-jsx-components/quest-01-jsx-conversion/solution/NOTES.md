@@ -401,7 +401,7 @@ Use expressions instead:
 
 **Module 4**: Handle forms and user events
 
-**Module 5+**: Fetch data with useEffect, then master lists, props, and advanced patterns!
+**Module 5+**: Style your components, then fetch data with useEffect and master advanced patterns!
 
 ## Key Takeaway
 

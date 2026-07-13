@@ -1,0 +1,37 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.student-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.student-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #334155;
+  color: #cbd5e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-list li:last-child {
+  border-bottom: none;
+}
+
+.student-house {
+  font-size: 0.8rem;
+  color: #64748b;
+  background: #0f172a;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.student-level {
+  font-size: 0.85rem;
+  color: #6366f1;
+  font-weight: 600;
+}

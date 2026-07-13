@@ -1,0 +1,212 @@
+/* ============================================================
+   App Layout
+   ============================================================ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   Navigation Bar
+   ============================================================ */
+
+.nav-bar {
+  background: #1e293b;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid #334155;
+  height: 60px;
+}
+
+.nav-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f8fafc;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+  height: 100%;
+  align-items: stretch;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ----------------------------------------------------------
+   🎨 TASK 2 — Style the active nav link
+
+   Right now this rule is empty, so every link looks the same.
+   Add styles to clearly show which page you're on.
+
+   Ideas:
+     color: #6366f1;
+     border-bottom: 2px solid #6366f1;
+     background: rgba(99, 102, 241, 0.08);
+   ---------------------------------------------------------- */
+.nav-link.active {
+  /* Your active styles here */
+}
+
+/* ============================================================
+   Main Content Area
+   ============================================================ */
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   Page Styles
+   ============================================================ */
+
+.page {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 1rem;
+}
+
+.page-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  max-width: 680px;
+}
+
+.page-text strong {
+  color: #e2e8f0;
+}
+
+/* ============================================================
+   Card Grid (Students, Spells, Library)
+   ============================================================ */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid #334155;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: #475569;
+  transform: translateY(-2px);
+}
+
+.card-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 0.75rem;
+}
+
+.card-detail {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 0.35rem;
+}
+
+.label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ============================================================
+   Spell List (Library page)
+   ============================================================ */
+
+.spell-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spell-list-item {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #334155;
+}
+
+.spell-list-item:last-child {
+  border-bottom: none;
+}
+
+/* ============================================================
+   404 Not Found Page
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   🎨 TASK 1 — Style the 404 page
+
+   After you've updated the JSX in pages/NotFound.jsx,
+   add styles here to make it look great.
+
+   Ideas:
+     text-align: center;
+     padding: 4rem 2rem;
+     background, border-radius, max-width, margin: auto...
+   ---------------------------------------------------------- */
+.not-found {
+  /* Your 404 styles here */
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #6366f1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.home-link:hover {
+  background: #4f46e5;
+}

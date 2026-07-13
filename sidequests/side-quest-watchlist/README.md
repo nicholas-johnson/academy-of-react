@@ -40,19 +40,19 @@ This project uses [The Movie Database (TMDB) API](https://www.themoviedb.org/doc
 - Filter watchlist by status
 - Add notes/review form for movies
 
-### After Module 5: Effects (useEffect)
+### After Module 5: Styling
+
+- Style movie cards with CSS Modules or Styled Components
+- Create star rating components with dynamic styling
+- Build responsive grid layouts with Tailwind
+
+### After Module 6: Effects (useEffect)
 
 - Fetch movies from TMDB API on search
 - Debounce search input
 - Persist watchlist to localStorage
 - Load saved data on mount
 - Multiple views: Search / Watchlist / Statistics
-
-### After Module 6: Styling
-
-- Style movie cards with CSS Modules or Styled Components
-- Create star rating components with dynamic styling
-- Build responsive grid layouts with Tailwind
 
 ### After Module 7: The Children Prop
 

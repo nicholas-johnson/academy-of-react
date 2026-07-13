@@ -35,4 +35,4 @@ Build a 3-step form wizard with navigation and progress tracking.
 
 ---
 
-**Complete!** Move to [Module 6](../../module-06-lists-keys/)
+**Complete!** Move to [Module 5: Styling in React](../../module-05-styling/)

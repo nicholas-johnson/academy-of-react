@@ -1,0 +1,158 @@
+/* ═══════════════════════════════════════════════
+   SPELL CARD STYLES
+   ═══════════════════════════════════════════════ */
+
+/* ✅ TASK 4 — CSS custom properties tweaked */
+:root {
+  --spell-card-bg: #162032;
+  --spell-badge-radius: 8px;
+  --spell-power-height: 10px;
+}
+
+/* Card container */
+.spell-card {
+  background: var(--spell-card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.spell-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* Header: icon + name */
+.spell-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.spell-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.spell-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+/* Element badge */
+.spell-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--spell-badge-radius);
+  width: fit-content;
+  color: #fff;
+}
+
+.badge-fire {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+.badge-ice {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+.badge-lightning {
+  background: linear-gradient(135deg, #eab308, #f59e0b);
+  color: #1a1a2e;
+}
+
+.badge-earth {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.badge-arcane {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+}
+
+/* Power bar */
+.power-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.power-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.power-value {
+  color: #cbd5e1;
+  font-weight: 700;
+}
+
+.power-bar {
+  height: var(--spell-power-height);
+  background: #334155;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.power-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.element-fire .power-fill {
+  background: linear-gradient(90deg, #ef4444, #f97316);
+}
+
+.element-ice .power-fill {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+}
+
+.element-lightning .power-fill {
+  background: linear-gradient(90deg, #eab308, #facc15);
+}
+
+.element-earth .power-fill {
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+}
+
+.element-arcane .power-fill {
+  background: linear-gradient(90deg, #8b5cf6, #c084fc);
+}
+
+/* Spell details (description) — toggle visibility */
+.spell-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.spell-details.visible {
+  max-height: 120px;
+  opacity: 1;
+}
+
+.spell-description {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  padding-top: 0.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 0;
+  padding: 0.5rem 0 0;
+}
