@@ -1,0 +1,23 @@
+.house-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 2rem;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.house-banner-crest {
+  font-size: 1.2rem;
+}
+
+.house-banner-text {
+  color: var(--primary);
+}

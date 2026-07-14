@@ -120,6 +120,83 @@ Then in your JSX, add a button and the Modal:
 
 ---
 
+## Extension: Create Your First Component — `<Badge>`
+
+You've been *using* components with children all quest. Now it's time to *build* one.
+
+A `<Badge>` is a small inline label — like "NEW" or "URGENT" — that wraps whatever text you put between its tags. You'll create it from scratch and use it inside your Cards.
+
+### Step 1 — Create the component file
+
+Create a new file: `src/components/Badge.jsx`
+
+Paste this code into it:
+
+```jsx
+import "./Badge.css";
+
+function Badge({ children }) {
+  return <span className="badge">{children}</span>;
+}
+
+export default Badge;
+```
+
+Notice the `{ children }` — that's the same prop that powers Card, Section, and every other component you've been using. Whatever you put between `<Badge>` and `</Badge>` becomes `children`.
+
+### Step 2 — Add the component styles
+
+Create `src/components/Badge.css` and paste these styles:
+
+```css
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e0f2fe;
+  background: #6366f1;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+```
+
+### Step 3 — Use it in App.jsx
+
+Add this import near the top of `src/App.jsx`, with the other imports:
+
+```jsx
+import Badge from "./components/Badge";
+```
+
+Then add `<Badge>` inside any of your Cards. For example, in an announcement:
+
+```jsx
+<Card variant="highlighted">
+  <Badge>URGENT</Badge>
+  <h3>Portal Maintenance</h3>
+  <p>The east wing portal will be offline for repairs.</p>
+</Card>
+```
+
+Or inside a stats card:
+
+```jsx
+<Card>
+  <Badge>NEW</Badge>
+  <p className="stat-number">42</p>
+  <p className="stat-label">Total Students</p>
+</Card>
+```
+
+Try using it in several places with different text between the tags.
+
+**You're done when:** Your badges appear inside cards, and changing the CSS in `Badge.css` updates every badge at once.
+
+---
+
 ## What the JavaScript Was Doing
 
 The `children` prop is the secret ingredient in all these components. When you write:

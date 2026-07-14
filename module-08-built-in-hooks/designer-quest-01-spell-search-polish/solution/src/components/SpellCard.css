@@ -1,0 +1,67 @@
+.spell-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid #334155;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.spell-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.spell-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.spell-name {
+  font-size: 1.1rem;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.spell-element {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.spell-description {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem;
+}
+
+.spell-power {
+  position: relative;
+  height: 6px;
+  background: #334155;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.spell-power-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.spell-power-label {
+  position: absolute;
+  right: 0;
+  top: -1.4rem;
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 600;
+}

@@ -108,18 +108,7 @@
   width: 100%;
 }
 
-.skeleton-card {
-  height: 180px;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  border: 1px solid #334155;
-  border-radius: 1rem;
-  animation: pulse-skeleton 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse-skeleton {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
+/* skeleton-card styles moved to components/SkeletonCard.css (Extension task) */
 
 /* ═══════════════════════════════════════════════════════════════════════════
    🎨 ERROR ZONE — Polished solution with error card

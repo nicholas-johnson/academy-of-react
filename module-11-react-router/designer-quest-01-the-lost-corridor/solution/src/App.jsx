@@ -5,6 +5,7 @@ import Spells from "./pages/Spells";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Library from "./pages/Library";
+import Potions from "./pages/Potions";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <NavLink to="/spells" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Spells</NavLink>
           <NavLink to="/about" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>About</NavLink>
           <NavLink to="/library" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Library</NavLink>
+          <NavLink to="/potions" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Potions</NavLink>
         </div>
       </nav>
 
@@ -29,6 +31,7 @@ function App() {
           <Route path="/spells" element={<Spells />} />
           <Route path="/about" element={<About />} />
           <Route path="/library" element={<Library />} />
+          <Route path="/potions" element={<Potions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

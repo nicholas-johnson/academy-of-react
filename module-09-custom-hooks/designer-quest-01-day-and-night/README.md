@@ -91,3 +91,76 @@ Behind the scenes, the app uses a **custom hook** called `useLocalStorage`. Here
 - **useLocalStorage** = a custom hook that combines React's state with localStorage. When you toggle the theme, it saves your choice. When the page loads, it checks localStorage first — so your preference comes back.
 
 The toggle button and all the wiring were pre-built. You focused on the design — and still got to experience the power of a custom hook. That's the collaboration between design and engineering in React.
+
+---
+
+## Extension: Create a `<ThemeToggle>` Component
+
+The toggle button currently lives inline in `App.jsx`. In this extension you'll pull it into its own component file, making it reusable and easier to style independently.
+
+### Step 1 — Create the component file
+
+Create a new folder and file: `src/components/ThemeToggle.jsx`
+
+Paste this code into it:
+
+```jsx
+import "./ThemeToggle.css";
+
+function ThemeToggle({ theme, onToggle }) {
+  return (
+    <button className="toggle-btn" onClick={onToggle}>
+      {theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode"}
+    </button>
+  );
+}
+
+export default ThemeToggle;
+```
+
+The component receives two **props**: `theme` (the current theme name) and `onToggle` (a function to call when clicked). It doesn't need to know *how* the theme is saved — it just shows the button.
+
+### Step 2 — Add the component styles
+
+Create `src/components/ThemeToggle.css` and paste these styles:
+
+```css
+.toggle-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.toggle-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+```
+
+### Step 3 — Use it in App.jsx
+
+Add this import near the top of `src/App.jsx`:
+
+```jsx
+import ThemeToggle from "./components/ThemeToggle";
+```
+
+Then find the toggle button in the header and replace it with the component:
+
+```jsx
+<header className="header">
+  <h1 className="title">Academy Dashboard</h1>
+  <ThemeToggle
+    theme={theme}
+    onToggle={() => setTheme(theme === "dark" ? "light" : "dark")}
+  />
+</header>
+```
+
+**You're done when:** The toggle works exactly as before, but the button markup and styles now live in their own file. Editing `ThemeToggle.css` changes the button without touching App.

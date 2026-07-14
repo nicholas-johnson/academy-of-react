@@ -160,4 +160,80 @@ You don't need to memorize any of this — just a peek behind the curtain.
 
 ---
 
+## Extension: Create a Potions Page From Scratch
+
+In Task 3 you hooked up a pre-built Library page. In this extension you'll create a brand new page yourself and wire it into the app using the same three-step pattern.
+
+### Step 1 — Create the page file
+
+Create a new file: `src/pages/Potions.jsx`
+
+Paste this code into it — or change the content to whatever you like:
+
+```jsx
+function Potions() {
+  return (
+    <div className="page">
+      <h1 className="page-title">Potions Laboratory</h1>
+      <p className="page-text">
+        Welcome to the Potions wing. Brews are organised by difficulty.
+      </p>
+
+      <div className="card-grid">
+        <div className="card">
+          <h3 className="card-name">Beginner Brews</h3>
+          <ul className="spell-list">
+            <li className="spell-list-item">Healing Tonic</li>
+            <li className="spell-list-item">Glow Elixir</li>
+            <li className="spell-list-item">Stamina Draught</li>
+          </ul>
+        </div>
+        <div className="card">
+          <h3 className="card-name">Advanced Concoctions</h3>
+          <ul className="spell-list">
+            <li className="spell-list-item">Invisibility Serum</li>
+            <li className="spell-list-item">Phoenix Tears</li>
+            <li className="spell-list-item">Liquid Luck</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Potions;
+```
+
+The classes `page`, `page-title`, `card-grid`, and `card` are already styled in `App.css` — your page will look consistent with the others automatically.
+
+### Step 2 — Wire it up in App.jsx
+
+Use the same three-step pattern from Task 3:
+
+**Import** (at the top, with the other page imports):
+
+```jsx
+import Potions from "./pages/Potions";
+```
+
+**NavLink** (in the nav section, after the Library link):
+
+```jsx
+<NavLink to="/potions" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Potions</NavLink>
+```
+
+**Route** (in the Routes section, before the `*` catch-all):
+
+```jsx
+<Route path="/potions" element={<Potions />} />
+```
+
+### Step 3 — Make it yours
+
+Change the content inside `Potions.jsx` to anything you want. Add more cards, change the text, try a different layout. This is your page — there are no wrong answers.
+
+**You're done when:** A "Potions" link appears in the nav bar, clicking it shows your page, and the active nav styling highlights it.
+
+---
+
 **Next:** Continue to the next quest in Module 11.

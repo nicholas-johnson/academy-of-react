@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import SkeletonCard from "./components/SkeletonCard";
 
 // 🎨 TASK 4: Changed from 2000 to 1500 for a snappier feel
 const FETCH_DELAY_MS = 1500;
@@ -80,10 +81,10 @@ function App() {
             <div className="loading-spinner" aria-label="Loading"></div>
             <p className="loading-message">Gathering intelligence...</p>
             <div className="skeleton-grid">
-              <div className="skeleton-card"></div>
-              <div className="skeleton-card"></div>
-              <div className="skeleton-card"></div>
-              <div className="skeleton-card"></div>
+              <SkeletonCard />
+              <SkeletonCard />
+              <SkeletonCard />
+              <SkeletonCard />
             </div>
           </section>
         )}

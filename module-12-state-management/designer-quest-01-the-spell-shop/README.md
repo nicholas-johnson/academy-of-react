@@ -164,3 +164,107 @@ Think of it this way: **the store's state drives everything on screen.** You des
 ---
 
 **Tip:** Try adding the same spell multiple times — the quantity goes up! Try removing items one by one. Notice how the badge, cart list, and total all stay perfectly in sync. That's the store at work.
+
+---
+
+## Extension: Create a `<CartSummary>` Floating Widget
+
+The cart sidebar already reads from the Zustand store. But the whole point of a store is that **any component, anywhere** can read the shared data. In this extension you'll prove it by creating a floating widget that reads from the store independently.
+
+### Step 1 — Create the component file
+
+Create a new file: `src/components/CartSummary.jsx`
+
+Paste this code into it:
+
+```jsx
+import useCartStore from "../store/useCartStore";
+import "./CartSummary.css";
+
+function CartSummary() {
+  const items = useCartStore((state) => state.items);
+  const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
+  const totalGold = items.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
+
+  if (totalItems === 0) return null;
+
+  return (
+    <div className="cart-summary">
+      <span className="cart-summary-icon">🛒</span>
+      <span className="cart-summary-text">
+        {totalItems} {totalItems === 1 ? "item" : "items"} — {totalGold} gold
+      </span>
+    </div>
+  );
+}
+
+export default CartSummary;
+```
+
+Notice that this component doesn't receive any props — it calls `useCartStore` directly to read the cart state. The store is shared, so this widget always stays in sync with the sidebar and badge.
+
+### Step 2 — Add the component styles
+
+Create `src/components/CartSummary.css` and paste these styles:
+
+```css
+.cart-summary {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  animation: slideUp 0.3s ease;
+}
+
+.cart-summary-icon {
+  font-size: 1.1rem;
+}
+
+.cart-summary-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+```
+
+### Step 3 — Use it in App.jsx
+
+Add this import near the top of `src/App.jsx`:
+
+```jsx
+import CartSummary from "./components/CartSummary";
+```
+
+Then place `<CartSummary />` at the bottom of the app, just before the closing `</div>`:
+
+```jsx
+      </div>
+
+      <CartSummary />
+    </div>
+  );
+```
+
+**You're done when:** Adding spells makes a floating pill appear in the bottom-right corner showing the item count and total gold. Clearing the cart makes it disappear. The widget reads from the store on its own — no props needed.

@@ -1,4 +1,5 @@
 import { useLocalStorage } from "./hooks/useLocalStorage";
+import ThemeToggle from "./components/ThemeToggle";
 import { stats, recentSpells } from "./data";
 import "./App.css";
 
@@ -10,13 +11,10 @@ export default function App() {
     <div className="app" data-theme={theme}>
       <header className="header">
         <h1 className="title">Academy Dashboard</h1>
-        {/* ⚙️ Toggle button — switches between 'dark' and 'light' */}
-        <button
-          className="toggle-btn"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        >
-          {theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode"}
-        </button>
+        <ThemeToggle
+          theme={theme}
+          onToggle={() => setTheme(theme === "dark" ? "light" : "dark")}
+        />
       </header>
 
       <section className="stats-grid">

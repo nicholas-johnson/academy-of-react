@@ -1,5 +1,6 @@
 import { useState, useTransition, useRef, useEffect } from "react";
 import { spells, elements } from "./data.js";
+import SpellCard from "./components/SpellCard";
 import "./App.css";
 
 // ⚙️ ENGINE — All the logic is wired. You don't need to change how it works,
@@ -98,20 +99,7 @@ export default function App() {
         ) : (
           <div className="spell-grid">
             {filteredSpells.map((spell) => (
-              <div key={spell.id} className={`spell-card element-${spell.element}`}>
-                <div className="spell-card-header">
-                  <h3 className="spell-name">{spell.name}</h3>
-                  <span className="spell-element">{spell.element}</span>
-                </div>
-                <p className="spell-description">{spell.description}</p>
-                <div className="spell-power">
-                  <div
-                    className="spell-power-bar"
-                    style={{ width: `${spell.power}%` }}
-                  />
-                  <span className="spell-power-label">{spell.power}</span>
-                </div>
-              </div>
+              <SpellCard key={spell.id} spell={spell} />
             ))}
           </div>
         )}

@@ -4,6 +4,7 @@ import Section from "./components/Section";
 import Stack from "./components/Stack";
 import Sidebar from "./components/Sidebar";
 import Modal from "./components/Modal";
+import Badge from "./components/Badge";
 import { students, announcements, stats } from "./data";
 import "./App.css";
 
@@ -32,6 +33,7 @@ function App() {
         <Section title="Stats Overview">
           <Stack direction="horizontal" gap="1rem">
             <Card>
+              <Badge>NEW</Badge>
               <p className="stat-number">{stats.totalStudents}</p>
               <p className="stat-label">Total Students</p>
             </Card>
@@ -51,6 +53,7 @@ function App() {
           <Stack direction="vertical" gap="1rem">
             {announcements.map((a) => (
               <Card key={a.title} variant={a.urgent ? "highlighted" : "default"}>
+                {a.urgent && <Badge>URGENT</Badge>}
                 <h3>{a.title}</h3>
                 <p>{a.message}</p>
               </Card>

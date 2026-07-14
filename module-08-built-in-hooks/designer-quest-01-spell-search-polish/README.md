@@ -145,13 +145,149 @@ You don't need to understand all the code, but here's what the key pieces do:
 
 ---
 
+## Extension: Create Your First Component — `<SpellCard>`
+
+The spell cards in the grid are rendered as inline JSX inside `App.jsx` — about 15 lines of markup repeated for every spell. In this extension you'll extract that markup into its own component file.
+
+### Step 1 — Create the component file
+
+Create a new folder and file: `src/components/SpellCard.jsx`
+
+Paste this code into it:
+
+```jsx
+import "./SpellCard.css";
+
+function SpellCard({ spell }) {
+  return (
+    <div className={`spell-card element-${spell.element}`}>
+      <div className="spell-card-header">
+        <h3 className="spell-name">{spell.name}</h3>
+        <span className="spell-element">{spell.element}</span>
+      </div>
+      <p className="spell-description">{spell.description}</p>
+      <div className="spell-power">
+        <div
+          className="spell-power-bar"
+          style={{ width: `${spell.power}%` }}
+        />
+        <span className="spell-power-label">{spell.power}</span>
+      </div>
+    </div>
+  );
+}
+
+export default SpellCard;
+```
+
+Notice `{ spell }` in the function signature — that's a **prop**. The parent passes data in, the component renders it.
+
+### Step 2 — Add the component styles
+
+Create `src/components/SpellCard.css` and paste these styles:
+
+```css
+.spell-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid #334155;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.spell-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.spell-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.spell-name {
+  font-size: 1.1rem;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.spell-element {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.spell-description {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem;
+}
+
+.spell-power {
+  position: relative;
+  height: 6px;
+  background: #334155;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.spell-power-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.spell-power-label {
+  position: absolute;
+  right: 0;
+  top: -1.4rem;
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 600;
+}
+```
+
+### Step 3 — Use it in App.jsx
+
+Add this import near the top of `src/App.jsx`:
+
+```jsx
+import SpellCard from "./components/SpellCard";
+```
+
+Then find the spell grid section and replace the inline card markup with the component. The whole `.map()` block simplifies to:
+
+```jsx
+<div className="spell-grid">
+  {filteredSpells.map((spell) => (
+    <SpellCard key={spell.id} spell={spell} />
+  ))}
+</div>
+```
+
+**You're done when:** The spell grid looks exactly the same, but `App.jsx` is shorter and cleaner. Editing `SpellCard.jsx` updates every card in the grid.
+
+---
+
 ## File Map
 
 ```
 starter/src/
-├── main.jsx      — Boots the app (don't edit)
-├── data.js       — The spell list (don't edit)
-├── App.jsx       — Main component (Tasks 1–4 are here)
-├── App.css       — Styles (Tasks 1–2 are here)
-└── index.css     — Base reset (don't edit)
+├── main.jsx       — Boots the app (don't edit)
+├── data.js        — The spell list (don't edit)
+├── App.jsx        — Main component (Tasks 1–4 are here)
+├── App.css        — Styles (Tasks 1–2 are here)
+├── index.css      — Base reset (don't edit)
+└── components/
+    ├── SpellCard.jsx  — Your first component (Extension)
+    └── SpellCard.css  — Styles for the spell card
 ```

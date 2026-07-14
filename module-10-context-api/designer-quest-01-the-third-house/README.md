@@ -174,4 +174,94 @@ This pattern — **data-driven UI** — is one of React's superpowers. You chang
 
 ---
 
+## Extension: Create a `<HouseBanner>` Component
+
+So far, only `App.jsx` reads the theme using `useTheme()`. But the whole point of context is that **any component, anywhere in the app** can access the shared data without it being passed down as props. In this extension you'll prove it by creating a component that reads the theme directly.
+
+### Step 1 — Create the component file
+
+Create a new folder and file: `src/components/HouseBanner.jsx`
+
+Paste this code into it:
+
+```jsx
+import { useTheme } from "../context/ThemeContext.jsx";
+import "./HouseBanner.css";
+
+function HouseBanner() {
+  const { theme } = useTheme();
+
+  return (
+    <div
+      className="house-banner"
+      style={{ borderColor: theme.colors.primary }}
+    >
+      <span className="house-banner-crest">⚔️</span>
+      <span className="house-banner-text">House {theme.name}</span>
+    </div>
+  );
+}
+
+export default HouseBanner;
+```
+
+Notice that this component doesn't receive any props — it calls `useTheme()` to read the current theme directly from context. Change the house, and the banner updates automatically.
+
+### Step 2 — Add the component styles
+
+Create `src/components/HouseBanner.css` and paste these styles:
+
+```css
+.house-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 2rem;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.house-banner-crest {
+  font-size: 1.2rem;
+}
+
+.house-banner-text {
+  color: var(--primary);
+}
+```
+
+### Step 3 — Use it in App.jsx
+
+Add this import near the top of `src/App.jsx`:
+
+```jsx
+import HouseBanner from "./components/HouseBanner";
+```
+
+Then place `<HouseBanner />` anywhere in the JSX — for example, between the header and the theme picker:
+
+```jsx
+<header className="header">
+  <h1 className="title">The Academy of React</h1>
+  <p className="subtitle">
+    House <span className="house-name">{theme.name}</span>
+  </p>
+</header>
+
+<HouseBanner />
+
+<nav className="theme-picker">
+```
+
+**You're done when:** A banner strip appears on the page showing the current house name, and switching themes updates the banner automatically — without passing any props.
+
+---
+
 **Next Module**: [Module 11 →](../../module-11/)

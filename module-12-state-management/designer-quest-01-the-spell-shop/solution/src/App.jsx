@@ -1,6 +1,7 @@
 import useCartStore from "./store/useCartStore";
 import spells from "./data/spells";
 import SpellCard from "./components/SpellCard";
+import CartSummary from "./components/CartSummary";
 import "./App.css";
 
 function App() {
@@ -84,6 +85,8 @@ function App() {
           )}
         </aside>
       </div>
+
+      <CartSummary />
     </div>
   );
 }

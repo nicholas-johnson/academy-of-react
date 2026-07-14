@@ -1,6 +1,7 @@
 // ⚙️ ENGINE CODE — This file is fully wired. You don't need to edit it!
 
 import { useTheme } from "./context/ThemeContext.jsx";
+import HouseBanner from "./components/HouseBanner";
 import "./App.css";
 
 export default function App() {
@@ -24,6 +25,8 @@ export default function App() {
           House <span className="house-name">{theme.name}</span>
         </p>
       </header>
+
+      <HouseBanner />
 
       <nav className="theme-picker">
         <span className="picker-label">Choose your house:</span>
