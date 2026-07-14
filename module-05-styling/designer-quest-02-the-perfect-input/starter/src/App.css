@@ -1,0 +1,56 @@
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.input-section {
+  background: #1e293b;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid #334155;
+}
+
+.input-section h2 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6366f1;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.placeholder {
+  color: #475569;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .inputs-grid {
+    grid-template-columns: 1fr;
+  }
+}

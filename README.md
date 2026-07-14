@@ -122,6 +122,7 @@ If you're a designer learning React, there's a dedicated set of exercises that s
 | 3 — useState | The Spell Vault | Add a spell to a loop-rendered list, toggle a boolean | Loops |
 | 4 — Forms | The Enrolment Scroll | Add a form option, change a function's output string | Functions |
 | 5 — Styling | One Card, Three Ways | Restyle a SpellCard using CSS Modules, styled-components, and Tailwind | — |
+| 5 — Styling | The Perfect Input | Build a component from scratch, then style it three ways | Components |
 | 6 — useEffect | Design the Waiting | Design loading, error, and empty states on a pre-wired fetch | — |
 | 7 — Children | Build the Great Hall | Compose a page from pre-built layout components (pure JSX) | — |
 | 8 — Hooks | Spell Search Polish | Design pending and no-results states on a live search | — |

@@ -231,6 +231,16 @@ Each quest uses a different approach, so you get hands-on experience with all th
 
 [Start Quest 3 →](./quest-03-tailwind/)
 
+## Designer Track
+
+**Designer Quest 1: One Card, Three Ways** — Restyle a SpellCard using all three approaches. No JavaScript knowledge needed.
+
+[Start Designer Quest 1 →](./designer-quest-01-one-card-three-ways/)
+
+**Designer Quest 2: The Perfect Input** — Build a component from scratch, then style it three ways. The first exercise where you create a React file yourself.
+
+[Start Designer Quest 2 →](./designer-quest-02-the-perfect-input/)
+
 ## Running the Code
 
 ```bash
