@@ -1,0 +1,174 @@
+.app {
+  min-height: 100vh;
+  background: white;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #222740;
+  color: white;
+}
+.header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+.nav {
+  display: flex;
+  gap: 8px;
+}
+.nav-link {
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.main {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.page {
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.page h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.page p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 48px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Item grid */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.item-card {
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.item-card:hover {
+  border-color: #222740;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+.item-card h3 {
+  color: #333;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Item detail */
+.back-btn {
+  padding: 10px 20px;
+  background: #f3f4f6;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.back-btn:hover {
+  background: #e5e7eb;
+}
+
+.item-detail {
+  padding: 48px;
+  background: #f9fafb;
+  border-radius: 16px;
+}
+.item-detail h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+.rarity-badge,
+.category-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-bottom: 24px;
+}
+.rarity-badge {
+  background: #222740;
+  color: white;
+}
+.category-badge {
+  background: #e5e7eb;
+  color: #333;
+}
+.item-description {
+  max-width: 700px;
+  line-height: 1.8;
+}
+.item-description p {
+  margin-bottom: 16px;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* Not found */
+.not-found {
+  text-align: center;
+  padding: 48px;
+}
+.not-found h2 {
+  color: #ef4444;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #222740;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}

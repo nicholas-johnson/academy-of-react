@@ -238,10 +238,22 @@ If the user isn't logged in, they're redirected to `/login`. The `state={{ from:
 
 [Start Quest 3 →](./quest-03-protected-routes/)
 
+**Quest 4: The Artifact Vault (TypeScript)** — Build a typed React app that fetches magic items from a real API. Shared interfaces, a generic fetch helper, a list page, and dynamic detail pages — all in TypeScript.
+
+[Start Quest 4 →](./quest-04-typescript-api/)
+
 ## Running the Code
 
 ```bash
 cd demo
+npm install
+npm run dev
+```
+
+A TypeScript version of the same demo is available in `demo-ts`:
+
+```bash
+cd demo-ts
 npm install
 npm run dev
 ```

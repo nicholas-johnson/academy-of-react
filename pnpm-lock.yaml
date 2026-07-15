@@ -29,7 +29,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -41,7 +41,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/demo:
     dependencies:
@@ -54,10 +54,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/designer-quest-01-the-roster-board/solution:
     dependencies:
@@ -70,10 +70,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/designer-quest-01-the-roster-board/starter:
     dependencies:
@@ -86,10 +86,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/quest-01-jsx-conversion/solution:
     dependencies:
@@ -102,10 +102,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/quest-01-jsx-conversion/starter:
     dependencies:
@@ -118,10 +118,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/quest-02-props-basics/solution:
     dependencies:
@@ -134,10 +134,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/quest-02-props-basics/starter:
     dependencies:
@@ -150,10 +150,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/quest-03-component-lists/solution:
     dependencies:
@@ -166,10 +166,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/quest-03-component-lists/starter:
     dependencies:
@@ -182,10 +182,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-02-jsx-components/slides:
     dependencies:
@@ -204,7 +204,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -216,7 +216,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-03-state-usestate/demo:
     dependencies:
@@ -238,7 +238,7 @@ importers:
         version: 19.2.3(@types/react@19.2.13)
       '@vitejs/plugin-react':
         specifier: ^5.1.1
-        version: 5.1.3(vite@7.3.1(jiti@1.21.7))
+        version: 5.1.3(vite@7.3.1(jiti@1.21.7)(lightningcss@1.32.0))
       eslint:
         specifier: ^9.39.1
         version: 9.39.2(jiti@1.21.7)
@@ -253,7 +253,7 @@ importers:
         version: 16.5.0
       vite:
         specifier: ^7.3.1
-        version: 7.3.1(jiti@1.21.7)
+        version: 7.3.1(jiti@1.21.7)(lightningcss@1.32.0)
 
   module-03-state-usestate/demo-01-manual-rerender:
     dependencies:
@@ -266,10 +266,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.0.0
-        version: 4.7.0(vite@4.5.14)
+        version: 4.7.0(vite@4.5.14(lightningcss@1.32.0))
       vite:
         specifier: ^4.4.0
-        version: 4.5.14
+        version: 4.5.14(lightningcss@1.32.0)
 
   module-03-state-usestate/demo-02-usestate:
     dependencies:
@@ -282,10 +282,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-03-state-usestate/designer-quest-01-the-spell-vault/solution:
     dependencies:
@@ -298,10 +298,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-03-state-usestate/designer-quest-01-the-spell-vault/starter:
     dependencies:
@@ -314,10 +314,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-03-state-usestate/quest-01-multiple-state/solution:
     dependencies:
@@ -330,10 +330,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-03-state-usestate/quest-01-multiple-state/starter:
     dependencies:
@@ -346,10 +346,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-03-state-usestate/quest-02-object-state/solution:
     dependencies:
@@ -365,10 +365,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-03-state-usestate/quest-02-object-state/starter:
     dependencies:
@@ -381,10 +381,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-03-state-usestate/slides:
     dependencies:
@@ -403,7 +403,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -415,7 +415,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/demo:
     dependencies:
@@ -434,10 +434,10 @@ importers:
         version: 18.3.7(@types/react@18.3.28)
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/designer-quest-01-the-enrolment-scroll/solution:
     dependencies:
@@ -450,10 +450,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/designer-quest-01-the-enrolment-scroll/starter:
     dependencies:
@@ -466,10 +466,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/quest-01-form-validation/solution:
     dependencies:
@@ -482,10 +482,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/quest-01-form-validation/starter:
     dependencies:
@@ -498,10 +498,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/quest-02-controlled-inputs/solution:
     dependencies:
@@ -514,10 +514,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/quest-02-controlled-inputs/starter:
     dependencies:
@@ -530,10 +530,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/quest-03-form-submission/solution:
     dependencies:
@@ -546,10 +546,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/quest-03-form-submission/starter:
     dependencies:
@@ -562,10 +562,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/quest-04-bonus-array-state/solution:
     dependencies:
@@ -578,10 +578,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/quest-04-bonus-array-state/starter:
     dependencies:
@@ -594,10 +594,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-04-forms-events/slides:
     dependencies:
@@ -616,7 +616,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -628,7 +628,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/demo:
     dependencies:
@@ -644,7 +644,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -656,7 +656,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/designer-quest-01-one-card-three-ways/solution:
     dependencies:
@@ -672,7 +672,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -684,7 +684,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/designer-quest-01-one-card-three-ways/starter:
     dependencies:
@@ -700,7 +700,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -712,7 +712,63 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
+
+  module-05-styling/designer-quest-02-the-perfect-input/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.8
+        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.24(postcss@8.5.6)
+      postcss:
+        specifier: ^8.4.33
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.19
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21(lightningcss@1.32.0)
+
+  module-05-styling/designer-quest-02-the-perfect-input/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      styled-components:
+        specifier: ^6.1.8
+        version: 6.3.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.24(postcss@8.5.6)
+      postcss:
+        specifier: ^8.4.33
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.19
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/quest-01-css-modules/solution:
     dependencies:
@@ -725,10 +781,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/quest-01-css-modules/starter:
     dependencies:
@@ -741,10 +797,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/quest-02-styled-components/solution:
     dependencies:
@@ -760,10 +816,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/quest-02-styled-components/starter:
     dependencies:
@@ -779,10 +835,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/quest-03-tailwind/solution:
     dependencies:
@@ -795,7 +851,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -807,7 +863,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/quest-03-tailwind/starter:
     dependencies:
@@ -820,7 +876,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -832,7 +888,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-05-styling/slides:
     dependencies:
@@ -851,7 +907,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -863,7 +919,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-06-effects-useeffect/demo:
     dependencies:
@@ -876,10 +932,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-06-effects-useeffect/designer-quest-01-design-the-waiting/solution:
     dependencies:
@@ -892,10 +948,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-06-effects-useeffect/designer-quest-01-design-the-waiting/starter:
     dependencies:
@@ -908,10 +964,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-06-effects-useeffect/quest-01-data-fetching/solution:
     dependencies:
@@ -924,10 +980,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-06-effects-useeffect/quest-01-data-fetching/starter:
     dependencies:
@@ -940,10 +996,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-06-effects-useeffect/quest-02-timers-intervals/solution:
     dependencies:
@@ -956,10 +1012,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-06-effects-useeffect/quest-02-timers-intervals/starter:
     dependencies:
@@ -972,10 +1028,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-06-effects-useeffect/slides:
     dependencies:
@@ -994,7 +1050,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -1006,7 +1062,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-07-children-prop/demo:
     dependencies:
@@ -1019,10 +1075,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-07-children-prop/designer-quest-01-build-the-great-hall/solution:
     dependencies:
@@ -1035,10 +1091,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-07-children-prop/designer-quest-01-build-the-great-hall/starter:
     dependencies:
@@ -1051,10 +1107,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-07-children-prop/quest-01-layout-components/solution:
     dependencies:
@@ -1067,10 +1123,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-07-children-prop/quest-01-layout-components/starter:
     dependencies:
@@ -1083,10 +1139,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-07-children-prop/slides:
     dependencies:
@@ -1105,7 +1161,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -1117,7 +1173,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/demo:
     dependencies:
@@ -1130,10 +1186,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/designer-quest-01-spell-search-polish/solution:
     dependencies:
@@ -1146,10 +1202,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/designer-quest-01-spell-search-polish/starter:
     dependencies:
@@ -1162,10 +1218,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-01-usestate/solution:
     dependencies:
@@ -1178,10 +1234,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-01-usestate/starter:
     dependencies:
@@ -1194,10 +1250,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-02-useeffect/solution:
     dependencies:
@@ -1210,10 +1266,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-02-useeffect/starter:
     dependencies:
@@ -1226,10 +1282,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-03-usecontext/solution:
     dependencies:
@@ -1242,10 +1298,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-03-usecontext/starter:
     dependencies:
@@ -1258,10 +1314,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-04-usereducer/solution:
     dependencies:
@@ -1274,10 +1330,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-04-usereducer/starter:
     dependencies:
@@ -1290,10 +1346,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-05-usecallback/solution:
     dependencies:
@@ -1306,10 +1362,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-05-usecallback/starter:
     dependencies:
@@ -1322,10 +1378,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-06-usememo/solution:
     dependencies:
@@ -1338,10 +1394,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-06-usememo/starter:
     dependencies:
@@ -1354,10 +1410,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-07-useref/solution:
     dependencies:
@@ -1370,10 +1426,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-07-useref/starter:
     dependencies:
@@ -1386,10 +1442,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-08-useimperativehandle/solution:
     dependencies:
@@ -1402,10 +1458,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-08-useimperativehandle/starter:
     dependencies:
@@ -1418,10 +1474,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-09-uselayouteffect/solution:
     dependencies:
@@ -1434,10 +1490,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-09-uselayouteffect/starter:
     dependencies:
@@ -1450,10 +1506,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-10-usedebugvalue/solution:
     dependencies:
@@ -1466,10 +1522,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-10-usedebugvalue/starter:
     dependencies:
@@ -1482,10 +1538,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-11-useid/solution:
     dependencies:
@@ -1498,10 +1554,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-11-useid/starter:
     dependencies:
@@ -1514,10 +1570,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-12-usetransition/solution:
     dependencies:
@@ -1530,10 +1586,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-12-usetransition/starter:
     dependencies:
@@ -1546,10 +1602,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-13-usedeferredvalue/solution:
     dependencies:
@@ -1562,10 +1618,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-13-usedeferredvalue/starter:
     dependencies:
@@ -1578,10 +1634,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-14-usesyncexternalstore/solution:
     dependencies:
@@ -1594,10 +1650,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-14-usesyncexternalstore/starter:
     dependencies:
@@ -1610,10 +1666,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-15-useinsertioneffect/solution:
     dependencies:
@@ -1626,10 +1682,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-15-useinsertioneffect/starter:
     dependencies:
@@ -1642,10 +1698,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-16-useref-dom-access/solution:
     dependencies:
@@ -1658,10 +1714,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-16-useref-dom-access/starter:
     dependencies:
@@ -1674,10 +1730,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-17-useref-persistence/solution:
     dependencies:
@@ -1690,10 +1746,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-17-useref-persistence/starter:
     dependencies:
@@ -1706,10 +1762,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-18-useref-media/solution:
     dependencies:
@@ -1722,10 +1778,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-18-useref-media/starter:
     dependencies:
@@ -1738,10 +1794,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-19-usereducer-advanced/solution:
     dependencies:
@@ -1754,10 +1810,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/quest-19-usereducer-advanced/starter:
     dependencies:
@@ -1770,10 +1826,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-08-built-in-hooks/slides:
     dependencies:
@@ -1792,7 +1848,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -1804,7 +1860,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/demo:
     dependencies:
@@ -1817,10 +1873,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/designer-quest-01-day-and-night/solution:
     dependencies:
@@ -1833,10 +1889,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/designer-quest-01-day-and-night/starter:
     dependencies:
@@ -1849,10 +1905,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/quest-01-uselocalstorage/solution:
     dependencies:
@@ -1865,10 +1921,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/quest-01-uselocalstorage/starter:
     dependencies:
@@ -1881,10 +1937,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/quest-02-usefetch/solution:
     dependencies:
@@ -1897,10 +1953,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/quest-02-usefetch/starter:
     dependencies:
@@ -1913,10 +1969,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/quest-03-usedebounce/solution:
     dependencies:
@@ -1929,10 +1985,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/quest-03-usedebounce/starter:
     dependencies:
@@ -1945,10 +2001,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-09-custom-hooks/slides:
     dependencies:
@@ -1967,7 +2023,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.24(postcss@8.5.6)
@@ -1979,7 +2035,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/demo:
     dependencies:
@@ -1992,10 +2048,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/designer-quest-01-the-third-house/solution:
     dependencies:
@@ -2008,10 +2064,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/designer-quest-01-the-third-house/starter:
     dependencies:
@@ -2024,10 +2080,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/quest-01-theme-context/solution:
     dependencies:
@@ -2040,10 +2096,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/quest-01-theme-context/starter:
     dependencies:
@@ -2056,10 +2112,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/quest-02-language-context/solution:
     dependencies:
@@ -2075,10 +2131,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/quest-02-language-context/starter:
     dependencies:
@@ -2094,10 +2150,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/quest-03-context-patterns/solution:
     dependencies:
@@ -2110,10 +2166,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/quest-03-context-patterns/starter:
     dependencies:
@@ -2126,10 +2182,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-10-context-api/slides:
     dependencies:
@@ -2148,7 +2204,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.24(postcss@8.5.6)
@@ -2160,7 +2216,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/demo:
     dependencies:
@@ -2176,10 +2232,38 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
+
+  module-11-react-router/demo-ts:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      react-router-dom:
+        specifier: ^6.22.0
+        version: 6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.48
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.2.18
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/designer-quest-01-the-lost-corridor/solution:
     dependencies:
@@ -2195,10 +2279,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/designer-quest-01-the-lost-corridor/starter:
     dependencies:
@@ -2214,10 +2298,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/quest-01-basic-routing/solution:
     dependencies:
@@ -2236,10 +2320,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/quest-01-basic-routing/starter:
     dependencies:
@@ -2258,10 +2342,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/quest-02-dynamic-routes/solution:
     dependencies:
@@ -2277,10 +2361,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/quest-02-dynamic-routes/starter:
     dependencies:
@@ -2296,10 +2380,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/quest-03-protected-routes/solution:
     dependencies:
@@ -2315,10 +2399,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/quest-03-protected-routes/starter:
     dependencies:
@@ -2334,10 +2418,66 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
+
+  module-11-react-router/quest-04-typescript-api/solution:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      react-router-dom:
+        specifier: ^6.22.0
+        version: 6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.48
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.2.18
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21(lightningcss@1.32.0)
+
+  module-11-react-router/quest-04-typescript-api/starter:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      react-router-dom:
+        specifier: ^6.22.0
+        version: 6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.48
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.2.18
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-11-react-router/slides:
     dependencies:
@@ -2356,7 +2496,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.24(postcss@8.5.6)
@@ -2368,13 +2508,13 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/demo:
     dependencies:
       '@reduxjs/toolkit':
         specifier: ^2.0.1
-        version: 2.11.2(react-redux@9.2.0(@types/react@19.2.13)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
+        version: 2.11.2(react-redux@9.2.0(@types/react@19.2.17)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
       mobx:
         specifier: ^6.12.0
         version: 6.15.0
@@ -2389,13 +2529,13 @@ importers:
         version: 18.3.1(react@18.3.1)
       react-redux:
         specifier: ^9.1.0
-        version: 9.2.0(@types/react@19.2.13)(react@18.3.1)(redux@5.0.1)
+        version: 9.2.0(@types/react@19.2.17)(react@18.3.1)(redux@5.0.1)
       react-router-dom:
         specifier: ^7.13.0
         version: 7.18.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       zustand:
         specifier: ^4.5.0
-        version: 4.5.7(@types/react@19.2.13)(immer@11.1.3)(react@18.3.1)
+        version: 4.5.7(@types/react@19.2.17)(immer@11.1.3)(react@18.3.1)
     devDependencies:
       '@babel/core':
         specifier: ^7.29.0
@@ -2408,10 +2548,10 @@ importers:
         version: 7.29.7(@babel/core@7.29.0)
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/designer-quest-01-the-spell-shop/solution:
     dependencies:
@@ -2423,14 +2563,14 @@ importers:
         version: 18.3.1(react@18.3.1)
       zustand:
         specifier: ^4.5.0
-        version: 4.5.7(@types/react@19.2.13)(immer@11.1.3)(react@18.3.1)
+        version: 4.5.7(@types/react@19.2.17)(immer@11.1.3)(react@18.3.1)
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/designer-quest-01-the-spell-shop/starter:
     dependencies:
@@ -2442,14 +2582,14 @@ importers:
         version: 18.3.1(react@18.3.1)
       zustand:
         specifier: ^4.5.0
-        version: 4.5.7(@types/react@19.2.13)(immer@11.1.3)(react@18.3.1)
+        version: 4.5.7(@types/react@19.2.17)(immer@11.1.3)(react@18.3.1)
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/quest-01-zustand/solution:
     dependencies:
@@ -2461,14 +2601,14 @@ importers:
         version: 18.3.1(react@18.3.1)
       zustand:
         specifier: ^4.5.0
-        version: 4.5.7(@types/react@19.2.13)(immer@11.1.3)(react@18.3.1)
+        version: 4.5.7(@types/react@19.2.17)(immer@11.1.3)(react@18.3.1)
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/quest-01-zustand/starter:
     dependencies:
@@ -2480,20 +2620,20 @@ importers:
         version: 18.3.1(react@18.3.1)
       zustand:
         specifier: ^4.5.0
-        version: 4.5.7(@types/react@19.2.13)(immer@11.1.3)(react@18.3.1)
+        version: 4.5.7(@types/react@19.2.17)(immer@11.1.3)(react@18.3.1)
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/quest-02-redux/solution:
     dependencies:
       '@reduxjs/toolkit':
         specifier: ^2.0.1
-        version: 2.11.2(react-redux@9.2.0(@types/react@19.2.13)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
+        version: 2.11.2(react-redux@9.2.0(@types/react@19.2.17)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -2502,20 +2642,20 @@ importers:
         version: 18.3.1(react@18.3.1)
       react-redux:
         specifier: ^9.1.0
-        version: 9.2.0(@types/react@19.2.13)(react@18.3.1)(redux@5.0.1)
+        version: 9.2.0(@types/react@19.2.17)(react@18.3.1)(redux@5.0.1)
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/quest-02-redux/starter:
     dependencies:
       '@reduxjs/toolkit':
         specifier: ^2.0.1
-        version: 2.11.2(react-redux@9.2.0(@types/react@19.2.13)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
+        version: 2.11.2(react-redux@9.2.0(@types/react@19.2.17)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -2524,14 +2664,14 @@ importers:
         version: 18.3.1(react@18.3.1)
       react-redux:
         specifier: ^9.1.0
-        version: 9.2.0(@types/react@19.2.13)(react@18.3.1)(redux@5.0.1)
+        version: 9.2.0(@types/react@19.2.17)(react@18.3.1)(redux@5.0.1)
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/quest-03-mobx/solution:
     dependencies:
@@ -2550,10 +2690,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/quest-03-mobx/starter:
     dependencies:
@@ -2572,10 +2712,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-12-state-management/slides:
     dependencies:
@@ -2597,7 +2737,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.24(postcss@8.5.6)
@@ -2609,7 +2749,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   module-13-server-rendering/slides:
     dependencies:
@@ -2628,7 +2768,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.7.0(vite@5.4.21)
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.24(postcss@8.5.6)
@@ -2640,7 +2780,7 @@ importers:
         version: 3.4.19
       vite:
         specifier: ^5.0.8
-        version: 5.4.21
+        version: 5.4.21(lightningcss@1.32.0)
 
   slide-deck:
     dependencies:
@@ -3539,6 +3679,9 @@ packages:
   '@types/react@19.2.13':
     resolution: {integrity: sha512-KkiJeU6VbYbUOp5ITMIc7kBfqlYkKA5KhEHVrGMmUUMt7NeaZg65ojdPk+FtNrBAOXNVM5QM72jnADjM+XVRAQ==}
 
+  '@types/react@19.2.17':
+    resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
+
   '@types/stylis@4.2.7':
     resolution: {integrity: sha512-VgDNokpBoKF+wrdvhAAfS55OMQpL6QRglwTwNC3kIgBrzZxA4WsFj+2eLfEA/uMUDzBcEhYmjSbwQakn/i3ajA==}
 
@@ -3690,6 +3833,10 @@ packages:
 
   deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
+
+  detect-libc@2.1.2:
+    resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
+    engines: {node: '>=8'}
 
   didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
@@ -3939,6 +4086,76 @@ packages:
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
+
+  lightningcss-android-arm64@1.32.0:
+    resolution: {integrity: sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [android]
+
+  lightningcss-darwin-arm64@1.32.0:
+    resolution: {integrity: sha512-RzeG9Ju5bag2Bv1/lwlVJvBE3q6TtXskdZLLCyfg5pt+HLz9BqlICO7LZM7VHNTTn/5PRhHFBSjk5lc4cmscPQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [darwin]
+
+  lightningcss-darwin-x64@1.32.0:
+    resolution: {integrity: sha512-U+QsBp2m/s2wqpUYT/6wnlagdZbtZdndSmut/NJqlCcMLTWp5muCrID+K5UJ6jqD2BFshejCYXniPDbNh73V8w==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [darwin]
+
+  lightningcss-freebsd-x64@1.32.0:
+    resolution: {integrity: sha512-JCTigedEksZk3tHTTthnMdVfGf61Fky8Ji2E4YjUTEQX14xiy/lTzXnu1vwiZe3bYe0q+SpsSH/CTeDXK6WHig==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [freebsd]
+
+  lightningcss-linux-arm-gnueabihf@1.32.0:
+    resolution: {integrity: sha512-x6rnnpRa2GL0zQOkt6rts3YDPzduLpWvwAF6EMhXFVZXD4tPrBkEFqzGowzCsIWsPjqSK+tyNEODUBXeeVHSkw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm]
+    os: [linux]
+
+  lightningcss-linux-arm64-gnu@1.32.0:
+    resolution: {integrity: sha512-0nnMyoyOLRJXfbMOilaSRcLH3Jw5z9HDNGfT/gwCPgaDjnx0i8w7vBzFLFR1f6CMLKF8gVbebmkUN3fa/kQJpQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
+  lightningcss-linux-arm64-musl@1.32.0:
+    resolution: {integrity: sha512-UpQkoenr4UJEzgVIYpI80lDFvRmPVg6oqboNHfoH4CQIfNA+HOrZ7Mo7KZP02dC6LjghPQJeBsvXhJod/wnIBg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
+  lightningcss-linux-x64-gnu@1.32.0:
+    resolution: {integrity: sha512-V7Qr52IhZmdKPVr+Vtw8o+WLsQJYCTd8loIfpDaMRWGUZfBOYEJeyJIkqGIDMZPwPx24pUMfwSxxI8phr/MbOA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+
+  lightningcss-linux-x64-musl@1.32.0:
+    resolution: {integrity: sha512-bYcLp+Vb0awsiXg/80uCRezCYHNg1/l3mt0gzHnWV9XP1W5sKa5/TCdGWaR/zBM2PeF/HbsQv/j2URNOiVuxWg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+
+  lightningcss-win32-arm64-msvc@1.32.0:
+    resolution: {integrity: sha512-8SbC8BR40pS6baCM8sbtYDSwEVQd4JlFTOlaD3gWGHfThTcABnNDBda6eTZeqbofalIJhFx0qKzgHJmcPTnGdw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [win32]
+
+  lightningcss-win32-x64-msvc@1.32.0:
+    resolution: {integrity: sha512-Amq9B/SoZYdDi1kFrojnoqPLxYhQ4Wo5XiL8EVJrVsB8ARoC1PWW6VGtT0WKCemjy8aC+louJnjS7U18x3b06Q==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [win32]
+
+  lightningcss@1.32.0:
+    resolution: {integrity: sha512-NXYBzinNrblfraPGyrbPoD19C1h9lfI/1mzgWYvXUTe414Gz/X1FD2XBZSZM7rRTrMA8JL3OtAaGifrIKhQ5yQ==}
+    engines: {node: '>= 12.0.0'}
 
   lilconfig@3.1.3:
     resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
@@ -4334,6 +4551,11 @@ packages:
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
 
   update-browserslist-db@1.2.3:
     resolution: {integrity: sha512-Js0m9cx+qOgDxo0eMiFGEueWztz+d4+M3rGlmKPT+T4IS/jP4ylw3Nwpu6cpTTP8R1MAC1kF4VbdLt3ARf209w==}
@@ -5031,7 +5253,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
 
-  '@reduxjs/toolkit@2.11.2(react-redux@9.2.0(@types/react@19.2.13)(react@18.3.1)(redux@5.0.1))(react@18.3.1)':
+  '@reduxjs/toolkit@2.11.2(react-redux@9.2.0(@types/react@19.2.17)(react@18.3.1)(redux@5.0.1))(react@18.3.1)':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@standard-schema/utils': 0.3.0
@@ -5041,7 +5263,7 @@ snapshots:
       reselect: 5.1.1
     optionalDependencies:
       react: 18.3.1
-      react-redux: 9.2.0(@types/react@19.2.13)(react@18.3.1)(redux@5.0.1)
+      react-redux: 9.2.0(@types/react@19.2.17)(react@18.3.1)(redux@5.0.1)
 
   '@remix-run/router@1.23.2': {}
 
@@ -5172,11 +5394,16 @@ snapshots:
     dependencies:
       csstype: 3.2.3
 
+  '@types/react@19.2.17':
+    dependencies:
+      csstype: 3.2.3
+    optional: true
+
   '@types/stylis@4.2.7': {}
 
   '@types/use-sync-external-store@0.0.6': {}
 
-  '@vitejs/plugin-react@4.7.0(vite@4.5.14)':
+  '@vitejs/plugin-react@4.7.0(vite@4.5.14(lightningcss@1.32.0))':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.29.0)
@@ -5184,11 +5411,11 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.27
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 4.5.14
+      vite: 4.5.14(lightningcss@1.32.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-react@4.7.0(vite@5.4.21)':
+  '@vitejs/plugin-react@4.7.0(vite@5.4.21(lightningcss@1.32.0))':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.29.0)
@@ -5196,11 +5423,11 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.27
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 5.4.21
+      vite: 5.4.21(lightningcss@1.32.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-react@5.1.3(vite@7.3.1(jiti@1.21.7))':
+  '@vitejs/plugin-react@5.1.3(vite@7.3.1(jiti@1.21.7)(lightningcss@1.32.0))':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.29.0)
@@ -5208,7 +5435,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-rc.2
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
-      vite: 7.3.1(jiti@1.21.7)
+      vite: 7.3.1(jiti@1.21.7)(lightningcss@1.32.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5334,6 +5561,9 @@ snapshots:
       ms: 2.1.3
 
   deep-is@0.1.4: {}
+
+  detect-libc@2.1.2:
+    optional: true
 
   didyoumean@1.2.2: {}
 
@@ -5639,6 +5869,56 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
+  lightningcss-android-arm64@1.32.0:
+    optional: true
+
+  lightningcss-darwin-arm64@1.32.0:
+    optional: true
+
+  lightningcss-darwin-x64@1.32.0:
+    optional: true
+
+  lightningcss-freebsd-x64@1.32.0:
+    optional: true
+
+  lightningcss-linux-arm-gnueabihf@1.32.0:
+    optional: true
+
+  lightningcss-linux-arm64-gnu@1.32.0:
+    optional: true
+
+  lightningcss-linux-arm64-musl@1.32.0:
+    optional: true
+
+  lightningcss-linux-x64-gnu@1.32.0:
+    optional: true
+
+  lightningcss-linux-x64-musl@1.32.0:
+    optional: true
+
+  lightningcss-win32-arm64-msvc@1.32.0:
+    optional: true
+
+  lightningcss-win32-x64-msvc@1.32.0:
+    optional: true
+
+  lightningcss@1.32.0:
+    dependencies:
+      detect-libc: 2.1.2
+    optionalDependencies:
+      lightningcss-android-arm64: 1.32.0
+      lightningcss-darwin-arm64: 1.32.0
+      lightningcss-darwin-x64: 1.32.0
+      lightningcss-freebsd-x64: 1.32.0
+      lightningcss-linux-arm-gnueabihf: 1.32.0
+      lightningcss-linux-arm64-gnu: 1.32.0
+      lightningcss-linux-arm64-musl: 1.32.0
+      lightningcss-linux-x64-gnu: 1.32.0
+      lightningcss-linux-x64-musl: 1.32.0
+      lightningcss-win32-arm64-msvc: 1.32.0
+      lightningcss-win32-x64-msvc: 1.32.0
+    optional: true
+
   lilconfig@3.1.3: {}
 
   lines-and-columns@1.2.4: {}
@@ -5805,13 +6085,13 @@ snapshots:
       react: 19.2.4
       scheduler: 0.27.0
 
-  react-redux@9.2.0(@types/react@19.2.13)(react@18.3.1)(redux@5.0.1):
+  react-redux@9.2.0(@types/react@19.2.17)(react@18.3.1)(redux@5.0.1):
     dependencies:
       '@types/use-sync-external-store': 0.0.6
       react: 18.3.1
       use-sync-external-store: 1.6.0(react@18.3.1)
     optionalDependencies:
-      '@types/react': 19.2.13
+      '@types/react': 19.2.17
       redux: 5.0.1
 
   react-refresh@0.17.0: {}
@@ -6023,6 +6303,8 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
+  typescript@5.9.3: {}
+
   update-browserslist-db@1.2.3(browserslist@4.28.1):
     dependencies:
       browserslist: 4.28.1
@@ -6039,23 +6321,25 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite@4.5.14:
+  vite@4.5.14(lightningcss@1.32.0):
     dependencies:
       esbuild: 0.18.20
       postcss: 8.5.6
       rollup: 3.29.5
     optionalDependencies:
       fsevents: 2.3.3
+      lightningcss: 1.32.0
 
-  vite@5.4.21:
+  vite@5.4.21(lightningcss@1.32.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.6
       rollup: 4.57.1
     optionalDependencies:
       fsevents: 2.3.3
+      lightningcss: 1.32.0
 
-  vite@7.3.1(jiti@1.21.7):
+  vite@7.3.1(jiti@1.21.7)(lightningcss@1.32.0):
     dependencies:
       esbuild: 0.27.3
       fdir: 6.5.0(picomatch@4.0.3)
@@ -6066,6 +6350,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
       jiti: 1.21.7
+      lightningcss: 1.32.0
 
   which@2.0.2:
     dependencies:
@@ -6083,10 +6368,10 @@ snapshots:
 
   zod@4.3.6: {}
 
-  zustand@4.5.7(@types/react@19.2.13)(immer@11.1.3)(react@18.3.1):
+  zustand@4.5.7(@types/react@19.2.17)(immer@11.1.3)(react@18.3.1):
     dependencies:
       use-sync-external-store: 1.6.0(react@18.3.1)
     optionalDependencies:
-      '@types/react': 19.2.13
+      '@types/react': 19.2.17
       immer: 11.1.3
       react: 18.3.1

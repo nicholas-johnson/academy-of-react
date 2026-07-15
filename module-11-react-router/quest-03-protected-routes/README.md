@@ -27,4 +27,4 @@ Create a protected War Room that only authenticated users can access. Includes l
 - `useSearchParams()` works like useState but syncs with URL
 - `Navigate` component handles redirects with state
 
-[← Previous](../quest-02-spell-directory/)
+[← Previous](../quest-02-spell-directory/) | [Next →](../quest-04-typescript-api/)
