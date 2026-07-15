@@ -231,10 +231,22 @@ Each quest uses a different library so you experience all three:
 
 [Start Quest 3 →](./quest-03-mobx/)
 
+**Quest 4: The Potion Ledger (TypeScript)** — Build a typed Zustand store from scratch. Define store interfaces, use the curried `create<T>()()` pattern, type the `persist` middleware, and consume typed state in components.
+
+[Start Quest 4 →](./quest-04-typescript-zustand/)
+
 ## Running the Code
 
 ```bash
 cd demo
+npm install
+npm run dev
+```
+
+A TypeScript version of the same demo is available in `demo-ts`:
+
+```bash
+cd demo-ts
 npm install
 npm run dev
 ```

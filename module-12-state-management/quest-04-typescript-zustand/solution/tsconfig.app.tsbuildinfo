@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/addpotionform.tsx","./src/components/potionlist.tsx","./src/components/statsbar.tsx","./src/data/categories.ts","./src/store/potionstore.ts","./src/types/potion.ts"],"version":"5.9.3"}
