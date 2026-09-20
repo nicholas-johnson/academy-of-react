@@ -206,6 +206,14 @@ The Wizarding War is won by the academy whose battle system:
 
 ## Beyond the War
 
+### The Familiar's Binding (Module 14)
+
+Victory is not the end of training. At dusk on the tournament grounds, Headmaster Rundoolius binds each graduate a **familiar** — a spirit that writes runes faster than a human hand.
+
+The gift is real. So is the warning. Academies that skipped the fundamentals trial summoned familiars whose spells *compiled*, and still lost. A familiar can extract a custom hook; it cannot decide whether you needed one. Professor Hooksweasel reminds you that taste is still yours. Archmage Optimius notes that generated bundles are not free.
+
+You will learn the stack familiars already speak fluently, the patterns they ride, and how to catch the lies they tell. Power without mastery is how Shadowmere's cautionary tales begin.
+
 Upon completing the course, graduates of the Arcane Academy receive:
 
 - Certificate of React Mastery
@@ -213,6 +221,7 @@ Upon completing the course, graduates of the Arcane Academy receive:
 - Ability to build production-ready React applications
 - Deep understanding of JavaScript, React, and TypeScript
 - A portfolio project to showcase their skills
+- A bound familiar — useful only because they already know what they want written
 
 Some graduates go on to become professors themselves. Others join the Guild of Professional Developers. A few brave souls venture into the dangerous lands of Framework Creation.
 

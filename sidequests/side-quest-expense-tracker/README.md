@@ -100,6 +100,12 @@ For an optional backend later, consider:
 - Printable expense summaries
 - Shareable budget templates
 
+### After Module 14: AI-Assisted React
+
+- Ask a familiar to add a reports screen — then read the diff
+- Write a short spec before generating the CSV export
+- Review whatever compiles; verify the form still submits in the browser
+
 ---
 
 ## Handling CORS with Vite Proxy

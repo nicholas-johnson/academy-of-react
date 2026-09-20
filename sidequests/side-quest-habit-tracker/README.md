@@ -95,6 +95,12 @@ For notifications, you can optionally use the browser's Notification API.
 - Shareable streak achievements
 - Printable habit reports
 
+### After Module 14: AI-Assisted React
+
+- Ask a familiar to add a weekly heatmap — then read the diff
+- Write a short spec before generating streak reminders
+- Review whatever compiles; verify check-in still updates the streak in the browser
+
 ---
 
 ## Handling CORS with Vite Proxy

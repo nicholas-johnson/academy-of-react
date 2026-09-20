@@ -262,4 +262,4 @@ npm run dev
 
 ---
 
-[← Module 12: State Management](../module-12-state-management/)
+[← Module 12: State Management](../module-12-state-management/) | [Module 14: AI-Assisted React →](../module-14-ai-assisted-react/)

@@ -103,6 +103,12 @@ For metadata fetching, options include:
 - SEO-friendly link previews
 - Browser extension landing page
 
+### After Module 14: AI-Assisted React
+
+- Ask a familiar to add tag filters — then read the diff
+- Write a short spec before generating the preview card
+- Review whatever compiles; verify add-link still works in the browser
+
 ---
 
 ## Handling CORS with Vite Proxy

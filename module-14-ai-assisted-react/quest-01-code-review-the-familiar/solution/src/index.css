@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #1c1a24;
+  color: #f4efe6;
+}
+
+#root {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+h1 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  background: #764ba2;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+}
+
+button.danger {
+  background: #8b2942;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #3a3544;
+}
+
+.note {
+  color: #c8b8a0;
+  font-size: 0.95rem;
+}
+
+.meta {
+  color: #a89bb8;
+  font-size: 0.9rem;
+}
+
+.status {
+  min-height: 1.4rem;
+  color: #e0c36a;
+}

@@ -10,7 +10,7 @@ You've been chosen as a new student at the Arcane Academy. Through three phases 
 
 ## Course Structure
 
-This course contains **13 modules** divided into **four progressive phases**:
+This course contains **14 modules** divided into **five progressive phases**:
 
 ### Phase 1: JavaScript Basics (Modules 1-4)
 
@@ -55,6 +55,17 @@ Victory achieved! Now share the Academy's knowledge with the world. Learn modern
   - Part A: React Server Components (Next.js + Remix paths)
   - Part B: Islands Architecture (Astro path - bonus)
 
+### Phase 5: AI-Assisted React (Module 14)
+
+**Technology**: Vite + TypeScript + Tailwind + shadcn
+
+The war is over. Headmaster Rundoolius binds each graduate a **familiar** — an agent that writes runes faster than a human hand. You will learn the stack familiars already know, the patterns they ride, and how to catch the lies they tell. This phase does not replace Modules 1–13. It is why those modules matter.
+
+- Module 14: AI-Assisted React
+  - Reviewing familiar-generated code
+  - Specifying features before generating
+  - Binding shadcn, rules files, and an agent-friendly project
+
 ## What You'll Build
 
 Each module contains:
@@ -81,6 +92,12 @@ By Module 13, you'll deploy production server-rendered applications:
 - Real hosting on Vercel, Netlify, or Fly.io
 - SEO-optimized and production-ready
 
+By Module 14, you'll work with a familiar without surrendering the craft:
+
+- Review and repair agent-generated React
+- Write a spec an agent can follow — and a review of what it produced
+- A TypeScript + Tailwind + shadcn project with Academy conventions in `AGENTS.md`
+
 ## Prerequisites
 
 To enroll in the Arcane Academy, you should have:
@@ -103,7 +120,7 @@ To enroll in the Arcane Academy, you should have:
 4. Complete the three quests in order
 5. Check your work against the acceptance criteria
 
-### For Modules 5-13 (Vite-based):
+### For Modules 5-14 (Vite-based):
 
 1. Navigate to the module folder
 2. Install dependencies: `npm install`
@@ -216,20 +233,29 @@ Track your journey through the Academy:
     - [ ] Quest 2: Interactive Simulator
     - [ ] Quest 3: Production Portal
 
+### Phase 5: AI-Assisted React
+
+- [ ] Module 14: AI-Assisted React
+  - [ ] Quest 1: Code-Review the Familiar
+  - [ ] Quest 2: Spec First
+  - [ ] Quest 3: Bind a Familiar
+
 ## Completing the Course
 
-Once you've mastered all 13 modules and completed your chosen server rendering path, you'll have:
+Once you've mastered all 14 modules and completed your chosen server rendering path, you'll have:
 
 - **Solid JavaScript fundamentals** through practical wizard-themed exercises
 - **Complete React mastery** from basic elements to advanced optimization
 - **TypeScript proficiency** with proper typing for complex applications
 - **Production-ready skills** with modern server rendering frameworks
+- **AI-assisted craft** — specifying, reviewing, and verifying generated React instead of accepting whatever compiles
 - **Portfolio projects** including:
   - Interactive Battle Arena (client-side React)
   - Server-rendered Academy Portal (Next.js/Remix/Astro)
+  - A familiar-ready Codex (Vite + TypeScript + Tailwind + shadcn)
 - **Real-world full-stack skills** applicable to professional React development
 
-You'll be ready to build production applications with confidence, understanding both client-side React and modern server rendering approaches!
+You'll be ready to build production applications with confidence, understanding both client-side React and modern server rendering approaches — and to work with a familiar without throwing away that understanding!
 
 The Wizarding War awaits, brave apprentice. May your code be bug-free and your components render swiftly!
 
@@ -240,3 +266,5 @@ The Wizarding War awaits, brave apprentice. May your code be bug-free and your c
 **Questions or stuck?** Review the hints in each quest README, or study the demo code for guidance.
 
 **Completed Modules 1-12?** Continue to [Module 13: Modern Server Rendering](./module-13-server-rendering/) for the capstone!
+
+**Completed Module 13?** Continue to [Module 14: AI-Assisted React](./module-14-ai-assisted-react/) and bind your familiar.

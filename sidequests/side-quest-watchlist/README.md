@@ -94,6 +94,12 @@ This project uses [The Movie Database (TMDB) API](https://www.themoviedb.org/doc
 - SEO-friendly movie detail pages
 - Shareable watchlist links
 
+### After Module 14: AI-Assisted React
+
+- Ask a familiar to add a filter bar — then read the diff
+- Write a short spec before generating the "watched" toggle
+- Review whatever compiles; verify search and favorites still work in the browser
+
 ---
 
 ## Handling CORS with Vite Proxy
