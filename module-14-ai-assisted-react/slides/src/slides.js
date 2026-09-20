@@ -294,6 +294,49 @@ function SpellCard({ name, power, children }: SpellCardProps) {
     },
   },
   {
+    type: "rules",
+    content: {
+      title: "Cursor Modes",
+      rules: [
+        {
+          rule: "Ask",
+          example: "Read-only. Explain, explore, do not edit.",
+          icon: "search",
+        },
+        {
+          rule: "Plan",
+          example: "Research, write a plan, you approve, then build.",
+          icon: "file-text",
+        },
+        {
+          rule: "Debug",
+          example: "Hypothesize, log, reproduce, fix from evidence.",
+          icon: "bug",
+        },
+        {
+          rule: "Agent",
+          example: "The default: search, edit, run commands.",
+          icon: "bot",
+        },
+      ],
+    },
+  },
+  {
+    type: "standard",
+    content: {
+      title: "Pick the Mode for the Job",
+      points: [
+        "Ask = tutor mode, enforced — cannot touch files",
+        "Plan = spec first — Quest 2 in the editor",
+        "Debug = races and 'it used to work' — you still reproduce it",
+        "Agent = generator mode — only when you can describe the change",
+        "Shift+Tab cycles modes. Living in Agent for everything is the mistake.",
+        "Other tools use different names. The habit is the same.",
+      ],
+      icon: "toggle-left",
+    },
+  },
+  {
     type: "standard",
     content: {
       title: "The Loop",

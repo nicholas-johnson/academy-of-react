@@ -151,6 +151,20 @@ The ideas that outlast the specific tools:
 
 There is a sample `AGENTS.md` in the [demo](./demo/AGENTS.md). Quest 3 asks you to write your own.
 
+## Cursor Modes: Ask, Plan, and Debug
+
+Cursor is not one chat that always writes code. It has named modes. Pick the mode that matches the job, the same way you already distinguish tutor mode from generator mode. Switch with the mode picker, or press Shift+Tab.
+
+**Ask mode** is read-only. The agent can search the repo and answer questions. It cannot edit files. Use it when you want to understand something: "How does this form submit?" "Where is the spell list filtered?" "What does this hook return?" That is tutor mode, enforced by the tool. If you are not ready to change code, stay here.
+
+**Plan mode** researches the codebase, asks clarifying questions, and writes a reviewable plan *before* any files change. You edit the plan, then start implementation. Use it for work with more than one reasonable approach, or that will touch several files. This is the spec step, built into the editor. Quest 2 is the same idea on paper: write what "done" means, then generate. If the first implementation misses, it is often faster to refine the plan and run it again than to patch a wandering agent.
+
+**Debug mode** is for bugs you can reproduce but cannot explain from reading the code. The agent forms hypotheses, adds logging, asks you to reproduce the problem, then uses the runtime evidence to make a small fix and remove the logs. Use it for races, "it used to work," and anything that depends on timing. Do not use it as a substitute for opening DevTools yourself — you still need to reproduce the bug and say what you saw.
+
+There is also **Agent mode**, the default that searches, edits, and runs commands. That is generator mode. Fine for a small, well-specified change. The mistake is living there for everything: asking it to explain a file (use Ask), invent an architecture (use Plan), or guess at a race (use Debug).
+
+Other tools do not use these names. Claude Code and Copilot have their own "talk vs change files" split. The habit transfers: **read, specify, or diagnose before you generate.**
+
 ## The Workflow
 
 ```text
@@ -176,6 +190,8 @@ These are common, not rare. Assume they will happen and look for them:
 The real risk is not "cheating." It is accepting whatever compiles without checking it.
 
 ## Common Mistakes
+
+**Staying in Agent mode for every question.** Ask when you want an explanation. Plan when the approach is not settled. Debug when you have a repro but no cause. Agent is for a change you can already describe.
 
 **Prompting instead of specifying.** "Make a spell dashboard" is not a spec. Screens, data, empty/error/loading states, and a definition of done are a spec.
 
