@@ -1112,7 +1112,7 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21(lightningcss@1.32.0)
 
-  module-07-children-prop/quest-01-layout-components/solution:
+  module-07-children-prop/quest-01-modal/solution:
     dependencies:
       react:
         specifier: ^19.0.0
@@ -1128,7 +1128,39 @@ importers:
         specifier: ^5.0.8
         version: 5.4.21(lightningcss@1.32.0)
 
-  module-07-children-prop/quest-01-layout-components/starter:
+  module-07-children-prop/quest-01-modal/starter:
+    dependencies:
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21(lightningcss@1.32.0)
+
+  module-07-children-prop/quest-02-layout-components/solution:
+    dependencies:
+      react:
+        specifier: ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@vitejs/plugin-react':
+        specifier: ^4.2.1
+        version: 4.7.0(vite@5.4.21(lightningcss@1.32.0))
+      vite:
+        specifier: ^5.0.8
+        version: 5.4.21(lightningcss@1.32.0)
+
+  module-07-children-prop/quest-02-layout-components/starter:
     dependencies:
       react:
         specifier: ^19.0.0

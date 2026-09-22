@@ -1,4 +1,4 @@
-# Quest 1 Solution: Layout Components
+# Quest 2 Solution: Layout Components
 
 ## Key Concepts Demonstrated
 
@@ -15,7 +15,7 @@ The `children` prop is whatever you put between a component's opening and closin
 
 ### 2. Wrapper Components
 
-Card, Section, and Modal all "wrap" their children:
+Card and Section both "wrap" their children:
 
 ```jsx
 function Card({ children }) {
@@ -26,6 +26,8 @@ function Card({ children }) {
   );
 }
 ```
+
+Modal is the same pattern — it was built in Quest 1 and is imported from `src/components/Modal.jsx`. Reusing it here is the point: a children wrapper works in any page.
 
 ### 3. Slot Pattern (Named Children)
 
@@ -50,25 +52,7 @@ Small components combine to build complex UIs:
 - Layout contains Sections
 - Sections contain Cards
 - Cards contain any content
-- Modal wraps any content
-
-### 5. Modal Pattern
-
-```jsx
-function Modal({ isOpen, onClose, title, children }) {
-  if (!isOpen) return null; // Don't render if closed
-
-  return (
-    <div className="overlay" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
-        {/* stopPropagation prevents closing when clicking inside */}
-        <h3>{title}</h3>
-        {children}
-      </div>
-    </div>
-  );
-}
-```
+- The provided Modal wraps any content
 
 ## When to Use children
 
@@ -84,3 +68,4 @@ function Modal({ isOpen, onClose, title, children }) {
 1. **Forgetting to render children**: Always include `{children}` in your JSX
 2. **Not destructuring**: Use `({ children })` not `(props)` for clarity
 3. **Overcomplicating**: Sometimes a simple div with className is enough!
+4. **Dropping the provided Modal**: Keep it in the tree so the Cast Spell button still works

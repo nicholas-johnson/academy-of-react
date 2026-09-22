@@ -184,9 +184,13 @@ Most wrapper and layout components use children. Most data-display components us
 
 ## Exercises
 
-**Quest 1: Layout Components** — Build a set of reusable wrapper components: Card, Section, Modal, and a two-column Layout. Practice composition by assembling them into a complete page.
+**Quest 1: The Enchanted Scroll** — Build a reusable Modal that wraps any content with the `children` prop. Open/close behaviour is included; you only implement the wrapper.
 
-[Start Quest 1 →](./quest-01-layout-components/)
+[Start Quest 1 →](./quest-01-modal/)
+
+**Quest 2: Layout Components** — Build Card, Section, and a two-column Layout. A finished Modal is provided — reuse it while you assemble the dashboard.
+
+[Start Quest 2 →](./quest-02-layout-components/)
 
 ## Running the Code
 

@@ -190,7 +190,8 @@ Track your journey through the Academy:
   - [ ] Quest 2: War Intelligence
   - [ ] Quest 3: Auto-Save
 - [ ] Module 7: The Children Prop
-  - [ ] Quest 1: Layout Components
+  - [ ] Quest 1: Modal
+  - [ ] Quest 2: Layout Components
 
 ### Phase 3: Routing + Advanced
 
